@@ -5,7 +5,9 @@ def convert_data_to_maps(lst, file):
     
     for med in csv_reader:
         med.pop("Image URL")
-        lst.append(dict(med))
+        med_dic = {k.lower(): v for k, v in dict(med).items()}
+        med_dic_v2 = {k.replace(' ', '_') : v for k, v in med_dic.items()}
+        lst.append(med_dic_v2)
 
 data_list = []
 file = open('./dataset/Medicine_Details.csv', mode='r')
