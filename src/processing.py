@@ -4,6 +4,7 @@ def convert_data_to_maps(lst, file):
     csv_reader = csv.DictReader(file)
     
     for med in csv_reader:
+        med.pop("Image URL")
         lst.append(dict(med))
 
 data_list = []
