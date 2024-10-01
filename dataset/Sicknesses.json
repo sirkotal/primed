@@ -1,0 +1,298 @@
+{
+    "Bronchiolitis, Bronchitis, Common Cold, Croup, Ear Infection, Pneumonia, Sinus Infection and Most Sore Throats (respiratory diseases caused by many different viruses and occasionally bacteria)": {
+        "Mode of Transmission": "Breathing in respiratory droplets containing the pathogen after an infected person exhales, sneezes, or coughs -Direct contact with respiratory secretions from an infected person -Touching a contaminated object then touching mouth, nose or eyes",
+        "Symptoms": "Variable, including runny nose, watery eyes, fatigue, coughing, and sneezing.  May or may not have fever",
+        "Incubation Period": "Variable",
+        "Period of Communicability": "Variable, often from the day before symptoms begin up to 5 days after onset",
+        "Criteria for Exclusion from School*": "No exclusion unless febrile or other symptoms meeting exclusion criteria are present",
+        "Reporting Requirement": "May depend of etiology/organism Report unusual illness, clusters of cases above baseline for group and time of year, or increased/unusual severity of illness to the\nlocal health department"
+    },
+    "Conjunctivitis, Bacterial or Viral (Pink eye)": {
+        "Mode of Transmission": "Contact with an infected person\u2019s skin, body fluid or though contact with a contaminated surface and then touching mucus membranes/eyes",
+        "Symptoms": "Red eyes, usually with some discharge or crusting around eyes; may be itchy, sensitive to light, or watery\nBacterial: may have yellow/greenish discharge; may affect one or both eyes Allergic and chemical conjunctivitis usually affects both eyes",
+        "Incubation Period": "Bacterial: Unknown. Viral: Varies with etiology",
+        "Period of Communicability": "Bacterial: from onset of symptoms until after start of antibiotics, or as long as there is discharge form the eye\nViral: variable, before symptoms appear and while symptoms are present\n(Allergic and chemical conjunctivitis is not\ncontagious.)",
+        "Criteria for Exclusion from School*": "Bacterial, Viral, or unknown etiology:\nExclude if conjunctivitis is accompanied by symptoms of systemic illness or if the child is unable to keep hands away from eye.\nChildcare rules: exclude if purulent drainage until after 24 hours of treatment\nhttp://www.ilga.gov/commission/jcar/adminc ode/089/089004070G03100R.html",
+        "Reporting Requirement": "Not required to be reported\nMay notify local health department of large clusters of cases or cases with unusual severity of illness"
+    },
+    "Influenza": {
+        "Mode of Transmission": "Person to person by respiratory droplets created by coughing or sneezing, or though contact with a contaminated surface and then touching mucus membranes/eyes The virus can live on surfaces for several hours.",
+        "Symptoms": "Sudden onset of fever, chills, headache, malaise, body aches, and nonproductive cough",
+        "Incubation Period": "1-4 days",
+        "Period of Communicability": "Variable, from 24 hours before onset of symptoms, peaks during first 3 days of illness through 7 days",
+        "Criteria for Exclusion from School*": "For 24 hours until both are true: fever-free without using fever- reducing medications and symptoms are improving overall. Upon return and for the next 5 days, CDC recommends enhancing hygiene practices, wearing a well-fitted mask and physical distance from others when indoors as much as possible.\nCriteria may differ in pandemic or novel/variant strain influenza situation.",
+        "Reporting Requirement": "Influenza deaths in persons<18 years of age. ICU admissions are reportable within 24 hours.\nInfluenza A, variant virus cases are required to be reported immediately within 3 hours by healthcare providers."
+    },
+    "Mumps": {
+        "Mode of Transmission": "Contact with droplets from eyes or mouth of infected person",
+        "Symptoms": "Fever with swelling and tenderness of one or both parotid glands located below and in front of the ears Unrecognized mild cases without swelling may occur.",
+        "Incubation Period": "12 to 25 days\n(usually 16 to\n18 days",
+        "Period of Communicability": "Peak infectious time begins 1 to 2 days before swelling to 5 days after but may range from 7 days before to 9 days after. For the purpose of contact tracing and exclusions, the infectious period is 2 days before to 5 days after parotitis.",
+        "Criteria for Exclusion from School*": "Exclude cases from school, childcare or workplace until 5 days after onset of parotitis.\nNote: daycare licensing rules require 9 days exclusion; refer to link below. http://www.ilga.gov/commission/j car/admincode/089/089004070G 03100R.html\nSusceptible contacts should be excluded from school or the\nworkplace from days 12-25 after last exposure.",
+        "Reporting Requirement": "Report case to local health department within 24 hours.\nOutbreaks: three or more probable or confirmed cases linked by time and place."
+    },
+    "Pertussis (Whooping Cough)": {
+        "Mode of Transmission": "Contact with droplets from nose, eyes or mouth of infected person",
+        "Symptoms": "Initially cold-like symptoms, later cough; may have inspiratory whoop, post-tussive vomiting",
+        "Incubation Period": "5 to 21 days\n(usually 7 to\n10 days)",
+        "Period of Communicability": "Before cough onset (with onset of runny nose), continuing until child has been on antibiotics for 5 days If untreated, infectious for 3 weeks after cough begins",
+        "Criteria for Exclusion from School*": "School exclusion: Cases must be excluded from school until 5 days of appropriate antibiotic treatment is completed or 21 days after cough onset if no treatment is received.\nSusceptible contacts do not need to be excluded unless they become symptomatic.",
+        "Reporting Requirement": "Report as soon as possible, within 24 hours\nOutbreaks:  Five or more cases epidemiologically linked"
+    },
+    "RSV": {
+        "Mode of Transmission": "Highly contagious; contact with droplets from nose, eyes or mouth of infected person; virus can live on surfaces (toys, tissues, doorknobs) for several hours",
+        "Symptoms": "Fever, runny nose, cough.  May have wheezing",
+        "Incubation Period": "2 to 8 days (4 to 6 days most common)",
+        "Period of Communicability": "Variable, from the day before until 3 to 8 days or longer; may last up to 3 to 4 weeks",
+        "Criteria for Exclusion from School*": "For 24 hours until both are true: fever-free without using fever- reducing medications and symptoms are improving overall. Upon return and for the next 5 days, CDC recommends enhancing hygiene practices, wearing a well-fitted mask and physical distance from others when indoors as much as possible.",
+        "Reporting Requirement": "RSV deaths in persons<18 years of age and ICU admissions are reportable within 24 hours."
+    },
+    "SARS-CoV-2 (COVID-19)": {
+        "Mode of Transmission": "Breathing in air when close to an infected person who is exhaling small droplets and particles that contain the virus.\nHaving these small droplets and particles that contain virus land on the eyes, nose, or mouth, especially through splashes and sprays like a cough or sneeze.\nTouching eyes, nose, or mouth with hands that have the virus on them.",
+        "Symptoms": "May have no symptoms or can have any of the following: Fever or chills, Cough,\nShortness of breath or difficulty breathing, Fatigue, Muscle or body aches, Headache,\nNew loss of taste or smell, Sore throat Congestion or runny nose, Nausea or vomiting, Diarrhea, dermatologic manifestations.",
+        "Incubation Period": "2-14 days",
+        "Period of Communicability": "From 2 days before symptom onset through Day 10 after symptom onset",
+        "Criteria for Exclusion from School*": "For 24 hours until both are true: fever-free without using fever- reducing medications and symptoms are improving overall. Upon return and for the next 5 days, CDC recommends enhancing hygiene practices, wearing a well-fitted mask and physical distance from others when indoors as much as possible.",
+        "Reporting Requirement": "COVID-19 deaths in persons<18 years of age and ICU admissions are reportable within 24 hours.\nOutbreaks with hospitalization or deaths related to COVID-19 involving 3 or more in a core group of individuals within a 10-day period or if the school is no longer able to safely operate and provide essential services."
+    },
+    "Strep throat/Scarlet Fever": {
+        "Mode of Transmission": "Contact with droplets from nose and mouth; close crowded contact, direct contact",
+        "Symptoms": "Fever, sore throat with pus spots on tonsils, tender swollen glands Scarlet fever has above symptoms plus a sandpaper-like rash Symptoms may vary.",
+        "Incubation Period": "2 to 5 days",
+        "Period of Communicability": "Highest during acute infection; no longer contagious within 24 hours after antibiotics",
+        "Criteria for Exclusion from School*": "Schools: Exclude until fever free without the use of fever-reducing medications or symptoms improving if fever not present AND on appropriate antibiotics for AT LEAST 12 hours.\nHowever, during outbreaks or in the setting of recurrent infection, IDPH recommends individuals stay home for at least 24 hours after on effective antibiotics AND fever free or symptoms improving if fever not present. Child Care: rules: Exclude until 24 hours after treatment has been initiated and until the child has been without fever for 24 hours;\nhttp://www.ilga.gov/commission/jcar/adminc\node/089/089004070G03100R.html",
+        "Reporting Requirement": "Clusters of 10 epidemiologically linked cases of strep throat/scarlet fever within a 10-day period are reportable to the local health department.\nInvasive disease from streptococcal bacteria is reportable."
+    },
+    "TB (tuberculosis)": {
+        "Mode of Transmission": "Airborne inhalation of droplets from nose and mouth of diseased person (children usually contract TB from close contact with a diseased adult)",
+        "Symptoms": "Fever, fatigue, weight loss, cough (lasting 3+ weeks), night sweats, loss of appetite",
+        "Incubation Period": "2 to 10 weeks to years; risk of developing disease is highest 6\nmonths to 2 years after infection",
+        "Period of Communicability": "Individuals with infection but without active disease (latent TB) are not infectious. Individuals with active disease are infectious until treatment.",
+        "Criteria for Exclusion from School*": "For active disease: after therapy started, adherence documented, symptoms diminished, and determined to be non-infectious; consult with public health officials; no exclusion for latent infection",
+        "Reporting Requirement": "Report suspect or confirmed TB cases to local health department within 7 days"
+    },
+    "Campylobacteriosis": {
+        "Mode of Transmission": "Ingestion of undercooked meat, contaminated food or water, or raw milk",
+        "Symptoms": "Diarrhea (may be bloody), abdominal pain, malaise, fever",
+        "Incubation Period": "1-10 days,\nusually 2-5 days",
+        "Period of Communicability": "Throughout illness (usually 1-2 weeks, but up to 7 weeks without treatment)",
+        "Criteria for Exclusion from School*": "Exclude until diarrhea has ceased for at least 24 hours; additional restrictions may apply.",
+        "Reporting Requirement": "Cases of campylobacteriosis are reportable to the local health department within 7 days."
+    },
+    "C. diff (clostridium difficile) infections": {
+        "Mode of Transmission": "Person-to-person through inadequate handwashing or on contaminated objects or surfaces, and ingestion of spores",
+        "Symptoms": "Diarrhea, may have fever, nausea, abdominal cramping",
+        "Incubation Period": "Unknown, likely less than 7 days",
+        "Period of Communicability": "During active infection (while symptomatic); can continue to shed spores when asymptomatic",
+        "Criteria for Exclusion from School*": "Exclude while symptomatic and until diarrhea has ceased for 24- 48 hours",
+        "Reporting Requirement": "Individual cases do not have to be reported. Clusters of cases should be reported to the local health department."
+    },
+    "E. coli infections (E. coli O157:H7 and Other Shiga Toxin Producing E. coli))": {
+        "Mode of Transmission": "Fecal-oral: person-to person, from\ncontaminated food or liquids, contact with infected animals",
+        "Symptoms": "Profuse, watery diarrhea, sometimes with blood",
+        "Incubation Period": "Variable,\nusually 2-10 days; for E.",
+        "Period of Communicability": "Typically, one week or\nless in adults or up to 3 weeks in children",
+        "Criteria for Exclusion from School*": "School:  Exclude until diarrhea,\nvomiting, and fever have ceased for at least 24 hours; additional",
+        "Reporting Requirement": "Report cases as soon as possible within 24 hours."
+    },
+    "Salmonellosis": {
+        "Mode of Transmission": "Fecal-oral: person-to person, contact with infected animals or via contaminated food",
+        "Symptoms": "Abdominal pain, diarrhea (possibly bloody), fever, nausea, vomiting, dehydration",
+        "Incubation Period": "Average 12- 36hrs (range: 6hrs-72 hours)",
+        "Period of Communicability": "During active illness and until organism is no longer detected in feces",
+        "Criteria for Exclusion from School*": "Exclude until diarrhea, vomiting, and fever have ceased for at least 24 hours; additional restrictions may apply.  Release specimens shall be required for food handlers, health care workers, and sensitive\noccupation.",
+        "Reporting Requirement": "Report cases as soon as possible within 7 days"
+    },
+    "Shigellosis": {
+        "Mode of Transmission": "Fecal-oral: frequently person-to- person; also via contaminated food or water",
+        "Symptoms": "Abdominal pain, diarrhea (possibly bloody), fever, nausea, vomiting, dehydration",
+        "Incubation Period": "Average 1-3 days (range 12-96hrs)",
+        "Period of Communicability": "During active illness and until no longer detected; treatment can shorten duration",
+        "Criteria for Exclusion from School*": "Exclude until diarrhea, vomiting, and fever have ceased for at least 24 hours; additional restrictions may apply.  Release specimens shall be required for food handlers, health care workers, and sensitive occupations.",
+        "Reporting Requirement": "Report cases as soon as possible within 7 days"
+    },
+    "Norovirus": {
+        "Mode of Transmission": "Contact with food, water or surfaces contaminated with vomit or feces, person-to-person, aerosolized vomit",
+        "Symptoms": "Nausea, vomiting, watery diarrhea, abdominal pain, possibly low-grade fever, chills, headache\nDuration of symptoms usually 12-72 hours",
+        "Incubation Period": "Average 24- 48hrs (range: 12-72hrs)",
+        "Period of Communicability": "Usually from onset until 2-3 days after recovery; typically, virus is no longer shed after 10 days",
+        "Criteria for Exclusion from School*": "Exclude until diarrhea, vomiting, and fever have ceased for 24hours\nExclude from food handling for 48 hours after recovery",
+        "Reporting Requirement": "Individual cases do not have to be reported. Clusters of cases should be reported to the local health department."
+    },
+    "Rotavirus": {
+        "Mode of Transmission": "By the fecal-oral route through direct contact or contact with contaminated hands, objects, food, or water",
+        "Symptoms": "Diarrhea, nausea, vomiting, fever, abdominal pain; may have loss of appetite and dehydration",
+        "Incubation Period": "Average: 2 days",
+        "Period of Communicability": "Usually from onset until 3 days after recovery",
+        "Criteria for Exclusion from School*": "Exclude until diarrhea, vomiting, and fever have ceased for 24hours\nExclude from food handling for 48 hours after recovery",
+        "Reporting Requirement": "Individual cases do not have to be reported. Clusters of cases should be reported to the local\nhealth department."
+    },
+    "Hepatitis A": {
+        "Mode of Transmission": "By the fecal-oral route through direct contact, person to person, or ingestion of contaminated food or water",
+        "Symptoms": "Fever, loss of appetite, nausea, abdominal discomfort and weakness followed by jaundice.\nMany unrecognized mild cases without jaundice occur, especially in children",
+        "Incubation Period": "From 15-50 days, average 28-30 days",
+        "Period of Communicability": "Communicability greatest in 2 weeks before onset of illness, and through 7 days after onset of jaundice",
+        "Criteria for Exclusion from School*": "Exclude from school and daycare for 7 days after onset of jaundice or for two weeks after onset of symptoms if no jaundice present Exclude food handlers, healthcare workers, or workers in sensitive occupations for 7 days after onset of jaundice, or two weeks after onset of initial\nsymptoms, if jaundice is not present",
+        "Reporting Requirement": "Report cases as soon as possible within 24 hours.\nOutbreaks: Two or more cases linked by time and place."
+    },
+    "Giardiasis": {
+        "Mode of Transmission": "By the fecal-oral route, ingestion of contaminated food or water, person-to-person transmission of cysts from infected feces; contaminated water (e.g. water play tables)",
+        "Symptoms": "Nausea, bloating, pain, and foul-smelling watery diarrhea, excessive flatulence, nausea and stomach cramps; symptoms can recur several times over a period of weeks.  May be\nasymptomatic.",
+        "Incubation Period": "Average 7-10\ndays (range 3-\n25+ days)",
+        "Period of Communicability": "Highly variable but most infectious during diarrhea phase.",
+        "Criteria for Exclusion from School*": "Exclude until diarrhea has ceased for at least 24 hours; may be relapsing; additional restrictions may apply",
+        "Reporting Requirement": "Individual cases do not have to be reported. Clusters of cases should be reported to the local health department."
+    },
+    "Cryptosporidiosis": {
+        "Mode of Transmission": "By the fecal-oral route, ingestion of fecally contaminated food or  water, contact with infected animals, consumption of contaminated unpasteurized food and drinks",
+        "Symptoms": "Diarrhea, which can be profuse and watery, preceded by loss of appetite, vomiting, abdominal pain; asymp- tomatic cases can spread the infection to others;\nsymptoms can come and go for up to 30 days",
+        "Incubation Period": "Range 1-12 days Commonly 7 days",
+        "Period of Communicability": "As long as the oocysts are being shed, typically days to weeks.  Shedding may persist after symptoms resolve.",
+        "Criteria for Exclusion from School*": "Exclude until diarrhea has ceased for at least 24 hrs; exclude from food handling and working in sensitive occupations for 48 hrs after recovery; exclude from swimming in public pools (or any recreational water venue)\nwhile symptomatic and for 2 weeks after symptoms resolve",
+        "Reporting Requirement": "Report cases as soon as possible within 7 days"
+    },
+    "Bacterial": {
+        "Mode of Transmission": "Contact with droplets from nose, eyes or mouth of infected person",
+        "Symptoms": "Sudden onset, severe headache, fever, nausea, vomiting, stiff neck\nMay have petechial rash with Neisseria meningitidis\nCan have behavioral changes including altered mental status\nMay have invasive disease with bacteremia or pneumonia",
+        "Incubation Period": "Hib: Unknown (usually 1 to 10 days)",
+        "Period of Communicability": "Unknown; communicable for as long as the organisms are present in the nasopharynx.\nNo longer communicable after 24 hours of antibiotic therapy",
+        "Criteria for Exclusion from School*": "Exclude until after at least 24 hours of antibiotic treatment received, including antibiotics to eliminate carrier state\nExclusion of contacts not indicated.",
+        "Reporting Requirement": "H. influenza, Invasive disease and meningitis, Reportable as soon as possible, within 24 hours"
+    },
+    "Viral (usually enterovirus)": {
+        "Mode of Transmission": "Contact with droplets from nose, eyes or mouth of infected person or fecal material, often from healthy people",
+        "Symptoms": "Sudden onset, severe headache, fever, nausea, vomiting, stiff neck, behavioral changes",
+        "Incubation Period": "3 to 6 days",
+        "Period of Communicability": "Viral shedding can occur from the day before illness until up to 2 weeks after onset.",
+        "Criteria for Exclusion from School*": "Exclude until fever resolved for at least 24 hours without the use of fever-reducing medication.",
+        "Reporting Requirement": "Individual cases are not reportable.\nClusters of cases are reported to local health department."
+    },
+    "Chickenpox (Varicella)": {
+        "Mode of Transmission": "Contact with the chickenpox rash or breathing in respiratory droplets containing the pathogen after an infected person exhales, sneezes, or coughs",
+        "Symptoms": "Fever and generalized rash.\nThere are usually two or three crops of new blisters that scab over then heal, sometimes leaving scars.\nDisease in vaccinated children can be mild or absent of fever with few lesions, which might not be blister-like.",
+        "Incubation Period": "Range 10-21 days Commonly 14-\n17 days",
+        "Period of Communicability": "Until lesions have crusted",
+        "Criteria for Exclusion from School*": "Exclude until all lesions have crusted (and at least 5 days) For vaccinated children with atypical rash: exclude until\nafebrile and no new lesions have developed for at least 24 hours Day Care licensing requirements: exclude at least 6 days after rash onset\nhttp://www.ilga.gov/commission/jcar/adminc ode/089/089004070G03100R.html\nNo exclusion of susceptible contacts unless in a healthcare facility/setting.",
+        "Reporting Requirement": "Cases are reportable as soon as possible but within 24 hours.\nOutbreaks are defined as 3 or more cases that are epidemiologically linked."
+    },
+    "Fifth Disease  (Human Parvovirus)": {
+        "Mode of Transmission": "By breathing in respiratory droplets containing the pathogen after an infected person exhales, sneezes, or coughs",
+        "Symptoms": "Redness of the cheeks and body, \u201cslapped cheek\u201d\u00a0rash.\nMay have mild fever, runny nose, headache Rash may come and go\nfor weeks",
+        "Incubation Period": "Range 4-20 days",
+        "Period of Communicability": "Until rash appears\nIn immunosuppressed persons, communicability may last months-years",
+        "Criteria for Exclusion from School*": "No exclusion unless febrile or other symptoms meeting illness exclusion criteria are present",
+        "Reporting Requirement": "Not reportable"
+    },
+    "German Measles (Rubella)": {
+        "Mode of Transmission": "Contact with droplets from nose, eyes or mouth of infected person; may be transmitted to fetus across the placenta",
+        "Symptoms": "Red or pink rash appearing on face then spreading down the body; sore throat; swollen glands behind ears; low grade fever; may have joint pain",
+        "Incubation Period": "14 to 23 days\n(usually 16 to\n18 days)",
+        "Period of Communicability": "From 7 days before until 7 days after the rash appears\nInfants with congenital rubella can shed the virus for months.",
+        "Criteria for Exclusion from School*": "Exclude cases for 7 days after the onset of the rash.\nExclude susceptible contacts from school or the workplace from days 7-23 following rash onset after last exposure.",
+        "Reporting Requirement": "Reportable as soon as possible, within 24 hours"
+    },
+    "Hand, Foot & Mouth Disease (Coxsackie Virus  and Enterovirus Diseases)": {
+        "Mode of Transmission": "By breathing in respiratory droplets containing the pathogen after an infected person exhales, sneezes, or coughs -Touching feces or objects contaminated with feces, then touching mouth",
+        "Symptoms": "Rash in mouth, hands (palms and fingers), and feet (soles); fever; loss of appetite; may be asymptomatic.",
+        "Incubation Period": "Range 3-5 days",
+        "Period of Communicability": "Most commonly during the first week of illness.  Can persist days to weeks after symptoms resolve.",
+        "Criteria for Exclusion from School*": "Exclude with febrile illness or other symptoms meeting illness exclusion criteria.\nExclude if child cannot maintain hygiene (e.g. excessive drooling) or avoid contact with others.",
+        "Reporting Requirement": "Individual cases are not reportable.\nClusters of 10 epidemiologically linked suspect or confirmed cases within a 10 day period should be\nreported to local health department."
+    },
+    "Head Lice (Parasite)": {
+        "Mode of Transmission": "Direct close person to person contact; less commonly through contact with contaminated objects",
+        "Symptoms": "Itching and scratching of scalp; presence of live lice or pinpoint-sized white eggs (nits) that will\nnot flick off the hair shaft",
+        "Incubation Period": "Commonly 7-\n10 days",
+        "Period of Communicability": "While live lice are present",
+        "Criteria for Exclusion from School*": "Childcare rules: exclude until the morning after the first treatment\nhttp://www.ilga.gov/commission/jcar/adminc ode/089/089004070G03100R.html",
+        "Reporting Requirement": "Not reportable"
+    },
+    "Herpes Simplex (cold sores, skin lesions)\nHSV1 (cold sores) HSV2 (genital lesions)": {
+        "Mode of Transmission": "Direct person to person contact with lesions, secretions form lesions, or saliva",
+        "Symptoms": "Primary infections may have no symptoms; may have fever or malaise; may or may not have rash, vesicular lesions, or ulcers at site, \u201cfever blister\u201d/cold sore\nHSV 1 and HSV2 lesions can appear on other\nparts of the body.",
+        "Incubation Period": "2-12 days",
+        "Period of Communicability": "Most infectious while vesicular lesions are present.\nMay be present with no symptoms",
+        "Criteria for Exclusion from School*": "Exclude from wrestling or contact sports (including practices) if lesions are present on the body (outside the genital area)\nIf large areas of lesions cannot be covered or if exposure to infectious lesions by other students cannot be avoided, the student should be excluded until\nlesions are dried and crusted.",
+        "Reporting Requirement": "Individual cases are not reportable.  Clusters of 2 or more suspect or confirmed cases within a 5 day period that are epidemiologically linked should be reported to the local health department."
+    },
+    "Impetigo (Staphylococcus or Streptococcus bacteria": {
+        "Mode of Transmission": "Direct skin contact (especially through contaminated hands) or nasal discharge or contaminated surfaces",
+        "Symptoms": "Small red pimples or fluid filled blisters with crusted yellow scabs; most often found on face but may be anywhere on body",
+        "Incubation Period": "7 to 10 days",
+        "Period of Communicability": "Until active crusting lesions are gone or after 24 hours on antibiotics",
+        "Criteria for Exclusion from School*": "Sores should be covered and child excluded at the end of the day, to return 24 hours after treatment is started.",
+        "Reporting Requirement": "Individual cases are not reportable.  Clusters of cases should be reported to local health department."
+    },
+    "Measles (Rubeola virus)": {
+        "Mode of Transmission": "Airborne or direct contact with droplets from nose, eyes or mouth of infected person",
+        "Symptoms": "Cough, runny nose, conjunctivitis, fever, rash that starts at head and spreads down and out on body; sore throat; may have Koplik\u2019s spots",
+        "Incubation Period": "7 to 21 days\n(usually 8 to\n12 days)",
+        "Period of Communicability": "From 4 days before until 4 days after rash onset.\nExtremely contagious!",
+        "Criteria for Exclusion from School*": "Exclude for at least 4 days after start of rash.\nSusceptible contacts: Those who do not receive vaccine within 72 hours of exposure shall be excluded for 21 days after onset of last case.",
+        "Reporting Requirement": "As soon as possible, within 3 hours."
+    },
+    "Mpox": {
+        "Mode of Transmission": "Direct skin contact with infected persons rash, scabs or body fluids, touching objects, fabrics (clothing, towels, bedding) and surfaces that have been used by someone with MPV or contact with respiratory secretions.",
+        "Symptoms": "Fever, headache, muscle aches/backache, swollen lymph nodes, chills, exhaustion, respiratory symptoms (sore throat, nasal congestion, or cough), and a rash that may be located on or rear the genitals or anus but can be located other places like the hands, feet, chest, face and mouth. The rash might look like pimples or blisters and may be painful or itchy.",
+        "Incubation Period": "Roughly 1 to 2 weeks. If flu- like symptoms develop, they usually develop a rash 1 to 4 days later.",
+        "Period of Communicability": "From onset of prodrome until the rash has healed, all scabs have fallen off and a fresh layer of skin has formed. This illness typically lasts 2 to 4 weeks.\nProdrome of fever, malaise, headache sometimes sore throat and cough, and lymphadenopathy usually occurs 1-2 days before rash\nonset.",
+        "Criteria for Exclusion from School*": "Exclude until the rash has healed, all scabs have fallen off and a fresh layer of skin has formed.",
+        "Reporting Requirement": "As soon as possible, within 24 hours."
+    },
+    "MRSA (Methicillin-resistant Staph aureus) skin infections": {
+        "Mode of Transmission": "Direct skin contact with infected person, wound drainage or contaminated surfaces; increase\nrisk in crowded conditions;",
+        "Symptoms": "Skin lesions such as furuncles (abscessed hair follicles or \u201cboils\u201d),\ncarbuncles (coalesced",
+        "Incubation Period": "Variable, usually 4-10 days and up to\nmonths; at",
+        "Period of Communicability": "Duration of acute illness if wound drainage present\nDraining wounds are",
+        "Criteria for Exclusion from School*": "Exclude if wound drainage cannot be well contained under a dressing",
+        "Reporting Requirement": "Individual cases are not reportable.\nClusters of 2 or more cases with infections in a"
+    },
+    "": {
+        "Mode of Transmission": "occasional transmission by droplet over short distances",
+        "Symptoms": "masses of furuncles), and abscesses; may have purulence (pus), yellow/white central point, redness",
+        "Incubation Period": "times initially mistaken as spider bite",
+        "Period of Communicability": "very contagious and should be covered at all times.",
+        "Criteria for Exclusion from School*": "Exclude from high-risk activities such as contact team sports if wound cannot be completely covered with a secure bandage that will remain intact throughout sport activity, until completely healed\nExclude from use of pools/whirlpools, etc. until wounds are healed",
+        "Reporting Requirement": "14-day period and with an epidemiological link should be reported to local health department."
+    },
+    "Molluscum contagiosum": {
+        "Mode of Transmission": "Person to person close contact; through sharing of objects such as towels",
+        "Symptoms": "Small flesh colored bumps on the skin that may have a tiny indented center",
+        "Incubation Period": "2 to 7 weeks, as long as 6 months",
+        "Period of Communicability": "When lesions are present; otherwise unknown",
+        "Criteria for Exclusion from School*": "No exclusion.\nProvide education on importance of hand hygiene and avoiding scratching areas.",
+        "Reporting Requirement": "Individual cases are not reportable.  Clusters of cases should be reported to local health\ndepartment."
+    },
+    "Ringworm  (e.g. tinea corporis, tinea capitis)": {
+        "Mode of Transmission": "Direct skin contact with infected person or animal, or contact with surfaces or objects contaminated with fungal spores",
+        "Symptoms": "Skin: red circular patches with raised edges and central clear area; cracked peeling skin between toes;\nScalp: redness, patchy scaly areas with/without hair loss\nCan occur in multiple sites on the body",
+        "Incubation Period": "Typically 4 to\n14 days after exposure",
+        "Period of Communicability": "From onset of lesions until treatment begins and lesion begins to shrink",
+        "Criteria for Exclusion from School*": "If lesion can be kept covered, exclusion are not required.\nIf lesions can NOT be kept covered, exclude from school until 24 hours after treatment begins.",
+        "Reporting Requirement": "Individual cases are not reportable.  Clusters of cases should be reported to local health department."
+    },
+    "Scabies": {
+        "Mode of Transmission": "Prolonged skin-to-skin contact with infested individual; contact with bedding or clothes of infested person",
+        "Symptoms": "Red bumps commonly found in skin folds; burrows appear as tiny whitish or gray lines on skin surface; intense itching, especially at night",
+        "Incubation Period": "4 to 6 weeks,\n1 to 4 days after re- exposure",
+        "Period of Communicability": "From up to 8 weeks before skin rash appears until it has been treated with a scabicide",
+        "Criteria for Exclusion from School*": "Exclude from school and other extracurricular activities until the morning after treatment recommended by the child\u2019s healthcare provider has been started.\nChildcare rules: exclude until the morning after the first treatment.\nhttp://www.ilga.gov/commission/jcar/adminc ode/089/089004070G03100R.html",
+        "Reporting Requirement": "Individual cases are not reportable.  Clusters of cases should be reported to local health department."
+    },
+    "Shingles/Zoster": {
+        "Mode of Transmission": "Direct contact with the rash during blister phase",
+        "Symptoms": "Painful rash that develops typically on one side of the body; may have fever, headache, chills, nausea",
+        "Incubation Period": "None. Anyone with history of chicken pox can develop shingles.",
+        "Period of Communicability": "Shingles cannot be passed from one person to another, but during the blister phase of rash, direct contact with blister fluid of shingles rash can cause chicken pox in non-immune persons.  When crusted over, rash is no longer infectious.",
+        "Criteria for Exclusion from School*": "Exclude if rash cannot be covered, or if child cannot comply with keeping rash covered until crusted over. Exclude if febrile or other symptoms meeting illness exclusion criteria are present",
+        "Reporting Requirement": "Individual cases are not reportable.  Clusters of cases should be reported to local health department."
+    },
+    "Bat Exposures/Animal Bites (Potential for Rabies)": {
+        "Mode of Transmission": "Contact with an infected animal\u2019s\nsaliva through a bite or scratch in the skin, or through mucous",
+        "Symptoms": "In animals, behavior\nchanges may occur, including seeing",
+        "Incubation Period": "Humans:\nsymptom onset usually",
+        "Period of Communicability": "When the virus\nreaches the saliva of the infected animal",
+        "Criteria for Exclusion from School*": "No exclusion.",
+        "Reporting Requirement": "Report potential human exposure to rabies as"
+    }
+}
