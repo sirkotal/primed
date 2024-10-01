@@ -42,6 +42,7 @@ with open("../dataset/Medicine_Details.csv", encoding="utf-8") as csvf:
         side_effects = parse_use_cases_side_effects(row["Side_effects"])
         row["Uses"] = use_cases
         row["Side_effects"] = side_effects
+        row.pop("Image URL", None)
         data[key] = row
 
 with open("../dataset/Medicine_Details.json", "w", encoding="utf-8") as jsonf:
