@@ -72,4 +72,5 @@ def parse_illnesses():
         jsonf.write(json.dumps(data, indent=4))
 
 parse_medicine_details()
+data.clear()
 parse_illnesses()
