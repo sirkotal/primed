@@ -4,5 +4,5 @@ import math
 import matplotlib.pyplot as plt
 import seaborn as sb
 
-df = pd.read_json('./dataset/medicine_details.csv')
+df = pd.read_csv('../dataset/Medicine_Details.csv')
 df.head()
