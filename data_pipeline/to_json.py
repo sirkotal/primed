@@ -1,6 +1,7 @@
 import csv
 import json
 import re
+import ast
 
 data = {}
 
@@ -47,7 +48,7 @@ def parse_medicine_details():
             row.pop("Image URL", None)
             data[key] = row
 
-    with open("../dataset/Medicine_Details.json", "w", encoding="utf-8") as jsonf:
+    with open("../dataset/medicine_details.json", "w", encoding="utf-8") as jsonf:
         jsonf.write(json.dumps(data, indent=4))
 
 
@@ -67,6 +68,12 @@ def parse_illnesses():
             key = remove_urls(row[key_name])
             row.pop(key_name, None)
             data[key] = row
+            if (data[key]["Link"]) != '':
+                data[key]["Link"] = ast.literal_eval(data[key]["Link"])
 
-    with open("../dataset/Sicknesses.json", "w", encoding="utf-8") as jsonf:
+    with open("../dataset/sicknesses.json", "w", encoding="utf-8") as jsonf:
         jsonf.write(json.dumps(data, indent=4))
+
+parse_medicine_details()
+data.clear()
+parse_illnesses()
