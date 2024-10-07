@@ -21,3 +21,26 @@ new_df_medicine['Manufacturer'].value_counts().plot(kind='pie', labels=[label if
 plt.ylabel('')
 plt.title('Medicine Manufacturers')
 plt.show()
+
+numerical_summary = new_df_medicine.select_dtypes(include=['int32']).describe()
+
+formatted_summary = numerical_summary.map(lambda n: f'{int(n)}' if n.is_integer() else f'{n:.2f}')
+
+print(formatted_summary)
+
+new_df_medicine.select_dtypes(include=['int32']).mean()
+new_df_medicine.select_dtypes(include=['int32']).median()
+
+numerical = new_df_medicine.select_dtypes(include=['int32']).columns.tolist()
+
+fig, axes = plt.subplots(math.ceil(len(numerical) / 4), 4, figsize=(25, 25))
+fig.subplots_adjust(hspace=0.5, wspace=0.5)
+axes = axes.ravel()
+
+for col, axis in zip(numerical, axes):
+    sb.boxplot(data=new_df_medicine[col], ax=axis)
+
+for i in range(len(numerical), len(axes)):
+    fig.delaxes(axes[i])
+
+plt.show()
