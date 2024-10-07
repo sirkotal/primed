@@ -15,7 +15,9 @@
         "Period of Communicability": "Bacterial: from onset of symptoms until after start of antibiotics, or as long as there is discharge form the eye\nViral: variable, before symptoms appear and while symptoms are present\n(Allergic and chemical conjunctivitis is not\ncontagious.)",
         "Criteria for Exclusion from School*": "Bacterial, Viral, or unknown etiology:\nExclude if conjunctivitis is accompanied by symptoms of systemic illness or if the child is unable to keep hands away from eye.\nChildcare rules: exclude if purulent drainage until after 24 hours of treatment\nhttp://www.ilga.gov/commission/jcar/adminc ode/089/089004070G03100R.html",
         "Reporting Requirement": "Not required to be reported\nMay notify local health department of large clusters of cases or cases with unusual severity of illness",
-        "Link": "['http://www.cdc.gov/conjunctivitis/index.html']"
+        "Link": [
+            "http://www.cdc.gov/conjunctivitis/index.html"
+        ]
     },
     "Influenza": {
         "Mode of Transmission": "Person to person by respiratory droplets created by coughing or sneezing, or though contact with a contaminated surface and then touching mucus membranes/eyes The virus can live on surfaces for several hours.",
@@ -24,7 +26,12 @@
         "Period of Communicability": "Variable, from 24 hours before onset of symptoms, peaks during first 3 days of illness through 7 days",
         "Criteria for Exclusion from School*": "For 24 hours until both are true: fever-free without using fever- reducing medications and symptoms are improving overall. Upon return and for the next 5 days, CDC recommends enhancing hygiene practices, wearing a well-fitted mask and physical distance from others when indoors as much as possible.\nCriteria may differ in pandemic or novel/variant strain influenza situation.",
         "Reporting Requirement": "Influenza deaths in persons<18 years of age. ICU admissions are reportable within 24 hours.\nInfluenza A, variant virus cases are required to be reported immediately within 3 hours by healthcare providers.",
-        "Link": "['https://dph.illinois.gov/topics-services/diseases-and-conditions/infectious-diseases/cd-school-nurse-guidance/flu-facts-for-parents.html', 'http://www.flu.gov/http://ilga.gov/commission/jcar/admincode/077/077006900D04650R.html', 'http://ilga.gov/commission/jcar/admincode/077/077006900D04680R.html', 'http://ilga.gov/commission/jcar/admincode/077/077006900D04690R.html']"
+        "Link": [
+            "https://dph.illinois.gov/topics-services/diseases-and-conditions/infectious-diseases/cd-school-nurse-guidance/flu-facts-for-parents.html",
+            "http://www.flu.gov/http://ilga.gov/commission/jcar/admincode/077/077006900D04650R.html",
+            "http://ilga.gov/commission/jcar/admincode/077/077006900D04680R.html",
+            "http://ilga.gov/commission/jcar/admincode/077/077006900D04690R.html"
+        ]
     },
     "Mumps": {
         "Mode of Transmission": "Contact with droplets from eyes or mouth of infected person",
@@ -33,7 +40,10 @@
         "Period of Communicability": "Peak infectious time begins 1 to 2 days before swelling to 5 days after but may range from 7 days before to 9 days after. For the purpose of contact tracing and exclusions, the infectious period is 2 days before to 5 days after parotitis.",
         "Criteria for Exclusion from School*": "Exclude cases from school, childcare or workplace until 5 days after onset of parotitis.\nNote: daycare licensing rules require 9 days exclusion; refer to link below. http://www.ilga.gov/commission/j car/admincode/089/089004070G 03100R.html\nSusceptible contacts should be excluded from school or the\nworkplace from days 12-25 after last exposure.",
         "Reporting Requirement": "Report case to local health department within 24 hours.\nOutbreaks: three or more probable or confirmed cases linked by time and place.",
-        "Link": "['http://www.cdc.gov/mumps/index.html', 'http://ilga.gov/commission/jcar/admincode/077/077006900D05500R.html']"
+        "Link": [
+            "http://www.cdc.gov/mumps/index.html",
+            "http://ilga.gov/commission/jcar/admincode/077/077006900D05500R.html"
+        ]
     },
     "Pertussis (Whooping Cough)": {
         "Mode of Transmission": "Contact with droplets from nose, eyes or mouth of infected person",
@@ -42,7 +52,10 @@
         "Period of Communicability": "Before cough onset (with onset of runny nose), continuing until child has been on antibiotics for 5 days If untreated, infectious for 3 weeks after cough begins",
         "Criteria for Exclusion from School*": "School exclusion: Cases must be excluded from school until 5 days of appropriate antibiotic treatment is completed or 21 days after cough onset if no treatment is received.\nSusceptible contacts do not need to be excluded unless they become symptomatic.",
         "Reporting Requirement": "Report as soon as possible, within 24 hours\nOutbreaks:  Five or more cases epidemiologically linked",
-        "Link": "['https://dph.illinois.gov/topics-services/diseases-and-conditions/infectious-diseases/cd-school-nurse-guidance/pertussis-facts-for-parents.html', 'http://www.cdc.gov/pertussis/http://www.ilga.gov/commission/jcar/admincode/077/077006900D07500R.html']"
+        "Link": [
+            "https://dph.illinois.gov/topics-services/diseases-and-conditions/infectious-diseases/cd-school-nurse-guidance/pertussis-facts-for-parents.html",
+            "http://www.cdc.gov/pertussis/http://www.ilga.gov/commission/jcar/admincode/077/077006900D07500R.html"
+        ]
     },
     "RSV": {
         "Mode of Transmission": "Highly contagious; contact with droplets from nose, eyes or mouth of infected person; virus can live on surfaces (toys, tissues, doorknobs) for several hours",
@@ -51,7 +64,10 @@
         "Period of Communicability": "Variable, from the day before until 3 to 8 days or longer; may last up to 3 to 4 weeks",
         "Criteria for Exclusion from School*": "For 24 hours until both are true: fever-free without using fever- reducing medications and symptoms are improving overall. Upon return and for the next 5 days, CDC recommends enhancing hygiene practices, wearing a well-fitted mask and physical distance from others when indoors as much as possible.",
         "Reporting Requirement": "RSV deaths in persons<18 years of age and ICU admissions are reportable within 24 hours.",
-        "Link": "['https://dph.illinois.gov/topics-services/diseases-and-conditions/infectious-diseases/cd-school-nurse-guidance/rsv-facts-for-parents.html', 'https://www.cdc.gov/rsv/https://www.cdc.gov/respiratory-viruses/index.html']"
+        "Link": [
+            "https://dph.illinois.gov/topics-services/diseases-and-conditions/infectious-diseases/cd-school-nurse-guidance/rsv-facts-for-parents.html",
+            "https://www.cdc.gov/rsv/https://www.cdc.gov/respiratory-viruses/index.html"
+        ]
     },
     "SARS-CoV-2 (COVID-19)": {
         "Mode of Transmission": "Breathing in air when close to an infected person who is exhaling small droplets and particles that contain the virus.\nHaving these small droplets and particles that contain virus land on the eyes, nose, or mouth, especially through splashes and sprays like a cough or sneeze.\nTouching eyes, nose, or mouth with hands that have the virus on them.",
@@ -60,7 +76,9 @@
         "Period of Communicability": "From 2 days before symptom onset through Day 10 after symptom onset",
         "Criteria for Exclusion from School*": "For 24 hours until both are true: fever-free without using fever- reducing medications and symptoms are improving overall. Upon return and for the next 5 days, CDC recommends enhancing hygiene practices, wearing a well-fitted mask and physical distance from others when indoors as much as possible.",
         "Reporting Requirement": "COVID-19 deaths in persons<18 years of age and ICU admissions are reportable within 24 hours.\nOutbreaks with hospitalization or deaths related to COVID-19 involving 3 or more in a core group of individuals within a 10-day period or if the school is no longer able to safely operate and provide essential services.",
-        "Link": "['https://www.cdc.gov/respiratory-viruses/index.html']"
+        "Link": [
+            "https://www.cdc.gov/respiratory-viruses/index.html"
+        ]
     },
     "Strep throat/Scarlet Fever": {
         "Mode of Transmission": "Contact with droplets from nose and mouth; close crowded contact, direct contact",
@@ -69,7 +87,10 @@
         "Period of Communicability": "Highest during acute infection; no longer contagious within 24 hours after antibiotics",
         "Criteria for Exclusion from School*": "Schools: Exclude until fever free without the use of fever-reducing medications or symptoms improving if fever not present AND on appropriate antibiotics for AT LEAST 12 hours.\nHowever, during outbreaks or in the setting of recurrent infection, IDPH recommends individuals stay home for at least 24 hours after on effective antibiotics AND fever free or symptoms improving if fever not present. Child Care: rules: Exclude until 24 hours after treatment has been initiated and until the child has been without fever for 24 hours;\nhttp://www.ilga.gov/commission/jcar/adminc\node/089/089004070G03100R.html",
         "Reporting Requirement": "Clusters of 10 epidemiologically linked cases of strep throat/scarlet fever within a 10-day period are reportable to the local health department.\nInvasive disease from streptococcal bacteria is reportable.",
-        "Link": "['https://dph.illinois.gov/topics-services/diseases-and-conditions/infectious-diseases/cd-school-nurse-guidance/strep-throat-facts-for-parents.html', 'http://www.cdc.gov/groupastrep/http://www.ilga.gov/commission/jcar/admincode/077/077006900D06700R.html']"
+        "Link": [
+            "https://dph.illinois.gov/topics-services/diseases-and-conditions/infectious-diseases/cd-school-nurse-guidance/strep-throat-facts-for-parents.html",
+            "http://www.cdc.gov/groupastrep/http://www.ilga.gov/commission/jcar/admincode/077/077006900D06700R.html"
+        ]
     },
     "TB (tuberculosis)": {
         "Mode of Transmission": "Airborne inhalation of droplets from nose and mouth of diseased person (children usually contract TB from close contact with a diseased adult)",
@@ -78,7 +99,9 @@
         "Period of Communicability": "Individuals with infection but without active disease (latent TB) are not infectious. Individuals with active disease are infectious until treatment.",
         "Criteria for Exclusion from School*": "For active disease: after therapy started, adherence documented, symptoms diminished, and determined to be non-infectious; consult with public health officials; no exclusion for latent infection",
         "Reporting Requirement": "Report suspect or confirmed TB cases to local health department within 7 days",
-        "Link": "['http://www.cdc.gov/TB/http://www.ilga.gov/commission/jcar/admincode/077/07700696sections.html']"
+        "Link": [
+            "http://www.cdc.gov/TB/http://www.ilga.gov/commission/jcar/admincode/077/07700696sections.html"
+        ]
     },
     "Campylobacteriosis": {
         "Mode of Transmission": "Ingestion of undercooked meat, contaminated food or water, or raw milk",
@@ -87,7 +110,10 @@
         "Period of Communicability": "Throughout illness (usually 1-2 weeks, but up to 7 weeks without treatment)",
         "Criteria for Exclusion from School*": "Exclude until diarrhea has ceased for at least 24 hours; additional restrictions may apply.",
         "Reporting Requirement": "Cases of campylobacteriosis are reportable to the local health department within 7 days.",
-        "Link": "['http://www.cdc.gov/foodsafety/diseases/campylobacter/index.html', 'http://www.ilga.gov/commission/jcar/admincode/077/077006900D03350R.html']"
+        "Link": [
+            "http://www.cdc.gov/foodsafety/diseases/campylobacter/index.html",
+            "http://www.ilga.gov/commission/jcar/admincode/077/077006900D03350R.html"
+        ]
     },
     "C. diff (clostridium difficile) infections": {
         "Mode of Transmission": "Person-to-person through inadequate handwashing or on contaminated objects or surfaces, and ingestion of spores",
@@ -96,7 +122,9 @@
         "Period of Communicability": "During active infection (while symptomatic); can continue to shed spores when asymptomatic",
         "Criteria for Exclusion from School*": "Exclude while symptomatic and until diarrhea has ceased for 24- 48 hours",
         "Reporting Requirement": "Individual cases do not have to be reported. Clusters of cases should be reported to the local health department.",
-        "Link": "['http://www.cdc.gov/HAI/organisms/cdiff/Cdiff_infect.html']"
+        "Link": [
+            "http://www.cdc.gov/HAI/organisms/cdiff/Cdiff_infect.html"
+        ]
     },
     "E. coli infections (E. coli O157:H7 and Other Shiga Toxin Producing E. coli))": {
         "Mode of Transmission": "Fecal-oral: person-to person, from\ncontaminated food or liquids, contact with infected animals",
@@ -114,7 +142,9 @@
         "Period of Communicability": "During active illness and until organism is no longer detected in feces",
         "Criteria for Exclusion from School*": "Exclude until diarrhea, vomiting, and fever have ceased for at least 24 hours; additional restrictions may apply.  Release specimens shall be required for food handlers, health care workers, and sensitive\noccupation.",
         "Reporting Requirement": "Report cases as soon as possible within 7 days",
-        "Link": "['http://www.cdc.gov/salmonella/http://ilga.gov/commission/jcar/admincode/077/077006900D06300R.html']"
+        "Link": [
+            "http://www.cdc.gov/salmonella/http://ilga.gov/commission/jcar/admincode/077/077006900D06300R.html"
+        ]
     },
     "Shigellosis": {
         "Mode of Transmission": "Fecal-oral: frequently person-to- person; also via contaminated food or water",
@@ -123,7 +153,9 @@
         "Period of Communicability": "During active illness and until no longer detected; treatment can shorten duration",
         "Criteria for Exclusion from School*": "Exclude until diarrhea, vomiting, and fever have ceased for at least 24 hours; additional restrictions may apply.  Release specimens shall be required for food handlers, health care workers, and sensitive occupations.",
         "Reporting Requirement": "Report cases as soon as possible within 7 days",
-        "Link": "['http://www.cdc.gov/shigella/http://ilga.gov/commission/jcar/admincode/077/077006900D06400R.html']"
+        "Link": [
+            "http://www.cdc.gov/shigella/http://ilga.gov/commission/jcar/admincode/077/077006900D06400R.html"
+        ]
     },
     "Norovirus": {
         "Mode of Transmission": "Contact with food, water or surfaces contaminated with vomit or feces, person-to-person, aerosolized vomit",
@@ -132,7 +164,9 @@
         "Period of Communicability": "Usually from onset until 2-3 days after recovery; typically, virus is no longer shed after 10 days",
         "Criteria for Exclusion from School*": "Exclude until diarrhea, vomiting, and fever have ceased for 24hours\nExclude from food handling for 48 hours after recovery",
         "Reporting Requirement": "Individual cases do not have to be reported. Clusters of cases should be reported to the local health department.",
-        "Link": "['https://dph.illinois.gov/topics-services/diseases-and-conditions/infectious-diseases/cd-school-nurse-guidance/norovirus-facts-for-parents.html']"
+        "Link": [
+            "https://dph.illinois.gov/topics-services/diseases-and-conditions/infectious-diseases/cd-school-nurse-guidance/norovirus-facts-for-parents.html"
+        ]
     },
     "Rotavirus": {
         "Mode of Transmission": "By the fecal-oral route through direct contact or contact with contaminated hands, objects, food, or water",
@@ -150,7 +184,9 @@
         "Period of Communicability": "Communicability greatest in 2 weeks before onset of illness, and through 7 days after onset of jaundice",
         "Criteria for Exclusion from School*": "Exclude from school and daycare for 7 days after onset of jaundice or for two weeks after onset of symptoms if no jaundice present Exclude food handlers, healthcare workers, or workers in sensitive occupations for 7 days after onset of jaundice, or two weeks after onset of initial\nsymptoms, if jaundice is not present",
         "Reporting Requirement": "Report cases as soon as possible within 24 hours.\nOutbreaks: Two or more cases linked by time and place.",
-        "Link": "['http://www.cdc.gov/hepatitis/http://ilga.gov/commission/jcar/admincode/077/077006900D04500R.html']"
+        "Link": [
+            "http://www.cdc.gov/hepatitis/http://ilga.gov/commission/jcar/admincode/077/077006900D04500R.html"
+        ]
     },
     "Giardiasis": {
         "Mode of Transmission": "By the fecal-oral route, ingestion of contaminated food or water, person-to-person transmission of cysts from infected feces; contaminated water (e.g. water play tables)",
@@ -168,7 +204,10 @@
         "Period of Communicability": "As long as the oocysts are being shed, typically days to weeks.  Shedding may persist after symptoms resolve.",
         "Criteria for Exclusion from School*": "Exclude until diarrhea has ceased for at least 24 hrs; exclude from food handling and working in sensitive occupations for 48 hrs after recovery; exclude from swimming in public pools (or any recreational water venue)\nwhile symptomatic and for 2 weeks after symptoms resolve",
         "Reporting Requirement": "Report cases as soon as possible within 7 days",
-        "Link": "['http://www.cdc.gov/parasites/crypto/http://ilga.gov/commission/jcar/admincode/077/077006900D03650R.html', 'http://www.cdc.gov/parasites/crypto/childcare/prevent.html']"
+        "Link": [
+            "http://www.cdc.gov/parasites/crypto/http://ilga.gov/commission/jcar/admincode/077/077006900D03650R.html",
+            "http://www.cdc.gov/parasites/crypto/childcare/prevent.html"
+        ]
     },
     "Bacterial": {
         "Mode of Transmission": "Contact with droplets from nose, eyes or mouth of infected person",
@@ -177,7 +216,11 @@
         "Period of Communicability": "Unknown; communicable for as long as the organisms are present in the nasopharynx.\nNo longer communicable after 24 hours of antibiotic therapy",
         "Criteria for Exclusion from School*": "Exclude until after at least 24 hours of antibiotic treatment received, including antibiotics to eliminate carrier state\nExclusion of contacts not indicated.",
         "Reporting Requirement": "H. influenza, Invasive disease and meningitis, Reportable as soon as possible, within 24 hours",
-        "Link": "['http://www.cdc.gov/meningitis/bacterial.html', 'http://www.cdc.gov/hi-disease/about/causes-transmission.html', 'http://ilga.gov/commission/jcar/admincode/077/077006900D04410R.html']"
+        "Link": [
+            "http://www.cdc.gov/meningitis/bacterial.html",
+            "http://www.cdc.gov/hi-disease/about/causes-transmission.html",
+            "http://ilga.gov/commission/jcar/admincode/077/077006900D04410R.html"
+        ]
     },
     "Viral (usually enterovirus)": {
         "Mode of Transmission": "Contact with droplets from nose, eyes or mouth of infected person or fecal material, often from healthy people",
@@ -186,7 +229,9 @@
         "Period of Communicability": "Viral shedding can occur from the day before illness until up to 2 weeks after onset.",
         "Criteria for Exclusion from School*": "Exclude until fever resolved for at least 24 hours without the use of fever-reducing medication.",
         "Reporting Requirement": "Individual cases are not reportable.\nClusters of cases are reported to local health department.",
-        "Link": "['http://www.cdc.gov/meningitis/viral.html']"
+        "Link": [
+            "http://www.cdc.gov/meningitis/viral.html"
+        ]
     },
     "Chickenpox (Varicella)": {
         "Mode of Transmission": "Contact with the chickenpox rash or breathing in respiratory droplets containing the pathogen after an infected person exhales, sneezes, or coughs",
@@ -195,7 +240,9 @@
         "Period of Communicability": "Until lesions have crusted",
         "Criteria for Exclusion from School*": "Exclude until all lesions have crusted (and at least 5 days) For vaccinated children with atypical rash: exclude until\nafebrile and no new lesions have developed for at least 24 hours Day Care licensing requirements: exclude at least 6 days after rash onset\nhttp://www.ilga.gov/commission/jcar/adminc ode/089/089004070G03100R.html\nNo exclusion of susceptible contacts unless in a healthcare facility/setting.",
         "Reporting Requirement": "Cases are reportable as soon as possible but within 24 hours.\nOutbreaks are defined as 3 or more cases that are epidemiologically linked.",
-        "Link": "['http://www.cdc.gov/chickenpox/http://ilga.gov/commission/jcar/admincode/077/077006900D03500R.html']"
+        "Link": [
+            "http://www.cdc.gov/chickenpox/http://ilga.gov/commission/jcar/admincode/077/077006900D03500R.html"
+        ]
     },
     "Fifth Disease  (Human Parvovirus)": {
         "Mode of Transmission": "By breathing in respiratory droplets containing the pathogen after an infected person exhales, sneezes, or coughs",
@@ -204,7 +251,9 @@
         "Period of Communicability": "Until rash appears\nIn immunosuppressed persons, communicability may last months-years",
         "Criteria for Exclusion from School*": "No exclusion unless febrile or other symptoms meeting illness exclusion criteria are present",
         "Reporting Requirement": "Not reportable",
-        "Link": "['http://www.cdc.gov/parvovirusB19/fifth-disease.html']"
+        "Link": [
+            "http://www.cdc.gov/parvovirusB19/fifth-disease.html"
+        ]
     },
     "German Measles (Rubella)": {
         "Mode of Transmission": "Contact with droplets from nose, eyes or mouth of infected person; may be transmitted to fetus across the placenta",
@@ -213,7 +262,9 @@
         "Period of Communicability": "From 7 days before until 7 days after the rash appears\nInfants with congenital rubella can shed the virus for months.",
         "Criteria for Exclusion from School*": "Exclude cases for 7 days after the onset of the rash.\nExclude susceptible contacts from school or the workplace from days 7-23 following rash onset after last exposure.",
         "Reporting Requirement": "Reportable as soon as possible, within 24 hours",
-        "Link": "['http://www.cdc.gov/rubella/http://ilga.gov/commission/jcar/admincode/077/077006900D06200R.html']"
+        "Link": [
+            "http://www.cdc.gov/rubella/http://ilga.gov/commission/jcar/admincode/077/077006900D06200R.html"
+        ]
     },
     "Hand, Foot & Mouth Disease (Coxsackie Virus  and Enterovirus Diseases)": {
         "Mode of Transmission": "By breathing in respiratory droplets containing the pathogen after an infected person exhales, sneezes, or coughs -Touching feces or objects contaminated with feces, then touching mouth",
@@ -222,7 +273,9 @@
         "Period of Communicability": "Most commonly during the first week of illness.  Can persist days to weeks after symptoms resolve.",
         "Criteria for Exclusion from School*": "Exclude with febrile illness or other symptoms meeting illness exclusion criteria.\nExclude if child cannot maintain hygiene (e.g. excessive drooling) or avoid contact with others.",
         "Reporting Requirement": "Individual cases are not reportable.\nClusters of 10 epidemiologically linked suspect or confirmed cases within a 10 day period should be\nreported to local health department.",
-        "Link": "['http://www.cdc.gov/hand-foot-mouth/index.html']"
+        "Link": [
+            "http://www.cdc.gov/hand-foot-mouth/index.html"
+        ]
     },
     "Head Lice (Parasite)": {
         "Mode of Transmission": "Direct close person to person contact; less commonly through contact with contaminated objects",
@@ -249,7 +302,10 @@
         "Period of Communicability": "Until active crusting lesions are gone or after 24 hours on antibiotics",
         "Criteria for Exclusion from School*": "Sores should be covered and child excluded at the end of the day, to return 24 hours after treatment is started.",
         "Reporting Requirement": "Individual cases are not reportable.  Clusters of cases should be reported to local health department.",
-        "Link": "['http://www.cdc.gov/groupAstrep/index.html', 'http://www.cdc.gov/mrsa/community/schools/index.html']"
+        "Link": [
+            "http://www.cdc.gov/groupAstrep/index.html",
+            "http://www.cdc.gov/mrsa/community/schools/index.html"
+        ]
     },
     "Measles (Rubeola virus)": {
         "Mode of Transmission": "Airborne or direct contact with droplets from nose, eyes or mouth of infected person",
@@ -258,7 +314,10 @@
         "Period of Communicability": "From 4 days before until 4 days after rash onset.\nExtremely contagious!",
         "Criteria for Exclusion from School*": "Exclude for at least 4 days after start of rash.\nSusceptible contacts: Those who do not receive vaccine within 72 hours of exposure shall be excluded for 21 days after onset of last case.",
         "Reporting Requirement": "As soon as possible, within 3 hours.",
-        "Link": "['http://www.cdc.gov/measles/hcp/index.html', 'http://ilga.gov/commission/jcar/admincode/077/077006900D05200R.html']"
+        "Link": [
+            "http://www.cdc.gov/measles/hcp/index.html",
+            "http://ilga.gov/commission/jcar/admincode/077/077006900D05200R.html"
+        ]
     },
     "Mpox": {
         "Mode of Transmission": "Direct skin contact with infected persons rash, scabs or body fluids, touching objects, fabrics (clothing, towels, bedding) and surfaces that have been used by someone with MPV or contact with respiratory secretions.",
@@ -276,7 +335,9 @@
         "Period of Communicability": "Duration of acute illness if wound drainage present\nDraining wounds are",
         "Criteria for Exclusion from School*": "Exclude if wound drainage cannot be well contained under a dressing",
         "Reporting Requirement": "Individual cases are not reportable.\nClusters of 2 or more cases with infections in a",
-        "Link": "['http://www.cdc.gov/mrsa/index.html']"
+        "Link": [
+            "http://www.cdc.gov/mrsa/index.html"
+        ]
     },
     "": {
         "Mode of Transmission": "occasional transmission by droplet over short distances",
@@ -285,7 +346,11 @@
         "Period of Communicability": "very contagious and should be covered at all times.",
         "Criteria for Exclusion from School*": "Exclude from high-risk activities such as contact team sports if wound cannot be completely covered with a secure bandage that will remain intact throughout sport activity, until completely healed\nExclude from use of pools/whirlpools, etc. until wounds are healed",
         "Reporting Requirement": "14-day period and with an epidemiological link should be reported to local health department.",
-        "Link": "['http://www.cdc.gov/mrsa/community/schools/index.html', 'http://www.cdc.gov/mrsa/community/team-hc-providers/index.html', 'http://ilga.gov/commission/jcar/admincode/077/077006900D06580R.html']"
+        "Link": [
+            "http://www.cdc.gov/mrsa/community/schools/index.html",
+            "http://www.cdc.gov/mrsa/community/team-hc-providers/index.html",
+            "http://ilga.gov/commission/jcar/admincode/077/077006900D06580R.html"
+        ]
     },
     "Molluscum contagiosum": {
         "Mode of Transmission": "Person to person close contact; through sharing of objects such as towels",
@@ -303,7 +368,9 @@
         "Period of Communicability": "From onset of lesions until treatment begins and lesion begins to shrink",
         "Criteria for Exclusion from School*": "If lesion can be kept covered, exclusion are not required.\nIf lesions can NOT be kept covered, exclude from school until 24 hours after treatment begins.",
         "Reporting Requirement": "Individual cases are not reportable.  Clusters of cases should be reported to local health department.",
-        "Link": "['http://www.cdc.gov/fungal/diseases/ringworm/index.html']"
+        "Link": [
+            "http://www.cdc.gov/fungal/diseases/ringworm/index.html"
+        ]
     },
     "Scabies": {
         "Mode of Transmission": "Prolonged skin-to-skin contact with infested individual; contact with bedding or clothes of infested person",

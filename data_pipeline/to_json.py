@@ -1,6 +1,7 @@
 import csv
 import json
 import re
+import ast
 
 data = {}
 
@@ -35,7 +36,7 @@ def parse_use_cases_side_effects(input_string):
     return use_cases
 
 def parse_medicine_details():
-    with open("./dataset/Medicine_Details.csv", encoding="utf-8") as csvf:
+    with open("../dataset/Medicine_Details.csv", encoding="utf-8") as csvf:
         csvReader = csv.DictReader(csvf)
 
         for row in csvReader:
@@ -47,7 +48,7 @@ def parse_medicine_details():
             row.pop("Image URL", None)
             data[key] = row
 
-    with open("./dataset/medicine_details.json", "w", encoding="utf-8") as jsonf:
+    with open("../dataset/medicine_details.json", "w", encoding="utf-8") as jsonf:
         jsonf.write(json.dumps(data, indent=4))
 
 
@@ -59,7 +60,7 @@ def remove_urls(text): # deletes everything in a string from the point where a u
     return text.strip()
 
 def parse_illnesses():
-    with open("./dataset/Sicknesses_clean.csv", encoding="utf-8") as csvf:
+    with open("../dataset/Sicknesses_clean.csv", encoding="utf-8") as csvf:
         csvReader = csv.DictReader(csvf)
         key_name = "Disease/ Illness"
 
@@ -67,8 +68,10 @@ def parse_illnesses():
             key = remove_urls(row[key_name])
             row.pop(key_name, None)
             data[key] = row
+            if (data[key]["Link"]) != '':
+                data[key]["Link"] = ast.literal_eval(data[key]["Link"])
 
-    with open("./dataset/sicknesses.json", "w", encoding="utf-8") as jsonf:
+    with open("../dataset/sicknesses.json", "w", encoding="utf-8") as jsonf:
         jsonf.write(json.dumps(data, indent=4))
 
 parse_medicine_details()
