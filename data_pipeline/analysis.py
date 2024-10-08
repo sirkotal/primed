@@ -3,9 +3,7 @@ import numpy as np
 import math
 import matplotlib.pyplot as plt
 import seaborn as sb
-# from sqlalchemy import create_engine
-
-# engine = create_engine('sqlite://', echo=False)
+from processing import convert_json_to_sql
 
 df_medicine = pd.read_json('../dataset/medicine_details.json')
 new_df_medicine = df_medicine.transpose()
@@ -48,4 +46,4 @@ for i in range(len(numerical), len(axes)):
 
 plt.show()
 
-# new_df_medicine.to_sql(name='medicine', con=engine)
+convert_json_to_sql(new_df_medicine)
