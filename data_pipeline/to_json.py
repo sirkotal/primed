@@ -74,6 +74,40 @@ def parse_illnesses():
     with open("../dataset/sicknesses.json", "w", encoding="utf-8") as jsonf:
         jsonf.write(json.dumps(data, indent=4))
 
+def parse_companies():
+    with open("../dataset/Pharmaceutical_companies.csv", encoding="utf-8") as csvf:
+        csvReader = csv.DictReader(csvf)
+        key_name = "Company Name"
+
+        for row in csvReader:
+            key = row["Company Name"]
+            year = row["Year"]
+            description = row["Description"]
+            data[key] = row
+
+    with open("../dataset/companies.json", "w", encoding="utf-8") as jsonf:
+        jsonf.write(json.dumps(data, indent=4))
+
+def parse_diseases():
+    with open("../dataset/Diseases.csv", encoding="utf-8") as csvf:
+        csvReader = csv.DictReader(csvf)
+        key_name = "Disease"
+
+        for row in csvReader:
+            key = row["Disease"]
+            primary_organ = row["Primary organ/body part affected"]
+            autoantibodies = row["Autoantibodies"]
+            acceptance = row["Acceptance as an autoimmune disease"]
+            prevalence = row["Prevalence rate (US)"]
+            data[key] = row
+    
+    with open("../dataset/diseases.json", "w", encoding="utf-8") as jsonf:
+        jsonf.write(json.dumps(data, indent=4))
+
 parse_medicine_details()
 data.clear()
 parse_illnesses()
+data.clear()
+parse_companies()
+data.clear()
+parse_diseases()

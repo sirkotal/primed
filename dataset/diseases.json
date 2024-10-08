@@ -1,0 +1,751 @@
+{
+    "Alopecia areata": {
+        "Disease": "Alopecia areata",
+        "Primary organ/body part affected": "Hair follicles",
+        "Autoantibodies": "None specific",
+        "Acceptance as an autoimmune disease": "Confirmed",
+        "Prevalence rate (US)": "2.1%"
+    },
+    "Autoimmune angioedema": {
+        "Disease": "Autoimmune angioedema",
+        "Primary organ/body part affected": "Skin",
+        "Autoantibodies": "C1 inhibitor",
+        "Acceptance as an autoimmune disease": "Probable",
+        "Prevalence rate (US)": "Less than 5,000"
+    },
+    "Autoimmune progesterone dermatitis": {
+        "Disease": "Autoimmune progesterone dermatitis",
+        "Primary organ/body part affected": "Skin",
+        "Autoantibodies": "Progesterone",
+        "Acceptance as an autoimmune disease": "Probable",
+        "Prevalence rate (US)": "Extremely rare"
+    },
+    "Autoimmune urticaria": {
+        "Disease": "Autoimmune urticaria",
+        "Primary organ/body part affected": "Skin",
+        "Autoantibodies": "IgG against IgE or IgE receptor",
+        "Acceptance as an autoimmune disease": "Probable",
+        "Prevalence rate (US)": "Not well established"
+    },
+    "Bullous pemphigoid": {
+        "Disease": "Bullous pemphigoid",
+        "Primary organ/body part affected": "Skin",
+        "Autoantibodies": "Anti-BP180, Anti-BP230",
+        "Acceptance as an autoimmune disease": "Confirmed",
+        "Prevalence rate (US)": "6-30 per 100,000 (mostly older adults)"
+    },
+    "Cicatricial pemphigoid": {
+        "Disease": "Cicatricial pemphigoid",
+        "Primary organ/body part affected": "Mucous membranes, sometimes skin",
+        "Autoantibodies": "Anti-BP180, Anti-BP230",
+        "Acceptance as an autoimmune disease": "Confirmed",
+        "Prevalence rate (US)": "Rare"
+    },
+    "Dermatitis herpetiformis": {
+        "Disease": "Dermatitis herpetiformis",
+        "Primary organ/body part affected": "Skin",
+        "Autoantibodies": "Anti-tissue transglutaminase",
+        "Acceptance as an autoimmune disease": "Confirmed",
+        "Prevalence rate (US)": "10 per 100,000"
+    },
+    "Dermatomyositis": {
+        "Disease": "Dermatomyositis",
+        "Primary organ/body part affected": "Skin and muscles",
+        "Autoantibodies": "Anti-Jo1, Anti-Mi2, Anti-SRP, Anti-TIF1",
+        "Acceptance as an autoimmune disease": "Confirmed",
+        "Prevalence rate (US)": "9 in 1,000,000"
+    },
+    "Discoid lupus erythematosus": {
+        "Disease": "Discoid lupus erythematosus",
+        "Primary organ/body part affected": "Skin",
+        "Autoantibodies": "ANA, Anti-dsDNA, Anti-Sm",
+        "Acceptance as an autoimmune disease": "Confirmed",
+        "Prevalence rate (US)": "Part of SLE prevalence (20-150 per 100,000)"
+    },
+    "Epidermolysis bullosa acquisita": {
+        "Disease": "Epidermolysis bullosa acquisita",
+        "Primary organ/body part affected": "Skin",
+        "Autoantibodies": "Anti-type VII collagen",
+        "Acceptance as an autoimmune disease": "Confirmed",
+        "Prevalence rate (US)": "Extremely rare"
+    },
+    "Erythema nodosum": {
+        "Disease": "Erythema nodosum",
+        "Primary organ/body part affected": "Skin",
+        "Autoantibodies": "None specific",
+        "Acceptance as an autoimmune disease": "Possible",
+        "Prevalence rate (US)": "Not well established"
+    },
+    "Gestational pemphigoid": {
+        "Disease": "Gestational pemphigoid",
+        "Primary organ/body part affected": "Skin",
+        "Autoantibodies": "Anti-BP180, Anti-BP230",
+        "Acceptance as an autoimmune disease": "Confirmed",
+        "Prevalence rate (US)": "Rare"
+    },
+    "Hidradenitis suppurativa": {
+        "Disease": "Hidradenitis suppurativa",
+        "Primary organ/body part affected": "Skin",
+        "Autoantibodies": "None specific",
+        "Acceptance as an autoimmune disease": "Uncertain",
+        "Prevalence rate (US)": "1-4%"
+    },
+    "Lichen planus": {
+        "Disease": "Lichen planus",
+        "Primary organ/body part affected": "Skin, mucous membranes",
+        "Autoantibodies": "None specific",
+        "Acceptance as an autoimmune disease": "Probable",
+        "Prevalence rate (US)": "1%"
+    },
+    "Lichen sclerosus": {
+        "Disease": "Lichen sclerosus",
+        "Primary organ/body part affected": "Skin",
+        "Autoantibodies": "None specific",
+        "Acceptance as an autoimmune disease": "Probable",
+        "Prevalence rate (US)": "Rare"
+    },
+    "Linear IgA disease": {
+        "Disease": "Linear IgA disease",
+        "Primary organ/body part affected": "Skin",
+        "Autoantibodies": "Anti-epidermal basement membrane IgA",
+        "Acceptance as an autoimmune disease": "Confirmed",
+        "Prevalence rate (US)": "Extremely rare"
+    },
+    "Morphea": {
+        "Disease": "Morphea",
+        "Primary organ/body part affected": "Skin",
+        "Autoantibodies": "None specific",
+        "Acceptance as an autoimmune disease": "Probable",
+        "Prevalence rate (US)": "Not well established"
+    },
+    "Psoriasis": {
+        "Disease": "Psoriasis",
+        "Primary organ/body part affected": "Skin",
+        "Autoantibodies": "Various, not specific",
+        "Acceptance as an autoimmune disease": "Confirmed",
+        "Prevalence rate (US)": "2-3%"
+    },
+    "Pemphigus vulgaris": {
+        "Disease": "Pemphigus vulgaris",
+        "Primary organ/body part affected": "Skin and mucous membranes",
+        "Autoantibodies": "Anti-desmoglein 3, Anti-desmoglein 1",
+        "Acceptance as an autoimmune disease": "Confirmed",
+        "Prevalence rate (US)": "1-5 per 100,000"
+    },
+    "Scleroderma (systemic sclerosis)": {
+        "Disease": "Scleroderma (systemic sclerosis)",
+        "Primary organ/body part affected": "Skin, organs",
+        "Autoantibodies": "ANA, anti-Scl-70, anti-centromere",
+        "Acceptance as an autoimmune disease": "Confirmed",
+        "Prevalence rate (US)": "240 per 1,000,000"
+    },
+    "Vitiligo": {
+        "Disease": "Vitiligo",
+        "Primary organ/body part affected": "Skin",
+        "Autoantibodies": "Various, not specific",
+        "Acceptance as an autoimmune disease": "Confirmed",
+        "Prevalence rate (US)": "1%"
+    },
+    "Autoimmune enteropathy": {
+        "Disease": "Autoimmune enteropathy",
+        "Primary organ/body part affected": "Small intestine",
+        "Autoantibodies": "Anti-enterocyte antibodies",
+        "Acceptance as an autoimmune disease": "Probable",
+        "Prevalence rate (US)": "Rare"
+    },
+    "Autoimmune hepatitis": {
+        "Disease": "Autoimmune hepatitis",
+        "Primary organ/body part affected": "Liver",
+        "Autoantibodies": "ANA, ASMA, anti-LKM1",
+        "Acceptance as an autoimmune disease": "Confirmed",
+        "Prevalence rate (US)": "1 in 10,000 to 1 in 50,000"
+    },
+    "Celiac disease": {
+        "Disease": "Celiac disease",
+        "Primary organ/body part affected": "Small intestine",
+        "Autoantibodies": "Anti-tissue transglutaminase antibodies (tTG), Endomysial antibody (EMA), Deamidated gliadin peptide (DGP)",
+        "Acceptance as an autoimmune disease": "Confirmed",
+        "Prevalence rate (US)": "1 in 100"
+    },
+    "Crohn's disease": {
+        "Disease": "Crohn's disease",
+        "Primary organ/body part affected": "Digestive tract",
+        "Autoantibodies": "ASCA, Anti-OmpC, Anti-CBir1, ANCA",
+        "Acceptance as an autoimmune disease": "Probable",
+        "Prevalence rate (US)": "201 per 100,000 adults"
+    },
+    "Pernicious anemia": {
+        "Disease": "Pernicious anemia",
+        "Primary organ/body part affected": "Stomach",
+        "Autoantibodies": "Anti-IF, Anti-parietal cell",
+        "Acceptance as an autoimmune disease": "Confirmed",
+        "Prevalence rate (US)": "0.1%"
+    },
+    "Ulcerative colitis": {
+        "Disease": "Ulcerative colitis",
+        "Primary organ/body part affected": "Colon and rectum",
+        "Autoantibodies": "pANCA, ASCA",
+        "Acceptance as an autoimmune disease": "Probable",
+        "Prevalence rate (US)": "249 per 100,000 adults"
+    },
+    "Rheumatic heart disease": {
+        "Disease": "Rheumatic heart disease",
+        "Primary organ/body part affected": "Heart valves",
+        "Autoantibodies": "Anti-streptolysin O (ASO), anti-DNase B",
+        "Acceptance as an autoimmune disease": "Confirmed",
+        "Prevalence rate (US)": "Declining due to improved treatment of strep throat"
+    },
+    "Kawasaki disease": {
+        "Disease": "Kawasaki disease",
+        "Primary organ/body part affected": "Coronary arteries",
+        "Autoantibodies": "Unknown",
+        "Acceptance as an autoimmune disease": "Probable",
+        "Prevalence rate (US)": "20 per 100,000 children under age 5"
+    },
+    "Giant cell arteritis": {
+        "Disease": "Giant cell arteritis",
+        "Primary organ/body part affected": "Large and medium arteries, can affect coronary arteries",
+        "Autoantibodies": "None specific",
+        "Acceptance as an autoimmune disease": "Confirmed",
+        "Prevalence rate (US)": "200 per 100,000 (over age 50)"
+    },
+    "Takayasu's arteritis": {
+        "Disease": "Takayasu's arteritis",
+        "Primary organ/body part affected": "Large arteries, including the aorta",
+        "Autoantibodies": "None specific",
+        "Acceptance as an autoimmune disease": "Confirmed",
+        "Prevalence rate (US)": "Rare, more common in East Asia"
+    },
+    "Behcet's disease": {
+        "Disease": "Behcet's disease",
+        "Primary organ/body part affected": "Small to large vessels in mouth, genitals, eyes, skin",
+        "Autoantibodies": "None specific",
+        "Acceptance as an autoimmune disease": "Probable",
+        "Prevalence rate (US)": ""
+    },
+    "Eosinophilic granulomatosis with polyangiitis (EGPA)": {
+        "Disease": "Eosinophilic granulomatosis with polyangiitis (EGPA)",
+        "Primary organ/body part affected": "See vascular system  [b]",
+        "Autoantibodies": "See vascular system",
+        "Acceptance as an autoimmune disease": "Confirmed",
+        "Prevalence rate (US)": "See vascular system"
+    },
+    "Granulomatosis with polyangiitis (GPA)": {
+        "Disease": "Granulomatosis with polyangiitis (GPA)",
+        "Primary organ/body part affected": "See vascular system  [c]",
+        "Autoantibodies": "See vascular system",
+        "Acceptance as an autoimmune disease": "Confirmed",
+        "Prevalence rate (US)": "See vascular system"
+    },
+    "IgA vasculitis (IgAV)": {
+        "Disease": "IgA vasculitis (IgAV)",
+        "Primary organ/body part affected": "Small vessels in skin, joints, kidneys, gastrointestinal tract",
+        "Autoantibodies": "IgA immune complexes",
+        "Acceptance as an autoimmune disease": "Probable",
+        "Prevalence rate (US)": ""
+    },
+    "Leukocytoclastic vasculitis": {
+        "Disease": "Leukocytoclastic vasculitis",
+        "Primary organ/body part affected": "Small vessels in skin",
+        "Autoantibodies": "Various immune complexes",
+        "Acceptance as an autoimmune disease": "Probable",
+        "Prevalence rate (US)": ""
+    },
+    "Lupus vasculitis": {
+        "Disease": "Lupus vasculitis",
+        "Primary organ/body part affected": "Small to medium vessels in multiple organs",
+        "Autoantibodies": "ANA, anti-dsDNA, anti-Smith, others",
+        "Acceptance as an autoimmune disease": "Confirmed",
+        "Prevalence rate (US)": ""
+    },
+    "Rheumatoid vasculitis": {
+        "Disease": "Rheumatoid vasculitis",
+        "Primary organ/body part affected": "Small to medium vessels in skin, nerves, eyes, heart",
+        "Autoantibodies": "Rheumatoid factor, ACPA",
+        "Acceptance as an autoimmune disease": "Probable",
+        "Prevalence rate (US)": ""
+    },
+    "Microscopic polyangiitis (MPA)": {
+        "Disease": "Microscopic polyangiitis (MPA)",
+        "Primary organ/body part affected": "Small vessels in kidneys, lungs, nerves, skin",
+        "Autoantibodies": "p-ANCA/MPO-ANCA",
+        "Acceptance as an autoimmune disease": "Confirmed",
+        "Prevalence rate (US)": ""
+    },
+    "Polyarteritis nodosa (PAN)": {
+        "Disease": "Polyarteritis nodosa (PAN)",
+        "Primary organ/body part affected": "Medium to small vessels in kidneys, skin, muscles, joints, nerves",
+        "Autoantibodies": "None specific",
+        "Acceptance as an autoimmune disease": "Probable",
+        "Prevalence rate (US)": ""
+    },
+    "Polymyalgia rheumatica": {
+        "Disease": "Polymyalgia rheumatica",
+        "Primary organ/body part affected": "Large to medium vessels in shoulders, hips",
+        "Autoantibodies": "None specific",
+        "Acceptance as an autoimmune disease": "Possible",
+        "Prevalence rate (US)": ""
+    },
+    "Urticarial vasculitis": {
+        "Disease": "Urticarial vasculitis",
+        "Primary organ/body part affected": "Small vessels in skin",
+        "Autoantibodies": "C1q antibodies",
+        "Acceptance as an autoimmune disease": "Probable",
+        "Prevalence rate (US)": ""
+    },
+    "Vasculitis": {
+        "Disease": "Vasculitis",
+        "Primary organ/body part affected": "All vessel sizes in multiple organs",
+        "Autoantibodies": "Depends on specific type",
+        "Acceptance as an autoimmune disease": "Uncertain",
+        "Prevalence rate (US)": ""
+    },
+    "Goodpasture syndrome": {
+        "Disease": "Goodpasture syndrome",
+        "Primary organ/body part affected": "See urinary system  [a]",
+        "Autoantibodies": "See urinary system",
+        "Acceptance as an autoimmune disease": "Confirmed",
+        "Prevalence rate (US)": "See urinary system"
+    },
+    "IgA nephropathy": {
+        "Disease": "IgA nephropathy",
+        "Primary organ/body part affected": "Kidneys",
+        "Autoantibodies": "IgA autoantibodies",
+        "Acceptance as an autoimmune disease": "Confirmed",
+        "Prevalence rate (US)": "3.5 per 100,000"
+    },
+    "Membranous nephropathy": {
+        "Disease": "Membranous nephropathy",
+        "Primary organ/body part affected": "Kidneys",
+        "Autoantibodies": "Anti-PLA2R antibodies",
+        "Acceptance as an autoimmune disease": "Confirmed",
+        "Prevalence rate (US)": "10 per 100,000"
+    },
+    "Lupus nephritis": {
+        "Disease": "Lupus nephritis",
+        "Primary organ/body part affected": "Kidneys",
+        "Autoantibodies": "Anti-dsDNA, Anti-Sm, Anti-nuclear antibodies",
+        "Acceptance as an autoimmune disease": "Confirmed",
+        "Prevalence rate (US)": "Up to 60% of those with Lupus"
+    },
+    "Interstitial nephritis": {
+        "Disease": "Interstitial nephritis",
+        "Primary organ/body part affected": "Kidneys",
+        "Autoantibodies": "Various autoantibodies",
+        "Acceptance as an autoimmune disease": "Probable",
+        "Prevalence rate (US)": "Varies widely, often drug-induced"
+    },
+    "Interstitial cystitis": {
+        "Disease": "Interstitial cystitis",
+        "Primary organ/body part affected": "Bladder",
+        "Autoantibodies": "Anti-urothelial and anti-nuclear antibodies",
+        "Acceptance as an autoimmune disease": "Probable",
+        "Prevalence rate (US)": "100-450 per 100,000 women, less common in men"
+    },
+    "Primary sclerosing cholangitis": {
+        "Disease": "Primary sclerosing cholangitis",
+        "Primary organ/body part affected": "Bile ducts, can affect gallbladder",
+        "Autoantibodies": "P-ANCA, Anti Smooth Muscle Antibodies (ASMA)",
+        "Acceptance as an autoimmune disease": "Confirmed",
+        "Prevalence rate (US)": "1 per 100,000"
+    },
+    "Acute disseminated encephalomyelitis": {
+        "Disease": "Acute disseminated encephalomyelitis",
+        "Primary organ/body part affected": "Central nervous system",
+        "Autoantibodies": "Unknown",
+        "Acceptance as an autoimmune disease": "Confirmed",
+        "Prevalence rate (US)": "0.8 per 100,000"
+    },
+    "Acute motor axonal neuropathy": {
+        "Disease": "Acute motor axonal neuropathy",
+        "Primary organ/body part affected": "Peripheral nerves",
+        "Autoantibodies": "Anti-GM1",
+        "Acceptance as an autoimmune disease": "Confirmed",
+        "Prevalence rate (US)": "Part of Guillain-Barre syndrome prevalence"
+    },
+    "Anti-NMDA receptor encephalitis": {
+        "Disease": "Anti-NMDA receptor encephalitis",
+        "Primary organ/body part affected": "Brain",
+        "Autoantibodies": "Anti-NMDA receptor",
+        "Acceptance as an autoimmune disease": "Confirmed",
+        "Prevalence rate (US)": "1.5 per million"
+    },
+    "Autoimmune encephalitis": {
+        "Disease": "Autoimmune encephalitis",
+        "Primary organ/body part affected": "Brain",
+        "Autoantibodies": "Various, depending on subtype (e.g., NMDA receptor antibodies, LGI1 antibodies)",
+        "Acceptance as an autoimmune disease": "Confirmed",
+        "Prevalence rate (US)": "Rare"
+    },
+    "Balo concentric sclerosis": {
+        "Disease": "Balo concentric sclerosis",
+        "Primary organ/body part affected": "Central nervous system",
+        "Autoantibodies": "Unknown",
+        "Acceptance as an autoimmune disease": "Probable",
+        "Prevalence rate (US)": "Rare"
+    },
+    "Bickerstaff's encephalitis": {
+        "Disease": "Bickerstaff's encephalitis",
+        "Primary organ/body part affected": "Brain",
+        "Autoantibodies": "Anti-GQ1b",
+        "Acceptance as an autoimmune disease": "Confirmed",
+        "Prevalence rate (US)": "Rare"
+    },
+    "Chronic inflammatory demyelinating polyneuropathy": {
+        "Disease": "Chronic inflammatory demyelinating polyneuropathy",
+        "Primary organ/body part affected": "Peripheral nerves",
+        "Autoantibodies": "Various, including anti-MAG",
+        "Acceptance as an autoimmune disease": "Confirmed",
+        "Prevalence rate (US)": "1-2 per 100,000"
+    },
+    "Guillain-Barre syndrome": {
+        "Disease": "Guillain-Barre syndrome",
+        "Primary organ/body part affected": "Peripheral nerves",
+        "Autoantibodies": "Various, including anti-GM1, anti-GD1a",
+        "Acceptance as an autoimmune disease": "Confirmed",
+        "Prevalence rate (US)": "1-2 per 100,000"
+    },
+    "Hashimoto's encephalopathy": {
+        "Disease": "Hashimoto's encephalopathy",
+        "Primary organ/body part affected": "Brain",
+        "Autoantibodies": "Anti-thyroid (TPO, Tg)",
+        "Acceptance as an autoimmune disease": "Probable",
+        "Prevalence rate (US)": "Rare"
+    },
+    "Idiopathic inflammatory demyelinating diseases": {
+        "Disease": "Idiopathic inflammatory demyelinating diseases",
+        "Primary organ/body part affected": "Central nervous system",
+        "Autoantibodies": "Varies",
+        "Acceptance as an autoimmune disease": "Probable",
+        "Prevalence rate (US)": "Varies by specific disease"
+    },
+    "Lambert-Eaton myasthenic syndrome": {
+        "Disease": "Lambert-Eaton myasthenic syndrome",
+        "Primary organ/body part affected": "Neuromuscular junction (affecting both CNS and PNS)",
+        "Autoantibodies": "Anti-VGCC",
+        "Acceptance as an autoimmune disease": "Confirmed",
+        "Prevalence rate (US)": "0.5-2 per million"
+    },
+    "Multiple sclerosis": {
+        "Disease": "Multiple sclerosis",
+        "Primary organ/body part affected": "Central nervous system",
+        "Autoantibodies": "Unknown, but Oligoclonal bands often present in CSF",
+        "Acceptance as an autoimmune disease": "Confirmed",
+        "Prevalence rate (US)": "90 per 100,000"
+    },
+    "Myasthenia gravis": {
+        "Disease": "Myasthenia gravis",
+        "Primary organ/body part affected": "Neuromuscular junction (affecting both CNS and PNS)",
+        "Autoantibodies": "Anti-AChR, anti-MuSK",
+        "Acceptance as an autoimmune disease": "Confirmed",
+        "Prevalence rate (US)": "20 per 100,000"
+    },
+    "Neuromyelitis optica (Devic's disease)/NMOSD": {
+        "Disease": "Neuromyelitis optica (Devic's disease)/NMOSD",
+        "Primary organ/body part affected": "Optic nerves and spinal cord",
+        "Autoantibodies": "AQP4-IgG (NMO-IgG)",
+        "Acceptance as an autoimmune disease": "Confirmed",
+        "Prevalence rate (US)": "0.5 - 4 per 100,000"
+    },
+    "Restless legs syndrome": {
+        "Disease": "Restless legs syndrome",
+        "Primary organ/body part affected": "Central nervous system (thought to involve dopaminergic pathways)",
+        "Autoantibodies": "Unknown",
+        "Acceptance as an autoimmune disease": "Uncertain",
+        "Prevalence rate (US)": "5-15% (more common in older adults)"
+    },
+    "Stiff-person syndrome": {
+        "Disease": "Stiff-person syndrome",
+        "Primary organ/body part affected": "Central nervous system",
+        "Autoantibodies": "Anti-GAD, anti-amphiphysin",
+        "Acceptance as an autoimmune disease": "Confirmed",
+        "Prevalence rate (US)": "Rare"
+    },
+    "Sydenham's chorea": {
+        "Disease": "Sydenham's chorea",
+        "Primary organ/body part affected": "Brain",
+        "Autoantibodies": "Anti-basal ganglia",
+        "Acceptance as an autoimmune disease": "Confirmed",
+        "Prevalence rate (US)": "Rare (linked to Group A streptococcal infection)"
+    },
+    "Transverse myelitis": {
+        "Disease": "Transverse myelitis",
+        "Primary organ/body part affected": "Spinal cord",
+        "Autoantibodies": "Various, including anti-AQP4",
+        "Acceptance as an autoimmune disease": "Probable",
+        "Prevalence rate (US)": "1-8 per million"
+    },
+    "Undifferentiated connective tissue disease (UCTD)": {
+        "Disease": "Undifferentiated connective tissue disease (UCTD)",
+        "Primary organ/body part affected": "Various",
+        "Autoantibodies": "ANA (antinuclear autoantibody) (HEp-2 cells)",
+        "Acceptance as an autoimmune disease": "Confirmed",
+        "Prevalence rate (US)": "2 per 100,000"
+    },
+    "Addison's disease": {
+        "Disease": "Addison's disease",
+        "Primary organ/body part affected": "Adrenal glands",
+        "Autoantibodies": "21-hydroxylase antibodies",
+        "Acceptance as an autoimmune disease": "Confirmed",
+        "Prevalence rate (US)": "0.93-1.4 per 10,000"
+    },
+    "Autoimmune oophoritis": {
+        "Disease": "Autoimmune oophoritis",
+        "Primary organ/body part affected": "Ovaries",
+        "Autoantibodies": "Anti-ovarian antibodies",
+        "Acceptance as an autoimmune disease": "Probable",
+        "Prevalence rate (US)": "Not well established"
+    },
+    "Autoimmune orchitis": {
+        "Disease": "Autoimmune orchitis",
+        "Primary organ/body part affected": "Testes",
+        "Autoantibodies": "Anti-sperm antibodies",
+        "Acceptance as an autoimmune disease": "Probable",
+        "Prevalence rate (US)": "Not well established"
+    },
+    "Autoimmune pancreatitis": {
+        "Disease": "Autoimmune pancreatitis",
+        "Primary organ/body part affected": "Pancreas",
+        "Autoantibodies": "IgG4, Anti-CA2 antibodies",
+        "Acceptance as an autoimmune disease": "Confirmed",
+        "Prevalence rate (US)": "0.82-1.3 per 100,000"
+    },
+    "Autoimmune polyendocrine syndrome type 1 (APS1)": {
+        "Disease": "Autoimmune polyendocrine syndrome type 1 (APS1)",
+        "Primary organ/body part affected": "Multiple endocrine organs",
+        "Autoantibodies": "Various autoantibodies depending on the organs affected",
+        "Acceptance as an autoimmune disease": "Confirmed",
+        "Prevalence rate (US)": "1 in 100,000 to 200,000"
+    },
+    "Autoimmune polyendocrine syndrome type 2 (APS2)": {
+        "Disease": "Autoimmune polyendocrine syndrome type 2 (APS2)",
+        "Primary organ/body part affected": "Multiple endocrine organs",
+        "Autoantibodies": "Various autoantibodies depending on the organs affected",
+        "Acceptance as an autoimmune disease": "Confirmed",
+        "Prevalence rate (US)": "1 in 20,000"
+    },
+    "Autoimmune polyendocrine syndrome type 3 (APS3)": {
+        "Disease": "Autoimmune polyendocrine syndrome type 3 (APS3)",
+        "Primary organ/body part affected": "Multiple endocrine organs",
+        "Autoantibodies": "Various autoantibodies depending on the organs affected",
+        "Acceptance as an autoimmune disease": "Confirmed",
+        "Prevalence rate (US)": "Rare"
+    },
+    "Diabetes mellitus type 1": {
+        "Disease": "Diabetes mellitus type 1",
+        "Primary organ/body part affected": "Pancreas",
+        "Autoantibodies": "Anti-insulin, anti-IA-2, anti-GAD, anti-ZnT8 antibodies",
+        "Acceptance as an autoimmune disease": "Confirmed",
+        "Prevalence rate (US)": "1.6 per 1,000"
+    },
+    "Endometriosis": {
+        "Disease": "Endometriosis",
+        "Primary organ/body part affected": "Uterus, ovaries, and pelvic tissue",
+        "Autoantibodies": "Various, including anti-endometrial antibodies",
+        "Acceptance as an autoimmune disease": "Probable",
+        "Prevalence rate (US)": "Approx. 10% of women of reproductive age"
+    },
+    "Graves' disease": {
+        "Disease": "Graves' disease",
+        "Primary organ/body part affected": "Thyroid gland",
+        "Autoantibodies": "TSI, TPO, TG antibodies",
+        "Acceptance as an autoimmune disease": "Confirmed",
+        "Prevalence rate (US)": "1.2% of the population"
+    },
+    "Hashimoto's thyroiditis": {
+        "Disease": "Hashimoto's thyroiditis",
+        "Primary organ/body part affected": "Thyroid gland",
+        "Autoantibodies": "TPO, TG antibodies",
+        "Acceptance as an autoimmune disease": "Confirmed",
+        "Prevalence rate (US)": "5% of the population"
+    },
+    "Ord's thyroiditis": {
+        "Disease": "Ord's thyroiditis",
+        "Primary organ/body part affected": "Thyroid gland",
+        "Autoantibodies": "TPO, TG antibodies",
+        "Acceptance as an autoimmune disease": "Confirmed",
+        "Prevalence rate (US)": "Rare"
+    },
+    "Sjogren syndrome": {
+        "Disease": "Sjogren syndrome",
+        "Primary organ/body part affected": "Exocrine glands (salivary and lacrimal glands)",
+        "Autoantibodies": "Anti-SSA/Ro, Anti-SSB/La antibodies",
+        "Acceptance as an autoimmune disease": "Confirmed",
+        "Prevalence rate (US)": "0.1-4% of the population"
+    },
+    "Idiopathic pulmonary fibrosis": {
+        "Disease": "Idiopathic pulmonary fibrosis",
+        "Primary organ/body part affected": "Lungs",
+        "Autoantibodies": "None specific",
+        "Acceptance as an autoimmune disease": "Possible",
+        "Prevalence rate (US)": "20 per 100,000 (men), 13 per 100,000 (women)"
+    },
+    "Interstitial lung disease": {
+        "Disease": "Interstitial lung disease",
+        "Primary organ/body part affected": "Lungs",
+        "Autoantibodies": "Depends on the subtype (e.g. Anti-Jo1 in Anti-synthetase syndrome)",
+        "Acceptance as an autoimmune disease": "Probable",
+        "Prevalence rate (US)": "31.5 per 100,000 (men), 26.1 per 100,000 (women)"
+    },
+    "Pulmonary alveolar proteinosis": {
+        "Disease": "Pulmonary alveolar proteinosis",
+        "Primary organ/body part affected": "Lungs",
+        "Autoantibodies": "Anti-GM-CSF antibodies",
+        "Acceptance as an autoimmune disease": "Confirmed",
+        "Prevalence rate (US)": "6.2 per million"
+    },
+    "Rheumatoid lung disease": {
+        "Disease": "Rheumatoid lung disease",
+        "Primary organ/body part affected": "Lungs",
+        "Autoantibodies": "Rheumatoid factor, Anti-CCP antibodies",
+        "Acceptance as an autoimmune disease": "Confirmed",
+        "Prevalence rate (US)": "Part of RA prevalence (about 1%)"
+    },
+    "Sarcoidosis": {
+        "Disease": "Sarcoidosis",
+        "Primary organ/body part affected": "Lungs and other organs",
+        "Autoantibodies": "None specific",
+        "Acceptance as an autoimmune disease": "Confirmed",
+        "Prevalence rate (US)": "10 - 40 per 100,000"
+    },
+    "Autoimmune hemolytic anemia": {
+        "Disease": "Autoimmune hemolytic anemia",
+        "Primary organ/body part affected": "Anti-red blood cell antibodies",
+        "Autoantibodies": "Confirmed",
+        "Acceptance as an autoimmune disease": "1-3 per 100,000",
+        "Prevalence rate (US)": "[89]"
+    },
+    "Immune thrombocytopenia": {
+        "Disease": "Immune thrombocytopenia",
+        "Primary organ/body part affected": "Anti-platelet antibodies",
+        "Autoantibodies": "Confirmed",
+        "Acceptance as an autoimmune disease": "3.3 per 100,000 (adults), 50 per 100,000 (children)",
+        "Prevalence rate (US)": "[90]"
+    },
+    "Thrombotic thrombocytopenic purpura": {
+        "Disease": "Thrombotic thrombocytopenic purpura",
+        "Primary organ/body part affected": "ADAMTS13 autoantibodies",
+        "Autoantibodies": "Confirmed",
+        "Acceptance as an autoimmune disease": "1-2 per million",
+        "Prevalence rate (US)": "[91]"
+    },
+    "Antiphospholipid syndrome": {
+        "Disease": "Antiphospholipid syndrome",
+        "Primary organ/body part affected": "Antiphospholipid antibodies",
+        "Autoantibodies": "Confirmed",
+        "Acceptance as an autoimmune disease": "40-50 per 100,000",
+        "Prevalence rate (US)": "[92]"
+    },
+    "Paroxysmal nocturnal hemoglobinuria": {
+        "Disease": "Paroxysmal nocturnal hemoglobinuria",
+        "Primary organ/body part affected": "None specific, mutation causes self-cells to become susceptible to attack",
+        "Autoantibodies": "Possible",
+        "Acceptance as an autoimmune disease": "1-2 per million",
+        "Prevalence rate (US)": "[93]"
+    },
+    "Premature ovarian failure": {
+        "Disease": "Premature ovarian failure",
+        "Primary organ/body part affected": "Ovaries",
+        "Autoantibodies": "Anti-ovarian antibodies, Anti-adrenal antibodies",
+        "Acceptance as an autoimmune disease": "Confirmed",
+        "Prevalence rate (US)": "1% of women under 40 years"
+    },
+    "Autoimmune retinopathy": {
+        "Disease": "Autoimmune retinopathy",
+        "Primary organ/body part affected": "Retina",
+        "Autoantibodies": "Various",
+        "Acceptance as an autoimmune disease": "Confirmed",
+        "Prevalence rate (US)": ""
+    },
+    "Autoimmune uveitis": {
+        "Disease": "Autoimmune uveitis",
+        "Primary organ/body part affected": "Uvea",
+        "Autoantibodies": "Various",
+        "Acceptance as an autoimmune disease": "Confirmed",
+        "Prevalence rate (US)": ""
+    },
+    "Cogan syndrome": {
+        "Disease": "Cogan syndrome",
+        "Primary organ/body part affected": "Inner ear and eye",
+        "Autoantibodies": "None specific",
+        "Acceptance as an autoimmune disease": "Probable",
+        "Prevalence rate (US)": ""
+    },
+    "Graves' ophthalmopathy": {
+        "Disease": "Graves' ophthalmopathy",
+        "Primary organ/body part affected": "Eye muscles and connective tissue",
+        "Autoantibodies": "TSH receptor antibodies",
+        "Acceptance as an autoimmune disease": "Confirmed",
+        "Prevalence rate (US)": ""
+    },
+    "Intermediate uveitis": {
+        "Disease": "Intermediate uveitis",
+        "Primary organ/body part affected": "Uvea (pars plana)",
+        "Autoantibodies": "Various",
+        "Acceptance as an autoimmune disease": "Probable",
+        "Prevalence rate (US)": ""
+    },
+    "Ligneous conjunctivitis": {
+        "Disease": "Ligneous conjunctivitis",
+        "Primary organ/body part affected": "Conjunctiva",
+        "Autoantibodies": "Plasminogen deficiency",
+        "Acceptance as an autoimmune disease": "Possible",
+        "Prevalence rate (US)": "Rare"
+    },
+    "Mooren's ulcer": {
+        "Disease": "Mooren's ulcer",
+        "Primary organ/body part affected": "Cornea",
+        "Autoantibodies": "None specific",
+        "Acceptance as an autoimmune disease": "Probable",
+        "Prevalence rate (US)": "Rare"
+    },
+    "Neuromyelitis optica": {
+        "Disease": "Neuromyelitis optica",
+        "Primary organ/body part affected": "Optic nerve and spinal cord",
+        "Autoantibodies": "Anti-AQP4",
+        "Acceptance as an autoimmune disease": "Confirmed",
+        "Prevalence rate (US)": ""
+    },
+    "Opsoclonus myoclonus syndrome": {
+        "Disease": "Opsoclonus myoclonus syndrome",
+        "Primary organ/body part affected": "Central nervous system, eye movement control",
+        "Autoantibodies": "Anti-neuronal antibodies",
+        "Acceptance as an autoimmune disease": "Possible",
+        "Prevalence rate (US)": ""
+    },
+    "Optic neuritis": {
+        "Disease": "Optic neuritis",
+        "Primary organ/body part affected": "Optic nerve",
+        "Autoantibodies": "Various",
+        "Acceptance as an autoimmune disease": "Confirmed",
+        "Prevalence rate (US)": ""
+    },
+    "Scleritis": {
+        "Disease": "Scleritis",
+        "Primary organ/body part affected": "Sclera",
+        "Autoantibodies": "Various",
+        "Acceptance as an autoimmune disease": "Possible",
+        "Prevalence rate (US)": ""
+    },
+    "Susac's syndrome": {
+        "Disease": "Susac's syndrome",
+        "Primary organ/body part affected": "Retina, cochlea, and brain",
+        "Autoantibodies": "None specific",
+        "Acceptance as an autoimmune disease": "Probable",
+        "Prevalence rate (US)": ""
+    },
+    "Sympathetic ophthalmia": {
+        "Disease": "Sympathetic ophthalmia",
+        "Primary organ/body part affected": "Uveal tract",
+        "Autoantibodies": "Various",
+        "Acceptance as an autoimmune disease": "Probable",
+        "Prevalence rate (US)": "Rare"
+    },
+    "Tolosa-Hunt syndrome": {
+        "Disease": "Tolosa-Hunt syndrome",
+        "Primary organ/body part affected": "Orbit",
+        "Autoantibodies": "None specific",
+        "Acceptance as an autoimmune disease": "Uncertain",
+        "Prevalence rate (US)": "Rare"
+    }
+}
