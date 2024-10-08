@@ -10,31 +10,14 @@ def get_first_sentence(company_url):
         company_response = requests.get(company_url)
         company_soup = BeautifulSoup(company_response.text, 'html.parser')
         
-        # first_paragraph = company_soup.find('p')
-        # if first_paragraph:
-        #     return first_paragraph.text.strip()  # Retornar o texto do parágrafo, sem espaços extras
-        # else:
-        #     return ""
-
-        # Find all <p> tags
         paragraphs = company_soup.find_all('p')
-        paragraphs = sv.filter(':not(table.infobox p)', paragraphs)
+        paragraphs = sv.filter(':not(table.infobox p)', paragraphs) # we don't want data from the table on the right side
         
-        i = 0
         for paragraph in paragraphs:
-            # Check if <p> contains a <span> with the class to ignore
             span = paragraph.find('span', class_="geo-inline-hidden noexcerpt")
             is_empty = len(paragraph.get_text()) <= 1
-
-            # is_inside_table = None
-            # if paragraph is not None:
-            #     is_inside_table = paragraph.get_parent("table", class_="infobox")
-            # is_inside_table = None
-
-            if not span and not is_empty:  # Skip <p> elements that contain the unwanted <span>
+            if not span and not is_empty:
                 return paragraph.get_text(strip=True)
-            i+=1
-            print(f"skipped {i} times")
 
     except Exception as e:
         print(f"Erro ao buscar dados de {company_url}: {e}")
@@ -59,19 +42,17 @@ def get_companies():
                 company_name = link.text
                 year_text = re.sub(r'[a-zA-Z]', '', item.text).split('(')[-1].replace('.', ';').replace(':', ';').replace(',', ';').split(';')[-1].replace('–', '-').replace(')', '').replace(' ', '')
                 year_text_unidecoded = unidecode(year_text)
-                # print(year_text_unidecoded)
                 
                 company_url = "https://en.wikipedia.org" + link['href']
                 
                 first_sentence = get_first_sentence(company_url)
                 first_sentence_unidecoded = unidecode(first_sentence)
-                # print(first_sentence_unidecoded)
                 
                 data.append([company_name, year_text_unidecoded, first_sentence_unidecoded])
 
     df = pd.DataFrame(data, columns=['Company Name', 'Year', 'Description'])
 
-    df.to_csv('../dataset/Pharmaceutical_companies_test.csv', index=False)
+    df.to_csv('../dataset/Pharmaceutical_companies.csv', index=False)
 
     print("CSV criado com sucesso!")
 
@@ -103,4 +84,4 @@ def get_diseases():
     print("CSV criado com sucesso!")
 
 get_companies()
-# get_diseases()
+get_diseases()
