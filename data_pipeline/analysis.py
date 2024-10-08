@@ -3,6 +3,9 @@ import numpy as np
 import math
 import matplotlib.pyplot as plt
 import seaborn as sb
+# from sqlalchemy import create_engine
+
+# engine = create_engine('sqlite://', echo=False)
 
 df_medicine = pd.read_json('../dataset/medicine_details.json')
 new_df_medicine = df_medicine.transpose()
@@ -44,3 +47,5 @@ for i in range(len(numerical), len(axes)):
     fig.delaxes(axes[i])
 
 plt.show()
+
+# new_df_medicine.to_sql(name='medicine', con=engine)
