@@ -107,22 +107,9 @@ def parse_pharmaceutical_companies():
     with open("../dataset/pharmaceutical_companies.json", "w", encoding="utf-8") as jsonf:
         jsonf.write(json.dumps(data, indent=4))
 
-# parse_medicine_details()
-def parse_companies():
-    with open("../dataset/Pharmaceutical_companies.csv", encoding="utf-8") as csvf:
-        csvReader = csv.DictReader(csvf)
-        key_name = "Company Name"
-
-        for row in csvReader:
-            key = row["Company Name"]
-            year = row["Year"]
-            description = row["Description"]
-            data[key] = row
-
-    with open("../dataset/companies.json", "w", encoding="utf-8") as jsonf:
-        jsonf.write(json.dumps(data, indent=4))
-
 def parse_diseases():
+    data = {}
+
     with open("../dataset/Diseases.csv", encoding="utf-8") as csvf:
         csvReader = csv.DictReader(csvf)
         key_name = "Disease"
@@ -139,9 +126,6 @@ def parse_diseases():
         jsonf.write(json.dumps(data, indent=4))
 
 parse_medicine_details()
-data.clear()
 parse_illnesses()
-data.clear()
-parse_companies()
-data.clear()
+parse_pharmaceutical_companies()
 parse_diseases()
