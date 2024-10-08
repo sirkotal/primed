@@ -2,6 +2,8 @@ import csv
 import json
 import re
 import ast
+from unidecode import unidecode
+
 
 def parse_use_cases_side_effects(input_string):
     connectors = {"of", "and", "in", "for", "with", "the", "to", "a", "an"}
@@ -73,6 +75,7 @@ def parse_illnesses():
             data[key] = row
             if (data[key]["Link"]) != '':
                 data[key]["Link"] = ast.literal_eval(data[key]["Link"])
+            data[key] = {k: unidecode(v) if k != "Link" else v for k, v in data[key].items()}
 
     with open("../dataset/sicknesses.json", "w", encoding="utf-8") as jsonf:
         jsonf.write(json.dumps(data, indent=4))
@@ -105,5 +108,5 @@ def parse_pharmaceutical_companies():
         jsonf.write(json.dumps(data, indent=4))
 
 # parse_medicine_details()
-# parse_illnesses()
-parse_pharmaceutical_companies()
+parse_illnesses()
+# parse_pharmaceutical_companies()

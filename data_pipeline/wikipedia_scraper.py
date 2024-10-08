@@ -39,7 +39,7 @@ def get_companies():
             link = item.find('a')
             
             if link and '(' in item.text and ')' in item.text:
-                company_name = link.text
+                company_name = unidecode(link.text)
                 year_text = re.sub(r'[a-zA-Z]', '', item.text).split('(')[-1].replace('.', ';').replace(':', ';').replace(',', ';').split(';')[-1].replace('–', '-').replace(')', '').replace(' ', '')
                 year_text_unidecoded = unidecode(year_text)
                 
