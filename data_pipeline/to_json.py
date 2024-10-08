@@ -2,8 +2,8 @@ import csv
 import json
 import re
 import ast
+from unidecode import unidecode
 
-data = {}
 
 def parse_use_cases_side_effects(input_string):
     connectors = {"of", "and", "in", "for", "with", "the", "to", "a", "an"}
@@ -36,6 +36,8 @@ def parse_use_cases_side_effects(input_string):
     return use_cases
 
 def parse_medicine_details():
+    data = {}
+
     with open("../dataset/Medicine_Details.csv", encoding="utf-8") as csvf:
         csvReader = csv.DictReader(csvf)
 
@@ -59,7 +61,10 @@ def remove_urls(text): # deletes everything in a string from the point where a u
         text = text[:match.start()]
     return text.strip()
 
+
 def parse_illnesses():
+    data = {}
+
     with open("../dataset/Sicknesses_clean.csv", encoding="utf-8") as csvf:
         csvReader = csv.DictReader(csvf)
         key_name = "Disease/ Illness"
@@ -70,10 +75,39 @@ def parse_illnesses():
             data[key] = row
             if (data[key]["Link"]) != '':
                 data[key]["Link"] = ast.literal_eval(data[key]["Link"])
+            data[key] = {k: unidecode(v) if k != "Link" else v for k, v in data[key].items()}
 
     with open("../dataset/sicknesses.json", "w", encoding="utf-8") as jsonf:
         jsonf.write(json.dumps(data, indent=4))
 
+
+def parse_pharmaceutical_companies():
+    data = {}
+
+    with open("../dataset/Pharmaceutical_companies.csv", encoding="utf-8") as csvf:
+        csvReader = csv.DictReader(csvf)
+        key_name = "Company Name"
+
+        for row in csvReader:
+            key = remove_urls(row[key_name])
+            row.pop(key_name, None)
+            data[key] = row
+            years = data[key]["Year"].split("-")
+            try:
+                year_start = years[0]
+                year_end = years[1]
+            except:
+                year_start = ""
+                year_end = ""
+            data[key]["Year Start"] = year_start
+            data[key]["Year End"] = year_end
+            data[key].pop("Year", None)
+
+
+    with open("../dataset/pharmaceutical_companies.json", "w", encoding="utf-8") as jsonf:
+        jsonf.write(json.dumps(data, indent=4))
+
+# parse_medicine_details()
 def parse_companies():
     with open("../dataset/Pharmaceutical_companies.csv", encoding="utf-8") as csvf:
         csvReader = csv.DictReader(csvf)

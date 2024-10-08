@@ -1,5 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
+import soupsieve as sv
 import pandas as pd
 import re
 from unidecode import unidecode
@@ -9,11 +10,15 @@ def get_first_sentence(company_url):
         company_response = requests.get(company_url)
         company_soup = BeautifulSoup(company_response.text, 'html.parser')
         
-        first_paragraph = company_soup.find('p')
-        if first_paragraph:
-            return first_paragraph.text.strip()  # Retornar o texto do parágrafo, sem espaços extras
-        else:
-            return ""
+        paragraphs = company_soup.find_all('p')
+        paragraphs = sv.filter(':not(table.infobox p)', paragraphs) # we don't want data from the table on the right side
+        
+        for paragraph in paragraphs:
+            span = paragraph.find('span', class_="geo-inline-hidden noexcerpt")
+            is_empty = len(paragraph.get_text()) <= 1
+            if not span and not is_empty:
+                return paragraph.get_text(strip=True)
+
     except Exception as e:
         print(f"Erro ao buscar dados de {company_url}: {e}")
         return ""
@@ -34,10 +39,9 @@ def get_companies():
             link = item.find('a')
             
             if link and '(' in item.text and ')' in item.text:
-                company_name = link.text
+                company_name = unidecode(link.text)
                 year_text = re.sub(r'[a-zA-Z]', '', item.text).split('(')[-1].replace('.', ';').replace(':', ';').replace(',', ';').split(';')[-1].replace('–', '-').replace(')', '').replace(' ', '')
                 year_text_unidecoded = unidecode(year_text)
-                print(year_text_unidecoded)
                 
                 company_url = "https://en.wikipedia.org" + link['href']
                 
@@ -48,7 +52,7 @@ def get_companies():
 
     df = pd.DataFrame(data, columns=['Company Name', 'Year', 'Description'])
 
-    df.to_csv('./dataset/Pharmaceutical_companies.csv', index=False)
+    df.to_csv('../dataset/Pharmaceutical_companies.csv', index=False)
 
     print("CSV criado com sucesso!")
 
@@ -75,7 +79,7 @@ def get_diseases():
 
     df = pd.DataFrame(data, columns=['Disease', 'Primary organ/body part affected', 'Autoantibodies', 'Acceptance as an autoimmune disease', 'Prevalence rate (US)'])
 
-    df.to_csv('./dataset/Diseases.csv', index=False)
+    df.to_csv('../dataset/Diseases.csv', index=False)
 
     print("CSV criado com sucesso!")
 

@@ -9,7 +9,7 @@
         "Link": ""
     },
     "Conjunctivitis, Bacterial or Viral (Pink eye)": {
-        "Mode of Transmission": "Contact with an infected person\u2019s skin, body fluid or though contact with a contaminated surface and then touching mucus membranes/eyes",
+        "Mode of Transmission": "Contact with an infected person's skin, body fluid or though contact with a contaminated surface and then touching mucus membranes/eyes",
         "Symptoms": "Red eyes, usually with some discharge or crusting around eyes; may be itchy, sensitive to light, or watery\nBacterial: may have yellow/greenish discharge; may affect one or both eyes Allergic and chemical conjunctivitis usually affects both eyes",
         "Incubation Period": "Bacterial: Unknown. Viral: Varies with etiology",
         "Period of Communicability": "Bacterial: from onset of symptoms until after start of antibiotics, or as long as there is discharge form the eye\nViral: variable, before symptoms appear and while symptoms are present\n(Allergic and chemical conjunctivitis is not\ncontagious.)",
@@ -246,7 +246,7 @@
     },
     "Fifth Disease  (Human Parvovirus)": {
         "Mode of Transmission": "By breathing in respiratory droplets containing the pathogen after an infected person exhales, sneezes, or coughs",
-        "Symptoms": "Redness of the cheeks and body, \u201cslapped cheek\u201d\u00a0rash.\nMay have mild fever, runny nose, headache Rash may come and go\nfor weeks",
+        "Symptoms": "Redness of the cheeks and body, \"slapped cheek\" rash.\nMay have mild fever, runny nose, headache Rash may come and go\nfor weeks",
         "Incubation Period": "Range 4-20 days",
         "Period of Communicability": "Until rash appears\nIn immunosuppressed persons, communicability may last months-years",
         "Criteria for Exclusion from School*": "No exclusion unless febrile or other symptoms meeting illness exclusion criteria are present",
@@ -288,7 +288,7 @@
     },
     "Herpes Simplex (cold sores, skin lesions)\nHSV1 (cold sores) HSV2 (genital lesions)": {
         "Mode of Transmission": "Direct person to person contact with lesions, secretions form lesions, or saliva",
-        "Symptoms": "Primary infections may have no symptoms; may have fever or malaise; may or may not have rash, vesicular lesions, or ulcers at site, \u201cfever blister\u201d/cold sore\nHSV 1 and HSV2 lesions can appear on other\nparts of the body.",
+        "Symptoms": "Primary infections may have no symptoms; may have fever or malaise; may or may not have rash, vesicular lesions, or ulcers at site, \"fever blister\"/cold sore\nHSV 1 and HSV2 lesions can appear on other\nparts of the body.",
         "Incubation Period": "2-12 days",
         "Period of Communicability": "Most infectious while vesicular lesions are present.\nMay be present with no symptoms",
         "Criteria for Exclusion from School*": "Exclude from wrestling or contact sports (including practices) if lesions are present on the body (outside the genital area)\nIf large areas of lesions cannot be covered or if exposure to infectious lesions by other students cannot be avoided, the student should be excluded until\nlesions are dried and crusted.",
@@ -309,7 +309,7 @@
     },
     "Measles (Rubeola virus)": {
         "Mode of Transmission": "Airborne or direct contact with droplets from nose, eyes or mouth of infected person",
-        "Symptoms": "Cough, runny nose, conjunctivitis, fever, rash that starts at head and spreads down and out on body; sore throat; may have Koplik\u2019s spots",
+        "Symptoms": "Cough, runny nose, conjunctivitis, fever, rash that starts at head and spreads down and out on body; sore throat; may have Koplik's spots",
         "Incubation Period": "7 to 21 days\n(usually 8 to\n12 days)",
         "Period of Communicability": "From 4 days before until 4 days after rash onset.\nExtremely contagious!",
         "Criteria for Exclusion from School*": "Exclude for at least 4 days after start of rash.\nSusceptible contacts: Those who do not receive vaccine within 72 hours of exposure shall be excluded for 21 days after onset of last case.",
@@ -330,7 +330,7 @@
     },
     "MRSA (Methicillin-resistant Staph aureus) skin infections": {
         "Mode of Transmission": "Direct skin contact with infected person, wound drainage or contaminated surfaces; increase\nrisk in crowded conditions;",
-        "Symptoms": "Skin lesions such as furuncles (abscessed hair follicles or \u201cboils\u201d),\ncarbuncles (coalesced",
+        "Symptoms": "Skin lesions such as furuncles (abscessed hair follicles or \"boils\"),\ncarbuncles (coalesced",
         "Incubation Period": "Variable, usually 4-10 days and up to\nmonths; at",
         "Period of Communicability": "Duration of acute illness if wound drainage present\nDraining wounds are",
         "Criteria for Exclusion from School*": "Exclude if wound drainage cannot be well contained under a dressing",
@@ -377,7 +377,7 @@
         "Symptoms": "Red bumps commonly found in skin folds; burrows appear as tiny whitish or gray lines on skin surface; intense itching, especially at night",
         "Incubation Period": "4 to 6 weeks,\n1 to 4 days after re- exposure",
         "Period of Communicability": "From up to 8 weeks before skin rash appears until it has been treated with a scabicide",
-        "Criteria for Exclusion from School*": "Exclude from school and other extracurricular activities until the morning after treatment recommended by the child\u2019s healthcare provider has been started.\nChildcare rules: exclude until the morning after the first treatment.\nhttp://www.ilga.gov/commission/jcar/adminc ode/089/089004070G03100R.html",
+        "Criteria for Exclusion from School*": "Exclude from school and other extracurricular activities until the morning after treatment recommended by the child's healthcare provider has been started.\nChildcare rules: exclude until the morning after the first treatment.\nhttp://www.ilga.gov/commission/jcar/adminc ode/089/089004070G03100R.html",
         "Reporting Requirement": "Individual cases are not reportable.  Clusters of cases should be reported to local health department.",
         "Link": ""
     },
@@ -391,7 +391,7 @@
         "Link": ""
     },
     "Bat Exposures/Animal Bites (Potential for Rabies)": {
-        "Mode of Transmission": "Contact with an infected animal\u2019s\nsaliva through a bite or scratch in the skin, or through mucous",
+        "Mode of Transmission": "Contact with an infected animal's\nsaliva through a bite or scratch in the skin, or through mucous",
         "Symptoms": "In animals, behavior\nchanges may occur, including seeing",
         "Incubation Period": "Humans:\nsymptom onset usually",
         "Period of Communicability": "When the virus\nreaches the saliva of the infected animal",

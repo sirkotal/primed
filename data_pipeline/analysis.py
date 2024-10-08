@@ -3,6 +3,7 @@ import numpy as np
 import math
 import matplotlib.pyplot as plt
 import seaborn as sb
+from processing import convert_json_to_sql
 
 df_medicine = pd.read_json('../dataset/medicine_details.json')
 new_df_medicine = df_medicine.transpose()
@@ -44,3 +45,5 @@ for i in range(len(numerical), len(axes)):
     fig.delaxes(axes[i])
 
 plt.show()
+
+convert_json_to_sql(new_df_medicine)
