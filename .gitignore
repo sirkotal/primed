@@ -3,4 +3,6 @@
 data_pipeline/venv
 dataset/venv
 src/venv
+*.zip
+idea/
 
