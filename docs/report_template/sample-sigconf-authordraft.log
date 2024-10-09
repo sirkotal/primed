@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.5.26)  9 OCT 2024 15:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.5.26)  9 OCT 2024 21:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1069,6 +1069,8 @@ LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
 (Font)              scaled to size 8.0pt on input line 236.
 LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
 (Font)              scaled to size 6.2pt on input line 236.
+LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/it' will be
+(Font)              scaled to size 9.0pt on input line 241.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
 (Font)              scaled to size 6.0pt on input line 251.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
@@ -1128,10 +1130,12 @@ x/fonts/enc/dvips/libertine/lbtn_76gpa5.enc}{D:/Miktex/fonts/enc/dvips/libertin
 e/lbtn_25tcsq.enc}{D:/Miktex/fonts/enc/dvips/libertine/lbtn_nh77jq.enc}
 
 {D:/Miktex/fonts/enc/dvips/libertine/lbtn_naooyc.enc}{D:/Miktex/fonts/enc/dvips
-/libertine/lbtn_7grukw.enc} <./sampleteaser.pdf>]
+/libertine/lbtn_7grukw.enc}{D:/Miktex/fonts/enc/dvips/libertine/lbtn_ki75ao.enc
+} <./sampleteaser.pdf>]
 LaTeX Font Info:    Trying to load font information for T1+zi4 on input line 25
 6.
- (D:\Miktex\tex/latex/inconsolata\t1zi4.fd
+
+(D:\Miktex\tex/latex/inconsolata\t1zi4.fd
 File: t1zi4.fd 2018/01/14 T1/zi4 (Inconsolata)
 )
 LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
@@ -1141,47 +1145,53 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/n' will be
-(Font)              scaled to size 9.0pt on input line 384.
+(Font)              scaled to size 9.0pt on input line 269.
+LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/it' will be
+(Font)              scaled to size 9.0pt on input line 269.
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/n' will be
-(Font)              scaled to size 7.0pt on input line 384.
+(Font)              scaled to size 7.0pt on input line 378.
  [2.2{D:/Miktex/fonts/enc/dvips/inconsolata/i4-t1-4.enc}]
-Overfull \hbox (2.79185pt too wide) in paragraph at lines 386--390
+Overfull \hbox (2.79185pt too wide) in paragraph at lines 389--393
 \T1/LinuxLibertineT-TLF/m/n/9 (-20) Your work should use stan-dard L[]T[]X sec-
 tion-ing com-mands: [][]\T1/zi4/m/n/9 section[]\T1/LinuxLibertineT-TLF/m/n/9 (-
 20) ,
  []
 
 
-Overfull \hbox (1.26605pt too wide) in paragraph at lines 386--390
+Overfull \hbox (1.26605pt too wide) in paragraph at lines 389--393
 [][]\T1/zi4/m/n/9 subsection[]\T1/LinuxLibertineT-TLF/m/n/9 (-20) , [][]\T1/zi4
 /m/n/9 subsubsection[]\T1/LinuxLibertineT-TLF/m/n/9 (-20) , and [][]\T1/zi4/m/n
 /9 paragraph[]\T1/LinuxLibertineT-TLF/m/n/9 (-20) . They should be num-
  []
 
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
-(Font)              scaled to size 7.3pt on input line 410.
-<sample-franklin.png, id=169, 411.5375pt x 323.2075pt>
+(Font)              scaled to size 7.3pt on input line 413.
+
+Underfull \vbox (badness 5939) has occurred while \output is active []
+
+<sample-franklin.png, id=172, 411.5375pt x 323.2075pt>
 File: sample-franklin.png Graphic file (type png)
 <use sample-franklin.png>
-Package pdftex.def Info: sample-franklin.png  used on input line 513.
+Package pdftex.def Info: sample-franklin.png  used on input line 516.
 (pdftex.def)             Requested size: 241.14749pt x 189.3888pt.
+
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Overfull \hbox (4.77193pt too wide) in paragraph at lines 530--543
+Overfull \hbox (4.77193pt too wide) in paragraph at lines 533--546
 \T1/LinuxLibertineT-TLF/m/n/9 (-20) 2000 char-ac-ters long (in-clud-ing spaces)
 . \T1/LinuxLibertineT-TLF/b/n/9 (-20) Fig-ure de-scrip-tions should
  []
 
 [3.3{D:/Miktex/fonts/enc/dvips/libertine/lbtn_oexx6f.enc}] [4.4 <./sample-frank
 lin.png>]
-Overfull \hbox (16.84637pt too wide) in paragraph at lines 665--665
+Overfull \hbox (16.84637pt too wide) in paragraph at lines 668--668
 []\T1/zi4/m/n/9 \documentclass[sigconf, language=english, language=german,[] 
  []
 
 LaTeX Font Info:    Font shape `T1/zi4/b/n' will be
-(Font)              scaled to size 9.0pt on input line 684.
+(Font)              scaled to size 9.0pt on input line 687.
 Processing 'acks' comment.
 \openout3 = `comment.cut'.
 
@@ -1205,9 +1215,11 @@ LaTeX Info: Redefining \tempurl on input line 391.
 LaTeX Info: Redefining \tempurl on input line 404.
 LaTeX Info: Redefining \tempurl on input line 417.
 LaTeX Info: Redefining \tempurl on input line 431.
-LaTeX Info: Redefining \tempurl on input line 499.
 
-[5.5]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [5.5]
+LaTeX Info: Redefining \tempurl on input line 499.
 LaTeX Info: Redefining \tempurl on input line 514.
 LaTeX Info: Redefining \tempurl on input line 525.
 LaTeX Info: Redefining \tempurl on input line 537.
@@ -1215,7 +1227,11 @@ LaTeX Info: Redefining \tempurl on input line 550.
 )
 
 Class acmart Warning: \vspace should only be used to provide space above/below 
-surrounding objects on input line 739.
+surrounding objects on input line 742.
+
+
+Overfull \vbox (1.64902pt too high) has occurred while \output is active []
+
 
 (D:\Miktex\tex/generic/stringenc\se-pdfdoc.def
 File: se-pdfdoc.def 2019/11/29 v1.12 stringenc: PDFDocEncoding
@@ -1233,26 +1249,27 @@ ged.
 (rerunfilecheck)             Checksum: 94EAE19561D24DC21C5FBD69AD85DE3F;4389.
  ) 
 Here is how much of TeX's memory you used:
- 21654 strings out of 474486
- 346302 string characters out of 5760170
- 1976542 words of memory out of 5000000
- 42805 multiletter control sequences out of 15000+600000
- 765306 words of font info for 464 fonts, out of 8000000 for 9000
+ 21687 strings out of 474486
+ 347142 string characters out of 5760170
+ 1973542 words of memory out of 5000000
+ 42810 multiletter control sequences out of 15000+600000
+ 778217 words of font info for 479 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
- 90i,16n,131p,1025b,806s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 90i,17n,131p,1025b,796s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <D:/Miktex/fonts/type1/public/inconsolata/Inconsolata-zi4b.pfb><D:/Miktex/fon
 ts/type1/public/inconsolata/Inconsolata-zi4r.pfb><D:/Miktex/fonts/type1/public/
 newtx/LibertineMathMI.pfb><D:/Miktex/fonts/type1/public/newtx/LibertineMathMI7.
 pfb><D:/Miktex/fonts/type1/public/newtx/LibertineMathRM.pfb><D:/Miktex/fonts/ty
 pe1/public/libertine/LinBiolinumT.pfb><D:/Miktex/fonts/type1/public/libertine/L
-inBiolinumTB.pfb><D:/Miktex/fonts/type1/public/libertine/LinLibertineT.pfb><D:/
-Miktex/fonts/type1/public/libertine/LinLibertineTB.pfb><D:/Miktex/fonts/type1/p
-ublic/libertine/LinLibertineTI.pfb><D:/Miktex/fonts/type1/public/newtx/txexs.pf
-b><D:/Miktex/fonts/type1/public/newtx/txmiaX.pfb><D:/Miktex/fonts/type1/public/
-newtx/txsys.pfb>
-Output written on sample-sigconf-authordraft.pdf (6 pages, 1094227 bytes).
+inBiolinumTB.pfb><D:/Miktex/fonts/type1/public/libertine/LinBiolinumTI.pfb><D:/
+Miktex/fonts/type1/public/libertine/LinLibertineT.pfb><D:/Miktex/fonts/type1/pu
+blic/libertine/LinLibertineTB.pfb><D:/Miktex/fonts/type1/public/libertine/LinLi
+bertineTBI.pfb><D:/Miktex/fonts/type1/public/libertine/LinLibertineTI.pfb><D:/M
+iktex/fonts/type1/public/newtx/txexs.pfb><D:/Miktex/fonts/type1/public/newtx/tx
+miaX.pfb><D:/Miktex/fonts/type1/public/newtx/txsys.pfb>
+Output written on sample-sigconf-authordraft.pdf (6 pages, 1157783 bytes).
 PDF statistics:
- 395 PDF objects out of 1000 (max. 8388607)
- 86 named destinations out of 1000 (max. 500000)
- 115979 words of extra memory for PDF output out of 128383 (max. 10000000)
+ 407 PDF objects out of 1000 (max. 8388607)
+ 87 named destinations out of 1000 (max. 500000)
+ 124171 words of extra memory for PDF output out of 128383 (max. 10000000)
 
