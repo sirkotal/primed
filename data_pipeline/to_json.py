@@ -35,6 +35,7 @@ def parse_use_cases_side_effects(input_string):
 
     return use_cases
 
+
 def parse_medicine_details():
     data = {}
 
@@ -103,9 +104,9 @@ def parse_pharmaceutical_companies():
             data[key]["Year End"] = year_end
             data[key].pop("Year", None)
 
-
     with open("../dataset/pharmaceutical_companies.json", "w", encoding="utf-8") as jsonf:
         jsonf.write(json.dumps(data, indent=4))
+
 
 def parse_diseases():
     data = {}
@@ -125,7 +126,35 @@ def parse_diseases():
     with open("../dataset/diseases.json", "w", encoding="utf-8") as jsonf:
         jsonf.write(json.dumps(data, indent=4))
 
+
+def parse_medicine_reviews():
+    data = {}
+
+    with open("../dataset/Drug_Reviews.csv", encoding="utf-8") as csvf:
+        csvReader = csv.DictReader(csvf)
+
+        for row in csvReader:
+            key = row["uniqueID"]
+            data[key] = row
+
+        total_rows = len(data)
+        half_point = total_rows // 2
+
+        keys = list(data.keys())
+
+        data_first_half = {key: data[key] for key in keys[:half_point]}
+
+        data_second_half = {key: data[key] for key in keys[half_point:]}
+
+    with open("../dataset/drug_reviews_part_1.json", "w", encoding="utf-8") as jsonf:
+        jsonf.write(json.dumps(data_first_half, indent=4))
+
+    with open("../dataset/drug_reviews_part_2.json", "w", encoding="utf-8") as jsonf:
+        jsonf.write(json.dumps(data_second_half, indent=4))
+
+
 parse_medicine_details()
 parse_illnesses()
 parse_pharmaceutical_companies()
 parse_diseases()
+parse_medicine_reviews()
