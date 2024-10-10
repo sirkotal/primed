@@ -150,25 +150,30 @@ def parse_drug_reviews():
             data[key]["date"] = date_obj.strftime("%Y-%m-%d")
 
         total_rows = len(data)
-        half_point = total_rows // 4
+        half_point = total_rows // 2
+        quarter_point = total_rows // 4
 
         keys = list(data.keys())
 
-        data_first_half = {key: data[key] for key in keys[:half_point]}
+        data_first_q = {key: data[key] for key in keys[:quarter_point]}
 
-        data_second_half = {key: data[key] for key in keys[half_point:]}
+        data_second_q = {key: data[key] for key in keys[quarter_point:half_point]}
+
+        data_third_q = {key: data[key] for key in keys[half_point:(quarter_point*3)]}
+
+        data_fourth_q = {key: data[key] for key in keys[(quarter_point*3):]}
 
     with open("dataset/drug_reviews_part_1.json", "w", encoding="utf-8") as jsonf:
-        jsonf.write(json.dumps(data_first_half, indent=4))
+        jsonf.write(json.dumps(data_first_q, indent=4))
     print("Successfully wrote data to drug_reviews_part_1.json")
     with open("dataset/drug_reviews_part_2.json", "w", encoding="utf-8") as jsonf:
-        jsonf.write(json.dumps(data_second_half, indent=4))
+        jsonf.write(json.dumps(data_second_q, indent=4))
     print("Successfully wrote data to drug_reviews_part_2.json")
     with open("dataset/drug_reviews_part_3.json", "w", encoding="utf-8") as jsonf:
-        jsonf.write(json.dumps(data_second_half, indent=4))
+        jsonf.write(json.dumps(data_third_q, indent=4))
     print("Successfully wrote data to drug_reviews_part_3.json")
     with open("dataset/drug_reviews_part_4.json", "w", encoding="utf-8") as jsonf:
-        jsonf.write(json.dumps(data_second_half, indent=4))
+        jsonf.write(json.dumps(data_fourth_q, indent=4))
     print("Successfully wrote data to drug_reviews_part_4.json")
 
 
