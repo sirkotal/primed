@@ -150,7 +150,7 @@ def parse_drug_reviews():
             data[key]["date"] = date_obj.strftime("%Y-%m-%d")
 
         total_rows = len(data)
-        half_point = total_rows // 2
+        half_point = total_rows // 4
 
         keys = list(data.keys())
 
@@ -164,6 +164,12 @@ def parse_drug_reviews():
     with open("dataset/drug_reviews_part_2.json", "w", encoding="utf-8") as jsonf:
         jsonf.write(json.dumps(data_second_half, indent=4))
     print("Successfully wrote data to drug_reviews_part_2.json")
+    with open("dataset/drug_reviews_part_3.json", "w", encoding="utf-8") as jsonf:
+        jsonf.write(json.dumps(data_second_half, indent=4))
+    print("Successfully wrote data to drug_reviews_part_3.json")
+    with open("dataset/drug_reviews_part_4.json", "w", encoding="utf-8") as jsonf:
+        jsonf.write(json.dumps(data_second_half, indent=4))
+    print("Successfully wrote data to drug_reviews_part_4.json")
 
 
 # parse_drug_details()
