@@ -5,6 +5,7 @@ import pandas as pd
 import re
 from unidecode import unidecode
 
+
 def get_first_sentence(company_url):
     try:
         company_response = requests.get(company_url)
@@ -52,9 +53,9 @@ def get_companies():
 
     df = pd.DataFrame(data, columns=['Company Name', 'Year', 'Description'])
 
-    df.to_csv('../dataset/Pharmaceutical_companies.csv', index=False)
+    df.to_csv('dataset/pharmaceutical_companies.csv', index=False)
 
-    print("CSV criado com sucesso!")
+    print("Successfully wrote data to pharmaceutical_companies.csv")
 
 
 def get_diseases():
@@ -79,9 +80,9 @@ def get_diseases():
 
     df = pd.DataFrame(data, columns=['Disease', 'Primary organ/body part affected', 'Autoantibodies', 'Acceptance as an autoimmune disease', 'Prevalence rate (US)'])
 
-    df.to_csv('../dataset/Diseases.csv', index=False)
+    df.to_csv('dataset/diseases.csv', index=False)
 
-    print("CSV criado com sucesso!")
+    print("Successfully wrote data to diseases.csv")
 
-get_companies()
-get_diseases()
+# get_companies()
+# get_diseases()

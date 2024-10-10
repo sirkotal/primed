@@ -2,6 +2,8 @@ import csv
 import json
 import re
 import ast
+from html import unescape
+from datetime import datetime
 from unidecode import unidecode
 
 
@@ -36,10 +38,10 @@ def parse_use_cases_side_effects(input_string):
     return use_cases
 
 
-def parse_medicine_details():
+def parse_drug_details():
     data = {}
 
-    with open("../dataset/Medicine_Details.csv", encoding="utf-8") as csvf:
+    with open("dataset/Medicine_Details.csv", encoding="utf-8") as csvf:
         csvReader = csv.DictReader(csvf)
 
         for row in csvReader:
@@ -51,8 +53,9 @@ def parse_medicine_details():
             row.pop("Image URL", None)
             data[key] = row
 
-    with open("../dataset/medicine_details.json", "w", encoding="utf-8") as jsonf:
+    with open("dataset/medicine_details.json", "w", encoding="utf-8") as jsonf:
         jsonf.write(json.dumps(data, indent=4))
+    print("Successfully wrote data to dataset/medicine_details.json")
 
 
 def remove_urls(text): # deletes everything in a string from the point where a url is found
@@ -63,10 +66,10 @@ def remove_urls(text): # deletes everything in a string from the point where a u
     return text.strip()
 
 
-def parse_illnesses():
+def parse_sicknesses():
     data = {}
 
-    with open("../dataset/Sicknesses_clean.csv", encoding="utf-8") as csvf:
+    with open("dataset/Sicknesses_clean.csv", encoding="utf-8") as csvf:
         csvReader = csv.DictReader(csvf)
         key_name = "Disease/ Illness"
 
@@ -76,16 +79,17 @@ def parse_illnesses():
             data[key] = row
             if (data[key]["Link"]) != '':
                 data[key]["Link"] = ast.literal_eval(data[key]["Link"])
-            data[key] = {k: unidecode(v) if k != "Link" else v for k, v in data[key].items()}
+            data[key] = { k: unidecode(v) if k != "Link" else v for k, v in data[key].items() }
 
-    with open("../dataset/sicknesses.json", "w", encoding="utf-8") as jsonf:
+    with open("dataset/sicknesses.json", "w", encoding="utf-8") as jsonf:
         jsonf.write(json.dumps(data, indent=4))
+    print("Successfully wrote data to dataset/sicknesses.json")
 
 
 def parse_pharmaceutical_companies():
     data = {}
 
-    with open("../dataset/Pharmaceutical_companies.csv", encoding="utf-8") as csvf:
+    with open("dataset/Pharmaceutical_companies.csv", encoding="utf-8") as csvf:
         csvReader = csv.DictReader(csvf)
         key_name = "Company Name"
 
@@ -104,14 +108,15 @@ def parse_pharmaceutical_companies():
             data[key]["Year End"] = year_end
             data[key].pop("Year", None)
 
-    with open("../dataset/pharmaceutical_companies.json", "w", encoding="utf-8") as jsonf:
+    with open("dataset/pharmaceutical_companies.json", "w", encoding="utf-8") as jsonf:
         jsonf.write(json.dumps(data, indent=4))
+    print("Successfully wrote data to pharmaceutical_companies.json")
 
 
 def parse_diseases():
     data = {}
 
-    with open("../dataset/Diseases.csv", encoding="utf-8") as csvf:
+    with open("dataset/Diseases.csv", encoding="utf-8") as csvf:
         csvReader = csv.DictReader(csvf)
         key_name = "Disease"
 
@@ -123,19 +128,26 @@ def parse_diseases():
             prevalence = row["Prevalence rate (US)"]
             data[key] = row
     
-    with open("../dataset/diseases.json", "w", encoding="utf-8") as jsonf:
+    with open("dataset/diseases.json", "w", encoding="utf-8") as jsonf:
         jsonf.write(json.dumps(data, indent=4))
+    print("Successfully wrote data to diseases.json")
 
-
-def parse_medicine_reviews():
+def parse_drug_reviews():
     data = {}
 
-    with open("../dataset/Drug_Reviews.csv", encoding="utf-8") as csvf:
+    with open("dataset/Drug_Reviews.csv", encoding="utf-8") as csvf:
         csvReader = csv.DictReader(csvf)
 
         for row in csvReader:
             key = row["uniqueID"]
             data[key] = row
+            data[key] = { k: unescape(v) for k, v in data[key].items() }
+
+            if data[key]["review"].startswith("\"") and data[key]["review"].endswith("\""):
+                data[key]["review"] = data[key]["review"][1:-1]
+
+            date_obj = datetime.strptime(data[key]["date"], "%d-%b-%y")
+            data[key]["date"] = date_obj.strftime("%Y-%m-%d")
 
         total_rows = len(data)
         half_point = total_rows // 2
@@ -146,15 +158,16 @@ def parse_medicine_reviews():
 
         data_second_half = {key: data[key] for key in keys[half_point:]}
 
-    with open("../dataset/drug_reviews_part_1.json", "w", encoding="utf-8") as jsonf:
+    with open("dataset/drug_reviews_part_1.json", "w", encoding="utf-8") as jsonf:
         jsonf.write(json.dumps(data_first_half, indent=4))
-
-    with open("../dataset/drug_reviews_part_2.json", "w", encoding="utf-8") as jsonf:
+    print("Successfully wrote data to drug_reviews_part_1.json")
+    with open("dataset/drug_reviews_part_2.json", "w", encoding="utf-8") as jsonf:
         jsonf.write(json.dumps(data_second_half, indent=4))
+    print("Successfully wrote data to drug_reviews_part_2.json")
 
 
-parse_medicine_details()
-parse_illnesses()
-parse_pharmaceutical_companies()
-parse_diseases()
-parse_medicine_reviews()
+# parse_drug_details()
+# parse_sicknesses()
+# parse_pharmaceutical_companies()
+# parse_diseases()
+# parse_drug_reviews()
