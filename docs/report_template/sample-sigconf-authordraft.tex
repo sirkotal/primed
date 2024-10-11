@@ -45,7 +45,7 @@
 %% for your publication.
 %%
 %%
-\documentclass[sigconf,authordraft]{acmart}
+\documentclass[sigconf]{acmart}
 \usepackage{hyperref}
 
 %%
@@ -65,9 +65,8 @@
 \acmDOI{XXXXXXX.XXXXXXX}
 
 %% These commands are for a PROCEEDINGS abstract or paper.
-\acmConference[Conference acronym 'XX]{Make sure to enter the correct
-  conference title from your rights confirmation emai}{June 03--05,
-  2018}{Woodstock, NY}
+\acmConference[PRI - G51]{Make sure to enter the correct
+  conference title from your rights confirmation emai}{October 13, 2024}{Porto, PT}
 %%
 %%  Uncomment \acmBooktitle if the title of the proceedings is different
 %%  from ``Proceedings of ...''!
@@ -117,7 +116,7 @@
 %%
 %% The "title" command has an optional parameter,
 %% allowing the author to define a "short title" to be used in page headers.
-\title{PRIMED: A medicine search system}
+\title{PRIMED: A Medicine Search System}
 
 %%
 %% The "author" command and its associated commands are used to define
@@ -163,18 +162,14 @@
 %% other information printed in the page headers. This command allows
 %% the author to define a more concise list
 %% of authors' names for this purpose.
-\renewcommand{\shortauthors}{Trovato et al.}
+\renewcommand{\shortauthors}{Pedro Simões, Miguel Garrido, Emanuel Maia and Guilherme Martins}
 
 %%
 %% The abstract is a short summary of the work to be presented in the
 %% article.
 \begin{abstract}
-  A clear and well-documented \LaTeX\ document is presented as an
-  article formatted for publication by ACM in a conference proceedings
-  or journal publication. Based on the ``acmart'' document class, this
-  article presents and explains many of the common variations, as well
-  as many of the formatting elements an author may use in the
-  preparation of the documentation of their work.
+    Factors like the simultaneous aging and growth of the population, as well as a larger prevalence of health issues, have lead to a higher demand for medical solutions and associated information systems. In this context, the project tackles the issue of efficiently searching for information about medicines, the diseases they treat and potential side-effects, as well as the companies that produce them and feedback left by other patients.
+    Therefore, this article's goal is to provide clear and extensive insights on the development of a search engine for the medicines themselves and other aforementioned associated information, by integrating previously prepared data collected from multiple sources and properly analysing it.
 \end{abstract}
 
 %%
@@ -183,33 +178,15 @@
 %%
 \begin{CCSXML}
 <ccs2012>
- <concept>
-  <concept_id>00000000.0000000.0000000</concept_id>
-  <concept_desc>Do Not Use This Code, Generate the Correct Terms for Your Paper</concept_desc>
-  <concept_significance>500</concept_significance>
- </concept>
- <concept>
-  <concept_id>00000000.00000000.00000000</concept_id>
-  <concept_desc>Do Not Use This Code, Generate the Correct Terms for Your Paper</concept_desc>
-  <concept_significance>300</concept_significance>
- </concept>
- <concept>
-  <concept_id>00000000.00000000.00000000</concept_id>
-  <concept_desc>Do Not Use This Code, Generate the Correct Terms for Your Paper</concept_desc>
-  <concept_significance>100</concept_significance>
- </concept>
- <concept>
-  <concept_id>00000000.00000000.00000000</concept_id>
-  <concept_desc>Do Not Use This Code, Generate the Correct Terms for Your Paper</concept_desc>
-  <concept_significance>100</concept_significance>
- </concept>
-</ccs2012>
+   <concept>
+       <concept_id>10002951.10003317.10003325</concept_id>
+       <concept_desc>Information systems~Information retrieval query processing</concept_desc>
+       <concept_significance>100</concept_significance>
+       </concept>
+ </ccs2012>
 \end{CCSXML}
 
-\ccsdesc[500]{Do Not Use This Code~Generate the Correct Terms for Your Paper}
-\ccsdesc[300]{Do Not Use This Code~Generate the Correct Terms for Your Paper}
-\ccsdesc{Do Not Use This Code~Generate the Correct Terms for Your Paper}
-\ccsdesc[100]{Do Not Use This Code~Generate the Correct Terms for Your Paper}
+\ccsdesc[100]{Information systems~Information retrieval query processing}
 
 %%
 %% Keywords. The author(s) should pick words that accurately describe
@@ -243,13 +220,13 @@ The \textit{\textbf{PRIMED}} project aims to compile and organize such data so t
 
 In this part of the project, data from various sources was collected, processed and analysed, aiming to create a solid basis for a pharmaceutical system. The whole process is described in this document, since the choice of theme, up to the analysis of gathered data and classification of it.
 
-\section{Theme selection}
+\section{Theme Selection}
 The choice of focusing on medications as the central theme for this project stems from the critical role they play in modern healthcare. Medications are the primary tool for treating various health problems and conditions, making them and essential component in both public healthcare systems and individual patient care. The data surrounding these substances, such as active ingredients, applicable cases and clinical trials, offers valuable insights that can improve decision-making in medical practice and pharmaceutics.
 
-\section{Data collection}
+\section{Data Collection}
 This chapter explains the process of data selection and their gathering.
 
-\subsection{Selection of data}
+\subsection{Selection of Data}
 
 One of the main challenges of the healthcare sector is ensuring that, accurate and up-to-date information on medications, is available to healthcare professionals. Given these needs, the selection of data to be collected was made:
 
