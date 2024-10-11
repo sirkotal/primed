@@ -41,7 +41,7 @@ def parse_use_cases_side_effects(input_string):
 def parse_drug_details():
     data = {}
 
-    with open("dataset/Medicine_Details.csv", encoding="utf-8") as csvf:
+    with open("dataset/medicine_details.csv", encoding="utf-8") as csvf:
         csvReader = csv.DictReader(csvf)
 
         for row in csvReader:
@@ -69,7 +69,7 @@ def remove_urls(text): # deletes everything in a string from the point where a u
 def parse_sicknesses():
     data = {}
 
-    with open("dataset/Sicknesses_clean.csv", encoding="utf-8") as csvf:
+    with open("dataset/sicknesses_clean.csv", encoding="utf-8") as csvf:
         csvReader = csv.DictReader(csvf)
         key_name = "Disease/ Illness"
 
@@ -89,7 +89,7 @@ def parse_sicknesses():
 def parse_pharmaceutical_companies():
     data = {}
 
-    with open("dataset/Pharmaceutical_companies.csv", encoding="utf-8") as csvf:
+    with open("dataset/pharmaceutical_companies.csv", encoding="utf-8") as csvf:
         csvReader = csv.DictReader(csvf)
         key_name = "Company Name"
 
@@ -116,7 +116,7 @@ def parse_pharmaceutical_companies():
 def parse_diseases():
     data = {}
 
-    with open("dataset/Diseases.csv", encoding="utf-8") as csvf:
+    with open("dataset/diseases.csv", encoding="utf-8") as csvf:
         csvReader = csv.DictReader(csvf)
         key_name = "Disease"
 
@@ -135,7 +135,7 @@ def parse_diseases():
 def parse_drug_reviews():
     data = {}
 
-    with open("dataset/Drug_Reviews.csv", encoding="utf-8") as csvf:
+    with open("dataset/drug_reviews.csv", encoding="utf-8") as csvf:
         csvReader = csv.DictReader(csvf)
 
         for row in csvReader:
