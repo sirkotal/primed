@@ -41,7 +41,7 @@ def parse_use_cases_side_effects(input_string):
 def parse_drug_details():
     data = {}
 
-    with open("dataset/Medicine_Details.csv", encoding="utf-8") as csvf:
+    with open("dataset/medicine_details.csv", encoding="utf-8") as csvf:
         csvReader = csv.DictReader(csvf)
 
         for row in csvReader:
@@ -69,7 +69,7 @@ def remove_urls(text): # deletes everything in a string from the point where a u
 def parse_sicknesses():
     data = {}
 
-    with open("dataset/Sicknesses_clean.csv", encoding="utf-8") as csvf:
+    with open("dataset/sicknesses_clean.csv", encoding="utf-8") as csvf:
         csvReader = csv.DictReader(csvf)
         key_name = "Disease/ Illness"
 
@@ -89,7 +89,7 @@ def parse_sicknesses():
 def parse_pharmaceutical_companies():
     data = {}
 
-    with open("dataset/Pharmaceutical_companies.csv", encoding="utf-8") as csvf:
+    with open("dataset/pharmaceutical_companies.csv", encoding="utf-8") as csvf:
         csvReader = csv.DictReader(csvf)
         key_name = "Company Name"
 
@@ -116,7 +116,7 @@ def parse_pharmaceutical_companies():
 def parse_diseases():
     data = {}
 
-    with open("dataset/Diseases.csv", encoding="utf-8") as csvf:
+    with open("dataset/diseases.csv", encoding="utf-8") as csvf:
         csvReader = csv.DictReader(csvf)
         key_name = "Disease"
 
@@ -135,7 +135,7 @@ def parse_diseases():
 def parse_drug_reviews():
     data = {}
 
-    with open("dataset/Drug_Reviews.csv", encoding="utf-8") as csvf:
+    with open("dataset/drug_reviews.csv", encoding="utf-8") as csvf:
         csvReader = csv.DictReader(csvf)
 
         for row in csvReader:
@@ -151,19 +151,30 @@ def parse_drug_reviews():
 
         total_rows = len(data)
         half_point = total_rows // 2
+        quarter_point = total_rows // 4
 
         keys = list(data.keys())
 
-        data_first_half = {key: data[key] for key in keys[:half_point]}
+        data_first_q = {key: data[key] for key in keys[:quarter_point]}
 
-        data_second_half = {key: data[key] for key in keys[half_point:]}
+        data_second_q = {key: data[key] for key in keys[quarter_point:half_point]}
+
+        data_third_q = {key: data[key] for key in keys[half_point:(quarter_point*3)]}
+
+        data_fourth_q = {key: data[key] for key in keys[(quarter_point*3):]}
 
     with open("dataset/drug_reviews_part_1.json", "w", encoding="utf-8") as jsonf:
-        jsonf.write(json.dumps(data_first_half, indent=4))
+        jsonf.write(json.dumps(data_first_q, indent=4))
     print("Successfully wrote data to drug_reviews_part_1.json")
     with open("dataset/drug_reviews_part_2.json", "w", encoding="utf-8") as jsonf:
-        jsonf.write(json.dumps(data_second_half, indent=4))
+        jsonf.write(json.dumps(data_second_q, indent=4))
     print("Successfully wrote data to drug_reviews_part_2.json")
+    with open("dataset/drug_reviews_part_3.json", "w", encoding="utf-8") as jsonf:
+        jsonf.write(json.dumps(data_third_q, indent=4))
+    print("Successfully wrote data to drug_reviews_part_3.json")
+    with open("dataset/drug_reviews_part_4.json", "w", encoding="utf-8") as jsonf:
+        jsonf.write(json.dumps(data_fourth_q, indent=4))
+    print("Successfully wrote data to drug_reviews_part_4.json")
 
 
 # parse_drug_details()

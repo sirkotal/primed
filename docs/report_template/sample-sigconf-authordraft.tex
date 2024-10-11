@@ -45,8 +45,9 @@
 %% for your publication.
 %%
 %%
-\documentclass[sigconf,authordraft]{acmart}
+\documentclass[sigconf]{acmart}
 \usepackage{hyperref}
+%%\usepackage{indentfirst}
 
 %%
 %% \BibTeX command to typeset BibTeX logo in the docs
@@ -65,9 +66,8 @@
 \acmDOI{XXXXXXX.XXXXXXX}
 
 %% These commands are for a PROCEEDINGS abstract or paper.
-\acmConference[Conference acronym 'XX]{Make sure to enter the correct
-  conference title from your rights confirmation emai}{June 03--05,
-  2018}{Woodstock, NY}
+\acmConference[PRI - G51]{Make sure to enter the correct
+  conference title from your rights confirmation email}{October 13, 2024}{Porto, PT}
 %%
 %%  Uncomment \acmBooktitle if the title of the proceedings is different
 %%  from ``Proceedings of ...''!
@@ -117,7 +117,7 @@
 %%
 %% The "title" command has an optional parameter,
 %% allowing the author to define a "short title" to be used in page headers.
-\title{PRIMED: A medicine search system}
+\title{PRIMED: A Medicine Search System}
 
 %%
 %% The "author" command and its associated commands are used to define
@@ -163,18 +163,14 @@
 %% other information printed in the page headers. This command allows
 %% the author to define a more concise list
 %% of authors' names for this purpose.
-\renewcommand{\shortauthors}{Trovato et al.}
+\renewcommand{\shortauthors}{Pedro Simões, Miguel Garrido, Emanuel Maia and Guilherme Martins}
 
 %%
 %% The abstract is a short summary of the work to be presented in the
 %% article.
 \begin{abstract}
-  A clear and well-documented \LaTeX\ document is presented as an
-  article formatted for publication by ACM in a conference proceedings
-  or journal publication. Based on the ``acmart'' document class, this
-  article presents and explains many of the common variations, as well
-  as many of the formatting elements an author may use in the
-  preparation of the documentation of their work.
+    Factors like the simultaneous aging and growth of the population, as well as a larger prevalence of health issues, have lead to a higher demand for medical solutions and associated information systems. In this context, the project tackles the issue of efficiently searching for information about medicines, the diseases they treat and potential side-effects, as well as the companies that produce them and feedback left by other patients.
+    Therefore, this article's goal is to provide clear and extensive insights on the development of a search engine for the medicines themselves and other aforementioned associated information, by integrating previously prepared data collected from multiple sources and properly analysing it.
 \end{abstract}
 
 %%
@@ -183,33 +179,15 @@
 %%
 \begin{CCSXML}
 <ccs2012>
- <concept>
-  <concept_id>00000000.0000000.0000000</concept_id>
-  <concept_desc>Do Not Use This Code, Generate the Correct Terms for Your Paper</concept_desc>
-  <concept_significance>500</concept_significance>
- </concept>
- <concept>
-  <concept_id>00000000.00000000.00000000</concept_id>
-  <concept_desc>Do Not Use This Code, Generate the Correct Terms for Your Paper</concept_desc>
-  <concept_significance>300</concept_significance>
- </concept>
- <concept>
-  <concept_id>00000000.00000000.00000000</concept_id>
-  <concept_desc>Do Not Use This Code, Generate the Correct Terms for Your Paper</concept_desc>
-  <concept_significance>100</concept_significance>
- </concept>
- <concept>
-  <concept_id>00000000.00000000.00000000</concept_id>
-  <concept_desc>Do Not Use This Code, Generate the Correct Terms for Your Paper</concept_desc>
-  <concept_significance>100</concept_significance>
- </concept>
-</ccs2012>
+   <concept>
+       <concept_id>10002951.10003317.10003325</concept_id>
+       <concept_desc>Information systems~Information retrieval query processing</concept_desc>
+       <concept_significance>100</concept_significance>
+       </concept>
+ </ccs2012>
 \end{CCSXML}
 
-\ccsdesc[500]{Do Not Use This Code~Generate the Correct Terms for Your Paper}
-\ccsdesc[300]{Do Not Use This Code~Generate the Correct Terms for Your Paper}
-\ccsdesc{Do Not Use This Code~Generate the Correct Terms for Your Paper}
-\ccsdesc[100]{Do Not Use This Code~Generate the Correct Terms for Your Paper}
+\ccsdesc[100]{Information systems~Information retrieval query processing}
 
 %%
 %% Keywords. The author(s) should pick words that accurately describe
@@ -237,34 +215,33 @@
 \maketitle
 
 \section{Introduction}
-Nowadays, medicine information plays a vital role in decision-making on the healthcare and investigation sectors. Having access to clean and relevant information is crucial to enhance the efficiency and safety of treatments.
+Nowadays, accurate and comprehensive medicine information plays a vital role in decision-making on the healthcare and investigation sectors. Having access to clean and relevant information is crucial to enhance the efficiency and safety of treatments.
 
-The \textit{\textbf{PRIMED}} project aims to compile and organize such data so that it can be accessed in an easy and organized way. It provides insights that can be applied both in practical cases or just in developing new health safety politics.
+The \textit{\textbf{PRIMED}} project aims to compile and organize such data so that it can be accessed in an easy and organized way. It provides insights that can be applied both in practical cases or simply in developing new health safety politics.
 
-In this part of the project, data from various sources was collected, processed and analysed, aiming to create a solid basis for a pharmaceutical system. The whole process is described in this document, since the choice of theme, up to the analysis of gathered data and classification of it.
+In this part of the project, data from various sources was collected, processed and analysed with the goal of creating a solid basis for a pharmaceutical system. The whole process is described in this document, from the choice of the theme itself up to the analysis of gathered data and its subsequent classification.
 
-\section{Theme selection}
-The choice of focusing on medications as the central theme for this project stems from the critical role they play in modern healthcare. Medications are the primary tool for treating various health problems and conditions, making them and essential component in both public healthcare systems and individual patient care. The data surrounding these substances, such as active ingredients, applicable cases and clinical trials, offers valuable insights that can improve decision-making in medical practice and pharmaceutics.
+\section{Theme Selection}
+The choice to focus on medicines as the central theme for this project stems from the critical role they play in modern healthcare. Medication is the primary tool for treating multiple health problems and conditions, making them an essential component in both public healthcare systems and individual patient care. The data surrounding these substances, such as active substances, applicable cases and clinical trials, offers valuable insights that can improve decision-making in medical practice and pharmaceutics.
 
-\section{Data collection}
-This chapter explains the process of data selection and their gathering.
+\section{Data Collection}
+This chapter outlines the data selection process and the methods utilized to gather it.
 
-\subsection{Selection of data}
-
-One of the main challenges of the healthcare sector is ensuring that, accurate and up-to-date information on medications, is available to healthcare professionals. Given these needs, the selection of data to be collected was made:
+\subsection{Selection of Data}
+One of the main challenges of the healthcare sector is ensuring that accurate and up-to-date information on medication is available to healthcare professionals. Given these needs, the selection of data to be collected was made:
 
 \begin{itemize}
-	\item {\texttt{Medicines}}: The main component of the data. Medicines and their relevant, intrinsic information.
-	\item {\texttt{Sicknesses}}: To complement the collected data, some diseases were collected so that it would be possible to get more information to enhance the success of the medicine selection.
-	\item {\texttt{Pharmaceutical Companies}}: Some pharmaceutical companies are more trusted than others, having more credibility and better products, which can impact on the decision-making process.
-	\item {\texttt{Reviews}}: Lastly, it is important to know the success rate of the presented medicine and how the people who use it feel about it.
+	\item {\texttt{Medicines}}: The main component of the data, consisting of medicines and their respective relevant, intrinsic information.
+	\item {\texttt{Sicknesses}}: To complement the collected data, information on some diseases was collected so that it would be possible to get more information to allow for an easier medicine selection process.
+	\item {\texttt{Pharmaceutical Companies}}: Some pharmaceutical companies are more trusted than others due to their credibility and higher quality products, which can impact the decision-making process.
+	\item {\texttt{Reviews}}: It is important to know the success rate of the presented medicine and how the people who use it feel about it.
 \end{itemize}
 
-With this data, we aim to provide the needed information for the users.
+With this data, the aim is to provide the required information to the users.
 
 \subsection{Gathering}
 
-Finding the intended data was not easy so it had to be gathered from various sources, some of them being scraped and the rest datasets prepared to use. The scraping was made from Wikipedia and the prepared datasets were found on Kaggle. 
+Finding data suitable for the project proved to be a challenge; not only did it have to be relevant and accurate, but it also had to meet some criteria in terms of quantity and quality. Therefore, the data had to be gathered from multiple sources using different methods - most of the data came from prepared datasets found on Kaggle, while the rest came from scraping Wikipedia.
 
 \subsubsection{Medicines}
 
@@ -334,6 +311,16 @@ vertical spacing between elements of your work --- is not allowed.
 
 {\bfseries Your document will be returned to you for revision if
   modifications are discovered.}
+
+\section{Pipeline Description}
+
+\section{Conceptual Data Model}
+
+\section{Information Needs}
+
+\section{Dataset Characterization}
+
+\section{Conclusions}
 
 \section{Typefaces}
 
