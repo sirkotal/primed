@@ -41,7 +41,7 @@ def parse_use_cases_side_effects(input_string):
 def parse_drug_details():
     data = {}
 
-    with open("dataset/medicine_details.csv", encoding="utf-8") as csvf:
+    with open("dataset/sources/medicine_details.csv", encoding="utf-8") as csvf:
         csvReader = csv.DictReader(csvf)
 
         for row in csvReader:
@@ -53,9 +53,9 @@ def parse_drug_details():
             row.pop("Image URL", None)
             data[key] = row
 
-    with open("dataset/medicine_details.json", "w", encoding="utf-8") as jsonf:
+    with open("dataset/output/medicine_details.json", "w", encoding="utf-8") as jsonf:
         jsonf.write(json.dumps(data, indent=4))
-    print("Successfully wrote data to dataset/medicine_details.json")
+    print("Successfully wrote data to dataset/output/medicine_details.json")
 
 
 def remove_urls(text): # deletes everything in a string from the point where a url is found
@@ -69,7 +69,7 @@ def remove_urls(text): # deletes everything in a string from the point where a u
 def parse_sicknesses():
     data = {}
 
-    with open("dataset/sicknesses_clean.csv", encoding="utf-8") as csvf:
+    with open("dataset/sources/sicknesses_clean.csv", encoding="utf-8") as csvf:
         csvReader = csv.DictReader(csvf)
         key_name = "Disease/ Illness"
 
@@ -81,15 +81,15 @@ def parse_sicknesses():
                 data[key]["Link"] = ast.literal_eval(data[key]["Link"])
             data[key] = { k: unidecode(v) if k != "Link" else v for k, v in data[key].items() }
 
-    with open("dataset/sicknesses.json", "w", encoding="utf-8") as jsonf:
+    with open("dataset/output/sicknesses.json", "w", encoding="utf-8") as jsonf:
         jsonf.write(json.dumps(data, indent=4))
-    print("Successfully wrote data to dataset/sicknesses.json")
+    print("Successfully wrote data to dataset/output/sicknesses.json")
 
 
 def parse_pharmaceutical_companies():
     data = {}
 
-    with open("dataset/pharmaceutical_companies.csv", encoding="utf-8") as csvf:
+    with open("dataset/sources/pharmaceutical_companies.csv", encoding="utf-8") as csvf:
         csvReader = csv.DictReader(csvf)
         key_name = "Company Name"
 
@@ -108,7 +108,7 @@ def parse_pharmaceutical_companies():
             data[key]["Year End"] = year_end
             data[key].pop("Year", None)
 
-    with open("dataset/pharmaceutical_companies.json", "w", encoding="utf-8") as jsonf:
+    with open("dataset/output/pharmaceutical_companies.json", "w", encoding="utf-8") as jsonf:
         jsonf.write(json.dumps(data, indent=4))
     print("Successfully wrote data to pharmaceutical_companies.json")
 
@@ -116,7 +116,7 @@ def parse_pharmaceutical_companies():
 def parse_diseases():
     data = {}
 
-    with open("dataset/diseases.csv", encoding="utf-8") as csvf:
+    with open("dataset/sources/diseases.csv", encoding="utf-8") as csvf:
         csvReader = csv.DictReader(csvf)
         key_name = "Disease"
 
@@ -129,14 +129,14 @@ def parse_diseases():
             data[key] = row
             data[key] = { k: unidecode(v) for k, v in data[key].items() }
     
-    with open("dataset/diseases.json", "w", encoding="utf-8") as jsonf:
+    with open("dataset/output/diseases.json", "w", encoding="utf-8") as jsonf:
         jsonf.write(json.dumps(data, indent=4))
     print("Successfully wrote data to diseases.json")
 
 def parse_drug_reviews():
     data = {}
 
-    with open("dataset/drug_reviews.csv", encoding="utf-8") as csvf:
+    with open("dataset/sources/drug_reviews.csv", encoding="utf-8") as csvf:
         csvReader = csv.DictReader(csvf)
 
         for row in csvReader:
@@ -164,18 +164,18 @@ def parse_drug_reviews():
 
         data_fourth_q = {key: data[key] for key in keys[(quarter_point*3):]}
 
-    with open("dataset/drug_reviews_part_1.json", "w", encoding="utf-8") as jsonf:
+    with open("dataset/output/drug_reviews_part_1.json", "w", encoding="utf-8") as jsonf:
         jsonf.write(json.dumps(data_first_q, indent=4))
-    print("Successfully wrote data to drug_reviews_part_1.json")
-    with open("dataset/drug_reviews_part_2.json", "w", encoding="utf-8") as jsonf:
+    print("Successfully wrote data to dataset/output/drug_reviews_part_1.json")
+    with open("dataset/output/drug_reviews_part_2.json", "w", encoding="utf-8") as jsonf:
         jsonf.write(json.dumps(data_second_q, indent=4))
-    print("Successfully wrote data to drug_reviews_part_2.json")
-    with open("dataset/drug_reviews_part_3.json", "w", encoding="utf-8") as jsonf:
+    print("Successfully wrote data to dataset/output/drug_reviews_part_2.json")
+    with open("dataset/output/drug_reviews_part_3.json", "w", encoding="utf-8") as jsonf:
         jsonf.write(json.dumps(data_third_q, indent=4))
-    print("Successfully wrote data to drug_reviews_part_3.json")
-    with open("dataset/drug_reviews_part_4.json", "w", encoding="utf-8") as jsonf:
+    print("Successfully wrote data to dataset/output/drug_reviews_part_3.json")
+    with open("dataset/output/drug_reviews_part_4.json", "w", encoding="utf-8") as jsonf:
         jsonf.write(json.dumps(data_fourth_q, indent=4))
-    print("Successfully wrote data to drug_reviews_part_4.json")
+    print("Successfully wrote data to dataset/output/drug_reviews_part_4.json")
 
 
 # parse_drug_details()
