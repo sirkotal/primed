@@ -12,7 +12,7 @@ install:
 	@echo "Creating virtual environment..."
 	@$(PYTHON) -m venv venv && echo "Virtual environment created in $(VENV_DIR)" && echo ""
 	@echo "Installing dependencies..."
-	@. $(ACTIVATE) && pip install -r $(REQS) && echo "Dependencies installed successfully!" && echo ""
+	@. $(ACTIVATE) && pip install -r $(REQS) && echo "" && echo "Dependencies installed successfully!" && echo ""
 
 run:
 	@. $(ACTIVATE) && $(PYTHON) data_pipeline/main.py && echo "" && echo "Done!"
