@@ -272,35 +272,37 @@ The information extracted from this dataset consists of:
 	\item {\texttt{Prevalence Rate (US))}}: The percentage of people or how many the disease affects in the US.
 \end{itemize}
 
-The gathered dataset contains about 110 lines of diseases, being available under the \textit{\textbf{Creative Commons Attribution-ShareAlike 4.0 International}} license\cite{wikipedia_cc}, which allows for the sharing and adaptation of the contents.
+The gathered dataset contains about 110 lines of diseases, being available under the \textit{\textbf{Creative Commons Attribution-ShareAlike 4.0 International}}\cite{wikipedia_cc} license, which allows for the sharing and adaptation of the contents.
 
 \subsubsection{Pharmaceutical Companies}
 
-To compliment the data on companies, another scraping of Wikipedia was made so that there could be more data on pharmaceutical companies.
+To complement the data on companies present in the \textit{Medicines} dataset, more data on pharmaceutical companies was gathered through another round Wikipedia scraping - this time from a page containing an extensive list of pharmaceutical companies\cite{companies_dataset}. Approximately 700 companies' names and founding dates were gathered, alongside a short description from each one's Wikipedia article.
 
-The gathered information for the companies was:
+The collected information follows this structure:
 \begin{itemize}
-	\item {\texttt{Company name}}: The name of the company.
+	\item {\texttt{Company Name}}: The company's name.
 	\item {\texttt{Year}}: The year the company was created and, if available, when the company was shut down.
-	\item {\texttt{Description}}: A short description of each company, it's values and some more information about them.
+	\item {\texttt{Description}}: A short description of each company, its values and some extra information.
 \end{itemize}
 
-The origin of the information was a \href{https://en.wikipedia.org/wiki/List_of_pharmaceutical_companies}{\textit{\textbf{pharmaceutical companies list}}} where around 700 companies names and years were gathered from and, for each company, their respective Wikipedia page's first description. This dataset also falls under the same licence ( \href{https://en.wikipedia.org/wiki/Wikipedia:Text_of_the_Creative_Commons_Attribution-ShareAlike_4.0_International_License}{\textit{\textbf{CC0 1.0 UniversalWikipedia:Text of the Creative Commons Attribution-ShareAlike 4.0 International License}}}) as the previous dataset, as it was gathered in a similar way.
+This dataset falls under the same license as the previous \textit{Diseases} dataset (\textit{\textbf{Creative Commons Attribution-ShareAlike 4.0 International}}), as the data was collected in a similar way.
 
 \subsubsection{Reviews}
 
-Lastly, some reviews for the arranged medicine with more personal descriptions from users was added.
+Lastly, a dataset containing reviews for the collected medication data with more personal descriptions from users\cite{reviews_dataset} was retrieved from UC Irvine's Machine Learning Repository\cite{irvine}.
 
-The information is:
+The data collected had the following structure:
 \begin{itemize}
-	\item {\texttt{Unique ID}}: The ID of the review.
+	\item {\texttt{Unique ID}}: The unique identification of the review.
 	\item {\texttt{Drug Name}}: Name of the drug/treatment.
 	\item {\texttt{Condition}}: The condition of the patient where it was used.
 	\item {\texttt{Review}}: Written review of the experience of taking the drug.
-	\item {\texttt{Drug Name}}: Name of the drug/treatment.
+	\item {\texttt{Rating}}: Number from 0-10 that expresses the quality of the drug.
+    \item {\texttt{Date}}: Date of when the drug was taken.
+    \item {\texttt{Useful Count}}: Similar to a "like" system, this showcases the number of people who found this review useful.
 \end{itemize}
 
-This information was gathered from \href{https://archive.ics.uci.edu/dataset/462/drug+review+dataset+drugs+com}{\textit{\textbf{UC Irvine}}}, containing around 215000 entries. This dataset is covered by the \href{https://creativecommons.org/licenses/by/4.0/legalcode}{\textit{\textbf{Attribution 4.0 International}}} licence, which allows for the sharing and adaptation of the datasets for any purpose, provided that the appropriate credit is given.
+This dataset contains around 215000 entries and is covered by the \textit{\textbf{Attribution 4.0 International}}\cite{ccfour} license, which allows for the sharing and adaptation of the datasets for any purpose, provided that the appropriate credit is given.
 
 \section{Modifications}
 
