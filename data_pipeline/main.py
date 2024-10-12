@@ -1,7 +1,7 @@
-from data_pipeline.to_json import parse_drug_details, parse_diseases, \
+from to_json import parse_drug_details, parse_diseases, \
     parse_drug_reviews, parse_pharmaceutical_companies, \
     parse_sicknesses
-from data_pipeline.wikipedia_scraper import get_companies, get_diseases
+from wikipedia_scraper import get_companies, get_diseases
 
 
 if __name__ == '__main__':
@@ -9,8 +9,9 @@ if __name__ == '__main__':
     print("Parsing drug details...")
     parse_drug_details()
 
-    print("\nParsing sicknesses...")
-    parse_sicknesses()
+    # dataset extracted from pdf, not using for now
+    # print("\nParsing sicknesses...")
+    # parse_sicknesses()
 
     print("\nParsing drug reviews...")
     parse_drug_reviews()
@@ -42,5 +43,3 @@ if __name__ == '__main__':
             break
         else:
             print("Please answer yes or no.")
-
-    print("\nDone!")

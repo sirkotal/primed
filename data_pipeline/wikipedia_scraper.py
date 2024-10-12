@@ -54,7 +54,7 @@ def get_companies():
 
     df = pd.DataFrame(data, columns=['Company Name', 'Year', 'Description'])
 
-    df.to_csv('dataset/pharmaceutical_companies.csv', index=False)
+    df.to_csv('dataset/sources/pharmaceutical_companies.csv', index=False)
 
     print("Successfully wrote data to pharmaceutical_companies.csv")
 
@@ -81,7 +81,7 @@ def get_diseases():
 
     df = pd.DataFrame(data, columns=['Disease', 'Primary organ/body part affected', 'Autoantibodies', 'Acceptance as an autoimmune disease', 'Prevalence rate (US)'])
 
-    df.to_csv('dataset/diseases.csv', index=False)
+    df.to_csv('dataset/sources/diseases.csv', index=False)
 
     print("Successfully wrote data to diseases.csv")
 
