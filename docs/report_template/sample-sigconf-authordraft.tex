@@ -304,30 +304,41 @@ This dataset contains around 215000 entries and is covered by the \textit{\textb
 
 \section{Pipeline Description}
 
-As mentioned in 3.2, PRIMED's data comes from various sources. Due to the often unstructured nature of this data, it is vital to have a streamlined and automated way of normalizing and processing all the information into similar formats, and that is the main role of the data pipeline.
+As mentioned in section 3.2 of this report, \textit{\textbf{PRIMED}}'s data comes from various sources. Due to the often unstructured nature of this data, it is vital to have a streamlined and automated way of normalizing and processing all the information into similar formats, which is the main role of the data pipeline.
 
-The pipeline is composed of \texttt{Python} \textit{scripts} using libraries such as \texttt{pandas}, \texttt{unidecode}, \texttt{html}, \texttt{json} and \texttt{csv} with the crux of the data processing occurring on the \texttt{to{\textunderscore}json.py} script, to convert \texttt{CSV} files into \texttt{JSON} format.
+The pipeline consists of \texttt{Python} scripts utilizing libraries such as \texttt{pandas}, \texttt{unidecode}, \texttt{html}, \texttt{json} and \texttt{csv} with the crux of the data processing occurring on the \texttt{to{\textunderscore}json.py} script, which converts the \texttt{CSV} files into \texttt{JSON} format.
 
 \subsection{Elimination of Null Values and Rows}
 
-When processing data, another key aspect to consider is that not all data may be correct or even present. For this reason, before doing anything else with the \texttt{csv} source files, the pipeline uses \texttt{pandas} dataframes to check for and remove rows containing only \texttt{Null} values, or rows in which key values, such as \texttt{Medicine Name}, for instance, aren't present.
+When processing data, another key aspect to consider is that not all data may be correct or even present. For this reason, before doing anything else with the \texttt{CSV} source files, the pipeline uses \texttt{pandas} \textit{dataframes} to check for and remove rows containing only null values, or rows in which key values, such as \texttt{Medicine Name}, for instance, aren't present.
 
 \subsection{Text Normalization}
 
 When scraping information from websites, it is important to make sure all the text is normalized. The data pipeline ensures, via \texttt{Python}'s \texttt{unidecode()} function, that the dataset only contains \texttt{ASCII} characters. This helps prevent future issues when searching the datasets for information.
 
-Another character normalization problem of scraping websites for information arises precisely due to \texttt{html}'s nature, with that being the escape codes used to represent special characeters. To convert these codes into ASCII characters we used \texttt{unescape()} from \texttt{Python}'s \texttt{html}, wrapped inside a call to the previously mentioned \texttt{unidecode()} function, to convert the \texttt{unicode} output into \texttt{ASCII}.
+Another character normalization problem resulting from the scraping process arises due to \texttt{HTML}'s nature - more specifically, escape codes used to represent special characters. To convert these codes into ASCII characters, the \texttt{unescape()} function from \texttt{Python}'s \texttt{html} module, wrapped inside a call to the previously mentioned \texttt{unidecode()} function, to convert the \texttt{Unicode} output into \texttt{ASCII}.
 
 \subsection{Standardization of Formats}
 
-For the best possible result, formats such as dates should follow the same format. Therefore, part of the pipeline deals with standardizing this data in \texttt{yyyy-mm-dd} format, which makes the process of sorting and searching substantially easier. 
-
+For the best possible result, formats such as dates should be standardized; therefore, part of the pipeline deals with transforming this data into \texttt{yyyy-mm-dd} format, which makes the process of sorting and searching substantially easier. 
 
 \subsection{Data Storage}
 
-maybe? describe how data is stored?
+maybe? describe how data is stored? buwomp
 
 \section{Conceptual Data Model}
+
+Having finalized the data collection and the subsequent transformation and storage processes in the pipeline, a conceptual data model for the combined dataset was developed.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\linewidth]{pri_uml_final.png}
+  \caption{Conceptual Data Model}
+  \Description{UML diagram for \textit{\textbf{PRIMED}}'s data}
+  \label{fig:uml}
+\end{figure}
+
+Each medicine is associated with one and only one pharmaceutical company; a company, however, can produce multiple medicines. A single medicine can be linked to multiple diseases and reviews, though the reverse is true only for diseases - a disease can be associated to many medicines (and many reviews). A review, however, can only be associated with a single medicine and a single disease.
 
 \section{Information Needs}
 
