@@ -317,6 +317,10 @@ As mentioned in 3.2, PRIMED's data comes from various sources. Due to the often 
 
 The pipeline is composed of \texttt{Python} \textit{scripts} using libraries such as \texttt{pandas}, \texttt{unidecode}, \texttt{html}, \texttt{json} and \texttt{csv} with the crux of the data processing occurring on the \texttt{to{\textunderscore}json.py} script, to convert \texttt{CSV} files into \texttt{JSON} format.
 
+\subsection{Elimination of Null Values and Rows}
+
+When processing data, another key aspect to consider is that not all data may be correct or even present. For this reason, before doing anything else with the \texttt{csv} source files, the pipeline uses \texttt{pandas} dataframes to check for and remove rows containing only \texttt{Null} values, or rows in which key values, such as \texttt{Medicine Name}, for instance, aren't present.
+
 \subsection{Text Normalization}
 
 When scraping information from websites, it is important to make sure all the text is normalized. The data pipeline ensures, via \texttt{Python}'s \texttt{unidecode()} function, that the dataset only contains \texttt{ASCII} characters. This helps prevent future issues when searching the datasets for information.
@@ -327,9 +331,10 @@ Another character normalization problem of scraping websites for information ari
 
 For the best possible result, formats such as dates should follow the same format. Therefore, part of the pipeline deals with standardizing this data in \texttt{yyyy-mm-dd} format, which makes the process of sorting and searching substantially easier. 
 
+
 \subsection{Data Storage}
 
-maybe?
+maybe? describe how data is stored?
 
 \section{Conceptual Data Model}
 
