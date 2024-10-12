@@ -192,8 +192,7 @@
 %%
 %% Keywords. The author(s) should pick words that accurately describe
 %% the work being presented. Separate the keywords with commas.
-\keywords{Do, Not, Us, This, Code, Put, the, Correct, Terms, for,
-  Your, Paper}
+\keywords{Medicine, Treatments, Sickness, Pipeline, Data, Gathering, Scraping, Preparation, Search Engine}
 %% A "teaser" image appears between the author and affiliation
 %% information and the body of the document, and typically spans the
 %% page.
@@ -335,6 +334,31 @@ maybe?
 \section{Conceptual Data Model}
 
 \section{Information Needs}
+
+The information needs on this data can vary from the person using it. If the one who is using the tool is, for example, a doctor or pharmaceutical, the needs might be related to the compositions of medicine or cases where it was applied. If the user is an average person, he can be more interested in checking who made the medicine to check if it can be trusted or to check other user's reviews on that treatment/possible side effects to have a better understanding of what can happen to him.
+
+Here is a list of possible information needs, explaining what kind of data on the is needed, why and for whom:
+\begin{itemize}
+	\item {\texttt{Medicine compositions}}: The composition of the treatment is important because some might even harm the patient so it is important to keep an eye out for that.
+	\item {\texttt{Uses}}: Not every medicine has clear use cases, some might have a principal use but an also good side use that is not much common.
+	\item {\texttt{Side effects}}: Clearly the users should be able to know the possible side effects of their treatment so that they can be prepared and informed of possible strange events.
+	\item {\texttt{Manufacturer}}: Some people have preferential manufacturers who they trust more than others or can simply want to know more about the one they were prescribed.
+	\item {\texttt{Reviews}}: For all possible types of users, the reviews are always important, both textual or not, they indicate other experiences. Sometimes peculiar cases are described there where the patients got rare effects from said treatment.
+	\item {\texttt{Diseases' primary organs/autoantibodies}}: In some cases, experts might need to know how what part of the body or what are the antibodies that are affected by the diseases in order to prescribe the best solution.
+	\item {\texttt{Prevalence rate}}: It can also be relevant to note how common certain disease when making the diagnosis of the patient or just for statistics.
+\end{itemize}
+
+Based one these needs we can answer some questions like: 
+\begin{itemize}
+	\item Which medicines can are more commonly used for certain conditions?
+	\item How different manufacturers affect the treatment of specific diseases?
+	\item How can certain health conditions be treated with the most effectiveness?
+	\item With certain symptoms, what treatment should be applied?
+	\item Are these effects normal after taking certain medication?
+	\item What happened to other people who had the same treatment as me?
+\end{itemize}
+
+Lastly, as previously stated, people such as normal users, medicine experts and even investigators can take advantage from this type of information. From gaining awareness, to helping people with special needs on recovering.
 
 \section{Dataset Characterization}
 
