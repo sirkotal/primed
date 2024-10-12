@@ -232,7 +232,7 @@ One of the main challenges of the healthcare sector is ensuring that accurate an
 
 \begin{itemize}
 	\item {\texttt{Medicines}}: The main component of the data, consisting of medicines and their respective relevant, intrinsic information.
-	\item {\texttt{Sicknesses}}: To complement the collected data, information on some diseases was collected so that it would be possible to get more information to allow for an easier medicine selection process.
+	\item {\texttt{Diseases}}: To complement the collected data, information on some diseases was collected so that it would be possible to get more information to allow for an easier medicine selection process.
 	\item {\texttt{Pharmaceutical Companies}}: Some pharmaceutical companies are more trusted than others due to their credibility and higher quality products, which can impact the decision-making process.
 	\item {\texttt{Reviews}}: It is important to know the success rate of the presented medicine and how the people who use it feel about it.
 \end{itemize}
@@ -241,66 +241,68 @@ With this data, the aim is to provide the required information to the users.
 
 \subsection{Gathering}
 
-Finding data suitable for the project proved to be a challenge; not only did it have to be relevant and accurate, but it also had to meet some criteria in terms of quantity and quality. Therefore, the data had to be gathered from multiple sources using different methods - most of the data came from prepared datasets found on Kaggle, while the rest came from scraping Wikipedia.
+Finding data suitable for the project proved to be a challenge; not only did it have to be relevant and accurate, but it also had to meet some criteria in terms of quantity and quality. Therefore, the data had to be gathered from multiple sources using different methods - most of the data came from prepared datasets found on Kaggle\cite{kaggle}, while the rest came from scraping Wikipedia\cite{wikipedia}.
 
 \subsubsection{Medicines}
 
-The Medicines dataset contains a list of pharmaceutical treatments and some relevant, mostly textual, information about the cases where it is used.
+The \textit{Medicines} dataset\cite{medicines_dataset}, retrieved from Kaggle, contains a list of pharmaceutical treatments and some relevant, mostly textual, information about the cases where it is used.
 
 The present information on this dataset is:
 \begin{itemize}
-	\item {\texttt{Medicine Name}}: The name of the treatment.
-	\item {\texttt{Composition}}: The active ingredient on the treatment.
-	\item {\texttt{Uses}}: A list of the cases where the treatment is used, mostly sicknesses.
-	\item {\texttt{Side effects}}: Another list, this time, of possible side effects of this medicine.
-	\item {\texttt{Manufacturer}}: The name of the company responsible for creating the medicine treatment.
-	\item {\texttt{Reviews}}: Three other columns of "Excellent", "Average" and "Poor" reviews of each treatment.
+	\item {\texttt{Medicine Name}}: The name of the medicine.
+	\item {\texttt{Composition}}: The active substance present in the medicine.
+	\item {\texttt{Uses}}: A list of cases where the medicine is used (specific diseases, for example).
+	\item {\texttt{Side Effects}}: Lists possible side effects resulting from the medicine's usage.
+	\item {\texttt{Manufacturer}}: The name of the company responsible for producing the medicine.
+	\item {\texttt{Reviews}}: Three additional columns containing the percentage of "Excellent", "Average" and "Poor" reviews for each medicine's treatment results.
 \end{itemize}
 
-This dataset was available on \href{https://www.kaggle.com/datasets/singhnavjot2062001/11000-medicine-details}{\textit{\textbf{Kaggle}}}, containing about 11000 lines of data and a \href{https://creativecommons.org/publicdomain/zero/1.0/}{\textit{\textbf{CC0 1.0 Universal}}} licence, which allows for the copying and modification of the data.
+This dataset possesses a {\textit{\textbf{CC0 1.0 Universal}}}\cite{cczero} license, which means the data is part of the public domain, allowing for the copying and modification of the data.
 
-\subsubsection{Sicknesses}
+\subsubsection{Diseases}
 
-This dataset was gathered with the aim of complementing the previous data on the "Uses" or "Side effects" columns, containing more information on the disease. Note that these sicknesses are only autoimmune diseases.
+This dataset was scraped from the tables of a Wikipedia page containing a list of autoimmune diseases\cite{diseases_dataset}; by gathering this data, the goal was to complement the previous dataset's "Uses" and "Side Effects" columns by collecting more information on this specific subset of diseases.
 
-The information extracted from this dataset is:
+The information extracted from this dataset consists of:
 \begin{itemize}
 	\item {\texttt{Disease}}: The name of the disease.
-	\item {\texttt{Primary organ/body part affected}}: Information of the affected part of the body by the disease.
-	\item {\texttt{Autoantibodies}}: Antibodies that are directly affected by it.
-	\item {\texttt{Acceptance as an autoimmune disease}}: How probable it is for the disease to be considered autoimmune.
-	\item {\texttt{Prevalence rate (US))}}: The percentage of people or how many the disease affects in the US.
+	\item {\texttt{Primary Organ/Body Part Affected}}: Information on the organs or body parts affected by the disease.
+	\item {\texttt{Autoantibodies}}: The antibodies associated with each specific disease.
+	\item {\texttt{Acceptance as an Autoimmune Disease}}: Classification for each disease related to its acceptance as an autoimmune condition, based on the current scientific consensus and level of evidence supporting its autoimmune nature.
+	\item {\texttt{Prevalence Rate (US))}}: The percentage of people or how many the disease affects in the US.
 \end{itemize}
 
-This information was scraped from the tables on this \href{https://en.wikipedia.org/wiki/List_of_autoimmune_diseases}{\textit{\textbf{Wikipedia}}} page. The gathered dataset contains about 110 lines of diseases, having the \href{https://en.wikipedia.org/wiki/Wikipedia:Text_of_the_Creative_Commons_Attribution-ShareAlike_4.0_International_License}{\textit{\textbf{CC0 1.0 UniversalWikipedia:Text of the Creative Commons Attribution-ShareAlike 4.0 International License}}} licence, which allows for the sharing and adaptation of the contents.
+The gathered dataset contains about 110 lines of diseases, being available under the \textit{\textbf{Creative Commons Attribution-ShareAlike 4.0 International}}\cite{wikipedia_cc} license, which allows for the sharing and adaptation of the contents.
 
 \subsubsection{Pharmaceutical Companies}
 
-To compliment the data on companies, another scraping of Wikipedia was made so that there could be more data on pharmaceutical companies.
+To complement the data on companies present in the \textit{Medicines} dataset, more data on pharmaceutical companies was gathered through another round Wikipedia scraping - this time from a page containing an extensive list of pharmaceutical companies\cite{companies_dataset}. Approximately 700 companies' names and founding dates were gathered, alongside a short description from each one's Wikipedia article.
 
-The gathered information for the companies was:
+The collected information follows this structure:
 \begin{itemize}
-	\item {\texttt{Company name}}: The name of the company.
+	\item {\texttt{Company Name}}: The company's name.
 	\item {\texttt{Year}}: The year the company was created and, if available, when the company was shut down.
-	\item {\texttt{Description}}: A short description of each company, it's values and some more information about them.
+	\item {\texttt{Description}}: A short description of each company, its values and some extra information.
 \end{itemize}
 
-The origin of the information was a \href{https://en.wikipedia.org/wiki/List_of_pharmaceutical_companies}{\textit{\textbf{pharmaceutical companies list}}} where around 700 companies names and years were gathered from and, for each company, their respective Wikipedia page's first description. This dataset also falls under the same licence ( \href{https://en.wikipedia.org/wiki/Wikipedia:Text_of_the_Creative_Commons_Attribution-ShareAlike_4.0_International_License}{\textit{\textbf{CC0 1.0 UniversalWikipedia:Text of the Creative Commons Attribution-ShareAlike 4.0 International License}}}) as the previous dataset, as it was gathered in a similar way.
+This dataset falls under the same license as the previous \textit{Diseases} dataset (\textit{\textbf{Creative Commons Attribution-ShareAlike 4.0 International}}), as the data was collected in a similar way.
 
 \subsubsection{Reviews}
 
-Lastly, some reviews for the arranged medicine with more personal descriptions from users was added.
+Lastly, a dataset containing reviews for the collected medication data with more personal descriptions from users\cite{reviews_dataset} was retrieved from UC Irvine's Machine Learning Repository\cite{irvine}.
 
-The information is:
+The data collected had the following structure:
 \begin{itemize}
-	\item {\texttt{Unique ID}}: The ID of the review.
+	\item {\texttt{Unique ID}}: The unique identification of the review.
 	\item {\texttt{Drug Name}}: Name of the drug/treatment.
 	\item {\texttt{Condition}}: The condition of the patient where it was used.
 	\item {\texttt{Review}}: Written review of the experience of taking the drug.
-	\item {\texttt{Drug Name}}: Name of the drug/treatment.
+	\item {\texttt{Rating}}: Number from 0-10 that expresses the quality of the drug.
+    \item {\texttt{Date}}: Date of when the drug was taken.
+    \item {\texttt{Useful Count}}: Similar to a "like" system, this showcases the number of people who found this review useful.
 \end{itemize}
 
-This information was gathered from \href{https://archive.ics.uci.edu/dataset/462/drug+review+dataset+drugs+com}{\textit{\textbf{UC Irvine}}}, containing around 215000 entries. This dataset is covered by the \href{https://creativecommons.org/licenses/by/4.0/legalcode}{\textit{\textbf{Attribution 4.0 International}}} licence, which allows for the sharing and adaptation of the datasets for any purpose, provided that the appropriate credit is given.
+This dataset contains around 215000 entries and is covered by the \textit{\textbf{Attribution 4.0 International}}\cite{ccfour} license, which allows for the sharing and adaptation of the datasets for any purpose, provided that the appropriate credit is given.
 
 \section{Modifications}
 
@@ -747,7 +749,8 @@ To Robert, for the bagels and explaining CMYK and color spaces.
 %%
 %% The next two lines define the bibliography style to be used, and
 %% the bibliography file.
-\bibliographystyle{ACM-Reference-Format}
+%%\bibliographystyle{ACM-Reference-Format}
+\bibliographystyle{unsrt}
 \bibliography{sample-base}
 
 
