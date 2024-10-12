@@ -127,6 +127,7 @@ def parse_diseases():
             acceptance = row["Acceptance as an autoimmune disease"]
             prevalence = row["Prevalence rate (US)"]
             data[key] = row
+            data[key] = { k: unidecode(v) for k, v in data[key].items() }
     
     with open("dataset/diseases.json", "w", encoding="utf-8") as jsonf:
         jsonf.write(json.dumps(data, indent=4))
@@ -141,7 +142,7 @@ def parse_drug_reviews():
         for row in csvReader:
             key = row["uniqueID"]
             data[key] = row
-            data[key] = { k: unescape(v) for k, v in data[key].items() }
+            data[key] = { k: unidecode(unescape(v)) for k, v in data[key].items() }
 
             if data[key]["review"].startswith("\"") and data[key]["review"].endswith("\""):
                 data[key]["review"] = data[key]["review"][1:-1]
