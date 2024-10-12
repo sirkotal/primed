@@ -42,5 +42,3 @@ if __name__ == '__main__':
             break
         else:
             print("Please answer yes or no.")
-
-    print("\nDone!")
