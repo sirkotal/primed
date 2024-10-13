@@ -309,7 +309,7 @@ This dataset contains around 215000 entries and is covered by the \textit{\textb
 
 As mentioned in section 3.2 of this report, \textit{\textbf{PRIMED}}'s data comes from various sources. Due to the often unstructured nature of this data, it is vital to have a streamlined and automated way of normalizing and processing all the information into similar formats, which is the main role of the data pipeline.
 
-The pipeline consists of \texttt{Python} scripts utilizing libraries such as \texttt{pandas}, \texttt{unidecode}, \texttt{html}, \texttt{json} and \texttt{csv} with the crux of the data processing occurring on the \texttt{to{\textunderscore}json.py} script, which converts the \texttt{CSV} files into \texttt{JSON} format.
+The pipeline consists of \texttt{Python}\cite{python} scripts utilizing libraries such as \texttt{pandas}\cite{pandas}, \texttt{unidecode}\cite{unidecode}, \texttt{html}\cite{html}, \texttt{json}\cite{json} and \texttt{csv}\cite{csv} with the crux of the data processing occurring on the \texttt{to{\textunderscore}json.py} script, which converts the \texttt{CSV} files into \texttt{JSON} format.
 
 \subsection{Elimination of Null Values and Rows}
 
@@ -319,7 +319,7 @@ When processing data, another key aspect to consider is that not all data may be
 
 When scraping information from websites, it is important to make sure all the text is normalized. The data pipeline ensures, via \texttt{Python}'s \texttt{unidecode()} function, that the dataset only contains \texttt{ASCII} characters. This helps prevent future issues when searching the datasets for information.
 
-Another character normalization problem resulting from the scraping process arises due to \texttt{HTML}'s nature - more specifically, escape codes used to represent special characters. To convert these codes into ASCII characters, the \texttt{unescape()} function from \texttt{Python}'s \texttt{html} module, wrapped inside a call to the previously mentioned \texttt{unidecode()} function, to convert the \texttt{Unicode} output into \texttt{ASCII}.
+Another character normalization problem resulting from the scraping process arises due to \texttt{HTML}'s nature - more specifically, escape codes used to represent special characters. To convert these codes into ASCII characters, the \texttt{unescape()}\cite{html} function from \texttt{Python}'s \texttt{html} module, wrapped inside a call to the previously mentioned \texttt{unidecode()} function, to convert the \texttt{Unicode} output into \texttt{ASCII}.
 
 \subsection{Standardization of Formats}
 
@@ -327,7 +327,10 @@ For the best possible result, formats such as dates should be standardized; ther
 
 \subsection{Data Storage}
 
-maybe? describe how data is stored? buwomp
+The final output of the pipeline, i.e., the processed data that the search engine will be working with, is stored in \texttt{JSON} format. This decision aligns with a document-oriented data storage model, where each \texttt{JSON} object represents a discrete document encapsulating all the relevant fields and values for a particular record. This approach provides flexibility in handling semi-structured or unstructured data, as the schema can evolve without rigid constraints.
+
+By using a document-oriented model, the search engine can efficiently query and retrieve data based on specific fields within these documents. This design also supports complex data relationships and makes it easier to aggregate and analyze information across different records. Furthermore, \texttt{JSON}’s lightweight structure allows for rapid data storage and retrieval, ensuring that the system can scale as the dataset grows.
+
 
 \section{Conceptual Data Model}
 
