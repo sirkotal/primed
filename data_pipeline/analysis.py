@@ -131,8 +131,18 @@ top_compositions = new_df_medicine['Composition'].value_counts().nlargest(5)
 top_compositions.index = [abbreviations.get(comp, comp) for comp in top_compositions.index]
     
 plt.figure(figsize=(10, 8))
-plt.pie(top_compositions, labels=top_compositions.index, autopct='%1.1f%%', startangle=140, colors=plt.cm.Paired.colors)
+top_compositions.plot(kind='bar', color='red')
+
+plt.ylabel('Number of Medicines')
 plt.title('Top 5 Most Common Medicine Compositions')
+plt.xticks(rotation=45, ha='right')
+
+for index, value in enumerate(top_compositions):
+    plt.text(index, value + 5, str(value), ha='center', color='black')
+
+plt.ylim(0, top_compositions.max() + 20)
+
+plt.tight_layout()
 plt.show()
 
 
@@ -147,6 +157,3 @@ plt.ylabel('Number of Companies')
 plt.title('Years with the Most Company Foundations')
 plt.yticks(range(0, int(top_years.max()) + 1))
 plt.show()
-
-
-convert_json_to_sql(new_df_medicine)
