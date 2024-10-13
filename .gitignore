@@ -8,3 +8,4 @@ src/venv
 .idea/
 *pycache
 *__pycache__
+data_pipeline/__pycache__
