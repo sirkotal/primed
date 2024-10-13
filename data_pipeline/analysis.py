@@ -81,7 +81,7 @@ category_summary = new_df_medicine_filtered.groupby('Uses')[['Excellent Review %
 
 category_summary.plot(kind='bar', stacked=True, figsize=(12, 8))
 plt.xticks(rotation=45, ha='right')
-plt.title('Average Review Percentages by Use Category')
+plt.title('Mean of Review Percentages by Use Category')
 plt.ylabel('Review Percentage')
 plt.show()
 
@@ -105,7 +105,7 @@ plt.figure(figsize=(12, 8))
 top_side_effects.plot(kind='bar', color='steelblue')
 plt.xlabel('Side Effects')
 plt.ylabel('Number of Medicines')
-plt.title('Distribution of Medicines by Common Side Effects')
+plt.title('Distribution of Medicines by Number of Common Side Effects')
 plt.xticks(rotation=45, ha='right')
 plt.show()
 
