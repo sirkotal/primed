@@ -19,6 +19,7 @@ run:
 
 clean:
 	@rm -rf $(VENV_DIR) __pycache__
+	@rm -rf data_pipeline/__pycache__
 	@rm -rf venv
 	@rm -rf dataset/output/*.json
 	# @rm -rf dataset/output/*.db (not using this now so don't remove it)

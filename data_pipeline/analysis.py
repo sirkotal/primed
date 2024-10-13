@@ -4,7 +4,6 @@ import math
 import matplotlib.pyplot as plt
 import seaborn as sb
 from wordcloud import WordCloud
-from processing import convert_json_to_sql
 
 df_medicine = pd.read_json('../dataset/output/drug_details.json')
 df_company = pd.read_json('../dataset/output/pharmaceutical_companies.json')
@@ -26,9 +25,17 @@ new_df_medicine.info()
 
 percentages = new_df_medicine['Manufacturer'].value_counts() / new_df_medicine['Manufacturer'].value_counts().sum() * 100
 
-new_df_medicine['Manufacturer'].value_counts().plot(kind='pie', labels=[label if i < 5 else '' for i, label in enumerate(new_df_medicine['Manufacturer'].value_counts().index)], autopct=lambda p: f'{p:.1f}%' if p >= percentages.nlargest(5).min() else '')
-plt.ylabel('')
-plt.title('Medicine Manufacturers')
+plt.figure(figsize=(10, 6))
+new_df_medicine['Manufacturer'].value_counts().nlargest(5).plot(kind='bar', color='purple')
+
+plt.ylabel('Number of Medicines')
+plt.title('Top Medicine Manufacturers')
+plt.xticks(rotation=45, ha='right')
+
+for index, value in enumerate(new_df_medicine['Manufacturer'].value_counts().nlargest(5)):
+    plt.text(index, value + 50, str(value), ha='center')
+
+plt.tight_layout()
 plt.show()
 
 numerical_summary = new_df_medicine.select_dtypes(include=['int32']).describe()
@@ -81,7 +88,7 @@ category_summary = new_df_medicine_filtered.groupby('Uses')[['Excellent Review %
 
 category_summary.plot(kind='bar', stacked=True, figsize=(12, 8))
 plt.xticks(rotation=45, ha='right')
-plt.title('Average Review Percentages by Use Category')
+plt.title('Mean of Review Percentages by Use Category')
 plt.ylabel('Review Percentage')
 plt.show()
 
@@ -105,7 +112,7 @@ plt.figure(figsize=(12, 8))
 top_side_effects.plot(kind='bar', color='steelblue')
 plt.xlabel('Side Effects')
 plt.ylabel('Number of Medicines')
-plt.title('Distribution of Medicines by Common Side Effects')
+plt.title('Distribution of Medicines by Number of Common Side Effects')
 plt.xticks(rotation=45, ha='right')
 plt.show()
 
@@ -123,8 +130,18 @@ top_compositions = new_df_medicine['Composition'].value_counts().nlargest(5)
 top_compositions.index = [abbreviations.get(comp, comp) for comp in top_compositions.index]
     
 plt.figure(figsize=(10, 8))
-plt.pie(top_compositions, labels=top_compositions.index, autopct='%1.1f%%', startangle=140, colors=plt.cm.Paired.colors)
-plt.title('Top 5 Most Common Medicine Compositions')
+top_compositions.plot(kind='bar', color='red')
+
+plt.ylabel('Number of Medicines')
+plt.title('Most Common Medicine Compositions')
+plt.xticks(rotation=45, ha='right')
+
+for index, value in enumerate(top_compositions):
+    plt.text(index, value + 5, str(value), ha='center', color='black')
+
+plt.ylim(0, top_compositions.max() + 20)
+
+plt.tight_layout()
 plt.show()
 
 
@@ -139,6 +156,3 @@ plt.ylabel('Number of Companies')
 plt.title('Years with the Most Company Foundations')
 plt.yticks(range(0, int(top_years.max()) + 1))
 plt.show()
-
-
-convert_json_to_sql(new_df_medicine)

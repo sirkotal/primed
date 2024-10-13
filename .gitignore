@@ -7,3 +7,4 @@ src/venv
 *.zip
 .idea/
 *pycache
+*__pycache__
