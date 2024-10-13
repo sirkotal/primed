@@ -6,10 +6,15 @@ import seaborn as sb
 from wordcloud import WordCloud
 from processing import convert_json_to_sql
 
-df_medicine = pd.read_json('../dataset/medicine_details.json')
-df_company = pd.read_json('../dataset/pharmaceutical_companies.json')
+df_medicine = pd.read_json('../dataset/output/drug_details.json')
+df_company = pd.read_json('../dataset/output/pharmaceutical_companies.json')
+
 new_df_medicine = df_medicine.transpose()
 new_df_company = df_company.transpose()
+
+new_df_medicine.reset_index(inplace=True)
+new_df_medicine.rename(columns={'index': 'Medicine Name'}, inplace=True)
+
 new_df_medicine.head()
 
 new_df_medicine['Medicine Name'].value_counts()
