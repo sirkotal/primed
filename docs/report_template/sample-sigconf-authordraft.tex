@@ -327,10 +327,9 @@ For the best possible result, formats such as dates should be standardized; ther
 
 \subsection{Data Storage}
 
-The final output of the pipeline, i.e., the processed data that the search engine will be working with, is stored in \texttt{JSON} format. This decision aligns with a document-oriented data storage model, where each \texttt{JSON} object represents a discrete document encapsulating all the relevant fields and values for a particular record. This approach provides flexibility in handling semi-structured or unstructured data, as the schema can evolve without rigid constraints.
+The final output of the pipeline (the processed data that the search engine will be working with) is stored in \texttt{JSON} format. This decision stems from the requirement of a document-based data storage model, where each \texttt{JSON} object represents a document encapsulating all the relevant fields and values for a particular record - in this case, a specific medicine. This approach provides flexibility in handling unstructured data, since there are no hard constraints in place.
 
-By using a document-oriented model, the search engine can efficiently query and retrieve data based on specific fields within these documents. This design also supports complex data relationships and makes it easier to aggregate and analyze information across different records. Furthermore, \texttt{JSON}’s lightweight structure allows for rapid data storage and retrieval, ensuring that the system can scale as the dataset grows.
-
+This model also ensures the search engine can query and retrieve data efficiently, based on specific fields within these documents, ensuring that the system can scale as the dataset grows; it also supports complex data relationships and makes it easier to analyse information across different records.
 
 \section{Conceptual Data Model}
 
@@ -379,23 +378,21 @@ With regard to the characterization of the dataset, the data resulting from the 
 
 \subsection{Distribution of Drug Manufacturers}
 
-Figure [3] shows the distribution of the main pharmaceutical companies responsible for manufacturing medicines, highlighting the five that possess the largest share. The analysis of the graph gives us a clearer understanding of each the manufacturers' production capabilities.
+By analysing figure [3], which shows the distribution of the main pharmaceutical companies responsible for manufacturing medicines where the five that possess the largest share are highlighted, we are given a clearer understanding of each manufacturers' production capabilities.
 
 \subsection{Distribution of Reviews}
 
-In figure [4], a box plot is utilized to analyse the distribution of “Excellent”, “Average” and “Poor” review percentages across the different medicines. The graph shows that, for instance, "Excellent" reviews percentages are more evenly spread than the "Average" reviews percentages which, despite having a lower interquartile range\cite{iqrange}, possesses a higher number of outliers.
+A box plot, present in figure [4], is utilized to analyse the distribution of “Excellent”, “Average” and “Poor” review percentages across the different medicines. The graph shows that, for instance, "Excellent" reviews percentages are more evenly spread than the "Average" reviews percentages which, despite having a lower interquartile range\cite{iqrange}, possesses a higher number of outliers. The "Poor" review percentages have the largest variations, but also the lowest values. 
 
-\subsection{Reviews Percentages by Uses}
-
-In this stacked bar chart, in figure [5] we can see the average percentage of reviews for different uses. Each bar represents a use, divided between “Excellent”, “Average” and “Poor” reviews. 
+In figure [5], we can see the average percentage of reviews for the top ten use cases, which supports the findings from figure [4].
 
 \subsection{Distribution of Side Effects}
 
-In the figure[6] In This bar chart shows us the number of drugs that are used for the different side effects. Among the most commonly treated effects are nausea, headache and diarrhea, which have the highest number of associated medications. This data shows a clear picture of the side effects that arise most frequently, and the amount of medication used to treat them.
+In figure [6], a bar chart showcases the number of medicines utilized associated with the most common side effects, like nausea, headaches and diarrhea, which consequently have the highest number of associated medications. This data shows a clear picture of the side effects that arise most frequently, and the amount of medication used to treat them.
 
 \subsection{Common Uses Word Cloud}
 
-The word cloud shows in the figure [7] the most common uses of medicines. “Bacterial Infections” and ‘Hypertension’ are examples of uses that appear most prominently, indicating that these are the diseases most frequently treated with medicines in the dataset.
+The word cloud shown in figure [7] the most common uses of medicines. “Bacterial Infections” and ‘Hypertension’ are examples of uses that appear most prominently, indicating that these are the diseases most frequently treated with medicines in the dataset.
 
 \subsection{Most Common Drug Compositions}
 
