@@ -10,6 +10,22 @@ from datetime import datetime
 from unidecode import unidecode
 
 
+# source datasets
+diseases_csv = "dataset/sources/diseases.csv"
+drug_details_csv = "dataset/sources/drug_details.csv"
+drug_reviews_csv = "dataset/sources/drug_reviews.csv"
+pharmaceutical_companies_csv = "dataset/sources/pharmaceutical_companies.csv"
+sicknesses_clean_csv = "dataset/sources/sicknesses_clean.csv"
+
+
+# output datasets
+diseases_json = "dataset/output/diseases.json"
+drug_details_json = "dataset/output/drug_details.json"
+drug_reviews_json = "dataset/output/drug_reviews.json"
+pharmaceutical_companies_json = "dataset/output/pharmaceutical_companies.json"
+sicknesses_json = "dataset/output/sicknesses_clean.json"
+
+
 def _parse_use_cases_side_effects(input_string):
     connectors = {"of", "and", "in", "for", "with", "the", "to", "a", "an"}
     
@@ -49,42 +65,74 @@ def _remove_urls(text): # deletes everything in a string from the point where a 
     return text.strip()
 
 
-def parse_drug_details():
-    data = {}
-    df = pd.read_csv("dataset/sources/drug_details.csv")
-    df = df.dropna(how='all')
-    df = df.dropna(subset=['Medicine Name'])
+def _remove_null_values(dataset: str, _drop_row_if_all_null: bool=False, _drop_if_null: list[str]=None) -> csv.DictReader:
+
+    df = pd.read_csv(dataset)
+
+    if _drop_row_if_all_null:
+        df = df.dropna(how='all')
+    if _drop_if_null is not None:
+        df = df.dropna(subset=_drop_if_null)
+
     csv_buffer = StringIO()
     df.to_csv(csv_buffer, index=False)
     csv_buffer.seek(0)
-    dict_reader = csv.DictReader(csv_buffer)
+
+    return csv.DictReader(csv_buffer)
+
+
+def _split_json(data: dict, output_path: str, parts: int) -> None:
+    path = output_path.split('.json')[0]
+
+    keys = list(data.keys())
+    total_rows = len(data)
+    entries_per_part = total_rows // parts
+    remainder = total_rows % parts
+
+    for i in range(parts):
+        low = i * entries_per_part
+        high =  (i + 1) * entries_per_part
+        if i == parts - 1:
+            high += remainder
+        current_data = { key: data[key] for key in keys[low:high] }
+        _write_to_json(current_data, f"{path}_part_{i + 1}.json")
+
+
+def _write_to_json(data: dict, json_path: str, divide: int=1) -> None:
+    try:
+        if divide > 1:
+            _split_json(data, json_path,divide)
+        else:
+            with open(json_path, "w", encoding="utf-8") as jsonf:
+                jsonf.write(json.dumps(data, indent=4))
+            print(f"Successfully wrote data to {json_path}")
+    except Exception as e:
+        print(f"Error occurred when writing to {json_path}: {e}")
+
+
+def parse_drug_details(key_name='Medicine Name'):
+    data = {}
+
+    dict_reader = _remove_null_values(drug_details_csv, _drop_row_if_all_null=True, _drop_if_null=[key_name])
 
     for row in dict_reader:
-        key = row["Medicine Name"]
+        key = row[key_name]
         use_cases = _parse_use_cases_side_effects(row["Uses"])
         side_effects = _parse_use_cases_side_effects(row["Side_effects"])
         row["Uses"] = use_cases
         row["Side_effects"] = side_effects
         row.pop("Image URL", None)
-        row.pop("Medicine Name", None)
+        row.pop(key_name, None)
         data[key] = row
 
-    with open("dataset/output/drug_details.json", "w", encoding="utf-8") as jsonf:
-        jsonf.write(json.dumps(data, indent=4))
-    print("Successfully wrote data to dataset/output/medicine_details.json")
+    _write_to_json(data, drug_details_json)
 
 
-def parse_sicknesses():
+def parse_sicknesses(key_name='Disease/ Illness'):
     data = {}
-    df = pd.read_csv("dataset/sources/sicknesses_clean.csv")
-    df = df.dropna(how='all')
-    df = df.dropna(subset=['Disease / Illness'])
-    csv_buffer = StringIO()
-    df.to_csv(csv_buffer, index=False)
-    csv_buffer.seek(0)
-    dict_reader = csv.DictReader(csv_buffer)
 
-    key_name = "Disease/ Illness"
+    dict_reader = _remove_null_values(sicknesses_clean_csv, _drop_row_if_all_null=True, _drop_if_null=[key_name])
+
     for row in dict_reader:
         key = _remove_urls(row[key_name])
         row.pop(key_name, None)
@@ -93,22 +141,14 @@ def parse_sicknesses():
             data[key]["Link"] = ast.literal_eval(data[key]["Link"])
         data[key] = { k: unidecode(v) if k != "Link" else v for k, v in data[key].items() }
 
-    with open("dataset/output/sicknesses.json", "w", encoding="utf-8") as jsonf:
-        jsonf.write(json.dumps(data, indent=4))
-    print("Successfully wrote data to dataset/output/sicknesses.json")
+    _write_to_json(data, sicknesses_json)
 
 
-def parse_pharmaceutical_companies():
+def parse_pharmaceutical_companies(key_name='Company Name'):
     data = {}
-    df = pd.read_csv("dataset/sources/pharmaceutical_companies.csv")
-    df = df.dropna(how='all')
-    df = df.dropna(subset=['Company Name'])
-    csv_buffer = StringIO()
-    df.to_csv(csv_buffer, index=False)
-    csv_buffer.seek(0)
-    dict_reader = csv.DictReader(csv_buffer)
 
-    key_name = "Company Name"
+    dict_reader = _remove_null_values(pharmaceutical_companies_csv, _drop_row_if_all_null=True, _drop_if_null=[key_name])
+
     for row in dict_reader:
         key = _remove_urls(row[key_name])
         row.pop(key_name, None)
@@ -124,80 +164,31 @@ def parse_pharmaceutical_companies():
         data[key]["Year End"] = year_end
         data[key].pop("Year", None)
 
-    with open("dataset/output/pharmaceutical_companies.json", "w", encoding="utf-8") as jsonf:
-        jsonf.write(json.dumps(data, indent=4))
-    print("Successfully wrote data to pharmaceutical_companies.json")
+    _write_to_json(data, pharmaceutical_companies_json)
 
 
-def parse_diseases():
+def parse_diseases(key_name='Disease'):
     data = {}
-    df = pd.read_csv("dataset/sources/diseases.csv")
-    df = df.dropna(how='all')
-    df = df.dropna(subset=['Disease'])
-    csv_buffer = StringIO()
-    df.to_csv(csv_buffer, index=False)
-    csv_buffer.seek(0)
-    dict_reader = csv.DictReader(csv_buffer)
 
-    key_name = "Disease"
+    dict_reader = _remove_null_values(diseases_csv, _drop_row_if_all_null=True, _drop_if_null=[key_name])
+
     for row in dict_reader:
         key = row[key_name]
-        primary_organ = row["Primary organ/body part affected"]
-        autoantibodies = row["Autoantibodies"]
-        acceptance = row["Acceptance as an autoimmune disease"]
-        prevalence = row["Prevalence rate (US)"]
+        row.pop(key_name)
         data[key] = row
         data[key] = { k: unidecode(v) for k, v in data[key].items() }
     
-    with open("dataset/output/diseases.json", "w", encoding="utf-8") as jsonf:
-        jsonf.write(json.dumps(data, indent=4))
-    print("Successfully wrote data to diseases.json")
-
-# def parse_drug_reviews():
-#     data = {}
-#     # df = pd.read_csv("dataset/sources/drug_reviews.csv")
-#     # df = df.dropna(how='all')
-#     # df = df.dropna(subset=['drugName'])
-#     # df = df.drop('uniqueID', axis=1)
-#     # csv_buffer = StringIO()
-#     # df.to_csv(csv_buffer, index=False)
-#     # csv_buffer.seek(0)
-#     # dict_reader = csv.DictReader(csv_buffer)
-
-#     with open("dataset/sources/drug_reviews.csv") as csvf:
-#         dict_reader = csv.DictReader(csvf)
-
-#         for row in dict_reader:
-#             key = row["drugName"]
-#             data[key] = row
-#             data[key] = { k: unidecode(unescape(v)) for k, v in data[key].items() }
-
-#             if data[key]["review"].startswith("\"") and data[key]["review"].endswith("\""):
-#                 data[key]["review"] = data[key]["review"][1:-1]
-
-#             date_obj = datetime.strptime(data[key]["date"], "%d-%b-%y")
-#             data[key]["date"] = date_obj.strftime("%Y-%m-%d")
+    _write_to_json(data, diseases_json)
 
 
-#     with open("dataset/output/drug_reviews.json", "w", encoding="utf-8") as jsonf:
-#         jsonf.write(json.dumps(data, indent=4))
-#     print("successfully wrote tudo de penalty")
-
-
-
-def parse_drug_reviews():
+def parse_drug_reviews(key_name='uniqueID'):
     data = {}
-    df = pd.read_csv("dataset/sources/drug_reviews.csv")
-    df = df.dropna(how='all')
-    df = df.dropna(subset=['drugName'])
-    csv_buffer = StringIO()
-    df.to_csv(csv_buffer, index=False)
-    csv_buffer.seek(0)
-    dict_reader = csv.DictReader(csv_buffer)
+
+    dict_reader = _remove_null_values(drug_reviews_csv, _drop_row_if_all_null=True, _drop_if_null=['drugName'])
 
     for row in dict_reader:
-        key = row["uniqueID"]
-        row.pop("uniqueID")
+        key = row[key_name]
+        row.pop(key_name)
         data[key] = row
         data[key] = { k: unidecode(unescape(v)) for k, v in data[key].items() }
 
@@ -206,30 +197,6 @@ def parse_drug_reviews():
 
         date_obj = datetime.strptime(data[key]["date"], "%d-%b-%y")
         data[key]["date"] = date_obj.strftime("%Y-%m-%d")
-
-    total_rows = len(data)
-    half_point = total_rows // 2
-    quarter_point = total_rows // 4
-
-    keys = list(data.keys())
-
-    data_first_q = { key: data[key] for key in keys[:quarter_point] }
-    data_second_q = { key: data[key] for key in keys[quarter_point:half_point] }
-    data_third_q = { key: data[key] for key in keys[half_point:(quarter_point*3)] }
-    data_fourth_q = { key: data[key] for key in keys[(quarter_point*3):] }
-
-    with open("dataset/output/drug_reviews_part_1.json", "w", encoding="utf-8") as jsonf:
-        jsonf.write(json.dumps(data_first_q, indent=4))
-    print("Successfully wrote data to dataset/output/drug_reviews_part_1.json")
-
-    with open("dataset/output/drug_reviews_part_2.json", "w", encoding="utf-8") as jsonf:
-        jsonf.write(json.dumps(data_second_q, indent=4))
-    print("Successfully wrote data to dataset/output/drug_reviews_part_2.json")
-
-    with open("dataset/output/drug_reviews_part_3.json", "w", encoding="utf-8") as jsonf:
-        jsonf.write(json.dumps(data_third_q, indent=4))
-    print("Successfully wrote data to dataset/output/drug_reviews_part_3.json")
-
-    with open("dataset/output/drug_reviews_part_4.json", "w", encoding="utf-8") as jsonf:
-        jsonf.write(json.dumps(data_fourth_q, indent=4))
-    print("Successfully wrote data to dataset/output/drug_reviews_part_4.json")
+    
+    _write_to_json(data, drug_reviews_json, divide=4)
+ 
