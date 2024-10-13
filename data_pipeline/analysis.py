@@ -4,7 +4,6 @@ import math
 import matplotlib.pyplot as plt
 import seaborn as sb
 from wordcloud import WordCloud
-from processing import convert_json_to_sql
 
 df_medicine = pd.read_json('../dataset/output/drug_details.json')
 df_company = pd.read_json('../dataset/output/pharmaceutical_companies.json')
@@ -30,7 +29,7 @@ plt.figure(figsize=(10, 6))
 new_df_medicine['Manufacturer'].value_counts().nlargest(5).plot(kind='bar', color='purple')
 
 plt.ylabel('Number of Medicines')
-plt.title('Top 5 Medicine Manufacturers')
+plt.title('Top Medicine Manufacturers')
 plt.xticks(rotation=45, ha='right')
 
 for index, value in enumerate(new_df_medicine['Manufacturer'].value_counts().nlargest(5)):
@@ -134,7 +133,7 @@ plt.figure(figsize=(10, 8))
 top_compositions.plot(kind='bar', color='red')
 
 plt.ylabel('Number of Medicines')
-plt.title('Top 5 Most Common Medicine Compositions')
+plt.title('Most Common Medicine Compositions')
 plt.xticks(rotation=45, ha='right')
 
 for index, value in enumerate(top_compositions):
