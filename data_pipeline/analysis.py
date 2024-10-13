@@ -26,9 +26,17 @@ new_df_medicine.info()
 
 percentages = new_df_medicine['Manufacturer'].value_counts() / new_df_medicine['Manufacturer'].value_counts().sum() * 100
 
-new_df_medicine['Manufacturer'].value_counts().plot(kind='pie', labels=[label if i < 5 else '' for i, label in enumerate(new_df_medicine['Manufacturer'].value_counts().index)], autopct=lambda p: f'{p:.1f}%' if p >= percentages.nlargest(5).min() else '')
-plt.ylabel('')
-plt.title('Medicine Manufacturers')
+plt.figure(figsize=(10, 6))
+new_df_medicine['Manufacturer'].value_counts().nlargest(5).plot(kind='bar', color='purple')
+
+plt.ylabel('Number of Medicines')
+plt.title('Top 5 Medicine Manufacturers')
+plt.xticks(rotation=45, ha='right')
+
+for index, value in enumerate(new_df_medicine['Manufacturer'].value_counts().nlargest(5)):
+    plt.text(index, value + 50, str(value), ha='center')
+
+plt.tight_layout()
 plt.show()
 
 numerical_summary = new_df_medicine.select_dtypes(include=['int32']).describe()
