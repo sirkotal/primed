@@ -1,0 +1,114 @@
+Disease,Primary organ/body part affected,Autoantibodies,Acceptance as an autoimmune disease,Prevalence rate (US)
+Alopecia areata,Hair follicles,None specific,Confirmed,2.1%
+Autoimmune angioedema,Skin,C1 inhibitor,Probable,"Less than 5,000"
+Autoimmune progesterone dermatitis,Skin,Progesterone,Probable,Extremely rare
+Autoimmune urticaria,Skin,IgG against IgE or IgE receptor,Probable,Not well established
+Bullous pemphigoid,Skin,"Anti-BP180, Anti-BP230",Confirmed,"6-30 per 100,000 (mostly older adults)"
+Cicatricial pemphigoid,"Mucous membranes, sometimes skin","Anti-BP180, Anti-BP230",Confirmed,Rare
+Dermatitis herpetiformis,Skin,Anti-tissue transglutaminase,Confirmed,"10 per 100,000"
+Dermatomyositis,Skin and muscles,"Anti-Jo1, Anti-Mi2, Anti-SRP, Anti-TIF1",Confirmed,"9 in 1,000,000"
+Discoid lupus erythematosus,Skin,"ANA, Anti-dsDNA, Anti-Sm",Confirmed,"Part of SLE prevalence (20-150 per 100,000)"
+Epidermolysis bullosa acquisita,Skin,Anti-type VII collagen,Confirmed,Extremely rare
+Erythema nodosum,Skin,None specific,Possible,Not well established
+Gestational pemphigoid,Skin,"Anti-BP180, Anti-BP230",Confirmed,Rare
+Hidradenitis suppurativa,Skin,None specific,Uncertain,1-4%
+Lichen planus,"Skin, mucous membranes",None specific,Probable,1%
+Lichen sclerosus,Skin,None specific,Probable,Rare
+Linear IgA disease,Skin,Anti-epidermal basement membrane IgA,Confirmed,Extremely rare
+Morphea,Skin,None specific,Probable,Not well established
+Psoriasis,Skin,"Various, not specific",Confirmed,2-3%
+Pemphigus vulgaris,Skin and mucous membranes,"Anti-desmoglein 3, Anti-desmoglein 1",Confirmed,"1-5 per 100,000"
+Scleroderma (systemic sclerosis),"Skin, organs","ANA, anti-Scl-70, anti-centromere",Confirmed,"240 per 1,000,000"
+Vitiligo,Skin,"Various, not specific",Confirmed,1%
+Autoimmune enteropathy,Small intestine,Anti-enterocyte antibodies,Probable,Rare
+Autoimmune hepatitis,Liver,"ANA, ASMA, anti-LKM1",Confirmed,"1 in 10,000 to 1 in 50,000"
+Celiac disease,Small intestine,"Anti-tissue transglutaminase antibodies (tTG), Endomysial antibody (EMA), Deamidated gliadin peptide (DGP)",Confirmed,1 in 100
+Crohn's disease,Digestive tract,"ASCA, Anti-OmpC, Anti-CBir1, ANCA",Probable,"201 per 100,000 adults"
+Pernicious anemia,Stomach,"Anti-IF, Anti-parietal cell",Confirmed,0.1%
+Ulcerative colitis,Colon and rectum,"pANCA, ASCA",Probable,"249 per 100,000 adults"
+Rheumatic heart disease,Heart valves,"Anti-streptolysin O (ASO), anti-DNase B",Confirmed,Declining due to improved treatment of strep throat
+Kawasaki disease,Coronary arteries,Unknown,Probable,"20 per 100,000 children under age 5"
+Giant cell arteritis,"Large and medium arteries, can affect coronary arteries",None specific,Confirmed,"200 per 100,000 (over age 50)"
+Takayasu's arteritis,"Large arteries, including the aorta",None specific,Confirmed,"Rare, more common in East Asia"
+Behcet's disease,"Small to large vessels in mouth, genitals, eyes, skin",None specific,Probable,
+Eosinophilic granulomatosis with polyangiitis (EGPA),"Small to medium vessels in respiratory tract, skin, heart, kidneys, nerves",ANCA,Confirmed,
+Granulomatosis with polyangiitis (GPA),"Small to medium vessels in respiratory tract, kidneys",c-ANCA/PR3-ANCA,Confirmed,
+IgA vasculitis (IgAV),"Small vessels in skin, joints, kidneys, gastrointestinal tract",IgA immune complexes,Probable,
+Leukocytoclastic vasculitis,Small vessels in skin,Various immune complexes,Probable,
+Lupus vasculitis,Small to medium vessels in multiple organs,"ANA, anti-dsDNA, anti-Smith, others",Confirmed,
+Rheumatoid vasculitis,"Small to medium vessels in skin, nerves, eyes, heart","Rheumatoid factor, ACPA",Probable,
+Microscopic polyangiitis (MPA),"Small vessels in kidneys, lungs, nerves, skin",p-ANCA/MPO-ANCA,Confirmed,
+Polyarteritis nodosa (PAN),"Medium to small vessels in kidneys, skin, muscles, joints, nerves",None specific,Probable,
+Polymyalgia rheumatica,"Large to medium vessels in shoulders, hips",None specific,Possible,
+Urticarial vasculitis,Small vessels in skin,C1q antibodies,Probable,
+Vasculitis,All vessel sizes in multiple organs,Depends on specific type,Uncertain,
+Goodpasture syndrome,"Kidneys, lungs",Anti-GBM antibodies,Confirmed,1 per million people
+IgA nephropathy,Kidneys,IgA autoantibodies,Confirmed,"3.5 per 100,000"
+Membranous nephropathy,Kidneys,Anti-PLA2R antibodies,Confirmed,"10 per 100,000"
+Lupus nephritis,Kidneys,"Anti-dsDNA, Anti-Sm, Anti-nuclear antibodies",Confirmed,Up to 60% of those with Lupus
+Interstitial nephritis,Kidneys,Various autoantibodies,Probable,"Varies widely, often drug-induced"
+Interstitial cystitis,Bladder,Anti-urothelial and anti-nuclear antibodies,Probable,"100-450 per 100,000 women, less common in men"
+Primary sclerosing cholangitis,"Bile ducts, can affect gallbladder","P-ANCA, Anti Smooth Muscle Antibodies (ASMA)",Confirmed,"1 per 100,000"
+Acute disseminated encephalomyelitis,Central nervous system,Unknown,Confirmed,"0.8 per 100,000"
+Acute motor axonal neuropathy,Peripheral nerves,Anti-GM1,Confirmed,Part of Guillain-Barre syndrome prevalence
+Anti-NMDA receptor encephalitis,Brain,Anti-NMDA receptor,Confirmed,1.5 per million
+Autoimmune encephalitis,Brain,"Various, depending on subtype (e.g., NMDA receptor antibodies, LGI1 antibodies)",Confirmed,Rare
+Balo concentric sclerosis,Central nervous system,Unknown,Probable,Rare
+Bickerstaff's encephalitis,Brain,Anti-GQ1b,Confirmed,Rare
+Chronic inflammatory demyelinating polyneuropathy,Peripheral nerves,"Various, including anti-MAG",Confirmed,"1-2 per 100,000"
+Guillain-Barre syndrome,Peripheral nerves,"Various, including anti-GM1, anti-GD1a",Confirmed,"1-2 per 100,000"
+Hashimoto's encephalopathy,Brain,"Anti-thyroid (TPO, Tg)",Probable,Rare
+Idiopathic inflammatory demyelinating diseases,Central nervous system,Varies,Probable,Varies by specific disease
+Lambert-Eaton myasthenic syndrome,Neuromuscular junction (affecting both CNS and PNS),Anti-VGCC,Confirmed,0.5-2 per million
+Multiple sclerosis,Central nervous system,"Unknown, but Oligoclonal bands often present in CSF",Confirmed,"90 per 100,000"
+Myasthenia gravis,Neuromuscular junction (affecting both CNS and PNS),"Anti-AChR, anti-MuSK",Confirmed,"20 per 100,000"
+Neuromyelitis optica (Devic's disease)/NMOSD,Optic nerves and spinal cord,AQP4-IgG (NMO-IgG),Confirmed,"0.5 - 4 per 100,000"
+Restless legs syndrome,Central nervous system (thought to involve dopaminergic pathways),Unknown,Uncertain,5-15% (more common in older adults)
+Stiff-person syndrome,Central nervous system,"Anti-GAD, anti-amphiphysin",Confirmed,Rare
+Sydenham's chorea,Brain,Anti-basal ganglia,Confirmed,Rare (linked to Group A streptococcal infection)
+Transverse myelitis,Spinal cord,"Various, including anti-AQP4",Probable,1-8 per million
+Undifferentiated connective tissue disease (UCTD),Various,ANA (antinuclear autoantibody) (HEp-2 cells),Confirmed,"2 per 100,000"
+Addison's disease,Adrenal glands,21-hydroxylase antibodies,Confirmed,"0.93-1.4 per 10,000"
+Autoimmune oophoritis,Ovaries,Anti-ovarian antibodies,Probable,Rare
+Autoimmune orchitis,Testes,Anti-sperm antibodies,Probable,Rare
+Autoimmune pancreatitis,Pancreas,"IgG4, Anti-CA2 antibodies",Confirmed,"0.82-1.3 per 100,000"
+Autoimmune polyendocrine syndrome type 1 (APS1),Multiple endocrine organs,Various autoantibodies depending on the organs affected,Confirmed,"1 in 100,000 to 200,000"
+Autoimmune polyendocrine syndrome type 2 (APS2),Multiple endocrine organs,Various autoantibodies depending on the organs affected,Confirmed,"1 in 20,000"
+Autoimmune polyendocrine syndrome type 3 (APS3),Multiple endocrine organs,Various autoantibodies depending on the organs affected,Confirmed,Rare
+Diabetes mellitus type 1,Pancreas,"Anti-insulin, anti-IA-2, anti-GAD, anti-ZnT8 antibodies",Confirmed,"1.6 per 1,000"
+Endometriosis,Endometrium,Anti-endometrial antibodies,Probable,6-10% of women of reproductive age
+Graves' disease,Thyroid gland,"TSI, TPO, TG antibodies",Confirmed,1.2% of the population
+Hashimoto's thyroiditis,Thyroid gland,"TPO, TG antibodies",Confirmed,5% of the population
+Ord's thyroiditis,Thyroid gland,"TPO, TG antibodies",Confirmed,Rare
+Sjogren syndrome,Exocrine glands (salivary and lacrimal glands),"Anti-SSA/Ro, Anti-SSB/La antibodies",Confirmed,0.1-4% of the population
+Goodpasture syndrome,See urinary system  [a],See urinary system,Confirmed,See urinary system
+Eosinophilic granulomatosis with polyangiitis (EGPA),See vascular system  [b],See vascular system,Confirmed,See vascular system
+Granulomatosis with polyangiitis (GPA),See vascular system  [c],See vascular system,Confirmed,See vascular system
+Idiopathic pulmonary fibrosis,Lungs,None specific,Possible,"20 per 100,000 (men), 13 per 100,000 (women)"
+Interstitial lung disease,Lungs,Depends on the subtype (e.g. Anti-Jo1 in Anti-synthetase syndrome),Probable,"31.5 per 100,000 (men), 26.1 per 100,000 (women)"
+Pulmonary alveolar proteinosis,Lungs,Anti-GM-CSF antibodies,Confirmed,6.2 per million
+Rheumatoid lung disease,Lungs,"Rheumatoid factor, Anti-CCP antibodies",Confirmed,Part of RA prevalence (about 1%)
+Sarcoidosis,Lungs and other organs,None specific,Confirmed,"10 - 40 per 100,000"
+Autoimmune hemolytic anemia,Anti-red blood cell antibodies,Confirmed,"1-3 per 100,000",[89]
+Immune thrombocytopenia,Anti-platelet antibodies,Confirmed,"3.3 per 100,000 (adults), 50 per 100,000 (children)",[90]
+Thrombotic thrombocytopenic purpura,ADAMTS13 autoantibodies,Confirmed,1-2 per million,[91]
+Antiphospholipid syndrome,Antiphospholipid antibodies,Confirmed,"40-50 per 100,000",[92]
+Paroxysmal nocturnal hemoglobinuria,"None specific, mutation causes self-cells to become susceptible to attack",Possible,1-2 per million,[93]
+Autoimmune orchitis,Testes,Anti-sperm antibodies,Probable,Not well established
+Autoimmune oophoritis,Ovaries,Anti-ovarian antibodies,Probable,Not well established
+Endometriosis,"Uterus, ovaries, and pelvic tissue","Various, including anti-endometrial antibodies",Probable,Approx. 10% of women of reproductive age
+Premature ovarian failure,Ovaries,"Anti-ovarian antibodies, Anti-adrenal antibodies",Confirmed,1% of women under 40 years
+Autoimmune retinopathy,Retina,Various,Confirmed,
+Autoimmune uveitis,Uvea,Various,Confirmed,
+Cogan syndrome,Inner ear and eye,None specific,Probable,
+Graves' ophthalmopathy,Eye muscles and connective tissue,TSH receptor antibodies,Confirmed,
+Intermediate uveitis,Uvea (pars plana),Various,Probable,
+Ligneous conjunctivitis,Conjunctiva,Plasminogen deficiency,Possible,Rare
+Mooren's ulcer,Cornea,None specific,Probable,Rare
+Neuromyelitis optica,Optic nerve and spinal cord,Anti-AQP4,Confirmed,
+Opsoclonus myoclonus syndrome,"Central nervous system, eye movement control",Anti-neuronal antibodies,Possible,
+Optic neuritis,Optic nerve,Various,Confirmed,
+Scleritis,Sclera,Various,Possible,
+Susac's syndrome,"Retina, cochlea, and brain",None specific,Probable,
+Sympathetic ophthalmia,Uveal tract,Various,Probable,Rare
+Tolosa-Hunt syndrome,Orbit,None specific,Uncertain,Rare

@@ -1,80 +1,87 @@
 This is BibTeX, Version 0.99d
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: sample-sigconf-authordraft.aux
-Reallocating 'name_of_file' (item size: 1) to 21 items.
-The style file: ACM-Reference-Format.bst
+Reallocating 'name_of_file' (item size: 1) to 6 items.
+The style file: unsrt.bst
 Reallocating 'name_of_file' (item size: 1) to 12 items.
-Reallocating 'singl_function' (item size: 4) to 100 items.
-Reallocating 'singl_function' (item size: 4) to 100 items.
-Reallocating 'wiz_functions' (item size: 4) to 6000 items.
 Database file #1: sample-base.bib
-Warning--entry type for "Bornmann2019" isn't style-file defined
---line 1604 of file sample-base.bib
-Warning--entry type for "AnzarootPBM14" isn't style-file defined
---line 1621 of file sample-base.bib
-Reallocating 'singl_function' (item size: 4) to 100 items.
-Reallocating 'glb_str_end' (item size: 4) to 20 items.
-Reallocating 'glb_str_ptr' (item size: 4) to 20 items.
-Reallocating 'global_strs' (item size: 1) to 4000000 items.
-Reallocating 'singl_function' (item size: 4) to 100 items.
-Warning--empty organization in Ablamowicz07
-Warning--empty organization in UMassCitations
-Warning--empty chapter and pages in Editor00
-Warning--page numbers missing in Editor00a
-Warning--empty author in 2004:ITE:1009386.1010128
-Warning--empty address in Knuth97
-Warning--articleno or eid field, but no numpages field, in Lee05
-Warning--page numbers missing in both pages and numpages fields in Lee05
-Warning--articleno or eid, but no pages or numpages field in Lee05
-Warning--unrecognized DOI value [99.9999/woot07-S422]
-Warning--articleno or eid field, but no numpages field, in rous08
-Warning--page numbers missing in both pages and numpages fields in rous08
-Warning--articleno or eid, but no pages or numpages field in rous08
-Warning--page numbers missing in both pages and numpages fields in SaeediJETC10
-Warning--unrecognized DOI value [99.9999/woot07-S422]
-Warning--empty organization in Thornburg01
-Warning--empty organization in TUGInstmem
-Warning--empty organization in TUGInstmem
-Warning--empty organization in CTANacmart
-You've used 38 entries,
-            5981 wiz_defined-function locations,
-            1922 strings with 26453 characters,
-and the built_in function-call counts, 34516 in all, are:
-= -- 4300
-> -- 816
-< -- 4
-+ -- 257
-- -- 328
-* -- 2318
-:= -- 3408
-add.period$ -- 203
-call.type$ -- 38
-change.case$ -- 218
-chr.to.int$ -- 36
-cite$ -- 55
-duplicate$ -- 3228
-empty$ -- 2290
-format.name$ -- 353
-if$ -- 8049
-int.to.chr$ -- 4
-int.to.str$ -- 1
-missing$ -- 70
-newline$ -- 422
-num.names$ -- 259
-pop$ -- 1068
+Warning--I didn't find a database entry for "Lamport:LaTeX"
+Warning--I didn't find a database entry for "Abril07"
+Warning--I didn't find a database entry for "Cohen07"
+Warning--I didn't find a database entry for "JCohen96"
+Warning--I didn't find a database entry for "Kosiur01"
+Warning--I didn't find a database entry for "Harel79"
+Warning--I didn't find a database entry for "Editor00"
+Warning--I didn't find a database entry for "Editor00a"
+Warning--I didn't find a database entry for "Spector90"
+Warning--I didn't find a database entry for "Douglass98"
+Warning--I didn't find a database entry for "Knuth97"
+Warning--I didn't find a database entry for "Andler79"
+Warning--I didn't find a database entry for "Hagerup1993"
+Warning--I didn't find a database entry for "Smith10"
+Warning--I didn't find a database entry for "VanGundy07"
+Warning--I didn't find a database entry for "Harel78"
+Warning--I didn't find a database entry for "Bornmann2019"
+Warning--I didn't find a database entry for "AnzarootPBM14"
+Warning--I didn't find a database entry for "Clarkson85"
+Warning--I didn't find a database entry for "anisi03"
+Warning--I didn't find a database entry for "Thornburg01"
+Warning--I didn't find a database entry for "Ablamowicz07"
+Warning--I didn't find a database entry for "Poker06"
+Warning--I didn't find a database entry for "Obama08"
+Warning--I didn't find a database entry for "Novak03"
+Warning--I didn't find a database entry for "Lee05"
+Warning--I didn't find a database entry for "JoeScientist001"
+Warning--I didn't find a database entry for "rous08"
+Warning--I didn't find a database entry for "SaeediMEJ10"
+Warning--I didn't find a database entry for "SaeediJETC10"
+Warning--I didn't find a database entry for "Kirschmer:2010:AEI:1958016.1958018"
+Warning--I didn't find a database entry for "MR781536"
+Warning--I didn't find a database entry for "MR781537"
+Warning--I didn't find a database entry for "2004:ITE:1009386.1010128"
+Warning--I didn't find a database entry for "TUGInstmem"
+Warning--I didn't find a database entry for "CTANacmart"
+Warning--I didn't find a database entry for "R"
+Warning--I didn't find a database entry for "UMassCitations"
+You've used 6 entries,
+            1791 wiz_defined-function locations,
+            538 strings with 4894 characters,
+and the built_in function-call counts, 756 in all, are:
+= -- 58
+> -- 24
+< -- 0
++ -- 12
+- -- 6
+* -- 6
+:= -- 121
+add.period$ -- 15
+call.type$ -- 6
+change.case$ -- 3
+chr.to.int$ -- 0
+cite$ -- 6
+duplicate$ -- 30
+empty$ -- 109
+format.name$ -- 6
+if$ -- 179
+int.to.chr$ -- 0
+int.to.str$ -- 6
+missing$ -- 0
+newline$ -- 30
+num.names$ -- 6
+pop$ -- 34
 preamble$ -- 1
-purify$ -- 512
+purify$ -- 0
 quote$ -- 0
-skip$ -- 1190
+skip$ -- 25
 stack$ -- 0
-substring$ -- 2702
-swap$ -- 289
-text.length$ -- 51
+substring$ -- 0
+swap$ -- 6
+text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 912
-warning$ -- 19
-while$ -- 254
-width$ -- 0
-write$ -- 861
-(There were 21 warnings)
+type$ -- 0
+warning$ -- 0
+while$ -- 6
+width$ -- 7
+write$ -- 54
+(There were 38 warnings)

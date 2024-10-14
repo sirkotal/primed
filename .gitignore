@@ -6,4 +6,6 @@ dataset/venv
 src/venv
 *.zip
 .idea/
-
+*pycache
+*__pycache__
+data_pipeline/__pycache__

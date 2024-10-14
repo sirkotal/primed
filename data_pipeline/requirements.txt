@@ -1,0 +1,10 @@
+pandas
+seaborn
+numpy
+matplotlib
+unidecode
+datetime
+bs4
+soupsieve
+requests
+bs4
