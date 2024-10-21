@@ -78,7 +78,6 @@ for drug, details in drug_details.items():
     }
     
     combined_data.append(combined_entry)
-    num += 1
 
 with open('../dataset/output/combined_drug_data.json', 'w') as f:
     json.dump(combined_data, f, indent=4)

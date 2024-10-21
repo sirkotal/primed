@@ -11,19 +11,19 @@ from unidecode import unidecode
 
 
 # source datasets
-diseases_csv = "dataset/sources/diseases.csv"
-drug_details_csv = "dataset/sources/drug_details.csv"
-drug_reviews_csv = "dataset/sources/drug_reviews.csv"
-pharmaceutical_companies_csv = "dataset/sources/pharmaceutical_companies.csv"
-sicknesses_clean_csv = "dataset/sources/sicknesses_clean.csv"
+diseases_csv = "../dataset/sources/diseases.csv"
+drug_details_csv = "../dataset/sources/drug_details.csv"
+drug_reviews_csv = "../dataset/sources/drug_reviews.csv"
+pharmaceutical_companies_csv = "../dataset/sources/pharmaceutical_companies.csv"
+sicknesses_clean_csv = "../dataset/sources/sicknesses_clean.csv"
 
 
 # output datasets
-diseases_json = "dataset/output/diseases.json"
-drug_details_json = "dataset/output/drug_details.json"
-drug_reviews_json = "dataset/output/drug_reviews.json"
-pharmaceutical_companies_json = "dataset/output/pharmaceutical_companies.json"
-sicknesses_json = "dataset/output/sicknesses_clean.json"
+diseases_json = "../dataset/output/diseases.json"
+drug_details_json = "../dataset/output/drug_details.json"
+drug_reviews_json = "../dataset/output/drug_reviews.json"
+pharmaceutical_companies_json = "../dataset/output/pharmaceutical_companies.json"
+sicknesses_json = "../dataset/output/sicknesses_clean.json"
 
 
 def _parse_use_cases_side_effects(input_string):
@@ -114,13 +114,14 @@ def parse_drug_details(key_name='Medicine Name'):
     data = {}
 
     dict_reader = _remove_null_values(drug_details_csv, _drop_row_if_all_null=True, _drop_if_null=[key_name])
+    separator= " ; "
 
     for row in dict_reader:
         key = row[key_name]
         use_cases = _parse_use_cases_side_effects(row["Uses"])
         side_effects = _parse_use_cases_side_effects(row["Side_effects"])
-        row["Uses"] = use_cases
-        row["Side_effects"] = side_effects
+        row["Uses"] = separator.join(use_cases)
+        row["Side_effects"] = separator.join(side_effects)
         row.pop("Image URL", None)
         row.pop(key_name, None)
         data[key] = row
