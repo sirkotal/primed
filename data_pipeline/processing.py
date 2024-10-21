@@ -16,7 +16,7 @@ def convert_data_to_maps(lst, file):
 
 #print(data_list)
 
-def convert_json_to_sql(j):
+'''def convert_json_to_sql(j):
     medicine_db = j.copy()
 
     medicine_db['Uses'] = medicine_db['Uses'].apply(lambda x: ', '.join(x) if isinstance(x, list) else x)
@@ -24,4 +24,4 @@ def convert_json_to_sql(j):
 
     conn = sqlite3.connect('../dataset/medicines.db')
     medicine_db.to_sql('medicine', conn, if_exists='replace', index=False)
-    conn.close()
+    conn.close()'''
