@@ -23,3 +23,9 @@ clean:
 	@rm -rf venv
 	@rm -rf dataset/output/*.json
 	# @rm -rf dataset/output/*.db (not using this now so don't remove it)
+
+down:
+	docker compose -f docker/docker-compose.yml down --remove-orphans -v
+
+up:
+	docker compose -f docker/docker-compose.yml up -d
