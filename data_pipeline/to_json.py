@@ -114,14 +114,14 @@ def parse_drug_details(key_name='Medicine Name'):
     data = {}
 
     dict_reader = _remove_null_values(drug_details_csv, _drop_row_if_all_null=True, _drop_if_null=[key_name])
-    separator= " ; "
+    # separator= " ; "
 
     for row in dict_reader:
         key = row[key_name]
         use_cases = _parse_use_cases_side_effects(row["Uses"])
         side_effects = _parse_use_cases_side_effects(row["Side_effects"])
-        row["Uses"] = separator.join(use_cases)
-        row["Side_effects"] = separator.join(side_effects)
+        row["Uses"] = use_cases  # separator.join(use_cases)
+        row["Side_effects"] = side_effects  # separator.join(side_effects)
         row.pop("Image URL", None)
         row.pop(key_name, None)
         data[key] = row

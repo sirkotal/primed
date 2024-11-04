@@ -57,7 +57,7 @@ def find_company(manufacturer_name):
             if key in part:
                 return companies[key]
             
-    return companies.get(manufacturer_name, {})
+    return companies.get(manufacturer_name, {'Description': '', 'Year Start': '', 'Year End': ''})
 
 combined_data = []
 for drug, details in drug_details.items():
@@ -67,14 +67,21 @@ for drug, details in drug_details.items():
     #related_reviews = find_reviews(details['Composition'])
     
     company_info = find_company(details['Manufacturer'])
+    print(company_info)
     
     combined_entry = {
         "drug": drug,
-        "details": details,
-        "applicable_diseases": related_diseases,
-        "possible_side_effects": related_side_effects,
+        "composition": details['Composition'],
+        "applicable_diseases": details['Uses'],
+        "possible_side_effects": details['Side_effects'],
+        "excellent_review_perc": details['Excellent Review %'],
+        "average_review_perc": details['Average Review %'],
+        "poor_review_perc": details['Poor Review %'],
         #"related_reviews": related_reviews,
-        "manufacturer_info": company_info
+        "manufacturer": details['Manufacturer'],
+        "manufacturer_desc": company_info['Description'],
+        "manufacturer_start": company_info['Year Start'],
+        "manufacturer_end": company_info['Year End']
     }
     
     combined_data.append(combined_entry)
