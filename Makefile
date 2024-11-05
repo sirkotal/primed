@@ -29,3 +29,9 @@ down:
 
 up:
 	docker compose -f docker/docker-compose.yml up -d
+
+core:
+	docker exec -it solr_pri bin/solr create_core -c primed-data
+
+data:
+	curl -X POST -H 'Content-type:application/json' --data-binary "@docker/data/combined_drug_data.json" http://localhost:8983/solr/primed-data/update\?commit\=true
