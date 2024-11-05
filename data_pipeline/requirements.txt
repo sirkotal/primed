@@ -8,3 +8,4 @@ bs4
 soupsieve
 requests
 bs4
+deep_translator
