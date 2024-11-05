@@ -1,20 +1,16 @@
 import requests
 from bs4 import BeautifulSoup
 import pandas as pd
-#from googletrans import Translator
+from deep_translator import GoogleTranslator
 
 base_url = "https://www.cuf.pt/saude-a-z"
 headers = {"User-Agent": "Mozilla/5.0"}
 doencas_data = []
 
-#def translate_text(text):
-#    """Traduz o texto para o idioma desejado (padrão: inglês)."""
-#    translator = Translator()
-#    translation = translator.translate(text=text, src='auto', dest='en')
-#    return translation.text
+def translate_text(text):
+    return GoogleTranslator(source='auto', target='en').translate(text)
 
 def get_doencas_list(page_content):
-    """Extrai os links para as páginas de cada doença a partir do HTML."""
     soup = BeautifulSoup(page_content, 'html.parser')
     
     doencas_links = []
@@ -26,7 +22,6 @@ def get_doencas_list(page_content):
     return doencas_links
 
 def get_detalhes_completo(doenca_url):
-    """Extrai o conteúdo completo da página de doença, formatando títulos e textos."""
     response = requests.get(doenca_url, headers=headers)
     soup = BeautifulSoup(response.text, 'html.parser')
     
@@ -35,12 +30,12 @@ def get_detalhes_completo(doenca_url):
 
     for tag in soup.find_all(["h2", "p", "li"]):
         if tag.name == "h2" and tag.get_text(strip=True) != "Consultas":
-            current_section = tag.get_text(strip=True)
+            current_section = translate_text(tag.get_text(strip=True))
             detalhes += f"//{current_section}// "
         elif tag.name == "p" and current_section:
-            detalhes += tag.get_text(strip=True) + " "
+            detalhes += translate_text(tag.get_text(strip=True)) + " "
         elif tag.name == "li" and current_section:
-            detalhes += tag.get_text(strip=True) + ";/ "
+            detalhes += translate_text(tag.get_text(strip=True)) + ";/ "
         elif tag.name == "h2" and tag.get_text(strip=True) == "Consultas":
             break
 
