@@ -67,7 +67,7 @@ for drug, details in drug_details.items():
     #related_reviews = find_reviews(details['Composition'])
     
     company_info = find_company(details['Manufacturer'])
-    print(company_info)
+    #print(company_info)
     
     combined_entry = {
         "drug": drug,
@@ -86,7 +86,7 @@ for drug, details in drug_details.items():
     
     combined_data.append(combined_entry)
 
-with open('../dataset/output/combined_drug_data.json', 'w') as f:
+with open('../docker/data/combined_drug_data.json', 'w') as f:
     json.dump(combined_data, f, indent=4)
     
 print("Dados combinados criados com sucesso!")
