@@ -1,7 +1,7 @@
 {
 	"add-field-type": [
         {
-            "name":"courseTitle",
+            "name":"drugName",
             "class":"solr.TextField",
             "indexAnalyzer":{
                 "tokenizer":{
@@ -21,23 +21,13 @@
                     {"class":"solr.LowerCaseFilterFactory"}
                 ]
             }
-        },
-        {
-            "name": "numStudents",
-            "class": "solr.IntPointField"
         }
     ],
     "add-field": [
         {
-            "name": "title",
-            "type": "courseTitle",
+            "name": "drug",
+            "type": "drugName",
             "indexed": true
-        },
-        {
-            "name": "students",
-            "type": "numStudents",
-            "indexed": true,
-            "multiValued": false
         }
     ]
 }
