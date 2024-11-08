@@ -64,13 +64,12 @@
 %% the commands and values with those provided to you when you
 %% complete the rights form.
 \setcopyright{acmlicensed}
-\copyrightyear{2018}
-\acmYear{2018}
-\acmDOI{XXXXXXX.XXXXXXX}
+\copyrightyear{2024}
+\acmYear{2024}
+\acmDOI{}
 
 %% These commands are for a PROCEEDINGS abstract or paper.
-\acmConference[PRI - G51]{Make sure to enter the correct
-  conference title from your rights confirmation email}{October 13, 2024}{Porto, PT}
+\acmConference[G51]{PRI}{October 13, 2024}{Porto, PT}
 %%
 %%  Uncomment \acmBooktitle if the title of the proceedings is different
 %%  from ``Proceedings of ...''!
@@ -199,16 +198,6 @@
 %% A "teaser" image appears between the author and affiliation
 %% information and the body of the document, and typically spans the
 %% page.
-\begin{teaserfigure}
-  \includegraphics[width=\textwidth]{medicine.png}
-  \caption{Medicine}
-  \Description{}
-  \label{fig:teaser}
-\end{teaserfigure}
-
-\received{20 February 2007}
-\received[revised]{12 March 2009}
-\received[accepted]{5 June 2009}
 
 %%
 %% This command processes the author and affiliation and title
@@ -258,7 +247,7 @@ The present information on this dataset is:
 	\item {\texttt{Reviews}}: Three additional columns containing the percentage of "Excellent", "Average" and "Poor" reviews for each medicine's treatment results.
 \end{itemize}
 
-This dataset possesses a {\textit{\textbf{CC0 1.0 Universal}}}\cite{cczero} license, which means the data is part of the public domain, allowing for the copying and modification of the data.
+This dataset, which contains 11824 different medicines, possesses a {\textit{\textbf{CC0 1.0 Universal}}}\cite{cczero} license, which means the data is part of the public domain, allowing for the copying and modification of the data.
 
 \subsubsection{Diseases}
 
@@ -303,11 +292,21 @@ The data collected had the following structure:
     \item {\texttt{Useful Count}}: Similar to a "like" system, this showcases the number of people who found this review useful.
 \end{itemize}
 
+Each review can only be associated with a single condition/disease, which is a limitation of the dataset itself.
+
 This dataset contains around 215000 entries and is covered by the \textit{\textbf{Attribution 4.0 International}}\cite{ccfour} license, which allows for the sharing and adaptation of the datasets for any purpose, provided that the appropriate credit is given.
 
 \section{Pipeline Description}
 
-As mentioned in section 3.2 of this report, \textit{\textbf{PRIMED}}'s data comes from various sources. Due to the often unstructured nature of this data, it is vital to have a streamlined and automated way of normalizing and processing all the information into similar formats, which is the main role of the data pipeline.
+As mentioned in section 3.2 of this report, \textit{\textbf{PRIMED}}'s data comes from various sources. Due to the often unstructured nature of this data, it is vital to have a streamlined and automated way of normalizing and processing all the information into similar formats, which is the main role of the data pipeline, present in figure [1].
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\linewidth]{data_pipeline.png}
+	\caption{Data Pipeline}
+	\Description{Data Pipeline}
+	\label{fig:pipeline}
+  \end{figure}
 
 The pipeline consists of \texttt{Python}\cite{python} scripts utilizing libraries such as \texttt{pandas}\cite{pandas}, \texttt{unidecode}\cite{unidecode}, \texttt{html}\cite{html}, \texttt{json}\cite{json} and \texttt{csv}\cite{csv} with the crux of the data processing occurring on the \texttt{to{\textunderscore}json.py} script, which converts the \texttt{CSV} files into \texttt{JSON} format.
 
@@ -345,6 +344,36 @@ Having finalized the data collection and the subsequent transformation and stora
 
 Each medicine is associated with one and only one pharmaceutical company; a company, however, can produce multiple medicines. A single medicine can be linked to multiple diseases and reviews, though the reverse is true only for diseases - a disease can be associated to many medicines (and many reviews). A review, however, can only be associated with a single medicine and a single disease.
 
+\section{Dataset Characterization}
+
+With regard to the characterization of the dataset, the data resulting from the pipeline was analysed. Graphs, tables and even word clouds, despite not being the most reliable method, were created to make it easier to understand the structure of the data and the patterns that guide the system itself.
+
+\subsection{Distribution of Drug Manufacturers}
+
+By analysing figure [3], which shows the distribution of the main pharmaceutical companies responsible for manufacturing medicines where the five that possess the largest share are highlighted, we are given a clearer understanding of each manufacturers' production capabilities.
+
+\subsection{Distribution of Reviews}
+
+A box plot, present in figure [4], is utilized to analyse the distribution of “Excellent”, “Average” and “Poor” review percentages across the different medicines. The graph shows that, for instance, "Excellent" reviews percentages are more evenly spread than the "Average" reviews percentages which, despite having a lower interquartile range\cite{iqrange}, possesses a higher number of outliers. The "Poor" review percentages have the largest variations, but also the lowest values. 
+
+In figure [5], we can see the average percentage of reviews for the top ten use cases, which supports the findings from figure [4].
+
+\subsection{Distribution of Side Effects}
+
+By analysing figure [6], we can identify the most common side effects caused by medication - nausea, headaches, diarrhea - and how many medicines are associated to each one of them. As expected, the data shows that side effects that occur more frequently are those that are milder in nature.
+
+\subsection{Common Uses Word Cloud}
+
+Figure [7] contains a word cloud with the most common use cases for medicines. “Bacterial Infections” and "Hypertension", for example, are clearly highlighted in the graph, being conditions that are found and treated more frequently.
+
+\subsection{Most Common Drug Compositions}
+
+Figure [8] identifies the the most common drug combinations available in the market, with “Levocetirizine + Montelukast” being the most prevalent, followed by other combinations such as “Luliconazole” and “Domperidone + Rabeprazole”.
+
+\subsection{Years with the Most Companies Foundations}	
+
+By analysing figure [9], it's possible to observe the years in which the most pharmaceutical companies were founded, with 2003 standing out. This temporal analysis gives us some information about periods of significant growth in the pharmaceutical industry.
+
 \section{Information Needs}
 
 The information needs can vary depending on the person using \textit{\textbf{PRIMED}}. If the individual who is using the tool is, for example, a doctor or a pharmacist, these needs might be related to the compositions of a medicine or cases where it can be applied. If the user is a patient (an average person), they might be more interested in checking which company manufactures the medicine to check if it can be trusted or to assess other user's reviews of that treatment, as well as possible side effects, to have a better understanding of what can happen to them.
@@ -372,46 +401,17 @@ Based one these needs, we can answer some questions like:
 
 As previously stated, a wide range of people can take advantage of this type of information - from regular patients to medicine experts and even investigators, everyone can benefit from having access to the data present in \textit{\textbf{PRIMED}}.
 
-\section{Dataset Characterization}
-
-With regard to the characterization of the dataset, the data resulting from the pipeline was analysed. Graphs, tables and even word clouds, despite not being the most reliable method, were created to make it easier to understand the structure of the data and the patterns that guide the system itself.
-
-\subsection{Distribution of Drug Manufacturers}
-
-By analysing figure [3], which shows the distribution of the main pharmaceutical companies responsible for manufacturing medicines where the five that possess the largest share are highlighted, we are given a clearer understanding of each manufacturers' production capabilities.
-
-\subsection{Distribution of Reviews}
-
-A box plot, present in figure [4], is utilized to analyse the distribution of “Excellent”, “Average” and “Poor” review percentages across the different medicines. The graph shows that, for instance, "Excellent" reviews percentages are more evenly spread than the "Average" reviews percentages which, despite having a lower interquartile range\cite{iqrange}, possesses a higher number of outliers. The "Poor" review percentages have the largest variations, but also the lowest values. 
-
-In figure [5], we can see the average percentage of reviews for the top ten use cases, which supports the findings from figure [4].
-
-\subsection{Distribution of Side Effects}
-
-By analysing figure [6], we get to know what are the most common side effects caused by medication - nausea, headaches, diarrhea - and how many medicines are associated to each one of them. As expected, the data shows that side effects that arise more frequently are those that are more mild in nature.
-
-\subsection{Common Uses Word Cloud}
-
-Figure [7] contains a word cloud with the most common use cases for medicines. “Bacterial Infections” and "Hypertension", for example, are clearly highlighted in the graph, being conditions that are found and treated more frequently.
-
-\subsection{Most Common Drug Compositions}
-
-In figure [8], the pie chart shows the five most common drug combinations. The combination “Levocetirizine + Montelukast” is the most frequent, followed by other combinations such as “Luliconazole” and “Domperidone + Rabeprazole”. This visualization makes it easier to identify the most popular compositions for treating diseases.
-
-\subsection{Years with the Most Companies Foundations}	
-
-In figure [9], we can see the years in which the most pharmaceutical companies were founded. 2003 is the year in which the most companies were founded. This temporal analysis helps us to understand the periods of greatest growth in the pharmaceutical industry.
-
 \section{Conclusions}
 
 Having completed this milestone of the project marks a very important step in the development of our system. The work carried out to this date has made it possible to transform an initial set of diverse, loosely related data into a cohesive and structured basis for \textit{\textbf{PRIMED}}. By carrying out data cleaning operations, we have been able to maintain the quality of the information while simultaneously reducing inconsistencies and duplicates. Outfitted with this data, \textit{\textbf{PRIMED}} will be able to offer users a practical source for consulting medical information; however, we will keep an eye on the dataset in case there is a need for further enhancements during future milestones.
 
+\appendix
 \section{Annexes}
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\linewidth]{graphic1.png}
-	\caption{Distribution of drug manufacturers}
+	\caption{Top Drug Manufacturers}
 	\Description{Dataset Characterization \textit{\textbf{PRIMED}}'s data}
 	\label{fig:uml}
   \end{figure}
@@ -427,7 +427,7 @@ Having completed this milestone of the project marks a very important step in th
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\linewidth]{graphic3.png}
-	\caption{Reviews percentages by uses}
+	\caption{Mean of Reviews Percentages by Uses}
 	\Description{Dataset Characterization \textit{\textbf{PRIMED}}'s data}
 	\label{fig:uml}
   \end{figure}
@@ -435,7 +435,7 @@ Having completed this milestone of the project marks a very important step in th
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\linewidth]{graphic4.png}
-	\caption{Distribution of side effects}
+	\caption{Distribution of Side Effects}
 	\Description{Dataset Characterization \textit{\textbf{PRIMED}}'s data}
 	\label{fig:uml}
   \end{figure}
