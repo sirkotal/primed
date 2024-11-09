@@ -4,5 +4,14 @@ Medicines Search Engine
 
 # Run Pipeline
 
-- Create virtual environment and install dependencies with `make`
+- Create virtual environment and install dependencies with `make install`
 - Run with `make run` and follow the prompts
+
+# Run Solr
+
+- Run the following commands:
+    - `make up`
+    - `make core`
+    - `make data`
+    - `make schema`
+- Visit `localhost:8983`
