@@ -16,6 +16,7 @@ drug_details_csv = "../dataset/sources/drug_details.csv"
 drug_reviews_csv = "../dataset/sources/drug_reviews.csv"
 pharmaceutical_companies_csv = "../dataset/sources/pharmaceutical_companies.csv"
 sicknesses_clean_csv = "../dataset/sources/sicknesses_clean.csv"
+cuf_sicknesses_csv = "../dataset/sources/cuf_sicknesses.csv"
 
 
 # output datasets
@@ -24,6 +25,7 @@ drug_details_json = "../dataset/output/drug_details.json"
 drug_reviews_json = "../dataset/output/drug_reviews.json"
 pharmaceutical_companies_json = "../dataset/output/pharmaceutical_companies.json"
 sicknesses_json = "../dataset/output/sicknesses_clean.json"
+cuf_sicknesses_json = "../dataset/output/cuf_sicknesses.json"
 
 
 def _parse_use_cases_side_effects(input_string):
@@ -196,8 +198,33 @@ def parse_drug_reviews(key_name='uniqueID'):
         if data[key]["review"].startswith("\"") and data[key]["review"].endswith("\""):
             data[key]["review"] = data[key]["review"][1:-1]
 
+        data[key]["review"] = data[key]["review"].replace("\r", "")
+        data[key]["review"] = data[key]["review"].replace("\n", " ")
+        data[key]["review"] = data[key]["review"].replace("  ", " ")
         date_obj = datetime.strptime(data[key]["date"], "%d-%b-%y")
         data[key]["date"] = date_obj.strftime("%Y-%m-%d")
     
     _write_to_json(data, drug_reviews_json, divide=4)
- 
+
+def parse_cuf_sicknesses(key_name='Doença'):
+    data = {}
+    
+    dict_reader = _remove_null_values(cuf_sicknesses_csv, _drop_row_if_all_null=True, _drop_if_null=[key_name])
+
+    for row in dict_reader:
+        disease = row[key_name]
+        details = row['Detalhes']
+        
+        disease_details = {}
+        
+        sections = details.split('//')
+        
+        for i in range(1, len(sections) - 1, 2):
+            title = unidecode(sections[i].strip())
+            text = sections[i + 1].strip()
+            
+            disease_details[title] = text
+        
+        data[disease] = disease_details
+
+    _write_to_json(data, cuf_sicknesses_json)

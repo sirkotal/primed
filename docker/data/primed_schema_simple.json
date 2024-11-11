@@ -1,0 +1,68 @@
+{
+	"add-field-type": [],
+    "add-field": [
+        {
+            "name": "drug",
+            "type": "text_general",
+            "indexed": true,
+            "stored": true
+        },
+        {
+            "name": "composition",
+            "type": "text_general",
+            "indexed": true,
+            "stored": true
+        },
+        {
+            "name": "applicable_diseases",
+            "type": "text_general",
+            "indexed": true,
+            "stored": true,
+            "multiValued": true
+        },
+        {
+            "name": "possible_side_effects",
+            "type": "text_general",
+            "indexed": true,
+            "stored": true,
+            "multiValued": true
+        },
+        {
+            "name": "excelent_review_perc",
+            "type": "int",
+            "indexed": true,
+            "stored": true
+        },
+        {
+            "name": "average_review_perc",
+            "type": "int",
+            "indexed": true,
+            "stored": true
+        },
+        {
+            "name": "poor_review_perc",
+            "type": "int",
+            "indexed": true,
+            "stored": true
+        },
+        {
+            "name": "reviews_average_rating",
+            "type": "double",
+            "indexed": true,
+            "stored": true
+        },
+        {
+            "name": "reviews_useful_count",
+            "type": "int",
+            "indexed": true,
+            "stored": true
+        },
+        {
+            "name": "reviews",
+            "type": "text_general",
+            "indexed": true,
+            "stored": true,
+            "multiValued": true
+        }
+    ]
+}
