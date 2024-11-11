@@ -1,0 +1,24 @@
+{
+	"add-field-type": [],
+    "add-field": [
+        {
+            "name": "drug",
+            "type": "text_general",
+            "indexed": true,
+            "stored": true
+        },
+        {
+            "name": "composition",
+            "type": "text_general",
+            "indexed": true,
+            "stored": true
+        },
+        {
+            "name": "possible_side_effects",
+            "type": "text_general",
+            "indexed": true,
+            "stored": true,
+            "multiValued": true
+        }
+    ]
+}
