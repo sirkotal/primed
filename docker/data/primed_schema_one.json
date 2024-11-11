@@ -29,7 +29,7 @@
     ],
     "add-field": [
         {
-            "name": "drug",
+            "name": "reviews",
             "type": "textBoosted",
             "indexed": true,
             "stored": true
