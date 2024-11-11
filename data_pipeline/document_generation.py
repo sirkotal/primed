@@ -120,7 +120,7 @@ for drug, details in drug_details.items():
         total_useful_count = sum(review['usefulCount'] for review in related_reviews)
         for review in related_reviews:
             all_reviews += review['reviews']
-        reviews_average_rating = total_ratings / len(related_reviews) if related_reviews else 0
+        reviews_average_rating = round(total_ratings / len(related_reviews), 2) if related_reviews else 0
         reviews_useful_count = total_useful_count
     else:
         reviews_average_rating = "0"
