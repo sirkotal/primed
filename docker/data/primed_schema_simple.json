@@ -1,6 +1,6 @@
 {
 	"add-field-type": [],
-    "add-field": [
+    "replace-field": [
         {
             "name": "drug",
             "type": "text_general",
@@ -28,32 +28,32 @@
             "multiValued": true
         },
         {
-            "name": "excelent_review_perc",
-            "type": "int",
+            "name": "excellent_review_perc",
+            "type": "pint",
             "indexed": true,
             "stored": true
         },
         {
             "name": "average_review_perc",
-            "type": "int",
+            "type": "pint",
             "indexed": true,
             "stored": true
         },
         {
             "name": "poor_review_perc",
-            "type": "int",
+            "type": "pint",
             "indexed": true,
             "stored": true
         },
         {
             "name": "reviews_average_rating",
-            "type": "double",
+            "type": "pdouble",
             "indexed": true,
             "stored": true
         },
         {
             "name": "reviews_useful_count",
-            "type": "int",
+            "type": "pint",
             "indexed": true,
             "stored": true
         },
