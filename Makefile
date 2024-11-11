@@ -37,4 +37,4 @@ data:
 	curl -X POST -H 'Content-type:application/json' --data-binary "@docker/data/combined_drug_data.json" http://localhost:8983/solr/primed-data/update\?commit\=true
 
 schema:
-	curl -X POST -H 'Content-type:application/json' --data-binary "@docker/data/primed_schema.json" http://localhost:8983/solr/primed-data/schema
+	curl -X POST -H 'Content-type:application/json' --data-binary "@docker/data/primed_schema_simple.json" http://localhost:8983/solr/primed-data/schema
