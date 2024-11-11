@@ -1,6 +1,7 @@
 import json
 from collections import defaultdict
 
+
 def summarize_drug_reviews(drug_reviews):
     summary_data = defaultdict(lambda: {"total_rating": 0, "count": 0, "usefulCount": 0, "reviews": []})
 
@@ -25,7 +26,6 @@ def summarize_drug_reviews(drug_reviews):
     return summarizedList
 
 
-
 with open('../dataset/output/drug_details.json', 'r') as f:
     drug_details = json.load(f)
 
@@ -35,6 +35,7 @@ with open('../dataset/output/diseases.json', 'r') as f:
 with open('../dataset/output/pharmaceutical_companies.json', 'r') as f:
     companies = json.load(f)
 
+
 def load_reviews(filenames):
     reviews = []
     for filename in filenames:
@@ -42,6 +43,7 @@ def load_reviews(filenames):
             data = json.load(f)
             reviews.extend(data.values())
     return reviews
+
 
 review_files = [
     '../dataset/output/drug_reviews_part_1.json',
@@ -53,15 +55,16 @@ review_files = [
 drug_reviews = load_reviews(review_files)
 summarizedList = summarize_drug_reviews(drug_reviews)
 
+
 def find_reviews(composition):
     reviews = []
     composition_terms = composition.split()
     
     for review in summarizedList:
         if 'drugName' in review and review['drugName'] in composition_terms:
-            print("Encontrou a review " + review['drugName'])
+            # print("Encontrou a review " + review['drugName'])
             reviews.append(review)
-    
+    #print(reviews)
     return reviews
 
 
@@ -88,6 +91,7 @@ def find_diseases(terms):
     
     return matched_diseases
 
+
 def find_company(manufacturer_name):
     name_parts = manufacturer_name.split()
     
@@ -101,17 +105,21 @@ def find_company(manufacturer_name):
             
     return companies.get(manufacturer_name, {'Description': '', 'Year Start': '', 'Year End': ''})
 
+
 combined_data = []
 for drug, details in drug_details.items():
     related_diseases = find_diseases(details['Uses'])
     
     related_reviews = find_reviews(details['Composition'])
+    all_reviews = []
+
+    #print(related_reviews)
 
     if related_reviews:
         total_ratings = sum(review['average_rating'] for review in related_reviews)
         total_useful_count = sum(review['usefulCount'] for review in related_reviews)
-        all_reviews = [review['reviews'] for review in related_reviews]
-    
+        for review in related_reviews:
+            all_reviews += review['reviews']
         reviews_average_rating = total_ratings / len(related_reviews) if related_reviews else 0
         reviews_useful_count = total_useful_count
     else:
@@ -139,10 +147,9 @@ for drug, details in drug_details.items():
         "manufacturer_end": company_info['Year End']
     }
 
-    
     combined_data.append(combined_entry)
 
 with open('../docker/data/combined_drug_data.json', 'w') as f:
     json.dump(combined_data, f, indent=4)
     
-print("Dados combinados criados com sucesso!")
+print("Combined data created successfully!")
