@@ -1,4 +1,30 @@
 import json
+from collections import defaultdict
+
+def summarize_drug_reviews(drug_reviews):
+    summary_data = defaultdict(lambda: {"total_rating": 0, "count": 0, "usefulCount": 0, "reviews": []})
+
+    for review_data in drug_reviews:
+        drug_name = review_data["drugName"]
+        
+        summary_data[drug_name]["total_rating"] += int(review_data["rating"])
+        summary_data[drug_name]["count"] += 1
+        summary_data[drug_name]["usefulCount"] += int(review_data["usefulCount"])
+        summary_data[drug_name]["reviews"].append(review_data["review"])
+
+    summarizedList = []
+    for drug_name, data in summary_data.items():
+        summarized_entry = {
+            "drugName": drug_name,
+            "average_rating": data["total_rating"] / data["count"],
+            "usefulCount": data["usefulCount"],
+            "reviews": data["reviews"]
+        }
+        summarizedList.append(summarized_entry)
+
+    return summarizedList
+
+
 
 with open('../dataset/output/drug_details.json', 'r') as f:
     drug_details = json.load(f)
@@ -9,27 +35,35 @@ with open('../dataset/output/diseases.json', 'r') as f:
 with open('../dataset/output/pharmaceutical_companies.json', 'r') as f:
     companies = json.load(f)
 
-drug_reviews = []
-for i in range(1, 5):
-    with open(f'../dataset/output/drug_reviews_part_{i}.json', 'r') as f:
-        drug_reviews.extend(json.load(f))
+def load_reviews(filenames):
+    reviews = []
+    for filename in filenames:
+        with open(filename, 'r') as f:
+            data = json.load(f)
+            reviews.extend(data.values())
+    return reviews
+
+review_files = [
+    '../dataset/output/drug_reviews_part_1.json',
+    #'../dataset/output/drug_reviews_part_2.json',
+    #'../dataset/output/drug_reviews_part_3.json',
+    #'../dataset/output/drug_reviews_part_4.json'
+]
+
+drug_reviews = load_reviews(review_files)
+summarizedList = summarize_drug_reviews(drug_reviews)
 
 def find_reviews(composition):
     reviews = []
-    print(f"Composition: {composition}")
+    composition_terms = composition.split()
     
-    for review in drug_reviews:
-        print(f"Review: {review}")
-        if isinstance(review, dict) and 'drugName' in review:
-            if isinstance(review['drugName'], str):
-                if composition in review['drugName']:
-                    reviews.append(review)
-            else:
-                print(f"Warning: 'drugName' is not a string: {review['drugName']}")
-        else:
-            print("Warning: review is not a dictionary or missing 'drugName'")
+    for review in summarizedList:
+        if 'drugName' in review and review['drugName'] in composition_terms:
+            print("Encontrou a review " + review['drugName'])
+            reviews.append(review)
     
     return reviews
+
 
 def find_diseases(terms):
     matched_diseases = []
@@ -38,12 +72,20 @@ def find_diseases(terms):
         name_parts = term.split()
         for part in name_parts:
             if part in diseases:
-                matched_diseases.append(diseases[part])
-        
-            for key in diseases.keys():
+                sickness_info = diseases[part]
+                description = "".join([f"//{k}//{v}" for k, v in sickness_info.items()])
+                matched_diseases.append({
+                    "Sickness": part,
+                    "Description": description
+                })
+            for key, sickness_info in diseases.items():
                 if key.lower() in part:
-                    matched_diseases.append(diseases[key])
-
+                    description = "".join([f"//{k}//{v}" for k, v in sickness_info.items()])
+                    matched_diseases.append({
+                        "Sickness": key,
+                        "Description": description
+                    })
+    
     return matched_diseases
 
 def find_company(manufacturer_name):
@@ -62,27 +104,41 @@ def find_company(manufacturer_name):
 combined_data = []
 for drug, details in drug_details.items():
     related_diseases = find_diseases(details['Uses'])
-    related_side_effects = find_diseases(details['Side_effects'])
     
-    #related_reviews = find_reviews(details['Composition'])
+    related_reviews = find_reviews(details['Composition'])
+
+    if related_reviews:
+        total_ratings = sum(review['average_rating'] for review in related_reviews)
+        total_useful_count = sum(review['usefulCount'] for review in related_reviews)
+        all_reviews = [review['reviews'] for review in related_reviews]
+    
+        reviews_average_rating = total_ratings / len(related_reviews) if related_reviews else 0
+        reviews_useful_count = total_useful_count
+    else:
+        reviews_average_rating = "0"
+        reviews_useful_count = "0"
+        all_reviews = []
     
     company_info = find_company(details['Manufacturer'])
-    #print(company_info)
     
     combined_entry = {
         "drug": drug,
         "composition": details['Composition'],
         "applicable_diseases": details['Uses'],
+        "diseases_info": [disease['Description'] for disease in related_diseases if 'Description' in disease],
         "possible_side_effects": details['Side_effects'],
         "excellent_review_perc": details['Excellent Review %'],
         "average_review_perc": details['Average Review %'],
         "poor_review_perc": details['Poor Review %'],
-        #"related_reviews": related_reviews,
+        "reviews_average_rating": str(reviews_average_rating),
+        "reviews_useful_count": str(reviews_useful_count),
+        "reviews": all_reviews,
         "manufacturer": details['Manufacturer'],
         "manufacturer_desc": company_info['Description'],
         "manufacturer_start": company_info['Year Start'],
         "manufacturer_end": company_info['Year End']
     }
+
     
     combined_data.append(combined_entry)
 

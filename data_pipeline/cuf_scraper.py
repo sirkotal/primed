@@ -67,11 +67,17 @@ def process_page(page):
 
 page = 0
 has_next_page = True
-max_threads = 5
+max_threads = 2                                                                    
+pages_to_skip = {1, 2, 4, 5, 8, 9}
 
 with ThreadPoolExecutor(max_workers=max_threads) as executor:
     futures = []
     while has_next_page:
+        if page in pages_to_skip:
+            print(f"Pular página {page}")
+            page += 1
+            continue
+
         futures.append(executor.submit(process_page, page))
         page += 1
         
