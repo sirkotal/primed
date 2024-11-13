@@ -36,7 +36,7 @@ core:
 schema_simple:
 	curl -X POST -H 'Content-type:application/json' --data-binary "@docker/data/primed_schema_simple.json" http://localhost:8983/solr/primed-data/schema
 
-schema_simple:
+schema_advanced:
 	curl -X POST -H 'Content-type:application/json' --data-binary "@docker/data/primed_schema_advanced.json" http://localhost:8983/solr/primed-data/schema
 	
 data:
