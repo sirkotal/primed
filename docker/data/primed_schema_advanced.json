@@ -54,13 +54,15 @@
             "name": "reviews",
             "type": "shortText",
             "indexed": true,
-            "stored": true
+            "stored": true,
+            "multiValued": true
         },
         {
             "name": "diseases_info",
             "type": "textBoosted",
             "indexed": true,
-            "stored": true
+            "stored": true,
+            "multiValued": true
         },
         {
             "name": "manufacturer_desc",
