@@ -25,12 +25,34 @@
                     {"class": "solr.EnglishMinimalStemFilterFactory"}
                 ]
             }
+        },
+        {
+            "name":"shortText",
+            "class":"solr.TextField",
+            "indexAnalyzer":{
+                "tokenizer":{
+                    "class":"solr.StandardTokenizerFactory"
+                },
+                "filters":[
+                    {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
+                    {"class":"solr.LowerCaseFilterFactory"}
+                ]
+            },
+            "queryAnalyzer":{
+                "tokenizer":{
+                    "class":"solr.StandardTokenizerFactory"
+                },
+                "filters":[
+                    {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
+                    {"class":"solr.LowerCaseFilterFactory"}
+                ]
+            }
         }
     ],
     "add-field": [
         {
             "name": "reviews",
-            "type": "textBoosted",
+            "type": "shortText",
             "indexed": true,
             "stored": true
         },
@@ -54,20 +76,20 @@
         },
         {
             "name": "composition",
-            "type": "text_general",
+            "type": "shortText",
             "indexed": true,
             "stored": true
         },
         {
             "name": "applicable_diseases",
-            "type": "text_general",
+            "type": "shortText",
             "indexed": true,
             "stored": true,
             "multiValued": true
         },
         {
             "name": "possible_side_effects",
-            "type": "text_general",
+            "type": "shortText",
             "indexed": true,
             "stored": true,
             "multiValued": true
