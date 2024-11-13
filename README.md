@@ -12,6 +12,6 @@ Medicines Search Engine
 - Run the following commands:
     - `make up`
     - `make core`
-    - `make data`
     - `make schema`
+    - `make data`
 - Visit `localhost:8983`

@@ -1,6 +1,51 @@
 {
-	"add-field-type": [],
+	"add-field-type": [
+        {
+            "name":"textBoosted",
+            "class":"solr.TextField",
+            "indexAnalyzer":{
+                "tokenizer":{
+                    "class":"solr.StandardTokenizerFactory"
+                },
+                "filters":[
+                    {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
+                    {"class":"solr.LowerCaseFilterFactory"},
+                    {"class": "solr.SnowballPorterFilterFactory"},
+                    {"class": "solr.EnglishMinimalStemFilterFactory"}
+                ]
+            },
+            "queryAnalyzer":{
+                "tokenizer":{
+                    "class":"solr.StandardTokenizerFactory"
+                },
+                "filters":[
+                    {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
+                    {"class":"solr.LowerCaseFilterFactory"},
+                    {"class": "solr.SnowballPorterFilterFactory"},
+                    {"class": "solr.EnglishMinimalStemFilterFactory"}
+                ]
+            }
+        }
+    ],
     "add-field": [
+        {
+            "name": "reviews",
+            "type": "textBoosted",
+            "indexed": true,
+            "stored": true
+        },
+        {
+            "name": "diseases_info",
+            "type": "textBoosted",
+            "indexed": true,
+            "stored": true
+        },
+        {
+            "name": "manufacturer_desc",
+            "type": "textBoosted",
+            "indexed": true,
+            "stored": true
+        },
         {
             "name": "drug",
             "type": "text_general",
@@ -15,13 +60,6 @@
         },
         {
             "name": "applicable_diseases",
-            "type": "text_general",
-            "indexed": true,
-            "stored": true,
-            "multiValued": true
-        },
-        {
-            "name": "diseases_info",
             "type": "text_general",
             "indexed": true,
             "stored": true,
@@ -65,39 +103,23 @@
             "stored": true
         },
         {
-            "name": "reviews",
-            "type": "text_general",
-            "indexed": true,
-            "stored": true,
-            "multiValued": true
-        },
-        {
             "name": "manufacturer",
             "type": "text_general",
             "indexed": true,
-            "stored": true,
-            "multiValued": false
-        },
-        {
-            "name": "manufacturer_desc",
-            "type": "text_general",
-            "indexed": true,
-            "stored": true,
-            "multiValued": false
+            "stored": true
         },
         {
             "name": "manufacturer_start",
             "type": "text_general",
             "indexed": true,
-            "stored": true,
-            "multiValued": false
+            "stored": true
         },
         {
             "name": "manufacturer_end",
             "type": "text_general",
             "indexed": true,
-            "stored": true,
-            "multiValued": false
+            "stored": true
         }
     ]
 }
+
