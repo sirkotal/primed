@@ -9,3 +9,4 @@ soupsieve
 requests
 bs4
 deep_translator
+wordninja
