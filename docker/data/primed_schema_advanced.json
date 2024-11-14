@@ -1,0 +1,149 @@
+{
+	"add-field-type": [
+        {
+            "name":"textBoosted",
+            "class":"solr.TextField",
+            "indexAnalyzer":{
+                "tokenizer":{
+                    "class":"solr.StandardTokenizerFactory"
+                },
+                "filters":[
+                    {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
+                    {"class":"solr.LowerCaseFilterFactory"},
+                    {"class": "solr.SnowballPorterFilterFactory"},
+                    {"class": "solr.EnglishMinimalStemFilterFactory"}
+                ]
+            },
+            "queryAnalyzer":{
+                "tokenizer":{
+                    "class":"solr.StandardTokenizerFactory"
+                },
+                "filters":[
+                    {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
+                    {"class":"solr.LowerCaseFilterFactory"},
+                    {"class": "solr.SnowballPorterFilterFactory"},
+                    {"class": "solr.EnglishMinimalStemFilterFactory"}
+                ]
+            }
+        },
+        {
+            "name":"shortText",
+            "class":"solr.TextField",
+            "indexAnalyzer":{
+                "tokenizer":{
+                    "class":"solr.StandardTokenizerFactory"
+                },
+                "filters":[
+                    {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
+                    {"class":"solr.LowerCaseFilterFactory"}
+                ]
+            },
+            "queryAnalyzer":{
+                "tokenizer":{
+                    "class":"solr.StandardTokenizerFactory"
+                },
+                "filters":[
+                    {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
+                    {"class":"solr.LowerCaseFilterFactory"}
+                ]
+            }
+        }
+    ],
+    "add-field": [
+        {
+            "name": "reviews",
+            "type": "shortText",
+            "indexed": true,
+            "stored": true,
+            "multiValued": true
+        },
+        {
+            "name": "diseases_info",
+            "type": "textBoosted",
+            "indexed": true,
+            "stored": true,
+            "multiValued": true
+        },
+        {
+            "name": "manufacturer_desc",
+            "type": "textBoosted",
+            "indexed": true,
+            "stored": true
+        },
+        {
+            "name": "drug",
+            "type": "text_general",
+            "indexed": true,
+            "stored": true
+        },
+        {
+            "name": "composition",
+            "type": "shortText",
+            "indexed": true,
+            "stored": true
+        },
+        {
+            "name": "applicable_diseases",
+            "type": "shortText",
+            "indexed": true,
+            "stored": true,
+            "multiValued": true
+        },
+        {
+            "name": "possible_side_effects",
+            "type": "shortText",
+            "indexed": true,
+            "stored": true,
+            "multiValued": true
+        },
+        {
+            "name": "excellent_review_perc",
+            "type": "pint",
+            "indexed": true,
+            "stored": true
+        },
+        {
+            "name": "average_review_perc",
+            "type": "pint",
+            "indexed": true,
+            "stored": true
+        },
+        {
+            "name": "poor_review_perc",
+            "type": "pint",
+            "indexed": true,
+            "stored": true
+        },
+        {
+            "name": "reviews_average_rating",
+            "type": "pdouble",
+            "indexed": true,
+            "stored": true
+        },
+        {
+            "name": "reviews_useful_count",
+            "type": "pint",
+            "indexed": true,
+            "stored": true
+        },
+        {
+            "name": "manufacturer",
+            "type": "text_general",
+            "indexed": true,
+            "stored": true
+        },
+        {
+            "name": "manufacturer_start",
+            "type": "text_general",
+            "indexed": true,
+            "stored": true
+        },
+        {
+            "name": "manufacturer_end",
+            "type": "text_general",
+            "indexed": true,
+            "stored": true
+        }
+    ]
+}
+

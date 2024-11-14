@@ -198,6 +198,9 @@ def parse_drug_reviews(key_name='uniqueID'):
         if data[key]["review"].startswith("\"") and data[key]["review"].endswith("\""):
             data[key]["review"] = data[key]["review"][1:-1]
 
+        data[key]["review"] = data[key]["review"].replace("\r", "")
+        data[key]["review"] = data[key]["review"].replace("\n", " ")
+        data[key]["review"] = data[key]["review"].replace("  ", " ")
         date_obj = datetime.strptime(data[key]["date"], "%d-%b-%y")
         data[key]["date"] = date_obj.strftime("%Y-%m-%d")
     

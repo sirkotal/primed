@@ -9,3 +9,4 @@ src/venv
 *pycache
 *__pycache__
 data_pipeline/__pycache__
+docker/data/combined_drug_data.json

@@ -1,0 +1,106 @@
+{
+	"add-field-type": [],
+    "add-field": [
+        {
+            "name": "drug",
+            "type": "text_general",
+            "indexed": true,
+            "stored": true
+        },
+        {
+            "name": "composition",
+            "type": "text_general",
+            "indexed": true,
+            "stored": true
+        },
+        {
+            "name": "applicable_diseases",
+            "type": "text_general",
+            "indexed": true,
+            "stored": true,
+            "multiValued": true
+        },
+        {
+            "name": "diseases_info",
+            "type": "text_general",
+            "indexed": true,
+            "stored": true,
+            "multiValued": true
+        },
+        {
+            "name": "possible_side_effects",
+            "type": "text_general",
+            "indexed": true,
+            "stored": true,
+            "multiValued": true
+        },
+        {
+            "name": "excellent_review_perc",
+            "type": "pint",
+            "indexed": true,
+            "stored": true
+        },
+        {
+            "name": "average_review_perc",
+            "type": "pint",
+            "indexed": true,
+            "stored": true
+        },
+        {
+            "name": "poor_review_perc",
+            "type": "pint",
+            "indexed": true,
+            "stored": true
+        },
+        {
+            "name": "reviews_average_rating",
+            "type": "pdouble",
+            "indexed": true,
+            "stored": true,
+            "multiValued": false,
+            "omitNorms": true,
+            "docValues": true
+        },
+        {
+            "name": "reviews_useful_count",
+            "type": "pint",
+            "indexed": true,
+            "stored": true
+        },
+        {
+            "name": "reviews",
+            "type": "text_general",
+            "indexed": true,
+            "stored": true,
+            "multiValued": true
+        },
+        {
+            "name": "manufacturer",
+            "type": "text_general",
+            "indexed": true,
+            "stored": true,
+            "multiValued": false
+        },
+        {
+            "name": "manufacturer_desc",
+            "type": "text_general",
+            "indexed": true,
+            "stored": true,
+            "multiValued": false
+        },
+        {
+            "name": "manufacturer_start",
+            "type": "text_general",
+            "indexed": true,
+            "stored": true,
+            "multiValued": false
+        },
+        {
+            "name": "manufacturer_end",
+            "type": "text_general",
+            "indexed": true,
+            "stored": true,
+            "multiValued": false
+        }
+    ]
+}
