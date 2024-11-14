@@ -4,7 +4,7 @@ def generate_simple_query(user_query):
         "start": 0,
         "rows": 30,
         'defType': 'edismax',
-        'qf': "drug composition applicable_diseases diseases_info possible_side_effects reviews manufacturer manufacturer_desc"
+        'qf': "diseases_info reviews manufacturer_desc"
     }
     return query_params
 
@@ -24,7 +24,7 @@ def generate_boosted_query(user_query):
         "start": 0,
         "rows": 30,
         'defType': 'edismax',
-        'qf': "drug^4 composition^2 applicable_diseases^2 diseases_info^6 possible_side_effects reviews^7 manufacturer manufacturer_desc^3",
+        'qf': "diseases_info^3 reviews^4 manufacturer_desc",
         'bf': "excellent_review_perc^1.5 poor_review_perc^0.5"
     }
     return query_params
