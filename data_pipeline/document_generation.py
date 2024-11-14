@@ -48,9 +48,9 @@ def load_reviews(filenames):
 
 review_files = [
     '../dataset/output/drug_reviews_part_1.json',
-    #'../dataset/output/drug_reviews_part_2.json',
-    #'../dataset/output/drug_reviews_part_3.json',
-    #'../dataset/output/drug_reviews_part_4.json'
+    '../dataset/output/drug_reviews_part_2.json',
+    '../dataset/output/drug_reviews_part_3.json',
+    '../dataset/output/drug_reviews_part_4.json'
 ]
 
 drug_reviews = load_reviews(review_files)
