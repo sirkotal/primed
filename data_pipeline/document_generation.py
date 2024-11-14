@@ -32,6 +32,10 @@ with open('../dataset/output/drug_details.json', 'r') as f:
 with open('../dataset/output/diseases.json', 'r') as f:
     diseases = json.load(f)
 
+with open('../dataset/output/cuf_sicknesses.json', 'r') as f:
+    cuf_sicknesses = json.load(f)
+    print(cuf_sicknesses)
+
 with open('../dataset/output/pharmaceutical_companies.json', 'r') as f:
     companies = json.load(f)
 
@@ -59,7 +63,6 @@ def find_reviews(composition):
     
     for review in summarizedList:
         if 'drugName' in review and review['drugName'] in composition_terms:
-            print("Encontrou a review " + review['drugName'])
             reviews.append(review)
     
     return reviews
@@ -88,6 +91,29 @@ def find_diseases(terms):
     
     return matched_diseases
 
+def find_cuf_diseases(terms):
+    matched_diseases = []
+
+    for term in terms:
+        name_parts = term.split()
+        for part in name_parts:
+            if part in cuf_sicknesses:
+                sickness_info = cuf_sicknesses[part]
+                description = "".join([f"//{k}//{v}" for k, v in sickness_info.items()])
+                matched_diseases.append({
+                    "Sickness": part,
+                    "Description": description
+                })
+            for key, sickness_info in cuf_sicknesses.items():
+                if key.lower() in part:
+                    description = "".join([f"//{k}//{v}" for k, v in sickness_info.items()])
+                    matched_diseases.append({
+                        "Sickness": key,
+                        "Description": description
+                    })
+    
+    return matched_diseases
+
 def find_company(manufacturer_name):
     name_parts = manufacturer_name.split()
     
@@ -104,6 +130,7 @@ def find_company(manufacturer_name):
 combined_data = []
 for drug, details in drug_details.items():
     related_diseases = find_diseases(details['Uses'])
+    related_cuf_diseases = find_cuf_diseases(details['Uses'])
     
     related_reviews = find_reviews(details['Composition'])
 
@@ -126,6 +153,7 @@ for drug, details in drug_details.items():
         "composition": details['Composition'],
         "applicable_diseases": details['Uses'],
         "diseases_info": [disease['Description'] for disease in related_diseases if 'Description' in disease],
+        "diseases_info2": [disease['Description'] for disease in related_cuf_diseases if 'Description' in disease],
         "possible_side_effects": details['Side_effects'],
         "excellent_review_perc": details['Excellent Review %'],
         "average_review_perc": details['Average Review %'],

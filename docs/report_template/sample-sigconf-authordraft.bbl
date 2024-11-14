@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{kaggle}
 Kaggle.
@@ -30,5 +30,63 @@ Creative Commons.
 \newblock Creative commons attribution-sharealike 4.0 international license.
 \newblock
   \url{https://en.wikipedia.org/wiki/Wikipedia:Text_of_the_Creative_Commons_Attribution-ShareAlike_4.0_International_License}.
+
+\bibitem{companies_dataset}
+Wikipedia.
+\newblock \url{https://en.wikipedia.org/wiki/List_of_pharmaceutical_companies},
+  2024.
+
+\bibitem{reviews_dataset}
+Surya Kallumadi and Felix Grer.
+\newblock Drug reviews.
+\newblock
+  \url{https://archive.ics.uci.edu/dataset/462/drug+review+dataset+drugs+com},
+  2018.
+\newblock UC Irvine Machine Learning Repository.
+
+\bibitem{irvine}
+UC~Irvine.
+\newblock \url{https://archive.ics.uci.edu/}.
+
+\bibitem{ccfour}
+Creative Commons.
+\newblock Attribution 4.0 international.
+\newblock \url{https://creativecommons.org/licenses/by/4.0/legalcode}.
+
+\bibitem{python}
+Python~Software Foundation.
+\newblock {\em Python Programming Language}.
+\newblock Python Software Foundation, 2023.
+\newblock Version 3.x.
+
+\bibitem{pandas}
+The pandas~development team.
+\newblock {\em pandas: Python Data Analysis Library}, 2023.
+\newblock Version 2.x.
+
+\bibitem{unidecode}
+Takahiko Wada.
+\newblock {\em unidecode: Text transliteration for Python}, 2023.
+\newblock Version 1.x.
+
+\bibitem{html}
+Python~Software Foundation.
+\newblock {\em html: HTML and XHTML processing for Python}, 2023.
+\newblock Python Standard Library.
+
+\bibitem{json}
+Python~Software Foundation.
+\newblock {\em json: JSON encoder and decoder for Python}, 2023.
+\newblock Python Standard Library.
+
+\bibitem{csv}
+Python~Software Foundation.
+\newblock {\em csv: CSV file reading and writing for Python}, 2023.
+\newblock Python Standard Library.
+
+\bibitem{iqrange}
+Pritha Bhandari.
+\newblock How to find interquartile range (iqr) | calculator \& examples.
+\newblock \url{https://www.scribbr.com/statistics/interquartile-range/}, 2023.
 
 \end{thebibliography}

@@ -211,6 +211,9 @@ def parse_cuf_sicknesses(key_name='Doença'):
     for row in dict_reader:
         disease = row[key_name]
         details = row['Detalhes']
+
+        if(details == ''):
+            continue
         
         disease_details = {}
         
@@ -225,3 +228,5 @@ def parse_cuf_sicknesses(key_name='Doença'):
         data[disease] = disease_details
 
     _write_to_json(data, cuf_sicknesses_json)
+
+parse_cuf_sicknesses()

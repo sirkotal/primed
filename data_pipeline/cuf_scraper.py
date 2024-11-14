@@ -4,6 +4,7 @@ import pandas as pd
 from deep_translator import GoogleTranslator
 from concurrent.futures import ThreadPoolExecutor, as_completed
 import os
+import glob
 
 base_url = "https://www.cuf.pt/saude-a-z"
 headers = {"User-Agent": "Mozilla/5.0"}
@@ -68,23 +69,30 @@ def process_page(page):
 page = 0
 has_next_page = True
 max_threads = 2                                                                    
-pages_to_skip = {1, 2, 4, 5, 8, 9}
+pages_to_skip = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16}
 
-with ThreadPoolExecutor(max_workers=max_threads) as executor:
-    futures = []
-    while has_next_page:
-        if page in pages_to_skip:
-            print(f"Pular página {page}")
+if(len(pages_to_skip) < 17):
+    with ThreadPoolExecutor(max_workers=max_threads) as executor:
+        futures = []
+        while has_next_page:
+            if page in pages_to_skip:
+                print(f"Pular página {page}")
+                page += 1
+                continue
+
+            futures.append(executor.submit(process_page, page))
             page += 1
-            continue
-
-        futures.append(executor.submit(process_page, page))
-        page += 1
         
-        response = requests.get(base_url, headers=headers, params={"page": page})
-        has_next_page = response.status_code == 200 and bool(get_doencas_list(response.text))
+            response = requests.get(base_url, headers=headers, params={"page": page})
+            has_next_page = response.status_code == 200 and bool(get_doencas_list(response.text))
 
-    for future in as_completed(futures):
-        future.result()
+        for future in as_completed(futures):
+            future.result()
 
 print("Scraping concluído e dados salvos em arquivos CSV individuais para cada página.")
+
+all_csv_files = glob.glob(os.path.join(output_dir, "*.csv"))
+combined_df = pd.concat([pd.read_csv(f) for f in all_csv_files], ignore_index=True)
+combined_csv_path = os.path.join("./dataset/sources", "cuf_sicknesses.csv")
+combined_df.to_csv(combined_csv_path, index=False, encoding="utf-8")
+print(f"Todos os dados combinados foram salvos em {combined_csv_path}")
