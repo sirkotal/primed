@@ -1,7 +1,11 @@
 {
-    "query": "title:(informação) OR objectives:(informação) OR learning_outcomes:(informação)",
-    "fields": "id, score",
-    "params": {
-        "defType": "edismax"
+    "simple": {
+        "q": "applicable_diseases:diabetes AND (manufacturer:"Novo Nordisk" OR manufacturer:"Eli Lilly" OR manufacturer:"Sanofi")",
+        "indent":"true",
+        "q.op": "AND",
+        "fq": "{!child of=": -nest_path:"}location:"united kingdom"",
+        "sort": "review_average_rating desc",
+        "start": 0,
+        "rows": 999
     }
 }

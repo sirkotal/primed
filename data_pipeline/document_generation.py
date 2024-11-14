@@ -1,5 +1,6 @@
 import json
 from collections import defaultdict
+from text_cleanup import repair_string
 
 
 def summarize_drug_reviews(drug_reviews):
@@ -142,8 +143,8 @@ for drug, details in drug_details.items():
         "reviews_useful_count": str(reviews_useful_count),
         "reviews": all_reviews,
         "manufacturer": details['Manufacturer'],
-        "manufacturer_desc": company_info['Description'],
-        "manufacturer_start": company_info['Year Start'],
+        "manufacturer_desc": repair_string(company_info['Description']),
+        "manufacturer_start": repair_string(company_info['Year Start']),
         "manufacturer_end": company_info['Year End']
     }
 

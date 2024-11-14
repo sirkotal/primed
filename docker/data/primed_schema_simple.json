@@ -1,6 +1,6 @@
 {
 	"add-field-type": [],
-    "replace-field": [
+    "add-field": [
         {
             "name": "drug",
             "type": "text_general",
@@ -56,7 +56,10 @@
             "name": "reviews_average_rating",
             "type": "pdouble",
             "indexed": true,
-            "stored": true
+            "stored": true,
+            "multiValued": false,
+            "omitNorms": true,
+            "docValues": true
         },
         {
             "name": "reviews_useful_count",
