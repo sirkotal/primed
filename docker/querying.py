@@ -1,6 +1,7 @@
 def generate_simple_query(user_query):
     query_params = {
         'q': user_query,
+        "sort": "reviews_average_rating desc",
         "start": 0,
         "rows": 30,
         'defType': 'edismax',
@@ -12,6 +13,9 @@ def generate_boosted_query(user_query):
     boosted_terms = {"cure": 3.0, "progress": 3.0, "effective": 2.5, "hope": 1.5, "side effects": 3.0, "risk": 2.5, "concern": 1.5}
     boosted_query = []
     for term in user_query.split():
+        if len(term) > 5:
+            term = f"{term}~1"
+        
         if term in boosted_terms:
             boosted_query.append(f"{term}^{boosted_terms[term]}")
         else:
@@ -25,6 +29,7 @@ def generate_boosted_query(user_query):
         "rows": 30,
         'defType': 'edismax',
         'qf': "diseases_info^3 reviews^4 manufacturer_desc",
+        'ps': 2,
         'bf': "excellent_review_perc^1.5 poor_review_perc^0.5"
     }
     return query_params
