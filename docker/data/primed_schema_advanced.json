@@ -72,7 +72,7 @@
         },
         {
             "name": "drug",
-            "type": "text_general",
+            "type": "shortText",
             "indexed": true,
             "stored": true
         },
@@ -121,12 +121,6 @@
             "stored": true
         },
         {
-            "name": "reviews_useful_count",
-            "type": "pint",
-            "indexed": true,
-            "stored": true
-        },
-        {
             "name": "manufacturer",
             "type": "text_general",
             "indexed": true,
@@ -135,13 +129,13 @@
         {
             "name": "manufacturer_start",
             "type": "text_general",
-            "indexed": true,
+            "indexed": false,
             "stored": true
         },
         {
             "name": "manufacturer_end",
             "type": "text_general",
-            "indexed": true,
+            "indexed": false,
             "stored": true
         }
     ]
