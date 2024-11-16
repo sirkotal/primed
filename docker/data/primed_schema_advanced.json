@@ -52,7 +52,7 @@
     "add-field": [
         {
             "name": "reviews",
-            "type": "shortText",
+            "type": "textBoosted",
             "indexed": true,
             "stored": true,
             "multiValued": true
