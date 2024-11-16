@@ -203,6 +203,7 @@ The PRIMED project aims to enhance access to structured pharmaceutical data for 
 \maketitle
 
 \section{Introduction}
+
 Nowadays, accurate and comprehensive medicine information plays a vital role in decision-making on the healthcare and investigation sectors. Having access to clean and relevant information is crucial to enhance the efficiency and safety of treatments.
 
 The \textit{\textbf{PRIMED}} project aims to compile and organize such data so that it can be accessed in an easy and organized way. It provides insights that can be applied both in practical cases or simply in developing new health safety politics.
@@ -210,12 +211,15 @@ The \textit{\textbf{PRIMED}} project aims to compile and organize such data so t
 In this part of the project, data from various sources was collected, processed and analysed with the goal of creating a solid basis for a pharmaceutical system. The whole process is described in this document, from the choice of the theme itself up to the analysis of gathered data and its subsequent classification.
 
 \section{Theme Selection}
+
 The choice to focus on medicines as the central theme for this project stems from the critical role they play in modern healthcare. Medication is the primary tool for treating multiple health problems and conditions, making them an essential component in both public healthcare systems and individual patient care. The data surrounding these substances, such as active substances, applicable cases and clinical trials, offers valuable insights that can improve decision-making in medical practice and pharmaceutics.
 
 \section{Data Collection}
+
 This chapter outlines the data selection process and the methods utilized to gather it.
 
 \subsection{Selection of Data}
+
 One of the main challenges of the healthcare sector is ensuring that accurate and up-to-date information on medication is available to healthcare professionals. Given these needs, the selection of data to be collected was made:
 
 \begin{itemize}
@@ -253,7 +257,7 @@ This dataset was scraped from the tables of a Wikipedia page containing a list o
 
 The information extracted from this dataset consists of:
 \begin{itemize}
-	\item {\texttt{Disease}}: The name of the disease.
+        \item {\texttt{Disease}}: The name of the disease.
 	\item {\texttt{Primary Organ/Body Part Affected}}: Information on the organs or body parts affected by the disease.
 	\item {\texttt{Autoantibodies}}: The antibodies associated with each specific disease.
 	\item {\texttt{Acceptance as an Autoimmune Disease}}: Classification for each disease related to its acceptance as an autoimmune condition, based on the current scientific consensus and level of evidence supporting its autoimmune nature.
@@ -346,6 +350,10 @@ Each medicine is associated with one and only one pharmaceutical company; a comp
 
 With regard to the characterization of the dataset, the data resulting from the pipeline was analysed. Graphs, tables and even word clouds, despite not being the most reliable method, were created to make it easier to understand the structure of the data and the patterns that guide the system itself.
 
+\subsection{General Description}
+
+The final version of the dataset, representing the collection of documents, contains 11498 entries. Each entry represents a medicine along with its related information, such as associated diseases and possible side effects, user reviews, ratings and manufacturer details.
+
 \subsection{Distribution of Drug Manufacturers}
 
 By analysing figure [3], which shows the distribution of the main pharmaceutical companies responsible for manufacturing medicines where the five that possess the largest share are highlighted, we are given a clearer understanding of each manufacturers' production capabilities.
@@ -372,10 +380,6 @@ Figure [8] identifies the the most common drug combinations available in the mar
 
 By analysing figure [9], it's possible to observe the years in which the most pharmaceutical companies were founded, with 2003 standing out. This temporal analysis gives us some information about periods of significant growth in the pharmaceutical industry.
 
-\subsection{General Description}
-
-The final version of the dataset, representing the collection of documents, contains 11498 entries, where each one represents a drug, alongside all of its related information: reviews, their text and usefulness, manufacturer details, diseases and more text info about each of them and the previously discussed drug information.
-
 \section{Information Needs}
 
 The information needs can vary depending on the person using \textit{\textbf{PRIMED}}. If the individual who is using the tool is, for example, a doctor or a pharmacist, these needs might be related to the compositions of a medicine or cases where it can be applied. If the user is a patient (an average person), they might be more interested in checking which company manufactures the medicine to check if it can be trusted or to assess other user's reviews of that treatment, as well as possible side effects, to have a better understanding of what can happen to them.
@@ -394,7 +398,7 @@ Here is a list of possible information needs, explaining what type of data is ne
 Based one these needs, we can answer some questions like: 
 \begin{arrowlist}
 	\item Which medicines are more commonly used to treat the common cold?
-    \item Trustworthy companies that provide medicines for Alzheimer’s disease. 
+        \item Trustworthy companies that provide medicines for Alzheimer’s disease. 
 	\item How does the composition of medicine for diabetes vary between manufacturers like Novo Nordisk, Eli Lilly, and Sanofi?
 	\item What are the most effective treatments for managing rheumatoid vasculitis pain and inflammation?
 	\item What is the best treatment for persistent migraine symptoms, including nausea and light sensitivity?
@@ -416,20 +420,33 @@ The objectives with SOLR are to create a way to find and access information with
 
 \section{Document Analysis}
 
-Here the final document is described and analysed, having some other relevant information related to it considered.
+In this section, the structure of the documents is analysed, as well as the systems utilized to index the document collection and parse the queries made by the users, which are treated as a variable in each of the aforementioned system's configurations.
 
 \subsection{Document Characteristics}
 
-The final document consists of the following field types:
+The final version of a document in the data collection contains the following fields:
 \begin{itemize}
-	\item {\texttt{Drug}}: The name of the drug in question.
-	\item {\texttt{Composition}}: Composition of the drug.
-	\item {\texttt{Applicable diseases}}: List of diseases where the drug is normally applied.
-	\item {\texttt{Diseases information}}: Also a list of information about the diseases specified before.
-	\item {\texttt{Possible side effects}}: List of possible side effects of the drug when taken.
-	\item {\texttt{Excellent review percentage}}: Percentage of reviews with a rating bigger than 7.
-	\item {\texttt{Average review percentage}}: Percentage of reviews with a rating between 4 and 7.
-	\item {\texttt{Poor review percentage}}: Percentage of reviews with a rating under 4.
+	\item {\texttt{Drug}}: The name of the medicine in question.
+	\item {\texttt{Composition}}: The active substance(s) present in the drug.
+	\item {\texttt{Applicable Diseases}}: A list of diseases for which the medicine is usually taken or applied.
+	\item {\texttt{Diseases Information}}: A list of information on the medicine's applicable diseases.
+	\item {\texttt{Possible Side Effects}}: A list of possible side effects provoked by the drug when taken.
+	\item {\texttt{Excellent Review Percentage}}: Percentage of reviews with a rating superior to 7.
+	\item {\texttt{Average Review Percentage}}: Percentage of reviews with a rating between 4 and 7.
+        \item {\texttt{Poor Review Percentage}}: Percentage of reviews 
+    with a rating inferior to 4.
+        \item {\texttt{Review Average Rating}}: The average review score for 
+    the medicine, based on all the reviews it received (rounded to two decimal places).
+        \item {\texttt{Reviews}}: Reviews associated with each medicine (in 
+    some specific cases, the association is made based on the active principle due to the reviewer not revealing the medicine's name itself).
+        \item {\texttt{Manufacturer}}: The name of the company responsible 
+    for producing a specific medicine.
+        \item {\texttt{Manufacturer Description}}: A short description of 
+    each company, containing some extra information.
+        \item {\texttt{Manufacturer Start}}: The year the company was created.
+        \item {\texttt{Manufacturer End}}: The year the company was shut 
+    down, if available.
+    
 \end{itemize}
 
 \subsection{Schema Definition}
