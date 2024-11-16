@@ -1,9 +1,10 @@
 def generate_simple_query(user_query):
     query_params = {
         'q': user_query,
-        "sort": "reviews_average_rating desc",
-        "start": 0,
-        "rows": 30,
+        'q.op': "AND",
+        'sort': "reviews_average_rating desc",
+        'start': 0,
+        'rows': 30,
         'defType': 'edismax',
         'qf': "diseases_info reviews manufacturer_desc"
     }
@@ -24,9 +25,10 @@ def generate_boosted_query(user_query):
     boosted_query = " ".join(boosted_query)
     query_params = {
         'q': boosted_query,
-        "sort": "reviews_average_rating desc",
-        "start": 0,
-        "rows": 30,
+        'q.op': "AND",
+        'sort': "reviews_average_rating desc",
+        'start': 0,
+        'rows': 30,
         'defType': 'edismax',
         'qf': "diseases_info^3 reviews^4 manufacturer_desc",
         'ps': 2,
