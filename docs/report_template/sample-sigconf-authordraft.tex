@@ -48,6 +48,7 @@
 \documentclass[sigconf]{acmart}
 \usepackage{hyperref}
 \usepackage{enumitem}
+\usepackage{pifont}
 \newlist{arrowlist}{itemize}{1}
 \setlist[arrowlist]{label=$\Rightarrow$}
 %%\usepackage{indentfirst}
@@ -424,7 +425,7 @@ In this section, the structure of the documents is analysed, as well as the syst
 
 \subsection{Document Characteristics}
 
-The final version of a document in the data collection contains the following fields:
+The final version of a document in the data collection, generated as a result of the previously implemented data pipeline, contains the following fields:
 \begin{itemize}
 	\item {\texttt{Drug}}: The name of the medicine in question.
 	\item {\texttt{Composition}}: The active substance(s) present in the drug.
@@ -451,6 +452,35 @@ The final version of a document in the data collection contains the following fi
 However, only a few of these document attributes are utilized in the retrieval process; the query is performed solely on the \texttt{Diseases Information}, \texttt{Reviews} and \texttt{Manufacturer Description} fields in the index, since these are attributes which primarily contain unstructured text.
 
 \subsection{Schema Definition}
+
+Solr stores details about the field types and which fields it is expected to understand in a schema\cite{schema}. A schema allows for a specific search system to be configured on the indexing process. For system and performance evaluation purposes, a decision was made to create two distinct systems.
+
+As a result, two different schemas were created - one for the baseline system, with minimal configuration, and another, more advanced schema for the improved system.
+
+\begin{table}[H]
+\begin{tabular}{llcc}
+\toprule
+Field & Type & Indexed & Multi-Valued\\
+\midrule
+reviews & boostedText & \ding{51} & \ding{51}\\
+diseases\_info & boostedText & \ding{51} & \ding{51}\\
+manufacturer\_desc & boostedText & \ding{51} & \ding{55}\\
+drug & shortText & \ding{51} & \ding{55}\\
+composition & shortText & \ding{51} & \ding{55}\\
+applicable\_diseases & shortText & \ding{51} & \ding{51}\\
+possible\_side\_effects & shortText & \ding{51} & \ding{51}\\
+excellent\_review\_perc & pint & \ding{51} & \ding{55}\\
+average\_review\_perc & pint & \ding{51} & \ding{55}\\
+poor\_review\_perc & pint & \ding{51} & \ding{55}\\
+reviews\_average\_rating & pdouble & \ding{51} & \ding{55}\\
+manufacturer & text\_general & \ding{51} & \ding{55}\\
+manufacturer\_start & text\_general & \ding{55} & \ding{55}\\
+manufacturer\_end & text\_general & \ding{55} & \ding{55}\\
+\bottomrule
+\end{tabular}
+\caption{Advanced Schema}
+\label{tab:schema}
+\end{table}
 
 \subsection{Retrieval}
 
