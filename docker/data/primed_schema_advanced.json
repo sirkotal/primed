@@ -10,7 +10,30 @@
                 "filters":[
                     {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
                     {"class":"solr.LowerCaseFilterFactory"},
-                    {"class": "solr.SnowballPorterFilterFactory"},
+                    {"class": "solr.SnowballPorterFilterFactory"}
+                ]
+            },
+            "queryAnalyzer":{
+                "tokenizer":{
+                    "class":"solr.StandardTokenizerFactory"
+                },
+                "filters":[
+                    {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
+                    {"class":"solr.LowerCaseFilterFactory"},
+                    {"class": "solr.SnowballPorterFilterFactory"}
+                ]
+            }
+        },
+        {
+            "name":"diseasesBoosted",
+            "class":"solr.TextField",
+            "indexAnalyzer":{
+                "tokenizer":{
+                    "class":"solr.StandardTokenizerFactory"
+                },
+                "filters":[
+                    {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
+                    {"class":"solr.LowerCaseFilterFactory"},
                     {"class": "solr.EnglishMinimalStemFilterFactory"}
                 ]
             },
@@ -21,7 +44,6 @@
                 "filters":[
                     {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
                     {"class":"solr.LowerCaseFilterFactory"},
-                    {"class": "solr.SnowballPorterFilterFactory"},
                     {"class": "solr.EnglishMinimalStemFilterFactory"}
                 ]
             }
@@ -59,7 +81,7 @@
         },
         {
             "name": "diseases_info",
-            "type": "textBoosted",
+            "type": "diseasesBoosted",
             "indexed": true,
             "stored": true,
             "multiValued": true

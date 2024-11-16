@@ -427,52 +427,74 @@ In this section, the structure of the documents is analysed, as well as the syst
 
 The final version of a document in the data collection, generated as a result of the previously implemented data pipeline, contains the following fields:
 \begin{itemize}
-	\item {\texttt{Drug}}: The name of the medicine in question.
-	\item {\texttt{Composition}}: The active substance(s) present in the drug.
-	\item {\texttt{Applicable Diseases}}: A list of diseases for which the medicine is usually taken or applied.
-	\item {\texttt{Diseases Information}}: A list of information on the medicine's applicable diseases.
-	\item {\texttt{Possible Side Effects}}: A list of possible side effects provoked by the drug when taken.
-	\item {\texttt{Excellent Review Percentage}}: Percentage of reviews with a rating superior to 7.
-	\item {\texttt{Average Review Percentage}}: Percentage of reviews with a rating between 4 and 7.
-        \item {\texttt{Poor Review Percentage}}: Percentage of reviews 
+	\item {\texttt{drug}}: The name of the medicine in question.
+	\item {\texttt{composition}}: The active substance(s) present in the drug.
+	\item {\texttt{applicable\_diseases}}: A list of diseases for which the medicine is usually taken or applied.
+	\item {\texttt{diseases\_info}}: A list of information on the medicine's applicable diseases.
+	\item {\texttt{possible\_side\_effects}}: A list of possible side effects provoked by the drug when taken.
+	\item {\texttt{excellent\_review\_perc}}: Percentage of reviews with a rating superior to 7.
+	\item {\texttt{average\_review\_perc}}: Percentage of reviews with a rating between 4 and 7.
+        \item {\texttt{poor\_review\_perc}}: Percentage of reviews 
     with a rating inferior to 4.
-        \item {\texttt{Review Average Rating}}: The average review score for 
+        \item {\texttt{reviews\_average\_rating}}: The average review score for 
     the medicine, based on all the reviews it received (rounded to two decimal places).
-        \item {\texttt{Reviews}}: Reviews associated with each medicine (in 
+        \item {\texttt{reviews}}: Reviews associated with each medicine (in 
     some specific cases, the association is made based on the active principle due to the reviewer not revealing the medicine's name itself).
-        \item {\texttt{Manufacturer}}: The name of the company responsible 
+        \item {\texttt{manufacturer}}: The name of the company responsible 
     for producing a specific medicine.
-        \item {\texttt{Manufacturer Description}}: A short description of 
+        \item {\texttt{manufacturer\_desc}}: A short description of 
     each company, containing some extra information.
-        \item {\texttt{Manufacturer Start}}: The year the company was created.
-        \item {\texttt{Manufacturer End}}: The year the company was shut 
+        \item {\texttt{manufacturer\_start}}: The year the company was created.
+        \item {\texttt{manufacturer\_end}}: The year the company was shut 
     down, if available.
 \end{itemize}
 
-However, only a few of these document attributes are utilized in the retrieval process; the query is performed solely on the \texttt{Diseases Information}, \texttt{Reviews} and \texttt{Manufacturer Description} fields in the index, since these are attributes which primarily contain unstructured text.
+However, only a few of these document attributes are utilized in the retrieval process; the query is performed solely on the \texttt{diseases\_info}, \texttt{reviews} and \texttt{manufacturer\_desc} fields in the index, since these are attributes which primarily contain unstructured text.
 
 \subsection{Schema Definition}
 
 Solr stores details about the field types and which fields it is expected to understand in a schema\cite{schema}. A schema allows for a specific search system to be configured on the indexing process. For system and performance evaluation purposes, a decision was made to create two distinct systems.
 
-As a result, two different schemas were created - one for the baseline system, with minimal configuration, and another, more advanced schema for the improved system.
+As a result, two different schemas were created - one for the baseline system, with minimal configuration, and another, more advanced schema for the improved system. 
+
+Since every field has the \textit{stored} property set to \textit{true} in both schemas, it won't be displayed in the upcoming (advanced) schema table. Of all the fields present, only two are not indexed (have the \textit{indexed} property set to \textit{false}): \texttt{manufacturer\_start} and \texttt{manufacturer\_end}, since they are only used to display additional information about a medicine's manufacturer and are not actively used in any search tasks. The only fields with the \textit{multiValued} property enabled are those that store a list of strings: \texttt{reviews}, \texttt{diseases\_info}, \texttt{applicable\_diseases} and \texttt{possible\_side\_effects}.
+
+For the basic schema, only native SOLR data types were used - no additional field types were created. For this reason, no tokenizers\cite{tokenizer} or filters\cite{filters} were added in the basic schema; however, the text fields utilize the \textit{text\_general} type, which tokenizes with a standard tokenizer. The percentage fields were assigned the \textit{pint} type, while the field representing the average rating of the reviews was assigned the \textit{pdouble} type.
+
+For the advanced schema, since the goal is to perform queries on textual field, a new field type, \textbf{\textit{textBoosted}}, was created, based on the \textit{TextField} class, which makes use of both tokenizers and filters - while the tokenizers are responsible for breaking field data into lexical units (tokens), filters examine the stream of tokens and keep them, discard them or transform them depending on the specific filter being used. The \textbf{\textit{textBoosted}} field type includes: 
+
+\begin{arrowlist}
+	\item \textbf{\textit{StandardTokenizerFactory}:} Tokenizer that uses whitespaces and punctuation as delimiters to split text into tokens.
+        \item \textbf{\textit{ASCIIFoldingFilterFactory}:} Filter that 
+    converts characters that don't belong
+	\item \textbf{\textit{LowerCaseFilterFactory}:} Filter that converts all letters to lowercase.
+	\item \textbf{\textit{SnowballPorterFilterFactory}:} Filter that applies stemming to tokens during text processing by generating pattern-based word stemmers - not as accurate as table-based stemmers, but faster and less complex.
+\end{arrowlist}
+
+Two additional field types, similar to \textbf{\textit{textBoosted}}, were created:
+
+\begin{itemize}
+        \item \textbf{\textit{diseasesBoosted}}: Very similar to 
+    \textbf{\textit{textBoosted}}, but utilizes the \textbf{\textit{EnglishMinimalStemFilterFactory}} filter for stemming instead, since it's less powerful and, therefore, more suitable to handle fields with more technical terms.
+	\item \textbf{\textit{shortText}}: Very similar to \textbf{\textit{textBoosted}} but without a stemming filter, as it is applied to short textual fields that contain very specific terms.
+\end{itemize}
 
 \begin{table}[H]
 \begin{tabular}{llcc}
 \toprule
 Field & Type & Indexed & Multi-Valued\\
 \midrule
-reviews & boostedText & \ding{51} & \ding{51}\\
-diseases\_info & boostedText & \ding{51} & \ding{51}\\
-manufacturer\_desc & boostedText & \ding{51} & \ding{55}\\
 drug & shortText & \ding{51} & \ding{55}\\
 composition & shortText & \ding{51} & \ding{55}\\
 applicable\_diseases & shortText & \ding{51} & \ding{51}\\
+diseases\_info & diseasesBoosted & \ding{51} & \ding{51}\\
 possible\_side\_effects & shortText & \ding{51} & \ding{51}\\
 excellent\_review\_perc & pint & \ding{51} & \ding{55}\\
 average\_review\_perc & pint & \ding{51} & \ding{55}\\
 poor\_review\_perc & pint & \ding{51} & \ding{55}\\
 reviews\_average\_rating & pdouble & \ding{51} & \ding{55}\\
+reviews & textBoosted & \ding{51} & \ding{51}\\
+manufacturer\_desc & textBoosted & \ding{51} & \ding{55}\\
 manufacturer & text\_general & \ding{51} & \ding{55}\\
 manufacturer\_start & text\_general & \ding{55} & \ding{55}\\
 manufacturer\_end & text\_general & \ding{55} & \ding{55}\\
