@@ -5,7 +5,7 @@ def generate_simple_query(user_query):
         'sort': "reviews_average_rating desc",
         'start': 0,
         'rows': 30,
-        'defType': 'edismax',
+        'defType': "edismax",
         'qf': "diseases_info reviews manufacturer_desc"
     }
     return query_params
@@ -29,7 +29,7 @@ def generate_boosted_query(user_query):
         'sort': "reviews_average_rating desc",
         'start': 0,
         'rows': 30,
-        'defType': 'edismax',
+        'defType': "edismax",
         'qf': "diseases_info^3 reviews^4 manufacturer_desc",
         'ps': 2,
         'bf': "excellent_review_perc^1.5 poor_review_perc^0.5"
