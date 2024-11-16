@@ -300,7 +300,7 @@ As mentioned in section 3.2 of this report, \textit{\textbf{PRIMED}}'s data come
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=\linewidth]{../data_pipeline.png}
+	\includegraphics[width=\linewidth]{data_pipeline.png}
 	\caption{Data Pipeline}
 	\Description{Data Pipeline}
 	\label{fig:pipeline}
@@ -334,7 +334,7 @@ Having finalized the data collection and the subsequent transformation and stora
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=\linewidth]{../pri_uml_final.png}
+  \includegraphics[width=\linewidth]{pri_uml_final.png}
   \caption{Conceptual Data Model}
   \Description{UML diagram for \textit{\textbf{PRIMED}}'s data}
   \label{fig:uml}
@@ -372,9 +372,9 @@ Figure [8] identifies the the most common drug combinations available in the mar
 
 By analysing figure [9], it's possible to observe the years in which the most pharmaceutical companies were founded, with 2003 standing out. This temporal analysis gives us some information about periods of significant growth in the pharmaceutical industry.
 
-\subsection{General description}
+\subsection{General Description}
 
-The final dataset contains 11498 entries, each one representing a drug with all information related to it. The present info on the drug are reviews, their text and usefulness, the manufacturer and it's details, diseases and more text info about each of them and the previously discussed drug information.
+The final version of the dataset, representing the collection of documents, contains 11498 entries, where each one represents a drug, alongside all of its related information: reviews, their text and usefulness, manufacturer details, diseases and more text info about each of them and the previously discussed drug information.
 
 \section{Information Needs}
 
@@ -404,22 +404,22 @@ Based one these needs, we can answer some questions like:
 
 As previously stated, a wide range of people can take advantage of this type of information - from regular patients to medicine experts and even investigators, everyone can benefit from having access to the data present in \textit{\textbf{PRIMED}}.
 
-\section{Results}
-
-Having completed this milestone of the project marks a very important step in the development of our system. The work carried out to this date has made it possible to transform an initial set of diverse, loosely related data into a cohesive and structured basis for \textit{\textbf{PRIMED}}. By carrying out data cleaning operations, we have been able to maintain the quality of the information while simultaneously reducing inconsistencies and duplicates. Outfitted with this data, \textit{\textbf{PRIMED}} will be able to offer users a practical source for consulting medical information; however, we will keep an eye on the dataset in case there is a need for further enhancements during future milestones.
-
 \section{System Overview}
-Apache SOLR is a search and analysis platform which allows the indexation of big data volumes and to make quick and efficient queries on that data. The way it works is by making the indexation of documents and then creating an efficient association of words and the documents they appear on. With that, the queries made are faster because when the user searches for a word, SOLR checks the index.\cite{solr} SOLR also allows the usage of other "tools" such as boosters to enhance the querying process and others like fuzziness to try and correct typos on the queries.
 
-\subsection{Objectives}
+Apache SOLR\cite{solr} is a search and analysis platform which allows the indexation of big data volumes, while also enabling quick and efficient queries on that same data. It works by indexing documents from a collection and then efficiently associating words with the respective documents they appear in. Thanks to this process, the queries performed are faster, since when the user searches for a word, SOLR checks the index; SOLR also allows the usage of other "tools" via query parameters, such as boosters that enhance the querying process by prioritizing certain terms or fields, or fuzziness to try and mitigate the effects of typos on user queries.
+
+\subsection{Project Objectives and Scope}
+
 The objectives with SOLR are to create a way to find and access information with quickness and ease, allowing for easy queries with fast results and some enhancement to them. We are also using this opportunity to enhance our documents, adding more text information and changing the numbered values to more meaningful ones.
 
 \subsection{System Architecture}
 
-\section{Final Document}
+\section{Document Analysis}
+
 Here the final document is described and analysed, having some other relevant information related to it considered.
 
-\subsection{Document Definition}
+\subsection{Document Characteristics}
+
 The final document consists of the following field types:
 \begin{itemize}
 	\item {\texttt{Drug}}: The name of the drug in question.
@@ -431,6 +431,20 @@ The final document consists of the following field types:
 	\item {\texttt{Average review percentage}}: Percentage of reviews with a rating between 4 and 7.
 	\item {\texttt{Poor review percentage}}: Percentage of reviews with a rating under 4.
 \end{itemize}
+
+\subsection{Schema Definition}
+
+\subsection{Retrieval}
+
+\section{System Evaluation}
+
+\subsection{Ground Truth Development}
+
+\subsection{Performance Metrics}
+
+\subsection{Performance Analysis}
+
+\section{Conclusions}
 
 \appendix
 \section{Annexes}
