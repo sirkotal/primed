@@ -3,10 +3,12 @@
 \bibitem{kaggle}
 Kaggle.
 \newblock \url{https://www.kaggle.com}, 2024.
+\newblock \newline Accessed on: November 9, 2024.
 
 \bibitem{wikipedia}
 Wikipedia.
 \newblock \url{https://www.wikipedia.org/}, 2024.
+\newblock \newline Accessed on: November 9, 2024.
 
 \bibitem{medicines_dataset}
 Kaggle.
@@ -14,32 +16,32 @@ Kaggle.
 \newblock
   \url{https://www.kaggle.com/datasets/singhnavjot2062001/11000-medicine-details},
   2024.
+\newblock \newline Accessed on: November 9, 2024.
 
 \bibitem{cczero}
 Creative Commons.
 \newblock Cc0 1.0 universal.
 \newblock \url{https://creativecommons.org/publicdomain/zero/1.0/}.
+\newblock \newline Accessed on: November 9, 2024.
 
 \bibitem{diseases_dataset}
 Wikipedia.
 \newblock \url{https://en.wikipedia.org/wiki/List_of_autoimmune_diseases},
   2024.
+\newblock \newline Accessed on: November 9, 2024.
 
 \bibitem{wikipedia_cc}
 Creative Commons.
 \newblock Creative commons attribution-sharealike 4.0 international license.
 \newblock
   \url{https://en.wikipedia.org/wiki/Wikipedia:Text_of_the_Creative_Commons_Attribution-ShareAlike_4.0_International_License}.
+\newblock \newline Accessed on: November 9, 2024.
 
-<<<<<<< HEAD
-=======
-<<<<<<< Updated upstream
-=======
->>>>>>> m1-report-revision
 \bibitem{companies_dataset}
 Wikipedia.
 \newblock \url{https://en.wikipedia.org/wiki/List_of_pharmaceutical_companies},
   2024.
+\newblock \newline Accessed on: November 9, 2024.
 
 \bibitem{reviews_dataset}
 Surya Kallumadi and Felix Grer.
@@ -52,55 +54,54 @@ Surya Kallumadi and Felix Grer.
 \bibitem{irvine}
 UC~Irvine.
 \newblock \url{https://archive.ics.uci.edu/}.
+\newblock \newline Accessed on: November 9, 2024.
 
 \bibitem{ccfour}
 Creative Commons.
 \newblock Attribution 4.0 international.
 \newblock \url{https://creativecommons.org/licenses/by/4.0/legalcode}.
+\newblock \newline Accessed on: November 9, 2024.
 
 \bibitem{python}
 Python~Software Foundation.
 \newblock {\em Python Programming Language}.
 \newblock Python Software Foundation, 2023.
-\newblock Version 3.x.
+\newblock Version 3.x \newline Accessed on: November 9, 2024.
 
 \bibitem{pandas}
 The pandas~development team.
 \newblock {\em pandas: Python Data Analysis Library}, 2023.
-\newblock Version 2.x.
+\newblock Version 2.x \newline Accessed on: November 9, 2024.
 
 \bibitem{unidecode}
 Takahiko Wada.
 \newblock {\em unidecode: Text transliteration for Python}, 2023.
-\newblock Version 1.x.
+\newblock Version 1.x \newline Accessed on: November 9, 2024.
 
 \bibitem{html}
 Python~Software Foundation.
 \newblock {\em html: HTML and XHTML processing for Python}, 2023.
-\newblock Python Standard Library.
+\newblock Python Standard Library \newline Accessed on: November 9, 2024.
 
 \bibitem{json}
 Python~Software Foundation.
 \newblock {\em json: JSON encoder and decoder for Python}, 2023.
-\newblock Python Standard Library.
+\newblock Python Standard Library \newline Accessed on: November 9, 2024.
 
 \bibitem{csv}
 Python~Software Foundation.
 \newblock {\em csv: CSV file reading and writing for Python}, 2023.
-\newblock Python Standard Library.
+\newblock Python Standard Library \newline Accessed on: November 9, 2024.
 
 \bibitem{iqrange}
 Pritha Bhandari.
 \newblock How to find interquartile range (iqr) | calculator \& examples.
 \newblock \url{https://www.scribbr.com/statistics/interquartile-range/}, 2023.
+\newblock \newline Accessed on: November 9, 2024.
 
-<<<<<<< HEAD
-=======
 \bibitem{solr}
 Sematext.
 \newblock {\em Getting Started with Apache Solr}.
 \newblock solr introduction and explanation.
 
->>>>>>> Stashed changes
->>>>>>> m1-report-revision
 \end{thebibliography}

@@ -16,7 +16,7 @@ def separate_words(text):
   return new_text
 
 def summarize_drug_reviews(drug_reviews):
-    summary_data = defaultdict(lambda: {"total_rating": 0, "count": 0, "usefulCount": 0, "reviews": []})
+    summary_data = defaultdict(lambda: {"total_rating": 0, "count": 0, "usefulCount": 0, "excelent": 0, "average": 0, "poor": 0, "reviews": []})
 
     for review_data in drug_reviews:
         drug_name = review_data["drugName"]
@@ -27,7 +27,7 @@ def summarize_drug_reviews(drug_reviews):
         summary_data[drug_name]["reviews"].append(review_data["review"])
         if int(review_data["rating"]) > 7:
             summary_data[drug_name]["excelent"] += 1
-        elif int(review_data["rating"] < 4):
+        elif int(review_data["rating"]) < 4:
             summary_data[drug_name]["poor"] += 1
         else:
             summary_data[drug_name]["average"] += 1
@@ -56,7 +56,6 @@ with open('../dataset/output/diseases.json', 'r') as f:
 
 with open('../dataset/output/cuf_sicknesses.json', 'r') as f:
     cuf_sicknesses = json.load(f)
-    print(cuf_sicknesses)
 
 with open('../dataset/output/pharmaceutical_companies.json', 'r') as f:
     companies = json.load(f)
@@ -167,9 +166,11 @@ for drug, details in drug_details.items():
             all_reviews += review['reviews']
         reviews_average_rating = round(total_ratings / len(related_reviews), 2) if related_reviews else 0
         reviews_useful_count = total_useful_count
+        related_perc = {'excelent_rating': round(review['excelent_rating'], 2), 'average_rating': round(review['average_rating'], 2), 'poor_rating': round(review['poor_rating'], 2)}
     else:
         reviews_average_rating = "0"
         reviews_useful_count = "0"
+        related_perc = {'excelent_rating': 0, 'average_rating': 0, 'poor_rating': 0}
         all_reviews = []
     
     company_info = find_company(details['Manufacturer'])
@@ -181,9 +182,9 @@ for drug, details in drug_details.items():
         "diseases_info": [disease['Description'] for disease in related_diseases if 'Description' in disease],
         "diseases_info2": [disease['Description'] for disease in related_cuf_diseases if 'Description' in disease],
         "possible_side_effects": details['Side_effects'],
-        "excellent_review_perc": related_reviews['excelent_rating'],
-        "average_review_perc": related_reviews['average_rating'],
-        "poor_review_perc": related_reviews['poor_rating'],
+        "excellent_review_perc": str(related_perc['excelent_rating']),
+        "average_review_perc": str(related_perc['average_rating']),
+        "poor_review_perc": str(related_perc['poor_rating']),
         "reviews_average_rating": str(reviews_average_rating),
         "reviews_useful_count": str(reviews_useful_count),
         "reviews": all_reviews,
