@@ -5,7 +5,50 @@ Reallocating 'name_of_file' (item size: 1) to 6 items.
 The style file: unsrt.bst
 Reallocating 'name_of_file' (item size: 1) to 12 items.
 Database file #1: sample-base.bib
+<<<<<<< HEAD
 You've used 17 entries,
+=======
+<<<<<<< Updated upstream
+Warning--I didn't find a database entry for "Lamport:LaTeX"
+Warning--I didn't find a database entry for "Abril07"
+Warning--I didn't find a database entry for "Cohen07"
+Warning--I didn't find a database entry for "JCohen96"
+Warning--I didn't find a database entry for "Kosiur01"
+Warning--I didn't find a database entry for "Harel79"
+Warning--I didn't find a database entry for "Editor00"
+Warning--I didn't find a database entry for "Editor00a"
+Warning--I didn't find a database entry for "Spector90"
+Warning--I didn't find a database entry for "Douglass98"
+Warning--I didn't find a database entry for "Knuth97"
+Warning--I didn't find a database entry for "Andler79"
+Warning--I didn't find a database entry for "Hagerup1993"
+Warning--I didn't find a database entry for "Smith10"
+Warning--I didn't find a database entry for "VanGundy07"
+Warning--I didn't find a database entry for "Harel78"
+Warning--I didn't find a database entry for "Bornmann2019"
+Warning--I didn't find a database entry for "AnzarootPBM14"
+Warning--I didn't find a database entry for "Clarkson85"
+Warning--I didn't find a database entry for "anisi03"
+Warning--I didn't find a database entry for "Thornburg01"
+Warning--I didn't find a database entry for "Ablamowicz07"
+Warning--I didn't find a database entry for "Poker06"
+Warning--I didn't find a database entry for "Obama08"
+Warning--I didn't find a database entry for "Novak03"
+Warning--I didn't find a database entry for "Lee05"
+Warning--I didn't find a database entry for "JoeScientist001"
+Warning--I didn't find a database entry for "rous08"
+Warning--I didn't find a database entry for "SaeediMEJ10"
+Warning--I didn't find a database entry for "SaeediJETC10"
+Warning--I didn't find a database entry for "Kirschmer:2010:AEI:1958016.1958018"
+Warning--I didn't find a database entry for "MR781536"
+Warning--I didn't find a database entry for "MR781537"
+Warning--I didn't find a database entry for "2004:ITE:1009386.1010128"
+Warning--I didn't find a database entry for "TUGInstmem"
+Warning--I didn't find a database entry for "CTANacmart"
+Warning--I didn't find a database entry for "R"
+Warning--I didn't find a database entry for "UMassCitations"
+You've used 6 entries,
+>>>>>>> m1-report-revision
             1791 wiz_defined-function locations,
             502 strings with 5083 characters,
 and the built_in function-call counts, 2145 in all, are:
@@ -37,12 +80,64 @@ quote$ -- 0
 skip$ -- 61
 stack$ -- 0
 substring$ -- 0
+<<<<<<< HEAD
 swap$ -- 23
+=======
+swap$ -- 6
+=======
+You've used 18 entries,
+            1791 wiz_defined-function locations,
+            506 strings with 5160 characters,
+and the built_in function-call counts, 2263 in all, are:
+= -- 182
+> -- 76
+< -- 0
++ -- 37
+- -- 19
+* -- 31
+:= -- 364
+add.period$ -- 51
+call.type$ -- 18
+change.case$ -- 6
+chr.to.int$ -- 0
+cite$ -- 18
+duplicate$ -- 104
+empty$ -- 304
+format.name$ -- 19
+if$ -- 525
+int.to.chr$ -- 0
+int.to.str$ -- 18
+missing$ -- 0
+newline$ -- 90
+num.names$ -- 18
+pop$ -- 84
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 64
+stack$ -- 0
+substring$ -- 0
+swap$ -- 25
+>>>>>>> Stashed changes
+>>>>>>> m1-report-revision
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
+<<<<<<< HEAD
 while$ -- 17
 width$ -- 19
 write$ -- 162
+=======
+<<<<<<< Updated upstream
+while$ -- 6
+width$ -- 7
+write$ -- 54
+(There were 38 warnings)
+=======
+while$ -- 18
+width$ -- 20
+write$ -- 171
+>>>>>>> Stashed changes
+>>>>>>> m1-report-revision
