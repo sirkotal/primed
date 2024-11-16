@@ -31,6 +31,11 @@ Creative Commons.
 \newblock
   \url{https://en.wikipedia.org/wiki/Wikipedia:Text_of_the_Creative_Commons_Attribution-ShareAlike_4.0_International_License}.
 
+<<<<<<< HEAD
+=======
+<<<<<<< Updated upstream
+=======
+>>>>>>> m1-report-revision
 \bibitem{companies_dataset}
 Wikipedia.
 \newblock \url{https://en.wikipedia.org/wiki/List_of_pharmaceutical_companies},
@@ -89,4 +94,13 @@ Pritha Bhandari.
 \newblock How to find interquartile range (iqr) | calculator \& examples.
 \newblock \url{https://www.scribbr.com/statistics/interquartile-range/}, 2023.
 
+<<<<<<< HEAD
+=======
+\bibitem{solr}
+Sematext.
+\newblock {\em Getting Started with Apache Solr}.
+\newblock solr introduction and explanation.
+
+>>>>>>> Stashed changes
+>>>>>>> m1-report-revision
 \end{thebibliography}
