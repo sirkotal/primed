@@ -1,7 +1,19 @@
 import json
 from collections import defaultdict
 from text_cleanup import repair_string
+import re
 
+def separate_words(text):
+  pattern = r"([a-z]+)([A-Z][a-z]+)"
+
+  new_text = re.sub(pattern, r"\1 \2", text)
+  test_text = re.sub(pattern, r"\1 \2", new_text)
+
+  while new_text != test_text:
+    new_text = re.sub(pattern, r"\1 \2", test_text)
+    test_text = re.sub(pattern, r"\1 \2", new_text)
+
+  return new_text
 
 def summarize_drug_reviews(drug_reviews):
     summary_data = defaultdict(lambda: {"total_rating": 0, "count": 0, "usefulCount": 0, "reviews": []})
@@ -13,12 +25,21 @@ def summarize_drug_reviews(drug_reviews):
         summary_data[drug_name]["count"] += 1
         summary_data[drug_name]["usefulCount"] += int(review_data["usefulCount"])
         summary_data[drug_name]["reviews"].append(review_data["review"])
+        if int(review_data["rating"]) > 7:
+            summary_data[drug_name]["excelent"] += 1
+        elif int(review_data["rating"] < 4):
+            summary_data[drug_name]["poor"] += 1
+        else:
+            summary_data[drug_name]["average"] += 1
 
     summarizedList = []
     for drug_name, data in summary_data.items():
         summarized_entry = {
             "drugName": drug_name,
             "average_rating": data["total_rating"] / data["count"],
+            "excelent_rating": data["excelent"] / data["count"],
+            "average_rating": data["average"] / data["count"],
+            "poor_rating": data["poor"] / data["count"],
             "usefulCount": data["usefulCount"],
             "reviews": data["reviews"]
         }
@@ -68,7 +89,6 @@ def find_reviews(composition):
     for review in summarizedList:
         if 'drugName' in review and review['drugName'] in composition_terms:
             reviews.append(review)
-    #print(reviews)
     return reviews
 
 
@@ -140,8 +160,6 @@ for drug, details in drug_details.items():
     related_reviews = find_reviews(details['Composition'])
     all_reviews = []
 
-    #print(related_reviews)
-
     if related_reviews:
         total_ratings = sum(review['average_rating'] for review in related_reviews)
         total_useful_count = sum(review['usefulCount'] for review in related_reviews)
@@ -163,9 +181,9 @@ for drug, details in drug_details.items():
         "diseases_info": [disease['Description'] for disease in related_diseases if 'Description' in disease],
         "diseases_info2": [disease['Description'] for disease in related_cuf_diseases if 'Description' in disease],
         "possible_side_effects": details['Side_effects'],
-        "excellent_review_perc": details['Excellent Review %'],
-        "average_review_perc": details['Average Review %'],
-        "poor_review_perc": details['Poor Review %'],
+        "excellent_review_perc": related_reviews['excelent_rating'],
+        "average_review_perc": related_reviews['average_rating'],
+        "poor_review_perc": related_reviews['poor_rating'],
         "reviews_average_rating": str(reviews_average_rating),
         "reviews_useful_count": str(reviews_useful_count),
         "reviews": all_reviews,
