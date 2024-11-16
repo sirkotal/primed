@@ -372,6 +372,10 @@ Figure [8] identifies the the most common drug combinations available in the mar
 
 By analysing figure [9], it's possible to observe the years in which the most pharmaceutical companies were founded, with 2003 standing out. This temporal analysis gives us some information about periods of significant growth in the pharmaceutical industry.
 
+\subsection{General description}
+
+The final dataset contains 11498 entries, each one representing a drug with all information related to it. The present info on the drug are reviews, their text and usefulness, the manufacturer and it's details, diseases and more text info about each of them and the previously discussed drug information.
+
 \section{Information Needs}
 
 The information needs can vary depending on the person using \textit{\textbf{PRIMED}}. If the individual who is using the tool is, for example, a doctor or a pharmacist, these needs might be related to the compositions of a medicine or cases where it can be applied. If the user is a patient (an average person), they might be more interested in checking which company manufactures the medicine to check if it can be trusted or to assess other user's reviews of that treatment, as well as possible side effects, to have a better understanding of what can happen to them.
@@ -400,11 +404,32 @@ Based one these needs, we can answer some questions like:
 
 As previously stated, a wide range of people can take advantage of this type of information - from regular patients to medicine experts and even investigators, everyone can benefit from having access to the data present in \textit{\textbf{PRIMED}}.
 
-\section{Conclusions}
+\section{Results}
 
 Having completed this milestone of the project marks a very important step in the development of our system. The work carried out to this date has made it possible to transform an initial set of diverse, loosely related data into a cohesive and structured basis for \textit{\textbf{PRIMED}}. By carrying out data cleaning operations, we have been able to maintain the quality of the information while simultaneously reducing inconsistencies and duplicates. Outfitted with this data, \textit{\textbf{PRIMED}} will be able to offer users a practical source for consulting medical information; however, we will keep an eye on the dataset in case there is a need for further enhancements during future milestones.
 
-\appendix
+\section{System Overview}
+Apache SOLR is a search and analysis platform which allows the indexation of big data volumes and to make quick and efficient queries on that data. The way it works is by making the indexation of documents and then creating an efficient association of words and the documents they appear on. With that, the queries made are faster because when the user searches for a word, SOLR checks the index.\cite{solr} SOLR also allows the usage of other "tools" such as boosters to enhance the querying process and others like fuzziness to try and correct typos on the queries.
+
+\subsection{Objectives}
+The objectives with SOLR are to create a way to find and access information with quickness and ease, allowing for easy queries with fast results and some enhancement to them. We are also using this opportunity to enhance our documents, adding more text information and changing the numbered values to more meaningful ones.
+
+\subsection{System architecture}
+
+\section{Final document}
+Here the final document is described and analysed, having some other relevant information related to it considered.
+
+\subsection{Document definition}
+The final document consists of the following field types:
+\begin{itemize}
+	\item {\texttt{Drug}}: The name of the drug in question.
+	\item {\texttt{Composition}}: Composition of the drug.
+	\item {\texttt{Applicable diseases}}: List of diseases where the drug is normally applied.
+	\item {\texttt{Diseases information}}: Also a list of information about the diseases specified before.
+	\item {\texttt{Possible side effects}}: List of possible side effects of the drug when taken.
+	\item {\texttt{Excellent review percentage}}: Percentage 
+\end{itemize}
+
 \section{Annexes}
 
 \begin{figure}[H]
