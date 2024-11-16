@@ -35,7 +35,7 @@ with open('../dataset/output/diseases.json', 'r') as f:
 
 with open('../dataset/output/cuf_sicknesses.json', 'r') as f:
     cuf_sicknesses = json.load(f)
-    print(cuf_sicknesses)
+    # print(cuf_sicknesses)
 
 with open('../dataset/output/pharmaceutical_companies.json', 'r') as f:
     companies = json.load(f)
