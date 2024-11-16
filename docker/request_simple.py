@@ -14,7 +14,7 @@ if response.status_code == 200:
     print(f"Successful query.")
     print(f"SOLR Response: {response.json()}")
 
-    with open("solr_simple_response.txt", "w") as file:
+    with open("solr_simple_response.json", "w") as file:
         json.dump(response.json(), file, indent=4) 
 else:
     print(f"Error: {response.status_code}")
