@@ -411,11 +411,11 @@ As previously stated, a wide range of people can take advantage of this type of 
 
 \section{System Overview}
 
-Apache SOLR\cite{solr} is a search and analysis platform which allows the indexation of big data volumes, while also enabling quick and efficient queries on that same data. It works by indexing documents from a collection and then efficiently associating words with the respective documents they appear in. Thanks to this process, the queries performed are faster, since when the user searches for a word, SOLR checks the index; SOLR also allows the usage of other "tools" via query parameters, such as boosters that enhance the querying process by prioritizing certain terms or fields, or fuzziness to try and mitigate the effects of typos on user queries.
+Apache Solr\cite{solr} is a search and analysis platform which allows the indexation of big data volumes, while also enabling quick and efficient queries on that same data. It works by indexing documents from a collection and then efficiently associating words with the respective documents they appear in. Thanks to this process, the queries performed are faster, since when the user searches for a word, Solr checks the index; Solr also allows the usage of other "tools" via query parameters, such as boosters that enhance the querying process by prioritizing certain terms or fields, or fuzziness to try and mitigate the effects of typos on user queries.
 
 \subsection{Project Objectives and Scope}
 
-The objectives with SOLR are to create a way to find and access information with quickness and ease, allowing for easy queries with fast results and some enhancement to them. We are also using this opportunity to enhance our documents, adding more text information and changing the numbered values to more meaningful ones.
+The objectives with Solr are to create a way to find and access information with quickness and ease, allowing for easy queries with fast results and some enhancement to them. We are also using this opportunity to enhance our documents, adding more text information and changing the numbered values to more meaningful ones.
 
 \subsection{System Architecture}
 
@@ -459,7 +459,7 @@ As a result, two different schemas were created - one for the baseline system, w
 
 Since every field has the \textit{stored} property set to \textit{true} in both schemas, it won't be displayed in the upcoming (advanced) schema table. Of all the fields present, only two are not indexed (have the \textit{indexed} property set to \textit{false}): \texttt{manufacturer\_start} and \texttt{manufacturer\_end}, since they are only used to display additional information about a medicine's manufacturer and are not actively used in any search tasks. The only fields with the \textit{multiValued} property enabled are those that store a list of strings: \texttt{reviews}, \texttt{diseases\_info}, \texttt{applicable\_diseases} and \texttt{possible\_side\_effects}.
 
-For the basic schema, only native SOLR data types were used - no additional field types were created. For this reason, no tokenizers\cite{tokenizer} or filters\cite{filters} were added in the basic schema; however, the text fields utilize the \textit{text\_general} type, which tokenizes with a standard tokenizer. The percentage fields were assigned the \textit{pint} type, while the field representing the average rating of the reviews was assigned the \textit{pdouble} type.
+For the basic schema, only native Solr data types were used - no additional field types were created. For this reason, no tokenizers\cite{tokenizer} or filters\cite{filters} were added in the basic schema; however, the text fields utilize the \textit{text\_general} type, which tokenizes with a standard tokenizer. The percentage fields were assigned the \textit{pint} type, while the field representing the average rating of the reviews was assigned the \textit{pdouble} type.
 
 For the advanced schema, since the goal is to perform queries on textual field, a new field type, \textbf{\textit{textBoosted}}, was created, based on the \textit{TextField} class, which makes use of both tokenizers and filters - while the tokenizers are responsible for breaking field data into lexical units (tokens), filters examine the stream of tokens and keep them, discard them or transform them depending on the specific filter being used. The \textbf{\textit{textBoosted}} field type includes: 
 
@@ -483,34 +483,94 @@ For each of three field types, the same tokenizer and filters were used in both 
 
 The table below provides an overview of the advanced schema's structure, detailing the field names, their respective types and whether they are indexed or multi-valued.
 
-\begin{table}[h]
-\begin{tabular}{llcc}
-\toprule
-Field & Type & Indexed & Multi-Valued\\
-\midrule
-drug & shortText & \ding{51} & \ding{55}\\
-composition & shortText & \ding{51} & \ding{55}\\
-applicable\_diseases & shortText & \ding{51} & \ding{51}\\
-diseases\_info & diseasesBoosted & \ding{51} & \ding{51}\\
-possible\_side\_effects & shortText & \ding{51} & \ding{51}\\
-excellent\_review\_perc & pint & \ding{51} & \ding{55}\\
-average\_review\_perc & pint & \ding{51} & \ding{55}\\
-poor\_review\_perc & pint & \ding{51} & \ding{55}\\
-reviews\_average\_rating & pdouble & \ding{51} & \ding{55}\\
-reviews & textBoosted & \ding{51} & \ding{51}\\
-manufacturer\_desc & textBoosted & \ding{51} & \ding{55}\\
-manufacturer & text\_general & \ding{51} & \ding{55}\\
-manufacturer\_start & text\_general & \ding{55} & \ding{55}\\
-manufacturer\_end & text\_general & \ding{55} & \ding{55}\\
-\bottomrule
-\end{tabular}
-\caption{Advanced Schema}
-\label{tab:schema}
+\begin{table}[H]
+    \begin{tabular}{llcc}
+    \toprule
+    Field & Type & Indexed & Multi-Valued\\
+    \midrule
+    drug & shortText & \ding{51} & \ding{55}\\
+    composition & shortText & \ding{51} & \ding{55}\\
+    applicable\_diseases & shortText & \ding{51} & \ding{51}\\
+    diseases\_info & diseasesBoosted & \ding{51} & \ding{51}\\
+    possible\_side\_effects & shortText & \ding{51} & \ding{51}\\
+    excellent\_review\_perc & pint & \ding{51} & \ding{55}\\
+    average\_review\_perc & pint & \ding{51} & \ding{55}\\
+    poor\_review\_perc & pint & \ding{51} & \ding{55}\\
+    reviews\_average\_rating & pdouble & \ding{51} & \ding{55}\\
+    reviews & textBoosted & \ding{51} & \ding{51}\\
+    manufacturer\_desc & textBoosted & \ding{51} & \ding{55}\\
+    manufacturer & text\_general & \ding{51} & \ding{55}\\
+    manufacturer\_start & text\_general & \ding{55} & \ding{55}\\
+    manufacturer\_end & text\_general & \ding{55} & \ding{55}\\
+    \bottomrule
+    \end{tabular}
+    \caption{Advanced Schema}
+    \label{tab:schema}
 \end{table}
 
 \subsection{Retrieval}
 
+With both schemas implemented, the next step in the system development was to configure the query parsers and their respective parameters. Both systems utilize the Extended DisMax (eDisMax) query parser\cite{edismax}, which is an improved version of the DisMax query parser\cite{dismax}.
 
+For the query parameters used by the aforementioned schemas, the following common ones are utilized:
+\begin{itemize}
+    \item \texttt{q}: Defines the raw input string for the query, inserted by the user.
+    \item \texttt{q.op}: Applies a logical OR/AND to query operations.
+    \item \texttt{sort}: Specifies the way the documents returned are to be sorted.
+    \item \texttt{start}: Specifies an offset applied to the documents returned from a query being displayed (decides whether Solr should skip over a set number of documents).
+    \item \texttt{rows}: Sets the maximum number of documents to be returned as a result.
+\end{itemize}
+
+Additionally, other parameters focused on optimizing search results are used:
+\begin{itemize}
+    \item \texttt{qf} (\textbf{Field Boosts}): Represents list of fields that are assigned a particular boost factor, which increases (or decreases) its importance in the query.
+    \item \texttt{pf} (\textbf{Phrase Match}): Once the list of matching documents has been identified by the \texttt{qf} parameter, \texttt{pf} can be used to boost the score of documents in which all of the terms present in the user's query appear in close proximity.
+    \item \texttt{ps} (\textbf{Phrase Slop}): Represents the amount of phrase slop\cite{slop} to apply to queries specified with the pf parameter.
+    \item \texttt{bf} (\textbf{Independent Boosts}): Used to apply additional boosting to the documents based on certain fields or functions, independent of a document's score calculated by other parameters.
+\end{itemize}
+
+Despite not being present in the query parameters, other techniques are utilized via direct application
+\begin{itemize}
+    \item \textbf{Term Boosts}: A specific set of terms relevant that may be relevant to the user are boosted individually when present in a query. The terms used specifically for our advanced system are present in table~[\ref{tab:boosted_terms}]
+    \item \textbf{Fuzziness}: Enables approximate matching of terms, which makes it easier to handle typos or misspellings. For our advanced system, a decision was made to have the fuzziness value set to 1 and applied only to words with more than five letters.
+\end{itemize}
+
+\begin{table}[H]
+    \begin{tabular}{ll}
+    \toprule
+    Parameter & Value\\
+    \midrule
+    q & \$query\\
+    q.op & AND\\
+    sort & reviews\_average\_rating desc\\
+    start & 0\\
+    rows & 30\\
+    qf & diseases\_info reviews manufacturer\_desc\\
+    \bottomrule
+    \end{tabular}
+    \caption{Simple Query Parser}
+    \label{tab:simple_query}
+\end{table}
+
+\begin{table}[H]
+    \begin{tabular}{ll}
+    \toprule
+    Parameter & Value\\
+    \midrule
+    q & \$boosted\_query\\
+    q.op & AND\\
+    sort & reviews\_average\_rating desc\\
+    start & 0\\
+    rows & 30\\
+    qf & diseases\_info\^{}3 reviews\^{}4 manufacturer\_desc\\
+    pf & reviews\^{}3\\
+    ps & 2\\
+    bf & excellent\_review\_perc\^{}1.5 poor\_review\_perc\^{}0.5\\
+    \bottomrule
+    \end{tabular}
+    \caption{Advanced Query Parser}
+    \label{tab:simple_query}
+\end{table}
 
 \section{System Evaluation}
 
@@ -521,6 +581,8 @@ manufacturer\_end & text\_general & \ding{55} & \ding{55}\\
 \subsection{Performance Analysis}
 
 \section{Conclusions}
+TODO:
+Having completed this milestone of the project marks a very important step in the development of our system. The work carried out to this date has made it possible to transform an initial set of diverse, loosely related data into a cohesive and structured basis for \textit{\textbf{PRIMED}}. By carrying out data cleaning operations, we have been able to maintain the quality of the information while simultaneously reducing inconsistencies and duplicates. Outfitted with this data, \textit{\textbf{PRIMED}} will be able to offer users a practical source for consulting medical information; however, we will keep an eye on the dataset in case there is a need for further enhancements during future milestones.
 
 \appendix
 \section{Annexes}
@@ -580,6 +642,30 @@ manufacturer\_end & text\_general & \ding{55} & \ding{55}\\
 	\Description{Dataset Characterization \textit{\textbf{PRIMED}}'s data}
 	\label{fig:companyYears}
   \end{figure}
+
+\begin{table}[H]
+    \begin{tabular}{ll}
+    \toprule
+    Term & Boost\\
+    \midrule
+    cure & 4.0\\
+    progress & 3.0\\
+    prevent & 2.75\\
+    effective & 2.5\\
+    safe & 2.5\\
+    hope & 1.5\\
+    effects & 3.0\\
+    risk & 2.5\\
+    concern & 1.5\\
+    reliable & 1.5\\
+    aggressive & 1.5\\
+    death & 2.0\\
+    prestigious & 1.1\\
+    \bottomrule
+    \end{tabular}
+    \caption{Boosted Terms}
+    \label{tab:boosted_terms}
+\end{table}
 
 %%
 %% The next two lines define the bibliography style to be used, and
