@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.5.26)  17 NOV 2024 17:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.5.26)  17 NOV 2024 21:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -741,7 +741,7 @@ File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
 )
 (sample-sigconf-authordraft.aux
 
-LaTeX Warning: Label `tab:simple_query' multiply defined.
+LaTeX Warning: Label `tab:advanced_query' multiply defined.
 
 )
 \openout1 = `sample-sigconf-authordraft.aux'.
@@ -1017,6 +1017,22 @@ LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
 (Font)              scaled to size 9.0pt on input line 204.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
 (Font)              scaled to size 10.95pt on input line 204.
+LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
+(Font)              scaled to size 9.0pt on input line 204.
+LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/it' will be
+(Font)              scaled to size 9.0pt on input line 204.
+LaTeX Font Info:    Trying to load font information for T1+zi4 on input line 20
+4.
+
+(D:\Miktex\tex/latex/inconsolata\t1zi4.fd
+File: t1zi4.fd 2018/01/14 T1/zi4 (Inconsolata)
+)
+LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
+(Font)              scaled to size 9.0pt on input line 204.
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `zi4' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `TS1/LinuxLibertineT-TLF/m/n' will be
 (Font)              scaled to size 9.0pt on input line 204.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
@@ -1041,30 +1057,14 @@ LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
 (Font)              scaled to size 8.0pt on input line 204.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
 (Font)              scaled to size 8.0pt on input line 204.
-LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
-(Font)              scaled to size 9.0pt on input line 210.
-LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/it' will be
-(Font)              scaled to size 9.0pt on input line 210.
-LaTeX Font Info:    Trying to load font information for T1+zi4 on input line 22
-7.
-
-(D:\Miktex\tex/latex/inconsolata\t1zi4.fd
-File: t1zi4.fd 2018/01/14 T1/zi4 (Inconsolata)
-)
-LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
-(Font)              scaled to size 9.0pt on input line 227.
-Package microtype Info: Loading generic protrusion settings for font family
-(microtype)             `zi4' (encoding: T1).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
  [1.1{C:/Users/pedro/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{D:/Mikte
 x/fonts/enc/dvips/libertine/lbtn_25tcsq.enc}{D:/Miktex/fonts/enc/dvips/libertin
 e/lbtn_76gpa5.enc}
 
 {D:/Miktex/fonts/enc/dvips/libertine/lbtn_nh77jq.enc}{D:/Miktex/fonts/enc/dvips
-/libertine/lbtn_naooyc.enc}{D:/Miktex/fonts/enc/dvips/libertine/lbtn_7grukw.enc
-}{D:/Miktex/fonts/enc/dvips/libertine/lbtn_ki75ao.enc}{D:/Miktex/fonts/enc/dvip
-s/inconsolata/i4-t1-4.enc}]
+/libertine/lbtn_ki75ao.enc}{D:/Miktex/fonts/enc/dvips/inconsolata/i4-t1-4.enc}{
+D:/Miktex/fonts/enc/dvips/libertine/lbtn_naooyc.enc}{D:/Miktex/fonts/enc/dvips/
+libertine/lbtn_7grukw.enc}]
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/n' will be
 (Font)              scaled to size 9.0pt on input line 241.
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/it' will be
@@ -1145,108 +1145,197 @@ icines for Alzheimer's
  []
 
 [4.4]
-Overfull \hbox (13.17508pt too wide) in paragraph at lines 432--433
+
+Package natbib Warning: Citation `schema' on page 5 undefined on input line 424
+.
+
+
+Package natbib Warning: Citation `http' on page 5 undefined on input line 424.
+
+
+Overfull \hbox (13.17508pt too wide) in paragraph at lines 436--437
 []\T1/zi4/m/n/9 applicable_diseases\T1/LinuxLibertineT-TLF/m/n/9 (-20) : A list
  of dis-eases for which the medicine
  []
 
 
-Overfull \hbox (21.80168pt too wide) in paragraph at lines 452--453
+Overfull \hbox (2.85129pt too wide) in paragraph at lines 456--457
 \T1/LinuxLibertineT-TLF/m/n/9 (-20) the re-trieval pro-cess; the query is per-f
-ormed solely on the \T1/zi4/m/n/9 diseases_info\T1/LinuxLibertineT-TLF/m/n/9 (-
-20) ,
- []
-
-
-Package natbib Warning: Citation `schema' on page 5 undefined on input line 456
-.
-
-
-Overfull \hbox (26.79341pt too wide) in paragraph at lines 460--461
-\T1/LinuxLibertineT-TLF/m/it/9 (-20) dexed \T1/LinuxLibertineT-TLF/m/n/9 (-20) 
-prop-erty set to \T1/LinuxLibertineT-TLF/m/it/9 (-20) false\T1/LinuxLibertineT-
-TLF/m/n/9 (-20) ): \T1/zi4/m/n/9 manufacturer_start \T1/LinuxLibertineT-TLF/m/n
-/9 (-20) and \T1/zi4/m/n/9 manufacturer_end\T1/LinuxLibertineT-TLF/m/n/9 (-20) 
-,
- []
-
-
-Overfull \hbox (52.03923pt too wide) in paragraph at lines 460--461
-\T1/LinuxLibertineT-TLF/m/n/9 (-20) those that store a list of strings: \T1/zi4
-/m/n/9 reviews\T1/LinuxLibertineT-TLF/m/n/9 (-20) , \T1/zi4/m/n/9 diseases_info
-\T1/LinuxLibertineT-TLF/m/n/9 (-20) , \T1/zi4/m/n/9 applicable_diseases
+ormed solely on the \T1/zi4/m/n/9 diseases- 
  []
 
 
 Package natbib Warning: Citation `tokenizer' on page 5 undefined on input line 
-462.
+466.
 
 
 Package natbib Warning: Citation `filters' on page 5 undefined on input line 46
-2.
+6.
 
-
-Overfull \hbox (22.62808pt too wide) in paragraph at lines 487--507
+[5.5]
+Overfull \hbox (22.62808pt too wide) in paragraph at lines 491--511
  [][] 
  []
 
 
-Underfull \vbox (badness 3536) has occurred while \output is active []
-
- [5.5]
-
 Package natbib Warning: Citation `edismax' on page 6 undefined on input line 51
-3.
+7.
 
 
-Package natbib Warning: Citation `dismax' on page 6 undefined on input line 513
+Package natbib Warning: Citation `dismax' on page 6 undefined on input line 517
 .
 
 
-Package natbib Warning: Citation `slop' on page 6 undefined on input line 528.
+Package natbib Warning: Citation `slop' on page 6 undefined on input line 532.
+
+
+Overfull \hbox (46.47002pt too wide) in paragraph at lines 565--566
+[]\T1/LinuxLibertineT-TLF/m/n/9 (-20) Finally, an in-de-pen-dent boost is added
+, based on the \T1/zi4/m/n/9 excellent_review_perc
+ []
 
 [6.6]
-<graphic1.png, id=251, 722.7pt x 433.62pt>
+Overfull \hbox (1.19856pt too wide) in paragraph at lines 595--596
+ \T1/LinuxBiolinumT-TLF/m/it/9 (-20) 10.2.1 Man-ual eval-u-a-tion.[] \T1/LinuxL
+ibertineT-TLF/m/n/9 (-20) To eval-u-ate the ef-fec-tive-ness of re-trieved
+ []
+
+
+! LaTeX Error: Illegal character in array arg.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.606 ...n{tabular}{ | m{5em} | m{1cm}| m{1cm} | }
+                                                  
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Illegal character in array arg.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.606 ...n{tabular}{ | m{5em} | m{1cm}| m{1cm} | }
+                                                  
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Illegal character in array arg.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.606 ...n{tabular}{ | m{5em} | m{1cm}| m{1cm} | }
+                                                  
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Illegal character in array arg.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.606 ...n{tabular}{ | m{5em} | m{1cm}| m{1cm} | }
+                                                  
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Illegal character in array arg.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.606 ...n{tabular}{ | m{5em} | m{1cm}| m{1cm} | }
+                                                  
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Illegal character in array arg.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.606 ...n{tabular}{ | m{5em} | m{1cm}| m{1cm} | }
+                                                  
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+<graphic1.png, id=250, 722.7pt x 433.62pt>
 File: graphic1.png Graphic file (type png)
 <use graphic1.png>
-Package pdftex.def Info: graphic1.png  used on input line 606.
+Package pdftex.def Info: graphic1.png  used on input line 658.
 (pdftex.def)             Requested size: 241.14749pt x 144.68962pt.
-<graphic2.png, id=253, 784.73175pt x 486.618pt>
-File: graphic2.png Graphic file (type png)
-<use graphic2.png>
-Package pdftex.def Info: graphic2.png  used on input line 614.
-(pdftex.def)             Requested size: 241.14749pt x 149.53575pt.
-<graphic3.png, id=254, 1110.0672pt x 550.6974pt>
-File: graphic3.png Graphic file (type png)
-<use graphic3.png>
-Package pdftex.def Info: graphic3.png  used on input line 622.
-(pdftex.def)             Requested size: 241.14749pt x 119.62447pt.
-<graphic4.png, id=255, 1037.67674pt x 544.434pt>
-File: graphic4.png Graphic file (type png)
-<use graphic4.png>
-Package pdftex.def Info: graphic4.png  used on input line 630.
-(pdftex.def)             Requested size: 241.14749pt x 126.52144pt.
-<graphic5.png, id=256, 655.85025pt x 367.3725pt>
-File: graphic5.png Graphic file (type png)
-<use graphic5.png>
-Package pdftex.def Info: graphic5.png  used on input line 638.
-(pdftex.def)             Requested size: 241.14749pt x 135.07362pt.
-<graphic6.png, id=257, 1110.0672pt x 550.6974pt>
-File: graphic6.png Graphic file (type png)
-<use graphic6.png>
-Package pdftex.def Info: graphic6.png  used on input line 646.
-(pdftex.def)             Requested size: 241.14749pt x 119.62447pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [7.7 <./graphic1.png> <./graphic2.png> <./graphic3.png> <./graphic4.png> <./gr
-aphic5.png>]
-<graphic7.png, id=268, 1025.63174pt x 523.35526pt>
+ [7.7{D:/Miktex/fonts/enc/dvips/libertine/lbtn_oexx6f.enc}]
+<graphic2.png, id=265, 784.73175pt x 486.618pt>
+File: graphic2.png Graphic file (type png)
+<use graphic2.png>
+Package pdftex.def Info: graphic2.png  used on input line 666.
+(pdftex.def)             Requested size: 241.14749pt x 149.53575pt.
+<graphic3.png, id=266, 1110.0672pt x 550.6974pt>
+File: graphic3.png Graphic file (type png)
+<use graphic3.png>
+Package pdftex.def Info: graphic3.png  used on input line 674.
+(pdftex.def)             Requested size: 241.14749pt x 119.62447pt.
+<graphic4.png, id=267, 1037.67674pt x 544.434pt>
+File: graphic4.png Graphic file (type png)
+<use graphic4.png>
+Package pdftex.def Info: graphic4.png  used on input line 682.
+(pdftex.def)             Requested size: 241.14749pt x 126.52144pt.
+
+Underfull \vbox (badness 1122) has occurred while \output is active []
+
+<graphic5.png, id=268, 655.85025pt x 367.3725pt>
+File: graphic5.png Graphic file (type png)
+<use graphic5.png>
+Package pdftex.def Info: graphic5.png  used on input line 690.
+(pdftex.def)             Requested size: 241.14749pt x 135.07362pt.
+<graphic6.png, id=269, 1110.0672pt x 550.6974pt>
+File: graphic6.png Graphic file (type png)
+<use graphic6.png>
+Package pdftex.def Info: graphic6.png  used on input line 698.
+(pdftex.def)             Requested size: 241.14749pt x 119.62447pt.
+<graphic7.png, id=270, 1025.63174pt x 523.35526pt>
 File: graphic7.png Graphic file (type png)
 <use graphic7.png>
-Package pdftex.def Info: graphic7.png  used on input line 654.
+Package pdftex.def Info: graphic7.png  used on input line 706.
 (pdftex.def)             Requested size: 241.14749pt x 123.04439pt.
- (sample-sigconf-authordraft.bbl
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [8.8 <./graphic1.png> <./graphic2.png> <./graphic3.png> <./graphic4.png> <./gr
+aphic5.png> <./graphic6.png>]
+
+LaTeX Warning: File `system_arch.png' not found on input line 714.
+
+
+! Package pdftex.def Error: File `system_arch.png' not found: using draft setti
+ng.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.714 ...aphics[width=\linewidth]{system_arch.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+(sample-sigconf-authordraft.bbl
 Underfull \hbox (badness 6758) in paragraph at lines 14--20
 []\T1/LinuxLibertineT-TLF/m/n/7 (+20) Kaggle.  11000 medicine de-tails.  []$htt
 ps : / / www . kaggle . com / datasets /
@@ -1271,7 +1360,8 @@ File: se-pdfdoc.def 2019/11/29 v1.12 stringenc: PDFDocEncoding
 )
 (D:\Miktex\tex/generic/stringenc\se-utf8.def
 File: se-utf8.def 2019/11/29 v1.12 stringenc: UTF-8
-) [8.8 <./graphic6.png> <./graphic7.png>] (sample-sigconf-authordraft.aux)
+) [9.9 <./graphic7.png>]
+(sample-sigconf-authordraft.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
@@ -1282,27 +1372,28 @@ LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `sample-sigconf-authordraft.out' has not chan
 ged.
-(rerunfilecheck)             Checksum: 034B8A3020A3240D5B7FEA635C91129E;6064.
+(rerunfilecheck)             Checksum: 7E6F534BC74CB4EE4D2D60F99E8097E7;6051.
  ) 
 Here is how much of TeX's memory you used:
- 21701 strings out of 474486
- 345049 string characters out of 5760170
+ 21772 strings out of 474486
+ 346721 string characters out of 5760170
  1954542 words of memory out of 5000000
- 42967 multiletter control sequences out of 15000+600000
- 709069 words of font info for 344 fonts, out of 8000000 for 9000
+ 43000 multiletter control sequences out of 15000+600000
+ 713534 words of font info for 367 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
- 90i,12n,131p,1025b,601s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 90i,12n,131p,1025b,624s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <D:/Miktex/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb><D:/Miktex/fon
-ts/type1/public/libertine/LinBiolinumT.pfb><D:/Miktex/fonts/type1/public/libert
-ine/LinBiolinumTB.pfb><D:/Miktex/fonts/type1/public/libertine/LinBiolinumTI.pfb
-><D:/Miktex/fonts/type1/public/libertine/LinLibertineT.pfb><D:/Miktex/fonts/typ
-e1/public/libertine/LinLibertineTB.pfb><D:/Miktex/fonts/type1/public/libertine/
-LinLibertineTBI.pfb><D:/Miktex/fonts/type1/public/libertine/LinLibertineTI.pfb>
-<D:/Miktex/fonts/type1/public/newtx/txsys.pfb><D:/Miktex/fonts/type1/urw/zapfdi
-ng/uzdr.pfb>
-Output written on sample-sigconf-authordraft.pdf (8 pages, 1149791 bytes).
+ts/type1/public/newtx/LibertineMathMI.pfb><D:/Miktex/fonts/type1/public/liberti
+ne/LinBiolinumT.pfb><D:/Miktex/fonts/type1/public/libertine/LinBiolinumTB.pfb><
+D:/Miktex/fonts/type1/public/libertine/LinBiolinumTI.pfb><D:/Miktex/fonts/type1
+/public/libertine/LinLibertineT.pfb><D:/Miktex/fonts/type1/public/libertine/Lin
+LibertineTB.pfb><D:/Miktex/fonts/type1/public/libertine/LinLibertineTBI.pfb><D:
+/Miktex/fonts/type1/public/libertine/LinLibertineTI.pfb><D:/Miktex/fonts/type1/
+public/newtx/txmiaX.pfb><D:/Miktex/fonts/type1/public/newtx/txsys.pfb><D:/Mikte
+x/fonts/type1/urw/zapfding/uzdr.pfb>
+Output written on sample-sigconf-authordraft.pdf (9 pages, 1175018 bytes).
 PDF statistics:
- 362 PDF objects out of 1000 (max. 8388607)
- 83 named destinations out of 1000 (max. 500000)
- 84812 words of extra memory for PDF output out of 89155 (max. 10000000)
+ 385 PDF objects out of 1000 (max. 8388607)
+ 88 named destinations out of 1000 (max. 500000)
+ 86860 words of extra memory for PDF output out of 89155 (max. 10000000)
 
