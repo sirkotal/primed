@@ -120,19 +120,19 @@
         },
         {
             "name": "excellent_review_perc",
-            "type": "pint",
+            "type": "pdouble",
             "indexed": true,
             "stored": true
         },
         {
             "name": "average_review_perc",
-            "type": "pint",
+            "type": "pdouble",
             "indexed": true,
             "stored": true
         },
         {
             "name": "poor_review_perc",
-            "type": "pint",
+            "type": "pdouble",
             "indexed": true,
             "stored": true
         },

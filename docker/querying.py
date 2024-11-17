@@ -27,7 +27,6 @@ def generate_boosted_query(user_query):
     query_params = {
         'q': user_query,
         'q.op': "AND",
-        'sort': "reviews_average_rating desc",
         'start': 0,
         'rows': 30,
         'defType': "edismax",
