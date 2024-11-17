@@ -1,0 +1,21 @@
+{
+    "responseHeader": {
+        "status": 0,
+        "QTime": 3,
+        "params": {
+            "q": "Caner",
+            "defType": "edismax",
+            "qf": "diseases_info reviews manufacturer_desc",
+            "start": "0",
+            "q.op": "AND",
+            "sort": "reviews_average_rating desc",
+            "rows": "30"
+        }
+    },
+    "response": {
+        "numFound": 0,
+        "start": 0,
+        "numFoundExact": true,
+        "docs": []
+    }
+}

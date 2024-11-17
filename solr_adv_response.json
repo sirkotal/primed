@@ -1,0 +1,24 @@
+{
+    "responseHeader": {
+        "status": 0,
+        "QTime": 78,
+        "params": {
+            "q": "Vomiting and cold treatment",
+            "defType": "edismax",
+            "ps": "2",
+            "bf": "excellent_review_perc^1.5 poor_review_perc^0.5",
+            "qf": "diseases_info^3 reviews^4 manufacturer_desc",
+            "pf": "reviews^3",
+            "start": "0",
+            "q.op": "AND",
+            "sort": "reviews_average_rating desc",
+            "rows": "30"
+        }
+    },
+    "response": {
+        "numFound": 0,
+        "start": 0,
+        "numFoundExact": true,
+        "docs": []
+    }
+}

@@ -143,9 +143,11 @@ def combine_data():
             for review in related_reviews:
                 all_reviews += review['reviews']
             reviews_average_rating = round(total_ratings / len(related_reviews), 2) if related_reviews else 0
+            related_perc = {'excelent_rating_perc': round(review['excelent_rating_perc'] * 100, 2), 'average_rating_perc': round(review['average_rating_perc'] * 100, 2), 'poor_rating_perc': round(review['poor_rating_perc'] * 100, 2)}
         else:
             reviews_average_rating = "0"
             all_reviews = []
+            related_perc = {'excelent_rating_perc': 0, 'average_rating_perc': 0, 'poor_rating_perc': 0}
     
         company_info = find_company(details['Manufacturer'])
     
@@ -153,12 +155,11 @@ def combine_data():
             "drug": drug,
             "composition": details['Composition'],
             "applicable_diseases": details['Uses'],
-            "diseases_info": [disease['Description'] for disease in related_diseases if 'Description' in disease],
-            "diseases_info2": [disease['Description'] for disease in related_cuf_diseases if 'Description' in disease],
+            "diseases_info": [disease['Description'] for disease in related_diseases if 'Description' in disease] + [disease['Description'] for disease in related_cuf_diseases if 'Description' in disease],
             "possible_side_effects": details['Side_effects'],
-            "excellent_review_perc": details['Excellent Review %'],
-            "average_review_perc": details['Average Review %'],
-            "poor_review_perc": details['Poor Review %'],
+            "excellent_review_perc": str(related_perc['excelent_rating_perc']),
+            "average_review_perc": str(related_perc['average_rating_perc']),
+            "poor_review_perc": str(related_perc['poor_rating_perc']),
             "reviews_average_rating": str(reviews_average_rating),
             "reviews": all_reviews,
             "manufacturer": details['Manufacturer'],
