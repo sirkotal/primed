@@ -62,12 +62,6 @@
             "docValues": true
         },
         {
-            "name": "reviews_useful_count",
-            "type": "pint",
-            "indexed": true,
-            "stored": true
-        },
-        {
             "name": "reviews",
             "type": "text_general",
             "indexed": true,
@@ -78,29 +72,25 @@
             "name": "manufacturer",
             "type": "text_general",
             "indexed": true,
-            "stored": true,
-            "multiValued": false
+            "stored": true
         },
         {
             "name": "manufacturer_desc",
             "type": "text_general",
             "indexed": true,
-            "stored": true,
-            "multiValued": false
+            "stored": true
         },
         {
             "name": "manufacturer_start",
             "type": "text_general",
-            "indexed": true,
-            "stored": true,
-            "multiValued": false
+            "indexed": false,
+            "stored": true
         },
         {
             "name": "manufacturer_end",
             "type": "text_general",
-            "indexed": true,
-            "stored": true,
-            "multiValued": false
+            "indexed": false,
+            "stored": true
         }
     ]
 }

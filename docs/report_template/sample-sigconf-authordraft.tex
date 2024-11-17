@@ -48,6 +48,7 @@
 \documentclass[sigconf]{acmart}
 \usepackage{hyperref}
 \usepackage{enumitem}
+\usepackage{pifont}
 \newlist{arrowlist}{itemize}{1}
 \setlist[arrowlist]{label=$\Rightarrow$}
 %%\usepackage{indentfirst}
@@ -203,6 +204,7 @@ The PRIMED project aims to enhance access to structured pharmaceutical data for 
 \maketitle
 
 \section{Introduction}
+
 Nowadays, accurate and comprehensive medicine information plays a vital role in decision-making on the healthcare and investigation sectors. Having access to clean and relevant information is crucial to enhance the efficiency and safety of treatments.
 
 The \textit{\textbf{PRIMED}} project aims to compile and organize such data so that it can be accessed in an easy and organized way. It provides insights that can be applied both in practical cases or simply in developing new health safety politics.
@@ -210,12 +212,15 @@ The \textit{\textbf{PRIMED}} project aims to compile and organize such data so t
 In this part of the project, data from various sources was collected, processed and analysed with the goal of creating a solid basis for a pharmaceutical system. The whole process is described in this document, from the choice of the theme itself up to the analysis of gathered data and its subsequent classification.
 
 \section{Theme Selection}
+
 The choice to focus on medicines as the central theme for this project stems from the critical role they play in modern healthcare. Medication is the primary tool for treating multiple health problems and conditions, making them an essential component in both public healthcare systems and individual patient care. The data surrounding these substances, such as active substances, applicable cases and clinical trials, offers valuable insights that can improve decision-making in medical practice and pharmaceutics.
 
 \section{Data Collection}
+
 This chapter outlines the data selection process and the methods utilized to gather it.
 
 \subsection{Selection of Data}
+
 One of the main challenges of the healthcare sector is ensuring that accurate and up-to-date information on medication is available to healthcare professionals. Given these needs, the selection of data to be collected was made:
 
 \begin{itemize}
@@ -253,7 +258,7 @@ This dataset was scraped from the tables of a Wikipedia page containing a list o
 
 The information extracted from this dataset consists of:
 \begin{itemize}
-	\item {\texttt{Disease}}: The name of the disease.
+        \item {\texttt{Disease}}: The name of the disease.
 	\item {\texttt{Primary Organ/Body Part Affected}}: Information on the organs or body parts affected by the disease.
 	\item {\texttt{Autoantibodies}}: The antibodies associated with each specific disease.
 	\item {\texttt{Acceptance as an Autoimmune Disease}}: Classification for each disease related to its acceptance as an autoimmune condition, based on the current scientific consensus and level of evidence supporting its autoimmune nature.
@@ -296,11 +301,11 @@ This dataset contains around 215000 entries and is covered by the \textit{\textb
 
 \section{Pipeline Description}
 
-As mentioned in section 3.2 of this report, \textit{\textbf{PRIMED}}'s data comes from various sources. Due to the often unstructured nature of this data, it is vital to have a streamlined and automated way of normalizing and processing all the information into similar formats, which is the main role of the data pipeline, present in figure [1].
+As mentioned in section 3.2 of this report, \textit{\textbf{PRIMED}}'s data comes from various sources. Due to the often unstructured nature of this data, it is vital to have a streamlined and automated way of normalizing and processing all the information into similar formats, which is the main role of the data pipeline, present in figure~[\ref{fig:pipeline}].
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=\linewidth]{../data_pipeline.png}
+	\includegraphics[width=\linewidth]{data_pipeline.png}
 	\caption{Data Pipeline}
 	\Description{Data Pipeline}
 	\label{fig:pipeline}
@@ -334,7 +339,7 @@ Having finalized the data collection and the subsequent transformation and stora
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=\linewidth]{../pri_uml_final.png}
+  \includegraphics[width=\linewidth]{pri_uml_final.png}
   \caption{Conceptual Data Model}
   \Description{UML diagram for \textit{\textbf{PRIMED}}'s data}
   \label{fig:uml}
@@ -346,35 +351,35 @@ Each medicine is associated with one and only one pharmaceutical company; a comp
 
 With regard to the characterization of the dataset, the data resulting from the pipeline was analysed. Graphs, tables and even word clouds, despite not being the most reliable method, were created to make it easier to understand the structure of the data and the patterns that guide the system itself.
 
+\subsection{General Description}
+
+The final version of the dataset, representing the collection of documents, contains 11498 entries. Each entry represents a medicine along with its related information, such as associated diseases and possible side effects, user reviews, ratings and manufacturer details.
+
 \subsection{Distribution of Drug Manufacturers}
 
-By analysing figure [3], which shows the distribution of the main pharmaceutical companies responsible for manufacturing medicines where the five that possess the largest share are highlighted, we are given a clearer understanding of each manufacturers' production capabilities.
+By analysing figure~[\ref{fig:topManufacturers}], which shows the distribution of the main pharmaceutical companies responsible for manufacturing medicines where the five that possess the largest share are highlighted, we are given a clearer understanding of each manufacturers' production capabilities.
 
 \subsection{Distribution of Reviews}
 
-A box plot, present in figure [4], is utilized to analyse the distribution of “Excellent”, “Average” and “Poor” review percentages across the different medicines. The graph shows that, for instance, "Excellent" reviews percentages are more evenly spread than the "Average" reviews percentages which, despite having a lower interquartile range\cite{iqrange}, possesses a higher number of outliers. The "Poor" review percentages have the largest variations, but also the lowest values. 
+A box plot, present in figure~[\ref{fig:reviewDistribution}], is utilized to analyse the distribution of “Excellent”, “Average” and “Poor” review percentages across the different medicines. The graph shows that, for instance, "Excellent" reviews percentages are more evenly spread than the "Average" reviews percentages which, despite having a lower interquartile range\cite{iqrange}, possesses a higher number of outliers. The "Poor" review percentages have the largest variations, but also the lowest values. 
 
-In figure [5], we can see the average percentage of reviews for the top ten use cases, which supports the findings from figure [4].
+In figure~[\ref{fig:reviewPercMean}], we can see the average percentage of reviews for the top ten use cases, which supports the findings from figure~[\ref{fig:reviewDistribution}].
 
 \subsection{Distribution of Side Effects}
 
-By analysing figure [6], we can identify the most common side effects caused by medication - nausea, headaches, diarrhea - and how many medicines are associated to each one of them. As expected, the data shows that side effects that occur more frequently are those that are milder in nature.
+By analysing figure~[\ref{fig:sideEffectsDistribution}], we can identify the most common side effects caused by medication - nausea, headaches, diarrhea - and how many medicines are associated to each one of them. As expected, the data shows that side effects that occur more frequently are those that are milder in nature.
 
 \subsection{Common Uses Word Cloud}
 
-Figure [7] contains a word cloud with the most common use cases for medicines. “Bacterial Infections” and "Hypertension", for example, are clearly highlighted in the graph, being conditions that are found and treated more frequently.
+Figure~[\ref{fig:commonUses}] contains a word cloud with the most common use cases for medicines. “Bacterial Infections” and "Hypertension", for example, are clearly highlighted in the graph, being conditions that are found and treated more frequently.
 
 \subsection{Most Common Drug Compositions}
 
-Figure [8] identifies the the most common drug combinations available in the market, with “Levocetirizine + Montelukast” being the most prevalent, followed by other combinations such as “Luliconazole” and “Domperidone + Rabeprazole”.
+Figure~[\ref{fig:commonDrugCompositions}] identifies the the most common drug combinations available in the market, with “Levocetirizine + Montelukast” being the most prevalent, followed by other combinations such as “Luliconazole” and “Domperidone + Rabeprazole”.
 
 \subsection{Years with the Most Companies Foundations}	
 
-By analysing figure [9], it's possible to observe the years in which the most pharmaceutical companies were founded, with 2003 standing out. This temporal analysis gives us some information about periods of significant growth in the pharmaceutical industry.
-
-\subsection{General description}
-
-The final dataset contains 11498 entries, each one representing a drug with all information related to it. The present info on the drug are reviews, their text and usefulness, the manufacturer and it's details, diseases and more text info about each of them and the previously discussed drug information.
+By analysing figure~[\ref{fig:companyYears}], it's possible to observe the years in which the most pharmaceutical companies were founded, with 2003 standing out. This temporal analysis gives us some information about periods of significant growth in the pharmaceutical industry.
 
 \section{Information Needs}
 
@@ -394,7 +399,7 @@ Here is a list of possible information needs, explaining what type of data is ne
 Based one these needs, we can answer some questions like: 
 \begin{arrowlist}
 	\item Which medicines are more commonly used to treat the common cold?
-    \item Trustworthy companies that provide medicines for Alzheimer’s disease. 
+        \item Trustworthy companies that provide medicines for Alzheimer’s disease. 
 	\item How does the composition of medicine for diabetes vary between manufacturers like Novo Nordisk, Eli Lilly, and Sanofi?
 	\item What are the most effective treatments for managing rheumatoid vasculitis pain and inflammation?
 	\item What is the best treatment for persistent migraine symptoms, including nausea and light sensitivity?
@@ -404,33 +409,118 @@ Based one these needs, we can answer some questions like:
 
 As previously stated, a wide range of people can take advantage of this type of information - from regular patients to medicine experts and even investigators, everyone can benefit from having access to the data present in \textit{\textbf{PRIMED}}.
 
-\section{Results}
-
-Having completed this milestone of the project marks a very important step in the development of our system. The work carried out to this date has made it possible to transform an initial set of diverse, loosely related data into a cohesive and structured basis for \textit{\textbf{PRIMED}}. By carrying out data cleaning operations, we have been able to maintain the quality of the information while simultaneously reducing inconsistencies and duplicates. Outfitted with this data, \textit{\textbf{PRIMED}} will be able to offer users a practical source for consulting medical information; however, we will keep an eye on the dataset in case there is a need for further enhancements during future milestones.
-
 \section{System Overview}
-Apache SOLR is a search and analysis platform which allows the indexation of big data volumes and to make quick and efficient queries on that data. The way it works is by making the indexation of documents and then creating an efficient association of words and the documents they appear on. With that, the queries made are faster because when the user searches for a word, SOLR checks the index.\cite{solr} SOLR also allows the usage of other "tools" such as boosters to enhance the querying process and others like fuzziness to try and correct typos on the queries.
 
-\subsection{Objectives}
+Apache SOLR\cite{solr} is a search and analysis platform which allows the indexation of big data volumes, while also enabling quick and efficient queries on that same data. It works by indexing documents from a collection and then efficiently associating words with the respective documents they appear in. Thanks to this process, the queries performed are faster, since when the user searches for a word, SOLR checks the index; SOLR also allows the usage of other "tools" via query parameters, such as boosters that enhance the querying process by prioritizing certain terms or fields, or fuzziness to try and mitigate the effects of typos on user queries.
+
+\subsection{Project Objectives and Scope}
+
 The objectives with SOLR are to create a way to find and access information with quickness and ease, allowing for easy queries with fast results and some enhancement to them. We are also using this opportunity to enhance our documents, adding more text information and changing the numbered values to more meaningful ones.
 
 \subsection{System Architecture}
 
-\section{Final Document}
-Here the final document is described and analysed, having some other relevant information related to it considered.
+\section{Document Analysis}
 
-\subsection{Document Definition}
-The final document consists of the following field types:
+In this section, the structure of the documents is analysed, as well as the systems utilized to index the document collection and parse the queries made by the users, which are treated as a variable in each of the aforementioned system's configurations.
+
+\subsection{Document Characteristics}
+
+The final version of a document in the data collection, generated as a result of the previously implemented data pipeline, contains the following fields:
 \begin{itemize}
-	\item {\texttt{Drug}}: The name of the drug in question.
-	\item {\texttt{Composition}}: Composition of the drug.
-	\item {\texttt{Applicable diseases}}: List of diseases where the drug is normally applied.
-	\item {\texttt{Diseases information}}: Also a list of information about the diseases specified before.
-	\item {\texttt{Possible side effects}}: List of possible side effects of the drug when taken.
-	\item {\texttt{Excellent review percentage}}: Percentage of reviews with a rating bigger than 7.
-	\item {\texttt{Average review percentage}}: Percentage of reviews with a rating between 4 and 7.
-	\item {\texttt{Poor review percentage}}: Percentage of reviews with a rating under 4.
+	\item {\texttt{drug}}: The name of the medicine in question.
+	\item {\texttt{composition}}: The active substance(s) present in the drug.
+	\item {\texttt{applicable\_diseases}}: A list of diseases for which the medicine is usually taken or applied.
+	\item {\texttt{diseases\_info}}: A list of information on the medicine's applicable diseases.
+	\item {\texttt{possible\_side\_effects}}: A list of possible side effects provoked by the drug when taken.
+	\item {\texttt{excellent\_review\_perc}}: Percentage of reviews with a rating superior to 7.
+	\item {\texttt{average\_review\_perc}}: Percentage of reviews with a rating between 4 and 7.
+        \item {\texttt{poor\_review\_perc}}: Percentage of reviews 
+    with a rating inferior to 4.
+        \item {\texttt{reviews\_average\_rating}}: The average review score for 
+    the medicine, based on all the reviews it received (rounded to two decimal places).
+        \item {\texttt{reviews}}: Reviews associated with each medicine (in 
+    some specific cases, the association is made based on the active principle due to the reviewer not revealing the medicine's name itself).
+        \item {\texttt{manufacturer}}: The name of the company responsible 
+    for producing a specific medicine.
+        \item {\texttt{manufacturer\_desc}}: A short description of 
+    each company, containing some extra information.
+        \item {\texttt{manufacturer\_start}}: The year the company was created.
+        \item {\texttt{manufacturer\_end}}: The year the company was shut 
+    down, if available.
 \end{itemize}
+
+However, only a few of these document attributes are utilized in the retrieval process; the query is performed solely on the \texttt{diseases\_info}, \texttt{reviews} and \texttt{manufacturer\_desc} fields in the index, since these are attributes which primarily contain unstructured text.
+
+\subsection{Schema Definition}
+
+Solr stores details about the field types and which fields it is expected to understand in a schema\cite{schema}. A schema allows for a specific search system to be configured on the indexing process. For system and performance evaluation purposes, a decision was made to create two distinct systems.
+
+As a result, two different schemas were created - one for the baseline system, with minimal configuration, and another, more advanced schema for the improved system. 
+
+Since every field has the \textit{stored} property set to \textit{true} in both schemas, it won't be displayed in the upcoming (advanced) schema table. Of all the fields present, only two are not indexed (have the \textit{indexed} property set to \textit{false}): \texttt{manufacturer\_start} and \texttt{manufacturer\_end}, since they are only used to display additional information about a medicine's manufacturer and are not actively used in any search tasks. The only fields with the \textit{multiValued} property enabled are those that store a list of strings: \texttt{reviews}, \texttt{diseases\_info}, \texttt{applicable\_diseases} and \texttt{possible\_side\_effects}.
+
+For the basic schema, only native SOLR data types were used - no additional field types were created. For this reason, no tokenizers\cite{tokenizer} or filters\cite{filters} were added in the basic schema; however, the text fields utilize the \textit{text\_general} type, which tokenizes with a standard tokenizer. The percentage fields were assigned the \textit{pint} type, while the field representing the average rating of the reviews was assigned the \textit{pdouble} type.
+
+For the advanced schema, since the goal is to perform queries on textual field, a new field type, \textbf{\textit{textBoosted}}, was created, based on the \textit{TextField} class, which makes use of both tokenizers and filters - while the tokenizers are responsible for breaking field data into lexical units (tokens), filters examine the stream of tokens and keep them, discard them or transform them depending on the specific filter being used. The \textbf{\textit{textBoosted}} field type includes: 
+
+\begin{arrowlist}
+	\item \textbf{\textit{StandardTokenizerFactory}:} Tokenizer that uses whitespaces and punctuation as delimiters to split text into tokens.
+        \item \textbf{\textit{ASCIIFoldingFilterFactory}:} Filter that 
+    converts Unicode characters like special characters or characters with accents into their ASCII equivalents, if one exists.
+	\item \textbf{\textit{LowerCaseFilterFactory}:} Filter that converts all letters in a token to lowercase.
+	\item \textbf{\textit{SnowballPorterFilterFactory}:} Filter that applies stemming to tokens during text processing by generating pattern-based word stemmers; while less accurate than table-based stemmers, it is faster and less complex. It was also chosen for its aggressive stemming, making it suitable to normalize word variations in the reviews and manufacturer descriptions.
+\end{arrowlist}
+
+Two additional field types, similar to \textbf{\textit{textBoosted}}, were also created:
+
+\begin{itemize}
+        \item \textbf{\textit{diseasesBoosted}}: Very similar to 
+    \textbf{\textit{textBoosted}}, but utilizes the \textbf{\textit{EnglishMinimalStemFilterFactory}} filter for stemming instead, since it's less powerful and, therefore, more suitable to handle fields with more technical terms - particularly the diseases' information.
+	\item \textbf{\textit{shortText}}: Very similar to \textbf{\textit{textBoosted}} but without a stemming filter, as it is applied to short textual fields that contain very specific terms.
+\end{itemize}
+
+For each of three field types, the same tokenizer and filters were used in both the query analyser and the index analyser.
+
+The table below provides an overview of the advanced schema's structure, detailing the field names, their respective types and whether they are indexed or multi-valued.
+
+\begin{table}[h]
+\begin{tabular}{llcc}
+\toprule
+Field & Type & Indexed & Multi-Valued\\
+\midrule
+drug & shortText & \ding{51} & \ding{55}\\
+composition & shortText & \ding{51} & \ding{55}\\
+applicable\_diseases & shortText & \ding{51} & \ding{51}\\
+diseases\_info & diseasesBoosted & \ding{51} & \ding{51}\\
+possible\_side\_effects & shortText & \ding{51} & \ding{51}\\
+excellent\_review\_perc & pint & \ding{51} & \ding{55}\\
+average\_review\_perc & pint & \ding{51} & \ding{55}\\
+poor\_review\_perc & pint & \ding{51} & \ding{55}\\
+reviews\_average\_rating & pdouble & \ding{51} & \ding{55}\\
+reviews & textBoosted & \ding{51} & \ding{51}\\
+manufacturer\_desc & textBoosted & \ding{51} & \ding{55}\\
+manufacturer & text\_general & \ding{51} & \ding{55}\\
+manufacturer\_start & text\_general & \ding{55} & \ding{55}\\
+manufacturer\_end & text\_general & \ding{55} & \ding{55}\\
+\bottomrule
+\end{tabular}
+\caption{Advanced Schema}
+\label{tab:schema}
+\end{table}
+
+\subsection{Retrieval}
+
+
+
+\section{System Evaluation}
+
+\subsection{Ground Truth Development}
+
+\subsection{Performance Metrics}
+
+\subsection{Performance Analysis}
+
+\section{Conclusions}
 
 \appendix
 \section{Annexes}
@@ -440,7 +530,7 @@ The final document consists of the following field types:
 	\includegraphics[width=\linewidth]{graphic1.png}
 	\caption{Top Drug Manufacturers}
 	\Description{Dataset Characterization \textit{\textbf{PRIMED}}'s data}
-	\label{fig:uml}
+	\label{fig:topManufacturers}
   \end{figure}
 
 \begin{figure}[H]
@@ -448,7 +538,7 @@ The final document consists of the following field types:
 	\includegraphics[width=\linewidth]{graphic2.png}
 	\caption{Distribution of Reviews}
 	\Description{Dataset Characterization \textit{\textbf{PRIMED}}'s data}
-	\label{fig:uml}
+	\label{fig:reviewDistribution}
   \end{figure}
 
 \begin{figure}[H]
@@ -456,7 +546,7 @@ The final document consists of the following field types:
 	\includegraphics[width=\linewidth]{graphic3.png}
 	\caption{Mean of Reviews Percentages by Uses}
 	\Description{Dataset Characterization \textit{\textbf{PRIMED}}'s data}
-	\label{fig:uml}
+	\label{fig:reviewPercMean}
   \end{figure}
 
 \begin{figure}[H]
@@ -464,7 +554,7 @@ The final document consists of the following field types:
 	\includegraphics[width=\linewidth]{graphic4.png}
 	\caption{Distribution of Side Effects}
 	\Description{Dataset Characterization \textit{\textbf{PRIMED}}'s data}
-	\label{fig:uml}
+	\label{fig:sideEffectsDistribution}
   \end{figure}
 
 \begin{figure}[H]
@@ -472,7 +562,7 @@ The final document consists of the following field types:
 	\includegraphics[width=\linewidth]{graphic5.png}
 	\caption{Common Uses Word Cloud}
 	\Description{Dataset Characterization \textit{\textbf{PRIMED}}'s data}
-	\label{fig:uml}
+	\label{fig:commonUses}
   \end{figure} 
 
 \begin{figure}[H]
@@ -480,7 +570,7 @@ The final document consists of the following field types:
 	\includegraphics[width=\linewidth]{graphic6.png}
 	\caption{Most Common Drug Compositions}
 	\Description{Dataset Characterization \textit{\textbf{PRIMED}}'s data}
-	\label{fig:uml}
+	\label{fig:commonDrugCompositions}
   \end{figure}   
 
 \begin{figure}[H]
@@ -488,7 +578,7 @@ The final document consists of the following field types:
 	\includegraphics[width=\linewidth]{graphic7.png}
 	\caption{Years with the Most Companies Foundations}
 	\Description{Dataset Characterization \textit{\textbf{PRIMED}}'s data}
-	\label{fig:uml}
+	\label{fig:companyYears}
   \end{figure}
 
 %%
