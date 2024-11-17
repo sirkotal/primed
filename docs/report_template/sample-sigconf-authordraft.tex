@@ -633,9 +633,11 @@ To evaluate the performance of our systems, the P@k metric\cite{pak} is used, wi
 
 \subsubsection{Mean Average Precision}
 
-The Mean Average Precision\cite{map}, or MAP, is a commonly used performance metric that calculates the mean of every relevant result is taken into account. Here, since there are too many results for each query, only the top 5 for each one were accounted, having for each query the averages
+The Mean Average Precision\cite{map}, or MAP, is a commonly used performance metric that calculates the average of the precision values at specific positions in the ranked collection where relevant documents appear.
 
-\subsubsection{P-R Curves}
+\subsubsection{P-R Curve}
+
+A Precision-Recall (P-R) Curve\cite{prcurves} is calculated for each individual query and system, based on the ranked collection of documents returned by Solr. For instance, the larger the area under the P-R curve\cite{auc}, the better a system performs.
 
 \subsection{Performance Analysis}
 
