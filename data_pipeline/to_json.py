@@ -11,21 +11,21 @@ from unidecode import unidecode
 
 
 # source datasets
-diseases_csv = "../dataset/sources/diseases.csv"
-drug_details_csv = "../dataset/sources/drug_details.csv"
-drug_reviews_csv = "../dataset/sources/drug_reviews.csv"
-pharmaceutical_companies_csv = "../dataset/sources/pharmaceutical_companies.csv"
-sicknesses_clean_csv = "../dataset/sources/sicknesses_clean.csv"
-cuf_sicknesses_csv = "../dataset/sources/cuf_sicknesses.csv"
+diseases_csv = "./dataset/sources/diseases.csv"
+drug_details_csv = "./dataset/sources/drug_details.csv"
+drug_reviews_csv = "./dataset/sources/drug_reviews.csv"
+pharmaceutical_companies_csv = "./dataset/sources/pharmaceutical_companies.csv"
+sicknesses_clean_csv = "./dataset/sources/sicknesses_clean.csv"
+cuf_sicknesses_csv = "./dataset/sources/cuf_sicknesses.csv"
 
 
 # output datasets
-diseases_json = "../dataset/output/diseases.json"
-drug_details_json = "../dataset/output/drug_details.json"
-drug_reviews_json = "../dataset/output/drug_reviews.json"
-pharmaceutical_companies_json = "../dataset/output/pharmaceutical_companies.json"
-sicknesses_json = "../dataset/output/sicknesses_clean.json"
-cuf_sicknesses_json = "../dataset/output/cuf_sicknesses.json"
+diseases_json = "./dataset/output/diseases.json"
+drug_details_json = "./dataset/output/drug_details.json"
+drug_reviews_json = "./dataset/output/drug_reviews.json"
+pharmaceutical_companies_json = "./dataset/output/pharmaceutical_companies.json"
+sicknesses_json = "./dataset/output/sicknesses_clean.json"
+cuf_sicknesses_json = "./dataset/output/cuf_sicknesses.json"
 
 
 def _parse_use_cases_side_effects(input_string):
@@ -231,5 +231,3 @@ def parse_cuf_sicknesses(key_name='Doença'):
         data[disease] = disease_details
 
     _write_to_json(data, cuf_sicknesses_json)
-
-parse_cuf_sicknesses()

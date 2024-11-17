@@ -1,8 +1,9 @@
 from to_json import parse_drug_details, parse_diseases, \
     parse_drug_reviews, parse_pharmaceutical_companies, \
-    parse_sicknesses
+    parse_sicknesses, parse_cuf_sicknesses
 from wikipedia_scraper import get_companies, get_diseases
-
+from cuf_scraper import get_cuf_diseases
+from document_generation import combine_data
 
 if __name__ == '__main__':
 
@@ -43,3 +44,20 @@ if __name__ == '__main__':
             break
         else:
             print("Please answer yes or no.")
+            
+    while True:
+        answer = input("\nDo you wish to download disease data from Cuf? (may take more than 10 minutes and risk of failure due to translation API) (y/n): ")
+        if answer[0].lower() == 'y':
+            print("Downloading cuf data...")
+            get_cuf_diseases()
+            print("Parsing cuf data...")
+            parse_cuf_sicknesses()
+            break
+        elif answer.lower() == 'n':
+            print("Skipping cuf data download.")
+            break
+        else:
+            print("Please answer yes or no.")
+
+    print("\nGenerating final document...")
+    combine_data()
