@@ -466,20 +466,24 @@ For the advanced schema, since the goal is to perform queries on textual field, 
 \begin{arrowlist}
 	\item \textbf{\textit{StandardTokenizerFactory}:} Tokenizer that uses whitespaces and punctuation as delimiters to split text into tokens.
         \item \textbf{\textit{ASCIIFoldingFilterFactory}:} Filter that 
-    converts characters that don't belong
-	\item \textbf{\textit{LowerCaseFilterFactory}:} Filter that converts all letters to lowercase.
-	\item \textbf{\textit{SnowballPorterFilterFactory}:} Filter that applies stemming to tokens during text processing by generating pattern-based word stemmers - not as accurate as table-based stemmers, but faster and less complex.
+    converts Unicode characters like special characters or characters with accents into their ASCII equivalents, if one exists.
+	\item \textbf{\textit{LowerCaseFilterFactory}:} Filter that converts all letters in a token to lowercase.
+	\item \textbf{\textit{SnowballPorterFilterFactory}:} Filter that applies stemming to tokens during text processing by generating pattern-based word stemmers; while less accurate than table-based stemmers, it is faster and less complex. It was also chosen for its aggressive stemming, making it suitable to normalize word variations in the reviews and manufacturer descriptions.
 \end{arrowlist}
 
-Two additional field types, similar to \textbf{\textit{textBoosted}}, were created:
+Two additional field types, similar to \textbf{\textit{textBoosted}}, were also created:
 
 \begin{itemize}
         \item \textbf{\textit{diseasesBoosted}}: Very similar to 
-    \textbf{\textit{textBoosted}}, but utilizes the \textbf{\textit{EnglishMinimalStemFilterFactory}} filter for stemming instead, since it's less powerful and, therefore, more suitable to handle fields with more technical terms.
+    \textbf{\textit{textBoosted}}, but utilizes the \textbf{\textit{EnglishMinimalStemFilterFactory}} filter for stemming instead, since it's less powerful and, therefore, more suitable to handle fields with more technical terms - particularly the diseases' information.
 	\item \textbf{\textit{shortText}}: Very similar to \textbf{\textit{textBoosted}} but without a stemming filter, as it is applied to short textual fields that contain very specific terms.
 \end{itemize}
 
-\begin{table}[H]
+For each of three field types, the same tokenizer and filters were used in both the query analyser and the index analyser.
+
+The table below provides an overview of the advanced schema's structure, detailing the field names, their respective types and whether they are indexed or multi-valued.
+
+\begin{table}[h]
 \begin{tabular}{llcc}
 \toprule
 Field & Type & Indexed & Multi-Valued\\
