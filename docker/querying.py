@@ -32,6 +32,7 @@ def generate_boosted_query(user_query):
         'rows': 30,
         'defType': "edismax",
         'qf': "diseases_info^3 reviews^4 manufacturer_desc",
+        'pf': "reviews^3",
         'ps': 2,
         'bf': "excellent_review_perc^1.5 poor_review_perc^0.5"
     }
