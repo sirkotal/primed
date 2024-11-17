@@ -3,16 +3,34 @@
 all:
 	@echo "Please specify a target: install, run, clean"
 
-PYTHON=python3
-VENV_DIR=venv
-ACTIVATE=$(VENV_DIR)/bin/activate
-REQS=data_pipeline/requirements.txt
+PYTHON = python3
+VENV_DIR = venv
+ACTIVATE = $(VENV_DIR)/bin/activate
+REQS = data_pipeline/requirements.txt
+LIB_NAME = wordninja
+PATCH_FILE = ./patches/split_fix.patch
+# LIB_PATH = $(shell $(PYTHON) -c "import $(LIB_NAME); import os; print(os.path.dirname($(LIB_NAME).__file__))")
 
 install:
 	@echo "Creating virtual environment..."
-	@$(PYTHON) -m venv venv && echo "Virtual environment created in $(VENV_DIR)" && echo ""
+	@$(PYTHON) -m venv $(VENV_DIR) && echo "Virtual environment created in $(VENV_DIR)" && echo ""
 	@echo "Installing dependencies..."
 	@. $(ACTIVATE) && pip install -r $(REQS) && echo "" && echo "Dependencies installed successfully!" && echo ""
+	@echo "Checking for $(LIB_NAME)..." && \
+		if python -c 'import $(LIB_NAME)' 2>/dev/null; then \
+			LIB_PATH=$$(python -c 'import $(LIB_NAME); import os; print(os.path.dirname($(LIB_NAME).__file__))') && \
+			echo "Applying patch to $$LIB_PATH..." && \
+			patch -p0 -d $$LIB_PATH < $(PATCH_FILE) && echo "Patch applied successfully"; \
+		else \
+			echo "$(LIB_NAME) not found. Patch not applied."; \
+			exit 1; \
+		fi
+	@echo "Done!"
+
+uninstall:
+	@rm -rf $(VENV_DIR) __pycache__
+	@rm -rf data_pipeline/__pycache__
+	@rm -rf venv
 
 run:
 	@. $(ACTIVATE) && $(PYTHON) data_pipeline/main.py && echo "" && echo "Done!"
