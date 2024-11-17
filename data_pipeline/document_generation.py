@@ -140,14 +140,11 @@ def combine_data():
 
         if related_reviews:
             total_ratings = sum(review['average_rating'] for review in related_reviews)
-            total_useful_count = sum(review['usefulCount'] for review in related_reviews)
             for review in related_reviews:
                 all_reviews += review['reviews']
             reviews_average_rating = round(total_ratings / len(related_reviews), 2) if related_reviews else 0
-            reviews_useful_count = total_useful_count
         else:
             reviews_average_rating = "0"
-            reviews_useful_count = "0"
             all_reviews = []
     
         company_info = find_company(details['Manufacturer'])
@@ -163,7 +160,6 @@ def combine_data():
             "average_review_perc": details['Average Review %'],
             "poor_review_perc": details['Poor Review %'],
             "reviews_average_rating": str(reviews_average_rating),
-            "reviews_useful_count": str(reviews_useful_count),
             "reviews": all_reviews,
             "manufacturer": details['Manufacturer'],
             "manufacturer_desc": repair_string(company_info['Description']),
