@@ -539,7 +539,7 @@ Other techniques, external to the query parameters, were explored via direct app
     \item \textbf{Fuzziness}: Enables approximate matching of terms, which makes it easier to handle typos or misspellings.
 \end{itemize}
 
-The simple system exclusively uses the common parameters, along with the \texttt{qf} parameter, to process a query and attempt to find matches in the designated query fields (\texttt{diseases\_info}, \texttt{reviews} and \texttt{manufacturer\_desc}); however, all three fields have the same weight in the ranking process. The system then returns the top 30 ranked documents, sorted in descending order based on their average review rating.
+The baseline system exclusively uses the common parameters, along with the \texttt{qf} parameter, to process a query and attempt to find matches in the designated query fields (\texttt{diseases\_info}, \texttt{reviews} and \texttt{manufacturer\_desc}); however, all three fields have the same weight in the ranking process. The system then returns the top 30 ranked documents, sorted in descending order based on their average review rating.
 
 \begin{table}[H]
     \begin{tabular}{ll}
@@ -558,7 +558,7 @@ The simple system exclusively uses the common parameters, along with the \texttt
     \label{tab:simple_query}
 \end{table}
 
-Alternatively, the advanced system makes use of the all the common and optimization parameters, allowing for theoretically better results to be achieved when processing a query. In this case, the common parameters have the same values as the ones in the simple system, but the designated query fields, albeit similar in structure to those in the simple system, have different weights in the ranking process: the \texttt{reviews} field has a weight of 4 and the \texttt{diseases\_info} field has a weight of 3, as they are the most important sources of information; \texttt{manufacturer\_desc} maintains a weight of 1. 
+Alternatively, the advanced system makes use of the all the common and optimization parameters, allowing for theoretically better results to be achieved when processing a query. In this case, the common parameters have the same values as the ones in the baseline system, but the designated query fields, albeit similar in structure to those in the baseline system, have different weights in the ranking process: the \texttt{reviews} field has a weight of 4 and the \texttt{diseases\_info} field has a weight of 3, as they are the most important sources of information; \texttt{manufacturer\_desc} maintains a weight of 1. 
 
 The document receives an additional boost if all of the terms in the query are found in close proximity of each other (exact phrase match) within the \texttt{reviews} field, due to the more informal nature its text. Nevertheless, to account for some variation in word order or the presence of extra words, a phrase slop of 2 is applied to allow for more flexibility when searching for the phrase matches.
 
@@ -581,7 +581,7 @@ Finally, an independent boost is added, based on the \texttt{excellent\_review\_
     \bottomrule
     \end{tabular}
     \caption{Advanced Query Parser}
-    \label{tab:simple_query}
+    \label{tab:advanced_query}
 \end{table}
 
 \section{System Evaluation}
