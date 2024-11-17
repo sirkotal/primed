@@ -10,7 +10,30 @@
                 "filters":[
                     {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
                     {"class":"solr.LowerCaseFilterFactory"},
-                    {"class": "solr.SnowballPorterFilterFactory"},
+                    {"class": "solr.SnowballPorterFilterFactory"}
+                ]
+            },
+            "queryAnalyzer":{
+                "tokenizer":{
+                    "class":"solr.StandardTokenizerFactory"
+                },
+                "filters":[
+                    {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
+                    {"class":"solr.LowerCaseFilterFactory"},
+                    {"class": "solr.SnowballPorterFilterFactory"}
+                ]
+            }
+        },
+        {
+            "name":"diseasesBoosted",
+            "class":"solr.TextField",
+            "indexAnalyzer":{
+                "tokenizer":{
+                    "class":"solr.StandardTokenizerFactory"
+                },
+                "filters":[
+                    {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
+                    {"class":"solr.LowerCaseFilterFactory"},
                     {"class": "solr.EnglishMinimalStemFilterFactory"}
                 ]
             },
@@ -21,7 +44,6 @@
                 "filters":[
                     {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
                     {"class":"solr.LowerCaseFilterFactory"},
-                    {"class": "solr.SnowballPorterFilterFactory"},
                     {"class": "solr.EnglishMinimalStemFilterFactory"}
                 ]
             }
@@ -59,7 +81,7 @@
         },
         {
             "name": "diseases_info",
-            "type": "textBoosted",
+            "type": "diseasesBoosted",
             "indexed": true,
             "stored": true,
             "multiValued": true
@@ -72,7 +94,7 @@
         },
         {
             "name": "drug",
-            "type": "text_general",
+            "type": "shortText",
             "indexed": true,
             "stored": true
         },
@@ -121,12 +143,6 @@
             "stored": true
         },
         {
-            "name": "reviews_useful_count",
-            "type": "pint",
-            "indexed": true,
-            "stored": true
-        },
-        {
             "name": "manufacturer",
             "type": "text_general",
             "indexed": true,
@@ -135,13 +151,13 @@
         {
             "name": "manufacturer_start",
             "type": "text_general",
-            "indexed": true,
+            "indexed": false,
             "stored": true
         },
         {
             "name": "manufacturer_end",
             "type": "text_general",
-            "indexed": true,
+            "indexed": false,
             "stored": true
         }
     ]

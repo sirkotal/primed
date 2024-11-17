@@ -1,24 +1,32 @@
 import json
 from collections import defaultdict
 from text_cleanup import repair_string
+import re
 
 def summarize_drug_reviews(drug_reviews):
-    summary_data = defaultdict(lambda: {"total_rating": 0, "count": 0, "usefulCount": 0, "reviews": []})
+    summary_data = defaultdict(lambda: {"total_rating": 0, "count": 0, "excelent": 0, "average": 0, "poor": 0, "reviews": []})
 
     for review_data in drug_reviews:
         drug_name = review_data["drugName"]
         
         summary_data[drug_name]["total_rating"] += int(review_data["rating"])
         summary_data[drug_name]["count"] += 1
-        summary_data[drug_name]["usefulCount"] += int(review_data["usefulCount"])
         summary_data[drug_name]["reviews"].append(review_data["review"])
+        if int(review_data["rating"]) > 7:
+            summary_data[drug_name]["excelent"] += 1
+        elif int(review_data["rating"]) < 4:
+            summary_data[drug_name]["poor"] += 1
+        else:
+            summary_data[drug_name]["average"] += 1
 
     summarizedList = []
     for drug_name, data in summary_data.items():
         summarized_entry = {
             "drugName": drug_name,
             "average_rating": data["total_rating"] / data["count"],
-            "usefulCount": data["usefulCount"],
+            "excelent_rating_perc": data["excelent"] / data["count"],
+            "average_rating_perc": data["average"] / data["count"],
+            "poor_rating_perc": data["poor"] / data["count"],
             "reviews": data["reviews"]
         }
         summarizedList.append(summarized_entry)
@@ -66,7 +74,6 @@ def find_reviews(composition):
     for review in summarizedList:
         if 'drugName' in review and review['drugName'] in composition_terms:
             reviews.append(review)
-    #print(reviews)
     return reviews
 
 
@@ -95,24 +102,17 @@ def find_diseases(terms):
 
 def find_cuf_diseases(terms):
     matched_diseases = []
+    keys = list(cuf_sicknesses.keys())
 
     for term in terms:
-        name_parts = term.split()
-        for part in name_parts:
-            if part in cuf_sicknesses:
-                sickness_info = cuf_sicknesses[part]
+        for sickness_name in keys:
+            if sickness_name.lower() in term.lower() or term.lower() in sickness_name.lower():
+                sickness_info = cuf_sicknesses[sickness_name]
                 description = "".join([f"//{k}//{v}" for k, v in sickness_info.items()])
                 matched_diseases.append({
-                    "Sickness": part,
+                    "Sickness": sickness_name,
                     "Description": description
                 })
-            for key, sickness_info in cuf_sicknesses.items():
-                if key.lower() in part:
-                    description = "".join([f"//{k}//{v}" for k, v in sickness_info.items()])
-                    matched_diseases.append({
-                        "Sickness": key,
-                        "Description": description
-                    })
     
     return matched_diseases
 
