@@ -529,7 +529,7 @@ Additionally, other parameters focused on optimizing search results are used:
     \item \texttt{bf} (\textbf{Independent Boosts}): Used to apply additional boosting to the documents based on certain fields or functions, independent of a document's score calculated by other parameters.
 \end{itemize}
 
-Despite not being present in the query parameters, other techniques are utilized via direct application
+Despite not being part of the query parameters, other techniques are utilized via direct application to the user's query in the system:
 \begin{itemize}
     \item \textbf{Term Boosts}: A specific set of terms relevant that may be relevant to the user are boosted individually when present in a query. The terms used specifically for our advanced system are present in table~[\ref{tab:boosted_terms}]
     \item \textbf{Fuzziness}: Enables approximate matching of terms, which makes it easier to handle typos or misspellings. For our advanced system, a decision was made to have the fuzziness value set to 1 and applied only to words with more than five letters.
