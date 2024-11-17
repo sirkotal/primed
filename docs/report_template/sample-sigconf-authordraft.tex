@@ -49,6 +49,7 @@
 \usepackage{hyperref}
 \usepackage{enumitem}
 \usepackage{pifont}
+\usepackage{array}
 \newlist{arrowlist}{itemize}{1}
 \setlist[arrowlist]{label=$\Rightarrow$}
 %%\usepackage{indentfirst}
@@ -564,7 +565,7 @@ Alternatively, the advanced system makes use of the all the common and optimizat
 
 The document receives an additional boost if all of the terms in the query are found in close proximity of each other (exact phrase match) within the \texttt{reviews} field, due to the more informal nature its text. Nevertheless, to account for some variation in word order or the presence of extra words, a phrase slop of 2 is applied to allow for more flexibility when searching for the phrase matches.
 
-Finally, an independent boost is added, based on the \texttt{excellent\_review\_perc} and \texttt{poor\_review\_perc} fields, with values of 1.5 and 0.5, respectively. This adjusts the scoring of each document based on its respective percentage of positive and negative reviews, effectively replacing the sorting utilized in the baseline system.
+Finally, an independent boost is added, based on the \texttt{excellent\_-\\review\_perc} and \texttt{poor\_review\_perc} fields, with values of 1.5 and 0.5, respectively. This adjusts the scoring of each document based on its respective percentage of positive and negative reviews, effectively replacing the sorting utilized in the baseline system.
 
 \begin{table}[H]
     \begin{tabular}{ll}
@@ -591,16 +592,18 @@ Finally, an independent boost is added, based on the \texttt{excellent\_review\_
 
 \subsection{Performance Metrics}
 
-\subsubsection{Manual evaluation}
-To evaluate the effectiveness of retrieved information, some metrics were established and analyzed. One example are the defined queries to be evaluated. These are derived from information needs and are:
+\subsubsection{Manual Evaluation}
+
+To evaluate the effectiveness of the information retrieved from querying, specific metrics were established and analysed. The evaluation process, however, requires predefined queries, derived from specific information needs, to be utilized:
 
 \begin{arrowlist}
-	\item \textbf{Q1}: Companies with treatment for Malaria.
+	\item \textbf{Q1}: Companies with treatment for malaria.
 	\item \textbf{Q2}: Reviews from Eli Lilly.
 	\item \textbf{Q3}: Weight gain from antidepressants.
 	\item \textbf{Q4}: Medicine for migraines.
 \end{arrowlist}
-These queries were tested and evaluated, the evaluation being considerate of the used schema, the simple and advanced.
+
+Each one of these queries was tested and evaluated, the evaluation being considerate of the used schema, the simple and advanced.
 
 \begin{table}[H]
 	\begin{tabular}{ | m{5em} | m{1cm}| m{1cm} | } 
@@ -629,6 +632,7 @@ These queries were tested and evaluated, the evaluation being considerate of the
 \textbf{Medicine for migraines}: Trying to find a solution for migraines, 4842 solutions were found on the advanced schema.
 
 \subsubsection{Precision@k}
+
 To evaluate the performance of our data and schemas the P@k metric is used and a K of 10 was defined. This metric selects a number of results and within those, the number of relevant and irrelevant ones are accounted for. In this case, we decided to test this metric on the advanced schema for the third query example (Weight gain from antidepressants). Here, 5 of the results were deemed relevant. The way this was decided was by searching the reviews for people who took antidepressants and the possible side effects for that medication was weight gain. Antidepressants whose side effects did not include weight gain were deemed irrelevant, although weight gain was reported in some other reviews.
 \[
 P@10 = \frac{5}{10} = 0.5
@@ -647,8 +651,8 @@ For this precision metric, the Average Precision for each result is to be calcul
 \subsection{Performance Analysis}
 
 \section{Conclusions}
-TODO:
-Having completed this milestone of the project marks a very important step in the development of our system. The work carried out to this date has made it possible to transform an initial set of diverse, loosely related data into a cohesive and structured basis for \textit{\textbf{PRIMED}}. By carrying out data cleaning operations, we have been able to maintain the quality of the information while simultaneously reducing inconsistencies and duplicates. Outfitted with this data, \textit{\textbf{PRIMED}} will be able to offer users a practical source for consulting medical information; however, we will keep an eye on the dataset in case there is a need for further enhancements during future milestones.
+
+Completing these project milestones marks a significant step in the development of our system. The work carried out to this date has made it possible to transform an initial set of diverse, loosely related data into a cohesive and structured basis for \textit{\textbf{PRIMED}}. By carrying out data cleaning operations, we have been able to maintain the quality of the information while simultaneously reducing inconsistencies and duplicates. With this refined data collection, we created two initial versions of the \textit{\textbf{PRIMED}} search engine by indexing the data in Solr, performing querying operations in both of these systems, and evaluating and comparing the subsequent results. The focus during the next milestone will be to keep improving upon these versions in order to enhance their accuracy and efficiency.
 
 \appendix
 \section{Annexes}
