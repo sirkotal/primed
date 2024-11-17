@@ -56,10 +56,7 @@
             "name": "reviews_average_rating",
             "type": "pdouble",
             "indexed": true,
-            "stored": true,
-            "multiValued": false,
-            "omitNorms": true,
-            "docValues": true
+            "stored": true
         },
         {
             "name": "reviews",
