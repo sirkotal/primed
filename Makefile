@@ -17,7 +17,7 @@ install:
 	@echo "Installing dependencies..."
 	@. $(ACTIVATE) && pip install -r $(REQS) && echo "" && echo "Dependencies installed successfully!" && echo ""
 	@echo "Checking for $(LIB_NAME)..." && \
-		if python -c 'import $(LIB_NAME)' 2>/dev/null; then \
+		if . $(ACTIVATE) && python -c 'import $(LIB_NAME)' 2>/dev/null; then \
 			LIB_PATH=$$(python -c 'import $(LIB_NAME); import os; print(os.path.dirname($(LIB_NAME).__file__))') && \
 			echo "Applying patch to $$LIB_PATH..." && \
 			patch -p0 -d $$LIB_PATH < $(PATCH_FILE) && echo "Patch applied successfully"; \
