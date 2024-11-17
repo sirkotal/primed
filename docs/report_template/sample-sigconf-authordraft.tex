@@ -588,7 +588,13 @@ Finally, an independent boost is added, based on the \texttt{excellent\_-\\revie
 
 \section{System Evaluation}
 
+This chapter outlines the evaluation process used to assess the precision of the search engine - that is, its ability to accurately retrieve the data a user is searching - as well as the metrics employed for this purpose.
+
 \subsection{Ground Truth Development}
+
+To evaluate the performance of each search engine system, we manually created QRELS\cite{qrels} files - one for each information need selected for the evaluation process. This involved searching through our data collection for suitable medicines and selecting the top 30 documents for each information need.
+
+Each QRELS file was created manually; despite being a cumbersome process, it ensured that each file contained list of relevant documents for the specific information need, which was critical for evaluating the precision of each version of the search engine's retrieval capabilities.
 
 \subsection{Performance Metrics}
 
