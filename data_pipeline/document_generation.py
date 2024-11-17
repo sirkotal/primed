@@ -16,14 +16,13 @@ def separate_words(text):
   return new_text
 
 def summarize_drug_reviews(drug_reviews):
-    summary_data = defaultdict(lambda: {"total_rating": 0, "count": 0, "usefulCount": 0, "excelent": 0, "average": 0, "poor": 0, "reviews": []})
+    summary_data = defaultdict(lambda: {"total_rating": 0, "count": 0, "excelent": 0, "average": 0, "poor": 0, "reviews": []})
 
     for review_data in drug_reviews:
         drug_name = review_data["drugName"]
         
         summary_data[drug_name]["total_rating"] += int(review_data["rating"])
         summary_data[drug_name]["count"] += 1
-        summary_data[drug_name]["usefulCount"] += int(review_data["usefulCount"])
         summary_data[drug_name]["reviews"].append(review_data["review"])
         if int(review_data["rating"]) > 7:
             summary_data[drug_name]["excelent"] += 1
@@ -37,10 +36,9 @@ def summarize_drug_reviews(drug_reviews):
         summarized_entry = {
             "drugName": drug_name,
             "average_rating": data["total_rating"] / data["count"],
-            "excelent_rating": data["excelent"] / data["count"],
-            "average_rating": data["average"] / data["count"],
-            "poor_rating": data["poor"] / data["count"],
-            "usefulCount": data["usefulCount"],
+            "excelent_rating_perc": data["excelent"] / data["count"],
+            "average_rating_perc": data["average"] / data["count"],
+            "poor_rating_perc": data["poor"] / data["count"],
             "reviews": data["reviews"]
         }
         summarizedList.append(summarized_entry)
@@ -116,24 +114,17 @@ def find_diseases(terms):
 
 def find_cuf_diseases(terms):
     matched_diseases = []
+    keys = list(cuf_sicknesses.keys())
 
     for term in terms:
-        name_parts = term.split()
-        for part in name_parts:
-            if part in cuf_sicknesses:
-                sickness_info = cuf_sicknesses[part]
+        for sickness_name in keys:
+            if sickness_name.lower() in term.lower() or term.lower() in sickness_name.lower():
+                sickness_info = cuf_sicknesses[sickness_name]
                 description = "".join([f"//{k}//{v}" for k, v in sickness_info.items()])
                 matched_diseases.append({
-                    "Sickness": part,
+                    "Sickness": sickness_name,
                     "Description": description
                 })
-            for key, sickness_info in cuf_sicknesses.items():
-                if key.lower() in part:
-                    description = "".join([f"//{k}//{v}" for k, v in sickness_info.items()])
-                    matched_diseases.append({
-                        "Sickness": key,
-                        "Description": description
-                    })
     
     return matched_diseases
 
@@ -161,16 +152,13 @@ for drug, details in drug_details.items():
 
     if related_reviews:
         total_ratings = sum(review['average_rating'] for review in related_reviews)
-        total_useful_count = sum(review['usefulCount'] for review in related_reviews)
         for review in related_reviews:
             all_reviews += review['reviews']
         reviews_average_rating = round(total_ratings / len(related_reviews), 2) if related_reviews else 0
-        reviews_useful_count = total_useful_count
-        related_perc = {'excelent_rating': round(review['excelent_rating'], 2), 'average_rating': round(review['average_rating'], 2), 'poor_rating': round(review['poor_rating'], 2)}
+        related_perc = {'excelent_rating_perc': round(review['excelent_rating_perc'] * 100, 2), 'average_rating_perc': round(review['average_rating_perc'] * 100, 2), 'poor_rating_perc': round(review['poor_rating_perc'] * 100, 2)}
     else:
         reviews_average_rating = "0"
-        reviews_useful_count = "0"
-        related_perc = {'excelent_rating': 0, 'average_rating': 0, 'poor_rating': 0}
+        related_perc = {'excelent_rating_perc': 0, 'average_rating_perc': 0, 'poor_rating_perc': 0}
         all_reviews = []
     
     company_info = find_company(details['Manufacturer'])
@@ -179,14 +167,12 @@ for drug, details in drug_details.items():
         "drug": drug,
         "composition": details['Composition'],
         "applicable_diseases": details['Uses'],
-        "diseases_info": [disease['Description'] for disease in related_diseases if 'Description' in disease],
-        "diseases_info2": [disease['Description'] for disease in related_cuf_diseases if 'Description' in disease],
+        "diseases_info": [disease['Description'] for disease in related_diseases if 'Description' in disease] + [disease['Description'] for disease in related_cuf_diseases if 'Description' in disease],
         "possible_side_effects": details['Side_effects'],
-        "excellent_review_perc": str(related_perc['excelent_rating']),
-        "average_review_perc": str(related_perc['average_rating']),
-        "poor_review_perc": str(related_perc['poor_rating']),
+        "excellent_review_perc": str(related_perc['excelent_rating_perc']),
+        "average_review_perc": str(related_perc['average_rating_perc']),
+        "poor_review_perc": str(related_perc['poor_rating_perc']),
         "reviews_average_rating": str(reviews_average_rating),
-        "reviews_useful_count": str(reviews_useful_count),
         "reviews": all_reviews,
         "manufacturer": details['Manufacturer'],
         "manufacturer_desc": repair_string(company_info['Description']),
