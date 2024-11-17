@@ -640,6 +640,36 @@ The Mean Average Precision\cite{map}, or MAP, is a commonly used performance met
 A Precision-Recall (P-R) Curve\cite{prcurves} is calculated for each individual query and system, based on the ranked collection of documents returned by Solr. For instance, the larger the area under the P-R curve\cite{auc}, the better a system performs.
 
 \subsection{Performance Analysis}
+To evaluate the performance of our data and schemas the P@k metric is used and a K of 10 was defined. This metric selects a number of results and within those, the number of relevant and irrelevant ones are accounted for. For each query, the P@10 was calculated in the simple and advanced schemas to determine if the results are relevant or not.\newline
+\textbf{Companies with treatment for Malaria}- Simple and advanced schema:
+\[
+P@10 = \frac{3}{10} = 0.3	/	P@10 = \frac{5}{10} = 0.5
+\]
+\textbf{Reviews from Eli Lilly}- Simple and advanced schema:
+\[
+P@10 = \frac{9}{10} = 0.9	/	P@10 = \frac{9}{10} = 0.9
+\]
+\textbf{Weight gain from antidepressants}- Simple and advanced schema:
+\[
+P@10 = \frac{5}{10} = 0.5	/	P@10 = \frac{7}{10} = 0.7
+\]
+\textbf{Medicine for migraines}- Simple and advanced schema:
+\[
+P@10 = \frac{4}{10} = 0.4	/	P@10 = \frac{6}{10} = 0.6
+\]
+The Average Precision for each result is to be calculated and then the mean of every relevant result is taken into account. Here, since there are too many results for each query, only the top 5 for each one were accounted, having for each query the averages of all the results. Keep in mind, these values were calculated at hand.
+
+\begin{itemize}
+	\item \textbf{Q1}: Here, the R1, R2 and R3 are relevant and R4 and R5 are not, having the AP of 3/5 percent.
+	\item \textbf{Q2}: Since this result is the return of reviews this AC is 100 percent, taking into account that all results are relevant.
+	\item \textbf{Q3}: This AC was calculated as 2/5, a these were hard to qualify as relevant because of missing information.
+	\item \textbf{Q4}: Here, the second, third and fourth results were deemed relevant so it was attributed an AC of 3/5.
+\end{itemize}
+
+With that in mind, the MAC was calculated.
+\[
+MAC = \frac{\frac{3}{5} + 1 + \frac{2}{5} + \frac{3}{5}}{4} = 0.65
+\]
 
 \section{Conclusions}
 
