@@ -399,7 +399,7 @@ Here is a list of possible information needs, explaining what type of data is ne
 Based one these needs, we can answer some questions like: 
 \begin{arrowlist}
 	\item Which medicines are more commonly used to treat the common cold?
-    \item Trustworthy companies that provide medicines for Alzheimer’s disease. 
+        \item Trustworthy companies that provide medicines for Alzheimer’s disease. 
 	\item How does the composition of medicine for diabetes vary between manufacturers like Novo Nordisk, Eli Lilly, and Sanofi?
 	\item What are the most effective treatments for managing rheumatoid vasculitis pain and inflammation?
 	\item What is the best treatment for persistent migraine symptoms, including nausea and light sensitivity?
@@ -465,7 +465,7 @@ As a result, two different schemas were created - one for the baseline system, w
 
 Since every field has the \textit{stored} property set to \textit{true} in both schemas, it won't be displayed in the upcoming (advanced) schema table. Of all the fields present, only two are not indexed (have the \textit{indexed} property set to \textit{false}): \texttt{manufacturer\_start} and \texttt{manufactu-\\rer\_end}, since they are only used to display additional information about a medicine's manufacturer and are not actively used in any search tasks. The only fields with the \textit{multiValued} property enabled are those that store a list of strings: \texttt{reviews}, \texttt{diseases\_info}, \texttt{applicable\_diseases} and \texttt{possible\_side\_effects}.
 
-For the basic schema, only native Solr data types were used - no additional field types were created. For this reason, no tokenizers\cite{tokenizer} or filters\cite{filters} were added in the basic schema; however, the text fields utilize the \textit{text\_general} type, which tokenizes with a standard tokenizer. The percentage fields were assigned the \textit{pint} type, while the field representing the average rating of the reviews was assigned the \textit{pdouble} type.
+For the basic schema, only native Solr data types were used - no additional field types were created. For this reason, no tokenizers\cite{tokenizer} or filters\cite{filters} were added in the basic schema; however, the text fields utilize the \textit{text\_general} type, which tokenizes with a standard tokenizer. The percentage fields type, as well as the field representing the average rating of the reviews, were assigned the \textit{pdouble} type.
 
 For the advanced schema, since the goal is to perform queries on textual field, a new field type, \textbf{\textit{textBoosted}}, was created, based on the \textit{TextField} class, which makes use of both tokenizers and filters - while the tokenizers are responsible for breaking field data into lexical units (tokens), filters examine the stream of tokens and keep them, discard them or transform them depending on the specific filter being used. The \textbf{\textit{textBoosted}} field type includes: 
 
@@ -499,9 +499,9 @@ The table below provides an overview of the advanced schema's structure, detaili
     applicable\_diseases & shortText & \ding{51} & \ding{51}\\
     diseases\_info & diseasesBoosted & \ding{51} & \ding{51}\\
     possible\_side\_effects & shortText & \ding{51} & \ding{51}\\
-    excellent\_review\_perc & pint & \ding{51} & \ding{55}\\
-    average\_review\_perc & pint & \ding{51} & \ding{55}\\
-    poor\_review\_perc & pint & \ding{51} & \ding{55}\\
+    excellent\_review\_perc & pdouble & \ding{51} & \ding{55}\\
+    average\_review\_perc & pdouble & \ding{51} & \ding{55}\\
+    poor\_review\_perc & pdouble & \ding{51} & \ding{55}\\
     reviews\_average\_rating & pdouble & \ding{51} & \ding{55}\\
     reviews & textBoosted & \ding{51} & \ding{51}\\
     manufacturer\_desc & textBoosted & \ding{51} & \ding{55}\\
@@ -587,23 +587,10 @@ Finally, an independent boost is added, based on the \texttt{excellent\_review\_
 \end{table}
 
 \section{System Evaluation}
-In this section, the information retrieval performance is evaluated, seeking to understand if the querying system is effective and works as expected.
 
 \subsection{Ground Truth Development}
-Our QRELS were created using important information related to the expected queries.
 
 \subsection{Performance Metrics}
-To evaluate the effectiveness of retrieved information, some metrics were established and analyzed. One example are the defined queries to be evaluated. These are derived from information needs and are:
-
-\begin{arrowlist}
-	\item Vomiting and cold treatment.
-	\item Intacept reviews.
-	\item Companies with treatment for headache.
-	\item Best reviews from Novo Nordisk, Eli Lilly and Sanofi.
-	\item Weight gain from antidepressants.
-	\item Common side effects from Metoder tablet.
-\end{arrowlist}
-These queries were tested and evaluated. The outputs produced were quick and fast, having information easy to fetch. They were also found to have relevant information.
 
 \subsection{Performance Analysis}
 
