@@ -598,23 +598,21 @@ Each QRELS file was created manually; despite being a cumbersome process, it ens
 
 \subsection{Performance Metrics}
 
-\subsubsection{Manual Evaluation}
-
 To evaluate the effectiveness of the information retrieved from querying, specific metrics were established and analysed. The evaluation process, however, requires predefined queries, derived from specific information needs, to be utilized:
 
 \begin{arrowlist}
-	\item \textbf{Q1}: Companies with treatment for malaria.
-	\item \textbf{Q2}: Reviews from Eli Lilly.
-	\item \textbf{Q3}: Weight gain from antidepressants.
-	\item \textbf{Q4}: Medicine for migraines.
+	\item \textit{Q1}: Companies with treatment for malaria.
+	\item \textit{Q2}: Reviews from Eli Lilly.
+	\item \textit{Q3}: Weight gain from antidepressants.
+	\item \textit{Q4}: Medicine for migraines.
 \end{arrowlist}
 
-Each one of these queries was tested and evaluated, the evaluation being considerate of the used schema, the simple and advanced.
+Each one of these queries was properly tested, with the number of documents retrieved for each query in both systems being recorded.
 
 \begin{table}[H]
-	\begin{tabular}{ | m{5em} | m{1cm}| m{1cm} | } 
+	\begin{tabular}{ | m{5em} | m{1cm}| m{1.2cm} | } 
 		\hline
-		Query& Simple results & Advanced results \\ 
+		Query& Simple Results & Advanced Results \\ 
 		\hline
 		Q1 & 1 & 60 \\ 
 		\hline
@@ -625,34 +623,19 @@ Each one of these queries was tested and evaluated, the evaluation being conside
 		Q4 & 1 & 4842 \\ 
 		\hline
 	\end{tabular}
-	\caption{Queries evaluation table}
-	\label{tab:advanced_query}
+	\caption{Query Results}
+	\label{tab:query_results}
 \end{table}
-
-\textbf{Companies with treatment for Malaria}: From the advanced query, 60 results were found, all having the companies who produced it and mostly with more information about it. The simple schema produced the same output.
-
-\textbf{Reviews from Eli Lilly}: There were 61 entries found using the advanced schema, where only drugs from Eli Lilly were retrieved and ordered from the best to worst reviews average rating. 
-
-\textbf{Weight gain from antidepressants}: 1573 results were found in the advanced schema query where both side effects and/or reviews would include weight gain/antidepressants.
-
-\textbf{Medicine for migraines}: Trying to find a solution for migraines, 4842 solutions were found on the advanced schema.
 
 \subsubsection{Precision@k}
 
-To evaluate the performance of our data and schemas the P@k metric is used and a K of 10 was defined. This metric selects a number of results and within those, the number of relevant and irrelevant ones are accounted for. In this case, we decided to test this metric on the advanced schema for the third query example (Weight gain from antidepressants). Here, 5 of the results were deemed relevant. The way this was decided was by searching the reviews for people who took antidepressants and the possible side effects for that medication was weight gain. Antidepressants whose side effects did not include weight gain were deemed irrelevant, although weight gain was reported in some other reviews.
-\[
-P@10 = \frac{5}{10} = 0.5
-\]
+To evaluate the performance of our systems, the P@k metric\cite{pak} is used, with the choice being made of evaluating the first ten documents returned for each query. This metric gauges the accuracy of the system by analysing the top k results and calculating the proportion of those documents that are relevant. 
 
 \subsubsection{Mean Average Precision}
-For this precision metric, the Average Precision for each result is to be calculated and then the mean of every relevant result is taken into account. Here, since there are too many results for each query, only the top 5 for each one were accounted, having for each query the averages
 
-\begin{itemize}
-	\item \textbf{Q1}: Here, the R1, R2 and R3 are relevant and R4 and R5 not relevant, having the AP of the first 3 results of 100 percent and the final AC of 1/3 as the last 2 were not deemed relevant.
-	\item \textbf{Q2}: Since this result is the return of reviews this AC is 100 percent, taking into account that all results are relevant.
-	\item \textbf{Q3}: This AC was almost all calculated in the previous subsection (P@K) with a result of 50 percent, having the 
-	\item \textbf{Q4}: R2, R3, R4
-\end{itemize}
+The Mean Average Precision\cite{map}, or MAP, is a commonly used performance metric that calculates the mean of every relevant result is taken into account. Here, since there are too many results for each query, only the top 5 for each one were accounted, having for each query the averages
+
+\subsubsection{P-R Curves}
 
 \subsection{Performance Analysis}
 
