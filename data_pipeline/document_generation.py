@@ -3,18 +3,6 @@ from collections import defaultdict
 from text_cleanup import repair_string
 import re
 
-def separate_words(text):
-  pattern = r"([a-z]+)([A-Z][a-z]+)"
-
-  new_text = re.sub(pattern, r"\1 \2", text)
-  test_text = re.sub(pattern, r"\1 \2", new_text)
-
-  while new_text != test_text:
-    new_text = re.sub(pattern, r"\1 \2", test_text)
-    test_text = re.sub(pattern, r"\1 \2", new_text)
-
-  return new_text
-
 def summarize_drug_reviews(drug_reviews):
     summary_data = defaultdict(lambda: {"total_rating": 0, "count": 0, "excelent": 0, "average": 0, "poor": 0, "reviews": []})
 
@@ -46,16 +34,16 @@ def summarize_drug_reviews(drug_reviews):
     return summarizedList
 
 
-with open('../dataset/output/drug_details.json', 'r') as f:
+with open('./dataset/output/drug_details.json', 'r') as f:
     drug_details = json.load(f)
 
-with open('../dataset/output/diseases.json', 'r') as f:
+with open('./dataset/output/diseases.json', 'r') as f:
     diseases = json.load(f)
 
-with open('../dataset/output/cuf_sicknesses.json', 'r') as f:
+with open('./dataset/output/cuf_sicknesses.json', 'r') as f:
     cuf_sicknesses = json.load(f)
 
-with open('../dataset/output/pharmaceutical_companies.json', 'r') as f:
+with open('./dataset/output/pharmaceutical_companies.json', 'r') as f:
     companies = json.load(f)
 
 
@@ -69,10 +57,10 @@ def load_reviews(filenames):
 
 
 review_files = [
-    '../dataset/output/drug_reviews_part_1.json',
-    '../dataset/output/drug_reviews_part_2.json',
-    '../dataset/output/drug_reviews_part_3.json',
-    '../dataset/output/drug_reviews_part_4.json'
+    './dataset/output/drug_reviews_part_1.json',
+    './dataset/output/drug_reviews_part_2.json',
+    './dataset/output/drug_reviews_part_3.json',
+    './dataset/output/drug_reviews_part_4.json'
 ]
 
 drug_reviews = load_reviews(review_files)
@@ -141,48 +129,51 @@ def find_company(manufacturer_name):
             
     return companies.get(manufacturer_name, {'Description': '', 'Year Start': '', 'Year End': ''})
 
-
-combined_data = []
-for drug, details in drug_details.items():
-    related_diseases = find_diseases(details['Uses'])
-    related_cuf_diseases = find_cuf_diseases(details['Uses'])
+def combine_data():
+    combined_data = []
+    for drug, details in drug_details.items():
+        related_diseases = find_diseases(details['Uses'])
+        related_cuf_diseases = find_cuf_diseases(details['Uses'])
     
-    related_reviews = find_reviews(details['Composition'])
-    all_reviews = []
-
-    if related_reviews:
-        total_ratings = sum(review['average_rating'] for review in related_reviews)
-        for review in related_reviews:
-            all_reviews += review['reviews']
-        reviews_average_rating = round(total_ratings / len(related_reviews), 2) if related_reviews else 0
-        related_perc = {'excelent_rating_perc': round(review['excelent_rating_perc'] * 100, 2), 'average_rating_perc': round(review['average_rating_perc'] * 100, 2), 'poor_rating_perc': round(review['poor_rating_perc'] * 100, 2)}
-    else:
-        reviews_average_rating = "0"
-        related_perc = {'excelent_rating_perc': 0, 'average_rating_perc': 0, 'poor_rating_perc': 0}
+        related_reviews = find_reviews(details['Composition'])
         all_reviews = []
-    
-    company_info = find_company(details['Manufacturer'])
-    
-    combined_entry = {
-        "drug": drug,
-        "composition": details['Composition'],
-        "applicable_diseases": details['Uses'],
-        "diseases_info": [disease['Description'] for disease in related_diseases if 'Description' in disease] + [disease['Description'] for disease in related_cuf_diseases if 'Description' in disease],
-        "possible_side_effects": details['Side_effects'],
-        "excellent_review_perc": str(related_perc['excelent_rating_perc']),
-        "average_review_perc": str(related_perc['average_rating_perc']),
-        "poor_review_perc": str(related_perc['poor_rating_perc']),
-        "reviews_average_rating": str(reviews_average_rating),
-        "reviews": all_reviews,
-        "manufacturer": details['Manufacturer'],
-        "manufacturer_desc": repair_string(company_info['Description']),
-        "manufacturer_start": repair_string(company_info['Year Start']),
-        "manufacturer_end": company_info['Year End']
-    }
 
-    combined_data.append(combined_entry)
-
-with open('../docker/data/combined_drug_data.json', 'w') as f:
-    json.dump(combined_data, f, indent=4)
+        if related_reviews:
+            total_ratings = sum(review['average_rating'] for review in related_reviews)
+            total_useful_count = sum(review['usefulCount'] for review in related_reviews)
+            for review in related_reviews:
+                all_reviews += review['reviews']
+            reviews_average_rating = round(total_ratings / len(related_reviews), 2) if related_reviews else 0
+            reviews_useful_count = total_useful_count
+        else:
+            reviews_average_rating = "0"
+            reviews_useful_count = "0"
+            all_reviews = []
     
-print("Combined data created successfully!")
+        company_info = find_company(details['Manufacturer'])
+    
+        combined_entry = {
+            "drug": drug,
+            "composition": details['Composition'],
+            "applicable_diseases": details['Uses'],
+            "diseases_info": [disease['Description'] for disease in related_diseases if 'Description' in disease],
+            "diseases_info2": [disease['Description'] for disease in related_cuf_diseases if 'Description' in disease],
+            "possible_side_effects": details['Side_effects'],
+            "excellent_review_perc": details['Excellent Review %'],
+            "average_review_perc": details['Average Review %'],
+            "poor_review_perc": details['Poor Review %'],
+            "reviews_average_rating": str(reviews_average_rating),
+            "reviews_useful_count": str(reviews_useful_count),
+            "reviews": all_reviews,
+            "manufacturer": details['Manufacturer'],
+            "manufacturer_desc": repair_string(company_info['Description']),
+            "manufacturer_start": repair_string(company_info['Year Start']),
+            "manufacturer_end": company_info['Year End']
+        }
+
+        combined_data.append(combined_entry)
+
+    with open('./docker/data/combined_drug_data.json', 'w') as f:
+        json.dump(combined_data, f, indent=4)
+    
+    print("Combined data created successfully!")
