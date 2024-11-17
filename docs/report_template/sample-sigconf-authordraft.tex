@@ -399,7 +399,7 @@ Here is a list of possible information needs, explaining what type of data is ne
 Based one these needs, we can answer some questions like: 
 \begin{arrowlist}
 	\item Which medicines are more commonly used to treat the common cold?
-        \item Trustworthy companies that provide medicines for Alzheimer’s disease. 
+    \item Trustworthy companies that provide medicines for Alzheimer’s disease. 
 	\item How does the composition of medicine for diabetes vary between manufacturers like Novo Nordisk, Eli Lilly, and Sanofi?
 	\item What are the most effective treatments for managing rheumatoid vasculitis pain and inflammation?
 	\item What is the best treatment for persistent migraine symptoms, including nausea and light sensitivity?
@@ -587,10 +587,23 @@ Finally, an independent boost is added, based on the \texttt{excellent\_review\_
 \end{table}
 
 \section{System Evaluation}
+In this section, the information retrieval performance is evaluated, seeking to understand if the querying system is effective and works as expected.
 
 \subsection{Ground Truth Development}
+Our QRELS were created using important information related to the expected queries.
 
 \subsection{Performance Metrics}
+To evaluate the effectiveness of retrieved information, some metrics were established and analyzed. One example are the defined queries to be evaluated. These are derived from information needs and are:
+
+\begin{arrowlist}
+	\item Vomiting and cold treatment.
+	\item Intacept reviews.
+	\item Companies with treatment for headache.
+	\item Best reviews from Novo Nordisk, Eli Lilly and Sanofi.
+	\item Weight gain from antidepressants.
+	\item Common side effects from Metoder tablet.
+\end{arrowlist}
+These queries were tested and evaluated. The outputs produced were quick and fast, having information easy to fetch. They were also found to have relevant information.
 
 \subsection{Performance Analysis}
 
