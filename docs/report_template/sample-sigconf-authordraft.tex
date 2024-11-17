@@ -301,7 +301,7 @@ This dataset contains around 215000 entries and is covered by the \textit{\textb
 
 \section{Pipeline Description}
 
-As mentioned in section 3.2 of this report, \textit{\textbf{PRIMED}}'s data comes from various sources. Due to the often unstructured nature of this data, it is vital to have a streamlined and automated way of normalizing and processing all the information into similar formats, which is the main role of the data pipeline, present in figure [1].
+As mentioned in section 3.2 of this report, \textit{\textbf{PRIMED}}'s data comes from various sources. Due to the often unstructured nature of this data, it is vital to have a streamlined and automated way of normalizing and processing all the information into similar formats, which is the main role of the data pipeline, present in figure~[\ref{fig:pipeline}].
 
 \begin{figure}[h]
 	\centering
@@ -357,29 +357,29 @@ The final version of the dataset, representing the collection of documents, cont
 
 \subsection{Distribution of Drug Manufacturers}
 
-By analysing figure [3], which shows the distribution of the main pharmaceutical companies responsible for manufacturing medicines where the five that possess the largest share are highlighted, we are given a clearer understanding of each manufacturers' production capabilities.
+By analysing figure~[\ref{fig:topManufacturers}], which shows the distribution of the main pharmaceutical companies responsible for manufacturing medicines where the five that possess the largest share are highlighted, we are given a clearer understanding of each manufacturers' production capabilities.
 
 \subsection{Distribution of Reviews}
 
-A box plot, present in figure [4], is utilized to analyse the distribution of “Excellent”, “Average” and “Poor” review percentages across the different medicines. The graph shows that, for instance, "Excellent" reviews percentages are more evenly spread than the "Average" reviews percentages which, despite having a lower interquartile range\cite{iqrange}, possesses a higher number of outliers. The "Poor" review percentages have the largest variations, but also the lowest values. 
+A box plot, present in figure~[\ref{fig:reviewDistribution}], is utilized to analyse the distribution of “Excellent”, “Average” and “Poor” review percentages across the different medicines. The graph shows that, for instance, "Excellent" reviews percentages are more evenly spread than the "Average" reviews percentages which, despite having a lower interquartile range\cite{iqrange}, possesses a higher number of outliers. The "Poor" review percentages have the largest variations, but also the lowest values. 
 
-In figure [5], we can see the average percentage of reviews for the top ten use cases, which supports the findings from figure [4].
+In figure~[\ref{fig:reviewPercMean}], we can see the average percentage of reviews for the top ten use cases, which supports the findings from figure~[\ref{fig:reviewDistribution}].
 
 \subsection{Distribution of Side Effects}
 
-By analysing figure [6], we can identify the most common side effects caused by medication - nausea, headaches, diarrhea - and how many medicines are associated to each one of them. As expected, the data shows that side effects that occur more frequently are those that are milder in nature.
+By analysing figure~[\ref{fig:sideEffectsDistribution}], we can identify the most common side effects caused by medication - nausea, headaches, diarrhea - and how many medicines are associated to each one of them. As expected, the data shows that side effects that occur more frequently are those that are milder in nature.
 
 \subsection{Common Uses Word Cloud}
 
-Figure [7] contains a word cloud with the most common use cases for medicines. “Bacterial Infections” and "Hypertension", for example, are clearly highlighted in the graph, being conditions that are found and treated more frequently.
+Figure~[\ref{fig:commonUses}] contains a word cloud with the most common use cases for medicines. “Bacterial Infections” and "Hypertension", for example, are clearly highlighted in the graph, being conditions that are found and treated more frequently.
 
 \subsection{Most Common Drug Compositions}
 
-Figure [8] identifies the the most common drug combinations available in the market, with “Levocetirizine + Montelukast” being the most prevalent, followed by other combinations such as “Luliconazole” and “Domperidone + Rabeprazole”.
+Figure~[\ref{fig:commonDrugCompositions}] identifies the the most common drug combinations available in the market, with “Levocetirizine + Montelukast” being the most prevalent, followed by other combinations such as “Luliconazole” and “Domperidone + Rabeprazole”.
 
 \subsection{Years with the Most Companies Foundations}	
 
-By analysing figure [9], it's possible to observe the years in which the most pharmaceutical companies were founded, with 2003 standing out. This temporal analysis gives us some information about periods of significant growth in the pharmaceutical industry.
+By analysing figure~[\ref{fig:companyYears}], it's possible to observe the years in which the most pharmaceutical companies were founded, with 2003 standing out. This temporal analysis gives us some information about periods of significant growth in the pharmaceutical industry.
 
 \section{Information Needs}
 
@@ -510,6 +510,8 @@ manufacturer\_end & text\_general & \ding{55} & \ding{55}\\
 
 \subsection{Retrieval}
 
+
+
 \section{System Evaluation}
 
 \subsection{Ground Truth Development}
@@ -528,7 +530,7 @@ manufacturer\_end & text\_general & \ding{55} & \ding{55}\\
 	\includegraphics[width=\linewidth]{graphic1.png}
 	\caption{Top Drug Manufacturers}
 	\Description{Dataset Characterization \textit{\textbf{PRIMED}}'s data}
-	\label{fig:uml}
+	\label{fig:topManufacturers}
   \end{figure}
 
 \begin{figure}[H]
@@ -536,7 +538,7 @@ manufacturer\_end & text\_general & \ding{55} & \ding{55}\\
 	\includegraphics[width=\linewidth]{graphic2.png}
 	\caption{Distribution of Reviews}
 	\Description{Dataset Characterization \textit{\textbf{PRIMED}}'s data}
-	\label{fig:uml}
+	\label{fig:reviewDistribution}
   \end{figure}
 
 \begin{figure}[H]
@@ -544,7 +546,7 @@ manufacturer\_end & text\_general & \ding{55} & \ding{55}\\
 	\includegraphics[width=\linewidth]{graphic3.png}
 	\caption{Mean of Reviews Percentages by Uses}
 	\Description{Dataset Characterization \textit{\textbf{PRIMED}}'s data}
-	\label{fig:uml}
+	\label{fig:reviewPercMean}
   \end{figure}
 
 \begin{figure}[H]
@@ -552,7 +554,7 @@ manufacturer\_end & text\_general & \ding{55} & \ding{55}\\
 	\includegraphics[width=\linewidth]{graphic4.png}
 	\caption{Distribution of Side Effects}
 	\Description{Dataset Characterization \textit{\textbf{PRIMED}}'s data}
-	\label{fig:uml}
+	\label{fig:sideEffectsDistribution}
   \end{figure}
 
 \begin{figure}[H]
@@ -560,7 +562,7 @@ manufacturer\_end & text\_general & \ding{55} & \ding{55}\\
 	\includegraphics[width=\linewidth]{graphic5.png}
 	\caption{Common Uses Word Cloud}
 	\Description{Dataset Characterization \textit{\textbf{PRIMED}}'s data}
-	\label{fig:uml}
+	\label{fig:commonUses}
   \end{figure} 
 
 \begin{figure}[H]
@@ -568,7 +570,7 @@ manufacturer\_end & text\_general & \ding{55} & \ding{55}\\
 	\includegraphics[width=\linewidth]{graphic6.png}
 	\caption{Most Common Drug Compositions}
 	\Description{Dataset Characterization \textit{\textbf{PRIMED}}'s data}
-	\label{fig:uml}
+	\label{fig:commonDrugCompositions}
   \end{figure}   
 
 \begin{figure}[H]
@@ -576,7 +578,7 @@ manufacturer\_end & text\_general & \ding{55} & \ding{55}\\
 	\includegraphics[width=\linewidth]{graphic7.png}
 	\caption{Years with the Most Companies Foundations}
 	\Description{Dataset Characterization \textit{\textbf{PRIMED}}'s data}
-	\label{fig:uml}
+	\label{fig:companyYears}
   \end{figure}
 
 %%
