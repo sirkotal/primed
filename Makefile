@@ -27,6 +27,11 @@ install:
 		fi
 	@echo "Done!"
 
+uninstall:
+	@rm -rf $(VENV_DIR) __pycache__
+	@rm -rf data_pipeline/__pycache__
+	@rm -rf venv
+
 run:
 	@. $(ACTIVATE) && $(PYTHON) data_pipeline/main.py && echo "" && echo "Done!"
 
