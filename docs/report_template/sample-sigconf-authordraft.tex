@@ -560,11 +560,11 @@ The baseline system exclusively uses the common parameters, along with the \text
     \label{tab:simple_query}
 \end{table}
 
-Alternatively, the advanced system makes use of the all the common and optimization parameters, allowing for theoretically better results to be achieved when processing a query. In this case, the common parameters have the same values as the ones in the baseline system, but the designated query fields, albeit similar in structure to those in the baseline system, have different weights in the ranking process: the \texttt{reviews} field has a weight of 4 and the \texttt{diseases\_info} field has a weight of 3, as they are the most important sources of information; \texttt{manufacturer\_desc} maintains a weight of 1. 
+Alternatively, the advanced system makes use of the all the common and optimization parameters, with the exception of the \texttt{sort} parameter, allowing for theoretically better results to be achieved when processing a query. In this case, the common parameters have the same values as the ones in the baseline system, but the designated query fields, albeit similar in structure to those in the baseline system, have different weights in the ranking process: the \texttt{reviews} field has a weight of 4 and the \texttt{diseases\_info} field has a weight of 3, as they are the most important sources of information; \texttt{manufacturer\_desc} maintains a weight of 1. 
 
 The document receives an additional boost if all of the terms in the query are found in close proximity of each other (exact phrase match) within the \texttt{reviews} field, due to the more informal nature its text. Nevertheless, to account for some variation in word order or the presence of extra words, a phrase slop of 2 is applied to allow for more flexibility when searching for the phrase matches.
 
-Finally, an independent boost is added, based on the \texttt{excellent\_review\_perc} and \texttt{poor\_review\_perc} fields, with values of 1.5 and 0.5, respectively. This adjusts the scoring of each document based on its respective percentage of positive and negative reviews.
+Finally, an independent boost is added, based on the \texttt{excellent\_review\_perc} and \texttt{poor\_review\_perc} fields, with values of 1.5 and 0.5, respectively. This adjusts the scoring of each document based on its respective percentage of positive and negative reviews, effectively replacing the sorting utilized in the baseline system.
 
 \begin{table}[H]
     \begin{tabular}{ll}
@@ -573,7 +573,6 @@ Finally, an independent boost is added, based on the \texttt{excellent\_review\_
     \midrule
     q & \$query\\
     q.op & AND\\
-    sort & reviews\_average\_rating desc\\
     start & 0\\
     rows & 30\\
     qf & diseases\_info\^{}3 reviews\^{}4 manufacturer\_desc\\
