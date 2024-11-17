@@ -9,7 +9,6 @@ ACTIVATE = $(VENV_DIR)/bin/activate
 REQS = data_pipeline/requirements.txt
 LIB_NAME = wordninja
 PATCH_FILE = ./patches/split_fix.patch
-# LIB_PATH = $(shell $(PYTHON) -c "import $(LIB_NAME); import os; print(os.path.dirname($(LIB_NAME).__file__))")
 
 install:
 	@echo "Creating virtual environment..."
