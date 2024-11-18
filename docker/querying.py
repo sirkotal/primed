@@ -2,9 +2,10 @@ def generate_simple_query(user_query):
     query_params = {
         'q': user_query,
         'q.op': "AND",
-        'sort': "reviews_average_rating desc",
+        'sort': "score desc",
         'start': 0,
         'rows': 30,
+        "fl": "id,drug,composition,applicable_diseases,diseases_info,possible_side_effects,excellent_review_perc,average_review_perc,poor_review_perc,reviews_average_rating,reviews_useful_count,reviews,manufacturer,manufacturer_desc,manufacturer_start,manufacturer_end,score",
         'defType': "edismax",
         'qf': "diseases_info reviews manufacturer_desc"
     }
