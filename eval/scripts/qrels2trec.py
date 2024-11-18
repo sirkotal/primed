@@ -11,7 +11,7 @@ def qrels_to_trec(qrels: list) -> None:
     - qrels: A list of qrel lines (document IDs) from standard input.
     """
     for line in qrels:
-        doc_id = line.strip()
+        doc_id = line.strip().replace(" ", "_")
         print(f"0 0 {doc_id} 1")
 
 
