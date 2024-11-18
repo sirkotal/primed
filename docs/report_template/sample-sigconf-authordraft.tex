@@ -640,23 +640,27 @@ The Mean Average Precision\cite{map}, or MAP, is a commonly used performance met
 A Precision-Recall (P-R) Curve\cite{prcurves} is calculated for each individual query and system, based on the ranked collection of documents returned by Solr. For instance, the larger the area under the P-R curve\cite{auc}, the better a system performs.
 
 \subsection{Performance Analysis}
-To evaluate the performance of our data and schemas the P@k metric is used and a K of 10 was defined. This metric selects a number of results and within those, the number of relevant and irrelevant ones are accounted for. For each query, the P@10 was calculated in the simple and advanced schemas to determine if the results are relevant or not.\newline
-\textbf{Companies with treatment for Malaria}- Simple and advanced schema:
+
+In this section, the results for every single query in both systems will be examined by analysing the different values for each performance metric, which will help to determine the accuracy of each system in regards to retrieving relevant information.\newline
+\textbf{\textit{Q1}}:
 \[
-P@10 = \frac{3}{10} = 0.3	/	P@10 = \frac{5}{10} = 0.5
+P@10 = \frac{3}{10} = 0.3	,	P@10 = \frac{5}{10} = 0.5
 \]
-\textbf{Reviews from Eli Lilly}- Simple and advanced schema:
+\textbf{\textit{Q2}}:
 \[
-P@10 = \frac{9}{10} = 0.9	/	P@10 = \frac{9}{10} = 0.9
+P@10 = \frac{9}{10} = 0.9	,	P@10 = \frac{9}{10} = 0.9
 \]
-\textbf{Weight gain from antidepressants}- Simple and advanced schema:
+\textbf{\textit{Q3}}:
 \[
-P@10 = \frac{5}{10} = 0.5	/	P@10 = \frac{7}{10} = 0.7
+P@10 = \frac{5}{10} = 0.5	,	P@10 = \frac{7}{10} = 0.7
 \]
-\textbf{Medicine for migraines}- Simple and advanced schema:
+\textit{Q4}:
 \[
-P@10 = \frac{4}{10} = 0.4	/	P@10 = \frac{6}{10} = 0.6
+P@10 = \frac{4}{10} = 0.4	,	P@10 = \frac{6}{10} = 0.6
 \]
+
+As expected, the values of the P@k metric are slightly higher in the advanced system, with the exception of the second query. However, since the value for both systems is extremely high, this might be caused by the query itself being rather simple.
+
 The Average Precision for each result is to be calculated and then the mean of every relevant result is taken into account.
 The Mean Average Precision defined using the P-R Curve as it provides the MAP value.
 \[
