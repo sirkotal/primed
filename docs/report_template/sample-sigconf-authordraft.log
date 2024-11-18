@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.5.26)  18 NOV 2024 01:15
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.5.26)  18 NOV 2024 01:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1279,17 +1279,31 @@ File: precision_recal_simple_1.png Graphic file (type png)
 <use precision_recal_simple_1.png>
 Package pdftex.def Info: precision_recal_simple_1.png  used on input line 748.
 (pdftex.def)             Requested size: 241.14749pt x 180.851pt.
-<precision_recal_simple_4.png, id=282, 1927.2pt x 1445.4pt>
-File: precision_recal_simple_4.png Graphic file (type png)
-<use precision_recal_simple_4.png>
-Package pdftex.def Info: precision_recal_simple_4.png  used on input line 756.
+<precision_recal_simple_2.png, id=282, 1927.2pt x 1445.4pt>
+File: precision_recal_simple_2.png Graphic file (type png)
+<use precision_recal_simple_2.png>
+Package pdftex.def Info: precision_recal_simple_2.png  used on input line 756.
 (pdftex.def)             Requested size: 241.14749pt x 180.851pt.
 
 Underfull \vbox (badness 4205) has occurred while \output is active []
 
+<precision_recal_simple_3.png, id=283, 1927.2pt x 1445.4pt>
+File: precision_recal_simple_3.png Graphic file (type png)
+<use precision_recal_simple_3.png>
+Package pdftex.def Info: precision_recal_simple_3.png  used on input line 764.
+(pdftex.def)             Requested size: 241.14749pt x 180.851pt.
+<precision_recal_simple_4.png, id=284, 1927.2pt x 1445.4pt>
+File: precision_recal_simple_4.png Graphic file (type png)
+<use precision_recal_simple_4.png>
+Package pdftex.def Info: precision_recal_simple_4.png  used on input line 772.
+(pdftex.def)             Requested size: 241.14749pt x 180.851pt.
 
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-LaTeX Warning: File `system_arch.png' not found on input line 764.
+ [9.9 <./graphic6.png> <./graphic7.png> <./precision_recal_simple_1.png> <./pre
+cision_recal_simple_2.png> <./precision_recal_simple_3.png>]
+
+LaTeX Warning: File `system_arch.png' not found on input line 780.
 
 
 ! Package pdftex.def Error: File `system_arch.png' not found: using draft setti
@@ -1299,7 +1313,7 @@ See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.764 ...aphics[width=\linewidth]{system_arch.png}
+l.780 ...aphics[width=\linewidth]{system_arch.png}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -1316,34 +1330,36 @@ Underfull \hbox (badness 2478) in paragraph at lines 22--26
  []$https : / / creativecommons . org /
  []
 
-[9.9 <./graphic6.png> <./graphic7.png> <./precision_recal_simple_1.png> <./prec
-ision_recal_simple_4.png>])
+)
 
 Package natbib Warning: There were undefined citations.
+
+
+Package balance Warning: You have called \balance in second column
+(balance)                Columns might not be balanced.
 
 (D:\Miktex\tex/generic/stringenc\se-pdfdoc.def
 File: se-pdfdoc.def 2019/11/29 v1.12 stringenc: PDFDocEncoding
 )
 (D:\Miktex\tex/generic/stringenc\se-utf8.def
 File: se-utf8.def 2019/11/29 v1.12 stringenc: UTF-8
-) [10.10]
-(sample-sigconf-authordraft.aux)
+) [10.10 <./precision_recal_simple_4.png>] (sample-sigconf-authordraft.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
  ***********
 Package rerunfilecheck Info: File `sample-sigconf-authordraft.out' has not chan
 ged.
-(rerunfilecheck)             Checksum: F176D03C003622BD9AA6E941155B9080;6051.
+(rerunfilecheck)             Checksum: EE4399D397EB19E287E9F9C50342A335;6051.
  ) 
 Here is how much of TeX's memory you used:
- 21861 strings out of 474486
- 348293 string characters out of 5760170
+ 21879 strings out of 474486
+ 348869 string characters out of 5760170
  1954542 words of memory out of 5000000
- 43077 multiletter control sequences out of 15000+600000
+ 43093 multiletter control sequences out of 15000+600000
  715143 words of font info for 372 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
- 90i,13n,131p,1025b,689s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 90i,13n,131p,1025b,626s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <D:/Miktex/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb><D:/Miktex/fon
 ts/type1/public/newtx/LibertineMathMI.pfb><D:/Miktex/fonts/type1/public/newtx/L
 ibertineMathMI7.pfb><D:/Miktex/fonts/type1/public/libertine/LinBiolinumT.pfb><D
@@ -1354,9 +1370,9 @@ ktex/fonts/type1/public/libertine/LinLibertineTBI.pfb><D:/Miktex/fonts/type1/pu
 blic/libertine/LinLibertineTI.pfb><D:/Miktex/fonts/type1/public/newtx/txmiaX.pf
 b><D:/Miktex/fonts/type1/public/newtx/txsys.pfb><D:/Miktex/fonts/type1/urw/zapf
 ding/uzdr.pfb>
-Output written on sample-sigconf-authordraft.pdf (10 pages, 1291154 bytes).
+Output written on sample-sigconf-authordraft.pdf (10 pages, 1397061 bytes).
 PDF statistics:
- 399 PDF objects out of 1000 (max. 8388607)
- 91 named destinations out of 1000 (max. 500000)
- 86870 words of extra memory for PDF output out of 89155 (max. 10000000)
+ 403 PDF objects out of 1000 (max. 8388607)
+ 93 named destinations out of 1000 (max. 500000)
+ 86880 words of extra memory for PDF output out of 89155 (max. 10000000)
 
