@@ -644,44 +644,44 @@ A Precision-Recall (P-R) Curve\cite{prcurves} is calculated for each individual 
 In this section, the results for every single query in both systems will be examined by analysing the different values for each performance metric, which will help to determine the accuracy of each system in regards to retrieving relevant information.\newline
 \textbf{\textit{Q1}}:
 \[
-P@10_S = \frac{3}{10} = 0.3	,	P@10_A = \frac{5}{10} = 0.5
+P@10_S = \frac{9}{10} = 0.9	,	P@10_A = \frac{5}{10} = 0.5
 \]
 \textbf{\textit{Q2}}:
 \[
-P@10_S = \frac{9}{10} = 0.9	,	P@10_A = \frac{9}{10} = 0.9
+P@10_S = \frac{7}{10} = 0.7	,	P@10_A = \frac{4}{10} = 0.4
 \]
 \textbf{\textit{Q3}}:
 \[
-P@10_S = \frac{5}{10} = 0.5	,	P@10_A = \frac{7}{10} = 0.7
+P@10_S = \frac{7}{10} = 0.7	,	P@10_A = \frac{2}{10} = 0.2
 \]
 \textbf{\textit{Q4}}:
 \[
-P@10_S = \frac{4}{10} = 0.4	,	P@10_A = \frac{6}{10} = 0.6
+P@10_S = \frac{7}{10} = 0.7	,	P@10_A = \frac{0}{10} = 0
 \]
-
-As expected, the values of the P@k metric are slightly higher in the advanced system (represented with an \textit{A}), with the exception of the second query. However, since the value for both systems is extremely high, this might be caused by the query itself being rather simple.
 
 The Average Precision is calculated for each query result, and the mean of these values across all relevant results is used to determine the Mean Average Precision, which in this case is obtained via the P-R Curve, as it provides the MAP value for all queries and systems. The figures containing each P-R Curve are placed in the appendix. \newline
 \textbf{\textit{Q1}}:
 \[
-MAP_S = 0.8128	,	MAP_A = x
+MAP_S = 0.8128	,	MAP_A = 0.2694
 \]
 \textbf{\textit{Q2}}:
 \[
-MAP_S = 0.6921	,	MAP_A = x
+MAP_S = 0.6921	,	MAP_A = 0.2414
 \]
 \textbf{\textit{Q3}}:
 \[
-MAP_S = 0.7179	,	MAP_A = x
+MAP_S = 0.7179	,	MAP_A = 0.0870
 \]
 \textbf{\textit{Q4}}:
 \[
-MAP_S = 0.6376	,	MAP_A = x
+MAP_S = 0.6376	,	MAP_A = 0
 \]
+
+Contrary to what we expected, the values of the P@k and MAP metrics were way lower in the advanced system (represented with an \textit{A}). However, when manually analysing the documents returned in the response, it became clear that the problem was most likely the way the QRELS files were built rather than the system itself. Even so, it makes it very hard to make a legitimate cross-system performance comparison and discussion.
 
 \section{Conclusions}
 
-Completing these project milestones marks a significant step in the development of our system. The work carried out to this date has made it possible to transform an initial set of diverse, loosely related data into a cohesive and structured basis for \textit{\textbf{PRIMED}}. By carrying out data cleaning operations, we have been able to maintain the quality of the information while simultaneously reducing inconsistencies and duplicates. With this refined data collection, we created two initial versions of the \textit{\textbf{PRIMED}} search engine by indexing the data in Solr, performing querying operations in both of these systems, and evaluating and comparing the subsequent results. The focus during the next milestone will be to keep improving upon these versions in order to enhance their accuracy and efficiency.
+Completing these project milestones marks a significant step in the development of our system. The work carried out to this date has made it possible to transform an initial set of diverse, loosely related data into a cohesive and structured basis for \textit{\textbf{PRIMED}}. By carrying out data cleaning operations, we have been able to maintain the quality of the information while simultaneously reducing inconsistencies and duplicates. With this refined data collection, we created two initial versions of the \textit{\textbf{PRIMED}} search engine by indexing the data in Solr, performing querying operations in both of these systems, and evaluating and comparing the subsequent results. Despite the progress, however, it was extremely frustrating to see the whole performance analysis process be foiled because of faulty QRELS files. Nevertheless, the focus during the next milestone will be to keep improving upon these versions in order to enhance their accuracy and efficiency, as well as fixing the QRELS files so that we can obtain more precise results.
 
 \appendix
 \section{Annexes}
@@ -780,6 +780,38 @@ Completing these project milestones marks a significant step in the development 
   \caption{Q4 P-R Curve -> Baseline System}
   \Description{Q4 P-R Curve -> Baseline System}
   \label{fig:precisionRecalSimple4}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\linewidth]{precision_recal_advanced_1.png}
+  \caption{Q1 P-R Curve -> Advanced System}
+  \Description{Q1 P-R Curve -> Advanced System}
+  \label{fig:precisionRecalAdv1}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\linewidth]{precision_recal_advanced_2.png}
+  \caption{Q2 P-R Curve -> Advanced System}
+  \Description{Q2 P-R Curve -> Advanced System}
+  \label{fig:precisionRecalAdv2}
+\end{figure}
+  
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\linewidth]{precision_recal_advanced_3.png}
+	\caption{Q3 P-R Curve -> Advanced System}
+	\Description{Q3 P-R Curve -> Advanced System}
+	\label{fig:precisionRecalAdv3}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\linewidth]{precision_recal_advanced_4.png}
+  \caption{Q4 P-R Curve -> Advanced System}
+  \Description{Q4 P-R Curve -> Advanced System}
+  \label{fig:precisionRecalAdv4}
 \end{figure}
 
 %%
