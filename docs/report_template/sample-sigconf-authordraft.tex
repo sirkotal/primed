@@ -614,13 +614,13 @@ Each one of these queries was properly tested, with the number of documents retr
 		\hline
 		Query& Simple Results & Advanced Results \\ 
 		\hline
-		Q1 & 1 & 60 \\ 
+		Q1 & 30 & 60 \\ 
 		\hline
-		Q2 & 1 & 61 \\ 
+		Q2 & 54 & 61 \\ 
 		\hline
-		Q3 & 1 & 1573 \\ 
+		Q3 & 1391 & 1573 \\ 
 		\hline
-		Q4 & 1 & 4842 \\ 
+		Q4 & 3897 & 4842 \\ 
 		\hline
 	\end{tabular}
 	\caption{Query Results}
@@ -640,27 +640,43 @@ The Mean Average Precision\cite{map}, or MAP, is a commonly used performance met
 A Precision-Recall (P-R) Curve\cite{prcurves} is calculated for each individual query and system, based on the ranked collection of documents returned by Solr. For instance, the larger the area under the P-R curve\cite{auc}, the better a system performs.
 
 \subsection{Performance Analysis}
-To evaluate the performance of our data and schemas the P@k metric is used and a K of 10 was defined. This metric selects a number of results and within those, the number of relevant and irrelevant ones are accounted for. For each query, the P@10 was calculated in the simple and advanced schemas to determine if the results are relevant or not.\newline
-\textbf{Companies with treatment for Malaria}- Simple and advanced schema:
+
+In this section, the results for every single query in both systems will be examined by analysing the different values for each performance metric, which will help to determine the accuracy of each system in regards to retrieving relevant information.\newline
+\textbf{\textit{Q1}}:
 \[
-P@10 = \frac{3}{10} = 0.3	/	P@10 = \frac{5}{10} = 0.5
+P@10_S = \frac{3}{10} = 0.3	,	P@10_A = \frac{5}{10} = 0.5
 \]
-\textbf{Reviews from Eli Lilly}- Simple and advanced schema:
+\textbf{\textit{Q2}}:
 \[
-P@10 = \frac{9}{10} = 0.9	/	P@10 = \frac{9}{10} = 0.9
+P@10_S = \frac{9}{10} = 0.9	,	P@10_A = \frac{9}{10} = 0.9
 \]
-\textbf{Weight gain from antidepressants}- Simple and advanced schema:
+\textbf{\textit{Q3}}:
 \[
-P@10 = \frac{5}{10} = 0.5	/	P@10 = \frac{7}{10} = 0.7
+P@10_S = \frac{5}{10} = 0.5	,	P@10_A = \frac{7}{10} = 0.7
 \]
-\textbf{Medicine for migraines}- Simple and advanced schema:
+\textbf{\textit{Q4}}:
 \[
-P@10 = \frac{4}{10} = 0.4	/	P@10 = \frac{6}{10} = 0.6
+P@10_S = \frac{4}{10} = 0.4	,	P@10_A = \frac{6}{10} = 0.6
 \]
-The Average Precision for each result is to be calculated and then the mean of every relevant result is taken into account.
-The Mean Average Precision defined using the P-R Curve as it provides the MAP value.
+
+As expected, the values of the P@k metric are slightly higher in the advanced system (represented with an \textit{A}), with the exception of the second query. However, since the value for both systems is extremely high, this might be caused by the query itself being rather simple.
+
+The Average Precision is calculated for each query result, and the mean of these values across all relevant results is used to determine the Mean Average Precision, which in this case is obtained via the P-R Curve, as it provides the MAP value for all queries and systems. The figures containing each P-R Curve are placed in the appendix. \newline
+\textbf{\textit{Q1}}:
 \[
-MAP = 0.6376
+MAP_S = 0.8128	,	MAP_A = x
+\]
+\textbf{\textit{Q2}}:
+\[
+MAP_S = 0.6921	,	MAP_A = x
+\]
+\textbf{\textit{Q3}}:
+\[
+MAP_S = 0.7179	,	MAP_A = x
+\]
+\textbf{\textit{Q4}}:
+\[
+MAP_S = 0.6376	,	MAP_A = x
 \]
 
 \section{Conclusions}
@@ -733,6 +749,38 @@ Completing these project milestones marks a significant step in the development 
 	\Description{\textit{\textbf{PRIMED}}'s Solr system architecture}
 	\label{fig:sysArchitecture}
   \end{figure}
+  
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\linewidth]{precision_recal_simple_1.png}
+  \caption{Q1 P-R Curve -> Baseline System}
+  \Description{Q1 P-R Curve -> Baseline System}
+  \label{fig:precisionRecalSimple1}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\linewidth]{precision_recal_simple_2.png}
+  \caption{Q2 P-R Curve -> Baseline System}
+  \Description{Q2 P-R Curve -> Baseline System}
+  \label{fig:precisionRecalSimple2}
+\end{figure}
+  
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\linewidth]{precision_recal_simple_3.png}
+	\caption{Q3 P-R Curve -> Baseline System}
+	\Description{Q3 P-R Curve -> Baseline System}
+	\label{fig:precisionRecalSimple3}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\linewidth]{precision_recal_simple_4.png}
+  \caption{Q4 P-R Curve -> Baseline System}
+  \Description{Q4 P-R Curve -> Baseline System}
+  \label{fig:precisionRecalSimple4}
+\end{figure}
 
 %%
 %% The next two lines define the bibliography style to be used, and
