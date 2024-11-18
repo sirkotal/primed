@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.5.26)  17 NOV 2024 23:44
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.5.26)  17 NOV 2024 23:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1237,32 +1237,35 @@ Package natbib Warning: Citation `auc' on page 7 undefined on input line 640.
 <graphic1.png, id=263, 722.7pt x 433.62pt>
 File: graphic1.png Graphic file (type png)
 <use graphic1.png>
-Package pdftex.def Info: graphic1.png  used on input line 683.
+Package pdftex.def Info: graphic1.png  used on input line 675.
 (pdftex.def)             Requested size: 241.14749pt x 144.68962pt.
 <graphic2.png, id=265, 784.73175pt x 486.618pt>
 File: graphic2.png Graphic file (type png)
 <use graphic2.png>
-Package pdftex.def Info: graphic2.png  used on input line 691.
+Package pdftex.def Info: graphic2.png  used on input line 683.
 (pdftex.def)             Requested size: 241.14749pt x 149.53575pt.
 <graphic3.png, id=266, 1110.0672pt x 550.6974pt>
 File: graphic3.png Graphic file (type png)
 <use graphic3.png>
-Package pdftex.def Info: graphic3.png  used on input line 699.
+Package pdftex.def Info: graphic3.png  used on input line 691.
 (pdftex.def)             Requested size: 241.14749pt x 119.62447pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
 <graphic4.png, id=267, 1037.67674pt x 544.434pt>
 File: graphic4.png Graphic file (type png)
 <use graphic4.png>
-Package pdftex.def Info: graphic4.png  used on input line 707.
+Package pdftex.def Info: graphic4.png  used on input line 699.
 (pdftex.def)             Requested size: 241.14749pt x 126.52144pt.
 <graphic5.png, id=268, 655.85025pt x 367.3725pt>
 File: graphic5.png Graphic file (type png)
 <use graphic5.png>
-Package pdftex.def Info: graphic5.png  used on input line 715.
+Package pdftex.def Info: graphic5.png  used on input line 707.
 (pdftex.def)             Requested size: 241.14749pt x 135.07362pt.
 <graphic6.png, id=269, 1110.0672pt x 550.6974pt>
 File: graphic6.png Graphic file (type png)
 <use graphic6.png>
-Package pdftex.def Info: graphic6.png  used on input line 723.
+Package pdftex.def Info: graphic6.png  used on input line 715.
 (pdftex.def)             Requested size: 241.14749pt x 119.62447pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1272,8 +1275,13 @@ aphic5.png>]
 <graphic7.png, id=279, 1025.63174pt x 523.35526pt>
 File: graphic7.png Graphic file (type png)
 <use graphic7.png>
-Package pdftex.def Info: graphic7.png  used on input line 731.
+Package pdftex.def Info: graphic7.png  used on input line 723.
 (pdftex.def)             Requested size: 241.14749pt x 123.04439pt.
+<precision_recal_simple_4.png, id=280, 1927.2pt x 1445.4pt>
+File: precision_recal_simple_4.png Graphic file (type png)
+<use precision_recal_simple_4.png>
+Package pdftex.def Info: precision_recal_simple_4.png  used on input line 731.
+(pdftex.def)             Requested size: 241.14749pt x 180.851pt.
 
 
 LaTeX Warning: File `system_arch.png' not found on input line 739.
@@ -1291,6 +1299,10 @@ l.739 ...aphics[width=\linewidth]{system_arch.png}
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
+
+Underfull \vbox (badness 4205) has occurred while \output is active []
+
+
 (sample-sigconf-authordraft.bbl
 Underfull \hbox (badness 6758) in paragraph at lines 14--20
 []\T1/LinuxLibertineT-TLF/m/n/7 (+20) Kaggle.  11000 medicine de-tails.  []$htt
@@ -1303,36 +1315,33 @@ Underfull \hbox (badness 2478) in paragraph at lines 22--26
  []$https : / / creativecommons . org /
  []
 
-)
+[9.9 <./graphic6.png> <./graphic7.png> <./precision_recal_simple_4.png>])
 
 Package natbib Warning: There were undefined citations.
-
-
-Package balance Warning: You have called \balance in second column
-(balance)                Columns might not be balanced.
 
 (D:\Miktex\tex/generic/stringenc\se-pdfdoc.def
 File: se-pdfdoc.def 2019/11/29 v1.12 stringenc: PDFDocEncoding
 )
 (D:\Miktex\tex/generic/stringenc\se-utf8.def
 File: se-utf8.def 2019/11/29 v1.12 stringenc: UTF-8
-) [9.9 <./graphic6.png> <./graphic7.png>] (sample-sigconf-authordraft.aux)
+) [10.10]
+(sample-sigconf-authordraft.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
  ***********
 Package rerunfilecheck Info: File `sample-sigconf-authordraft.out' has not chan
 ged.
-(rerunfilecheck)             Checksum: 7E6F534BC74CB4EE4D2D60F99E8097E7;6051.
+(rerunfilecheck)             Checksum: DC231563BC3746DFBEC0700518FBFBA5;6051.
  ) 
 Here is how much of TeX's memory you used:
- 21856 strings out of 474486
- 348130 string characters out of 5760170
+ 21852 strings out of 474486
+ 348050 string characters out of 5760170
  1954542 words of memory out of 5000000
- 43061 multiletter control sequences out of 15000+600000
- 715580 words of font info for 380 fonts, out of 8000000 for 9000
+ 43069 multiletter control sequences out of 15000+600000
+ 714232 words of font info for 371 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
- 90i,12n,131p,1025b,637s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 90i,12n,131p,1025b,729s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <D:/Miktex/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb><D:/Miktex/fon
 ts/type1/public/newtx/LibertineMathMI.pfb><D:/Miktex/fonts/type1/public/liberti
 ne/LinBiolinumT.pfb><D:/Miktex/fonts/type1/public/libertine/LinBiolinumTB.pfb><
@@ -1342,9 +1351,9 @@ LibertineTB.pfb><D:/Miktex/fonts/type1/public/libertine/LinLibertineTBI.pfb><D:
 /Miktex/fonts/type1/public/libertine/LinLibertineTI.pfb><D:/Miktex/fonts/type1/
 public/newtx/txmiaX.pfb><D:/Miktex/fonts/type1/public/newtx/txsys.pfb><D:/Mikte
 x/fonts/type1/urw/zapfding/uzdr.pfb>
-Output written on sample-sigconf-authordraft.pdf (9 pages, 1178653 bytes).
+Output written on sample-sigconf-authordraft.pdf (10 pages, 1232090 bytes).
 PDF statistics:
- 385 PDF objects out of 1000 (max. 8388607)
- 88 named destinations out of 1000 (max. 500000)
- 88908 words of extra memory for PDF output out of 89155 (max. 10000000)
+ 391 PDF objects out of 1000 (max. 8388607)
+ 90 named destinations out of 1000 (max. 500000)
+ 86865 words of extra memory for PDF output out of 89155 (max. 10000000)
 
