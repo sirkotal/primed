@@ -49,6 +49,7 @@
 \usepackage{hyperref}
 \usepackage{enumitem}
 \usepackage{pifont}
+\usepackage{array}
 \newlist{arrowlist}{itemize}{1}
 \setlist[arrowlist]{label=$\Rightarrow$}
 %%\usepackage{indentfirst}
@@ -560,11 +561,11 @@ The baseline system exclusively uses the common parameters, along with the \text
     \label{tab:simple_query}
 \end{table}
 
-Alternatively, the advanced system makes use of the all the common and optimization parameters, allowing for theoretically better results to be achieved when processing a query. In this case, the common parameters have the same values as the ones in the baseline system, but the designated query fields, albeit similar in structure to those in the baseline system, have different weights in the ranking process: the \texttt{reviews} field has a weight of 4 and the \texttt{diseases\_info} field has a weight of 3, as they are the most important sources of information; \texttt{manufacturer\_desc} maintains a weight of 1. 
+Alternatively, the advanced system makes use of the all the common and optimization parameters, with the exception of the \texttt{sort} parameter, allowing for theoretically better results to be achieved when processing a query. In this case, the common parameters have the same values as the ones in the baseline system, but the designated query fields, albeit similar in structure to those in the baseline system, have different weights in the ranking process: the \texttt{reviews} field has a weight of 4 and the \texttt{diseases\_info} field has a weight of 3, as they are the most important sources of information; \texttt{manufacturer\_desc} maintains a weight of 1. 
 
 The document receives an additional boost if all of the terms in the query are found in close proximity of each other (exact phrase match) within the \texttt{reviews} field, due to the more informal nature its text. Nevertheless, to account for some variation in word order or the presence of extra words, a phrase slop of 2 is applied to allow for more flexibility when searching for the phrase matches.
 
-Finally, an independent boost is added, based on the \texttt{excellent\_review\_perc} and \texttt{poor\_review\_perc} fields, with values of 1.5 and 0.5, respectively. This adjusts the scoring of each document based on its respective percentage of positive and negative reviews.
+Finally, an independent boost is added, based on the \texttt{excellent\_-\\review\_perc} and \texttt{poor\_review\_perc} fields, with values of 1.5 and 0.5, respectively. This adjusts the scoring of each document based on its respective percentage of positive and negative reviews, effectively replacing the sorting utilized in the baseline system.
 
 \begin{table}[H]
     \begin{tabular}{ll}
@@ -573,7 +574,6 @@ Finally, an independent boost is added, based on the \texttt{excellent\_review\_
     \midrule
     q & \$query\\
     q.op & AND\\
-    sort & reviews\_average\_rating desc\\
     start & 0\\
     rows & 30\\
     qf & diseases\_info\^{}3 reviews\^{}4 manufacturer\_desc\\
@@ -588,15 +588,84 @@ Finally, an independent boost is added, based on the \texttt{excellent\_review\_
 
 \section{System Evaluation}
 
+This chapter outlines the evaluation process used to assess the precision of the search engine - that is, its ability to accurately retrieve the data a user is searching - as well as the metrics employed for this purpose.
+
 \subsection{Ground Truth Development}
+
+To evaluate the performance of each search engine system, we manually created QRELS\cite{qrels} files - one for each information need selected for the evaluation process. This involved searching through our data collection for suitable medicines and selecting the top 30 documents for each information need.
+
+Each QRELS file was created manually; despite being a cumbersome task, it ensured that each file contained a list of relevant documents for the corresponding information need, which was critical for evaluating the precision of each version of the search engine's retrieval process.
 
 \subsection{Performance Metrics}
 
+To evaluate the effectiveness of the information retrieved from querying, specific metrics were established and analysed. The evaluation process, however, requires predefined queries, derived from specific information needs, to be utilized:
+
+\begin{arrowlist}
+	\item \textit{Q1}: Companies with treatment for malaria.
+	\item \textit{Q2}: Reviews from Eli Lilly.
+	\item \textit{Q3}: Weight gain from antidepressants.
+	\item \textit{Q4}: Medicine for migraines.
+\end{arrowlist}
+
+Each one of these queries was properly tested, with the number of documents retrieved for each query in both systems being recorded.
+
+\begin{table}[H]
+	\begin{tabular}{ | m{5em} | m{1cm}| m{1.2cm} | } 
+		\hline
+		Query& Simple Results & Advanced Results \\ 
+		\hline
+		Q1 & 1 & 60 \\ 
+		\hline
+		Q2 & 1 & 61 \\ 
+		\hline
+		Q3 & 1 & 1573 \\ 
+		\hline
+		Q4 & 1 & 4842 \\ 
+		\hline
+	\end{tabular}
+	\caption{Query Results}
+	\label{tab:query_results}
+\end{table}
+
+\subsubsection{Precision@k}
+
+To evaluate the performance of our systems, the P@k metric\cite{pak} is used, with the choice being made of evaluating the first ten documents returned for each query. This metric gauges the accuracy of the system by analysing the top k results and calculating the proportion of those documents that are relevant. 
+
+\subsubsection{Mean Average Precision}
+
+The Mean Average Precision\cite{map}, or MAP, is a commonly used performance metric that calculates the average of the precision values at specific positions in the ranked collection where relevant documents appear.
+
+\subsubsection{P-R Curve}
+
+A Precision-Recall (P-R) Curve\cite{prcurves} is calculated for each individual query and system, based on the ranked collection of documents returned by Solr. For instance, the larger the area under the P-R curve\cite{auc}, the better a system performs.
+
 \subsection{Performance Analysis}
+To evaluate the performance of our data and schemas the P@k metric is used and a K of 10 was defined. This metric selects a number of results and within those, the number of relevant and irrelevant ones are accounted for. For each query, the P@10 was calculated in the simple and advanced schemas to determine if the results are relevant or not.\newline
+\textbf{Companies with treatment for Malaria}- Simple and advanced schema:
+\[
+P@10 = \frac{3}{10} = 0.3	/	P@10 = \frac{5}{10} = 0.5
+\]
+\textbf{Reviews from Eli Lilly}- Simple and advanced schema:
+\[
+P@10 = \frac{9}{10} = 0.9	/	P@10 = \frac{9}{10} = 0.9
+\]
+\textbf{Weight gain from antidepressants}- Simple and advanced schema:
+\[
+P@10 = \frac{5}{10} = 0.5	/	P@10 = \frac{7}{10} = 0.7
+\]
+\textbf{Medicine for migraines}- Simple and advanced schema:
+\[
+P@10 = \frac{4}{10} = 0.4	/	P@10 = \frac{6}{10} = 0.6
+\]
+The Average Precision for each result is to be calculated and then the mean of every relevant result is taken into account.
+The Mean Average Precision defined using the P-R Curve as it provides the MAP value.
+\[
+MAP = 0.6376
+\]
 
 \section{Conclusions}
-TODO:
-Having completed this milestone of the project marks a very important step in the development of our system. The work carried out to this date has made it possible to transform an initial set of diverse, loosely related data into a cohesive and structured basis for \textit{\textbf{PRIMED}}. By carrying out data cleaning operations, we have been able to maintain the quality of the information while simultaneously reducing inconsistencies and duplicates. Outfitted with this data, \textit{\textbf{PRIMED}} will be able to offer users a practical source for consulting medical information; however, we will keep an eye on the dataset in case there is a need for further enhancements during future milestones.
+
+Completing these project milestones marks a significant step in the development of our system. The work carried out to this date has made it possible to transform an initial set of diverse, loosely related data into a cohesive and structured basis for \textit{\textbf{PRIMED}}. By carrying out data cleaning operations, we have been able to maintain the quality of the information while simultaneously reducing inconsistencies and duplicates. With this refined data collection, we created two initial versions of the \textit{\textbf{PRIMED}} search engine by indexing the data in Solr, performing querying operations in both of these systems, and evaluating and comparing the subsequent results. The focus during the next milestone will be to keep improving upon these versions in order to enhance their accuracy and efficiency.
 
 \appendix
 \section{Annexes}
