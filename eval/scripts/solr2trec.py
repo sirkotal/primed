@@ -26,7 +26,9 @@ def solr_to_trec(solr_response, run_id="run0"):
 
         # Enumerate through the results and write them in TREC format
         for rank, doc in enumerate(docs, start=1):
-            print(f"0 Q0 {doc['id']} {rank} {doc['score']} {run_id}")
+            drug_name = doc['drug'][0] if isinstance(doc['drug'], list) else doc['drug']
+            drug_name = drug_name.replace(" ", "_")
+            print(f"0 Q0 {drug_name} {rank} {doc['score']} {run_id}")
 
     except KeyError:
         print("Error: Invalid Solr response format. 'docs' key not found.")
