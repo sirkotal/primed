@@ -1,1 +1,27 @@
-<h1>Hello, Rails!</h1>
+<h1>Search Results</h1>
+
+<%= form_with url: search_path, method: :get, local: true do |form| %>
+  <%= form.label :query, "Enter your query:" %>
+  <%= form.text_field :query, value: params[:query] %>
+  
+  <div>
+    <%= form.label :type, "Select search system:" %><br>
+    <%= form.radio_button :type, 'baseline', checked: params[:type] != 'advanced' %> Baseline Search<br>
+    <%= form.radio_button :type, 'advanced', checked: params[:type] == 'advanced' %> Advanced Search
+  </div>
+  
+  <%= form.submit "Search" %>
+<% end %>
+
+<% if @error %>
+  <p class="error"><%= @error %></p>
+<% elsif @results %>
+  <ul>
+    <% @results.each do |result| %>
+      <li>
+        <h2><%= result['title'] %></h2>
+        <p><%= result['description'] %></p>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
