@@ -1,25 +1,54 @@
-Amnurite Beta 10/40 ER Tablet
-Amnurite Beta 5/20 ER Tablet
-Migranil EC 1mg/100mg Tablet
-Metopar Tablet
-Paramet Tablet
-Triptolol 10mg/40mg Tablet
-Vasograin Tablet
-Betacap Plus 10 Capsule SR
-Betacap Plus 5 Capsule SR
-Dompar 10mg/325mg Tablet
-Fluner 5 Tablet
-Flupanol 10mg Tablet
-Flupanol 5mg Tablet
-Grenil Tablet
-Grenil-F 10 Tablet
-Headset Tablet
-Rizora 10 Tablet
-Rizanet 10 Oral Disintegrating Strip
-Rizact 5 Tablet
-Rizact 10 Tablet
-Provanol Plus 10 Tablet
-Napsea Tablet
-Naprosyn D 500 Tablet
-Migrellium 10mg Tablet
-Migitus 5mg Tablet SR
+Sibelium 10mg Tablet
+Sibelium 5mg Tablet
+Topamac 50mg Tablet
+Topamac 100mg Tablet
+Metopole 25 XL Tablet
+Betaloc 50mg Tablet
+Betaloc 100mg Tablet
+Seloken XL 25mg Tablet
+Seloken XL 50mg Tablet
+Seloken XL 100mg Tablet
+Tryptinol 25 Tablet
+Telkonol AM 40mg/5mg Tablet
+Metopole-AM 5mg/50mg Tablet
+Olmo AM 20mg/5mg Tablet
+Telkonol M 40mg/25mg Tablet
+Prelogic Capsule
+Stugeron Plus Tablet (comum às duas listas)
+Olmo 20 Tablet
+Nervsenz Tablet SR
+Neurotrat NP Tablet
+Infen Plaster
+Ketoplast Plaster
+Lupiflex 4 Tablet
+Lupiflex 8 Tablet
+Recofast Plus Tablet
+Onabet SD Solution
+Gelofast Gel
+Instaflex Nano Gel
+Joyace Nano Gel 2X
+Moveran Gel
+Vorto Gel
+Superfen Gel
+Gabafix Gel
+Senseit Gel
+Insulate-NP Tablet
+Ovaa Shield DS Combipack
+Ovanac-CC Tablet
+Histo Calamine Lotion
+Biochemdryl Syrup
+Gulfadryl Syrup
+Gluconorm G2 D Tablet SR
+Zipvert-B6 Tablet
+Stugil D Tablet
+Draminate 50mg Tablet
+Diziron D Tablet MD
+Gemvert Tablet
+Gravol Tablet
+Acton Prolongatum 60IU Injection
+Kimet XL 50 Tablet
+Kimet XL 12.5 Tablet
+Embeta XR 25 Tablet
+Embeta XR 50 Tablet
+Embeta XR 12.5 Tablet
+Embeta 50 Tablet
