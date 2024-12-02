@@ -40,6 +40,6 @@ def generate_boosted_query(user_query):
         'qf': "diseases_info^3 reviews^4 manufacturer_desc",
         'pf': "reviews^3",
         'ps': 2,
-        'bf': "excellent_review_perc^1.5 poor_review_perc^0.5"
+        'bf': f"excellent_review_perc^1.5 poor_review_perc^0.5 query({{!v='side_effects:{user_query}'}})^1.5"
     }
     return query_params
