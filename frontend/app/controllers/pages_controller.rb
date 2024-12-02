@@ -1,19 +1,15 @@
 class PagesController < ApplicationController
   def index
+    # redirect_to action: "search"
   end
   def search
-    query = params[:query]
-    search_type = params[:type] || 'baseline'
-    api_url = 'http://127.0.0.1:8000'
-
-    response = HTTP.post(api_url, form: { query: query })
-
-    if response.status.success?
-      @results = response.parse['results']
+    results_file = Rails.root.join('..', 'solr_simple_response.json')
+    puts results_file
+    
+    if File.exist?(results_file)
+      @results = JSON.parse(File.read(results_file))
     else
-      @error = response.parse['error'] || "An error occurred"
+      @results = { "error" => "No results found" }
     end
-
-    render :search_results
   end
 end

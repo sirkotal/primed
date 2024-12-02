@@ -1,0 +1,14 @@
+<h1>Search Results</h1>
+
+<% if @results["error"] %>
+  <p><%= @results["error"] %></p>
+<% else %>
+  <p>Query: <%= @results["query"] %></p>
+  <ul>
+    <% @results["response"]["docs"].each do |result| %>
+      <li>
+        <strong><%= result["drug"] %></strong>: <%= result["snippet"] %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>

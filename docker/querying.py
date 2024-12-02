@@ -1,8 +1,3 @@
-from flask import Flask
-
-app = Flask(__name__)
-
-@app.route('/search_simple', methods=['POST'])
 def generate_simple_query(user_query):
     query_params = {
         'q': user_query,
@@ -16,21 +11,24 @@ def generate_simple_query(user_query):
     }
     return query_params
 
-@app.route('/search_boosted', methods=['POST'])
 def generate_boosted_query(user_query):
     '''boosted_terms = {"cure": 4.0, "progress": 3.0, "prevent": 2.75, "effective": 2.5, "safe": 2.5, "hope": 1.5, "effects": 3.0, 
                      "risk": 2.5, "concern": 1.5, "reliable": 1.5, "aggressive": 1.5, "death": 2.0, "prestigious": 1.1}
-    boosted_query = []
-    for term in user_query.split():
-        if len(term) > 5:
-            term = f"{term}~1"
-        
+
         if term in boosted_terms:
             boosted_query.append(f"{term}^{boosted_terms[term]}")
         else:
             boosted_query.append(term)
     
     boosted_query = " ".join(boosted_query)'''
+
+    boosted_query = []
+
+    for term in user_query.split():
+        if len(term) > 5:
+            term = f"{term}~1"
+        boosted_query.append(term)
+
     query_params = {
         'q': user_query,
         'q.op': "AND",
@@ -43,6 +41,3 @@ def generate_boosted_query(user_query):
         'bf': "excellent_review_perc^1.5 poor_review_perc^0.5"
     }
     return query_params
-
-if __name__ == '__main__':
-    app.run(debug=True, port=5000)

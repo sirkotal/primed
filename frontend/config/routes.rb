@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   get "/pages", to: "pages#index"
-  get '/search', to: 'pages#search'
+  get "/search", to: "pages#search"
   root "pages#index"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
