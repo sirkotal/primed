@@ -321,9 +321,9 @@ When processing data, another key aspect to consider is that not all data may be
 
 \subsection{Text Normalization}
 
-When scraping information from websites, it is important to make sure all the text is normalized. The data pipeline ensures, via \texttt{Python}'s \texttt{unidecode()} function, that the dataset only contains \texttt{ASCII} characters. This helps prevent future issues when searching the datasets for information.
+When scraping information from websites, it is important to make sure all the text is normalized. The data pipeline ensures, via \texttt{Python}'s \texttt{unidecode} function, that the dataset only contains \texttt{ASCII} characters. This helps prevent future issues when searching the datasets for information.
 
-Another character normalization problem resulting from the scraping process arises due to \texttt{HTML}'s nature - more specifically, escape codes used to represent special characters. To convert these codes into ASCII characters, the \texttt{unescape()}\cite{html} function from \texttt{Python}'s \texttt{html} module, wrapped inside a call to the previously mentioned \texttt{unidecode()} function, to convert the \texttt{Unicode} output into \texttt{ASCII}.
+Another character normalization problem resulting from the scraping process arises due to \texttt{HTML}'s nature - more specifically, escape codes used to represent special characters. To convert these codes into ASCII characters, the \texttt{unescape}\cite{html} function from \texttt{Python}'s \texttt{html} module, wrapped inside a call to the previously mentioned \texttt{unidecode} function, to convert the \texttt{Unicode} output into \texttt{ASCII}.
 
 \subsection{Standardization of Formats}
 
@@ -352,34 +352,18 @@ Each medicine is associated with one and only one pharmaceutical company; a comp
 \section{Dataset Characterization}
 
 With regard to the characterization of the dataset, the data resulting from the pipeline was analysed. Graphs, tables and even word clouds, despite not being the most reliable method, were created to make it easier to understand the structure of the data and the patterns that guide the system itself.
-
-\subsection{General Description}
-
 The final version of the dataset, representing the collection of documents, contains 11498 entries. Each entry represents a medicine along with its related information, such as associated diseases and possible side effects, user reviews, ratings and manufacturer details.
-
-\subsection{Distribution of Drug Manufacturers}
 
 By analysing figure~[\ref{fig:topManufacturers}], which shows the distribution of the main pharmaceutical companies responsible for manufacturing medicines where the five that possess the largest share are highlighted, we are given a clearer understanding of each manufacturers' production capabilities.
 
-\subsection{Distribution of Reviews}
-
 A box plot, present in figure~[\ref{fig:reviewDistribution}], is utilized to analyse the distribution of “Excellent”, “Average” and “Poor” review percentages across the different medicines. The graph shows that, for instance, "Excellent" reviews percentages are more evenly spread than the "Average" reviews percentages which, despite having a lower interquartile range\cite{iqrange}, possesses a higher number of outliers. The "Poor" review percentages have the largest variations, but also the lowest values. 
-
 In figure~[\ref{fig:reviewPercMean}], we can see the average percentage of reviews for the top ten use cases, which supports the findings from figure~[\ref{fig:reviewDistribution}].
-
-\subsection{Distribution of Side Effects}
 
 By analysing figure~[\ref{fig:sideEffectsDistribution}], we can identify the most common side effects caused by medication - nausea, headaches, diarrhea - and how many medicines are associated to each one of them. As expected, the data shows that side effects that occur more frequently are those that are milder in nature.
 
-\subsection{Common Uses Word Cloud}
-
 Figure~[\ref{fig:commonUses}] contains a word cloud with the most common use cases for medicines. “Bacterial Infections” and "Hypertension", for example, are clearly highlighted in the graph, being conditions that are found and treated more frequently.
 
-\subsection{Most Common Drug Compositions}
-
 Figure~[\ref{fig:commonDrugCompositions}] identifies the the most common drug combinations available in the market, with “Levocetirizine + Montelukast” being the most prevalent, followed by other combinations such as “Luliconazole” and “Domperidone + Rabeprazole”.
-
-\subsection{Years with the Most Companies Foundations}	
 
 By analysing figure~[\ref{fig:companyYears}], it's possible to observe the years in which the most pharmaceutical companies were founded, with 2003 standing out. This temporal analysis gives us some information about periods of significant growth in the pharmaceutical industry.
 
@@ -401,7 +385,7 @@ Here is a list of possible information needs, explaining what type of data is ne
 Based one these needs, we can answer some questions like: 
 \begin{arrowlist}
 	\item Which medicines are more commonly used to treat the common cold?
-        \item Trustworthy companies that provide medicines for Alzheimer’s disease. 
+        \item Trustworthy companies that provide medicines for \\Alzheimer’s disease. 
 	\item How does the composition of medicine for diabetes vary between manufacturers like Novo Nordisk, Eli Lilly, and Sanofi?
 	\item What are the most effective treatments for managing rheumatoid vasculitis pain and inflammation?
 	\item What is the best treatment for persistent migraine symptoms, including nausea and light sensitivity?
@@ -685,6 +669,13 @@ Contrary to what we expected, the values of the P@k and MAP metrics were way low
 
 Completing these project milestones marks a significant step in the development of our system. The work carried out to this date has made it possible to transform an initial set of diverse, loosely related data into a cohesive and structured basis for \textit{\textbf{PRIMED}}. By carrying out data cleaning operations, we have been able to maintain the quality of the information while simultaneously reducing inconsistencies and duplicates. With this refined data collection, we created two initial versions of the \textit{\textbf{PRIMED}} search engine by indexing the data in Solr, performing querying operations in both of these systems, and evaluating and comparing the subsequent results. Despite the progress, however, it was extremely frustrating to see the whole performance analysis process be foiled because of faulty QRELS files. Nevertheless, the focus during the next milestone will be to keep improving upon these versions in order to enhance their accuracy and efficiency, as well as fixing the QRELS files so that we can obtain more precise results.
 
+%%
+%% The next two lines define the bibliography style to be used, and
+%% the bibliography file.
+%%\bibliographystyle{ACM-Reference-Format}
+\bibliographystyle{unsrt}
+\bibliography{sample-base}
+
 \appendix
 \section{Annexes}
 
@@ -815,14 +806,6 @@ Completing these project milestones marks a significant step in the development 
   \Description{Q4 P-R Curve -> Advanced System}
   \label{fig:precisionRecalAdv4}
 \end{figure}
-
-%%
-%% The next two lines define the bibliography style to be used, and
-%% the bibliography file.
-%%\bibliographystyle{ACM-Reference-Format}
-\bibliographystyle{unsrt}
-\bibliography{sample-base}
-
 
 %%
 %% If your work has an appendix, this is the place to put it.
