@@ -451,21 +451,21 @@ Since every field has the \textit{stored} property set to \textit{true} in both 
 
 For the basic schema, only native Solr data types were used - no additional field types were created. For this reason, no tokenizers\cite{tokenizer} or filters\cite{filters} were added in the basic schema; however, the text fields utilize the \textit{text\_general} type, which tokenizes with a standard tokenizer. The percentage fields type, as well as the field representing the average rating of the reviews, were assigned the \textit{pdouble} type.
 
-For the advanced schema, since the goal is to perform queries on textual field, a new field type, \textbf{\textit{textBoosted}}, was created, based on the \textit{TextField} class, which makes use of both tokenizers and filters - while the tokenizers are responsible for breaking field data into lexical units (tokens), filters examine the stream of tokens and keep them, discard them or transform them depending on the specific filter being used. The \textbf{\textit{textBoosted}} field type includes: 
+For the advanced schema, since the goal is to perform queries on textual fields, a new field type, \textbf{\textit{textBoosted}}, was created, based on the \textit{TextField} class, which makes use of both tokenizers and filters - while the tokenizers are responsible for breaking field data into lexical units (tokens), filters examine the stream of tokens and keep them, discard them or transform them depending on the specific filter being used. The \textbf{\textit{textBoosted}} field type includes: 
 
 \begin{arrowlist}
 	\item \textbf{\textit{StandardTokenizerFactory}:} Tokenizer that uses whitespaces and punctuation as delimiters to split text into tokens.
         \item \textbf{\textit{ASCIIFoldingFilterFactory}:} Filter that 
     converts Unicode characters like special characters or characters with accents into their ASCII equivalents, if one exists.
 	\item \textbf{\textit{LowerCaseFilterFactory}:} Filter that converts all letters in a token to lowercase.
-	\item \textbf{\textit{SnowballPorterFilterFactory}:} Filter that applies stemming to tokens during text processing by generating pattern-based word stemmers; while less accurate than table-based stemmers, it is faster and less complex. It was also chosen for its aggressive stemming, making it suitable to normalize word variations in the reviews and manufacturer descriptions.
+	\item \textbf{\textit{SnowballPorterFilterFactory}:} Filter that applies stemming\cite{stemming} - the process of reducing a word to its root form (or \textit{stem}) - to tokens during text processing by generating pattern-based word stemmers. While less accurate than table-based stemmers, it is faster and less complex. It was also chosen for its aggressive stemming\footnote{The \textit{SnowballPorterFilterFactory} filter often applies more drastic reductions to words than other stemming filters; for instance, the words \textit{general}, \textit{generous}, \textit{generation} can be reduced to the stem \textit{\textbf{gener}}, despite having different meanings.}, making it suitable to normalize word variations in the reviews and manufacturer descriptions.
 \end{arrowlist}
 
 Two additional field types, similar to \textbf{\textit{textBoosted}}, were also created:
 
 \begin{itemize}
         \item \textbf{\textit{diseasesBoosted}}: Very similar to 
-    \textbf{\textit{textBoosted}}, but utilizes the \textbf{\textit{EnglishMinimalStemFilterFactory}} filter for stemming instead, since it's less powerful and, therefore, more suitable to handle fields with more technical terms - particularly the diseases' information.
+    \textbf{\textit{textBoosted}}, but relies on \textbf{\textit{EnglishMinimalStemFilterFactory}} for stemming instead, which is a lightweight filter, better suited to handle fields that contain more technical terms - particularly the diseases' information.
 	\item \textbf{\textit{shortText}}: Very similar to \textbf{\textit{textBoosted}} but without a stemming filter, as it is applied to short textual fields that contain very specific terms.
 \end{itemize}
 
