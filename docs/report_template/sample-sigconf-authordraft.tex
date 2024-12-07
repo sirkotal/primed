@@ -213,8 +213,6 @@ The \textit{\textbf{PRIMED}} project aims to compile and organize such data so t
 
 In this part of the project, data from various sources was collected, processed and analysed with the goal of creating a solid basis for a pharmaceutical system. The whole process is described in this document, from the choice of the theme itself up to the analysis of gathered data and its subsequent classification.
 
-\section{Theme Selection}
-
 The choice to focus on medicines as the central theme for this project stems from the critical role they play in modern healthcare. Medication is the primary tool for treating multiple health problems and conditions, making them an essential component in both public healthcare systems and individual patient care. The data surrounding these substances, such as active substances, applicable cases and clinical trials, offers valuable insights that can improve decision-making in medical practice and pharmaceutics.
 
 \section{Data Collection}
@@ -628,41 +626,43 @@ A Precision-Recall (P-R) Curve\cite{prcurves} is calculated for each individual 
 \subsection{Performance Analysis}
 
 In this section, the results for every single query in both systems will be examined by analysing the different values for each performance metric, which will help to determine the accuracy of each system in regards to retrieving relevant information.\newline
-\textbf{\textit{Q1}}:
-\[
-P@10_S = \frac{9}{10} = 0.9	,	P@10_A = \frac{5}{10} = 0.5
-\]
-\textbf{\textit{Q2}}:
-\[
-P@10_S = \frac{7}{10} = 0.7	,	P@10_A = \frac{4}{10} = 0.4
-\]
-\textbf{\textit{Q3}}:
-\[
-P@10_S = \frac{7}{10} = 0.7	,	P@10_A = \frac{2}{10} = 0.2
-\]
-\textbf{\textit{Q4}}:
-\[
-P@10_S = \frac{7}{10} = 0.7	,	P@10_A = \frac{0}{10} = 0
-\]
 
+\begin{table}[H]
+	\begin{tabular}{ | m{5em} | m{1cm}| m{1.2cm} | } 
+		\hline
+		Query& Simple P@10 & Advanced P@10 \\ 
+		\hline
+		Q1 & 0.9 & 0.5 \\ 
+		\hline
+		Q2 & 0.7 & 0.4 \\ 
+		\hline
+		Q3 & 0.7 & 0.2 \\ 
+		\hline
+		Q4 & 0.7 & 0 \\ 
+		\hline
+	\end{tabular}
+	\caption{P@10 Results}
+	\label{tab:pat10_results}
+\end{table}
 The Average Precision is calculated for each query result, and the mean of these values across all relevant results is used to determine the Mean Average Precision, which in this case is obtained via the P-R Curve, as it provides the MAP value for all queries and systems. The figures containing each P-R Curve are placed in the appendix. \newline
-\textbf{\textit{Q1}}:
-\[
-MAP_S = 0.8128	,	MAP_A = 0.2694
-\]
-\textbf{\textit{Q2}}:
-\[
-MAP_S = 0.6921	,	MAP_A = 0.2414
-\]
-\textbf{\textit{Q3}}:
-\[
-MAP_S = 0.7179	,	MAP_A = 0.0870
-\]
-\textbf{\textit{Q4}}:
-\[
-MAP_S = 0.6376	,	MAP_A = 0
-\]
 
+\begin{table}[H]
+	\begin{tabular}{ | m{5em} | m{1cm}| m{1.2cm} | } 
+		\hline
+		Query& Simple MAP & Advanced MAP \\ 
+		\hline
+		Q1 & 0.8128 & 0.2694 \\ 
+		\hline
+		Q2 & 0.6921 & 0.2414 \\ 
+		\hline
+		Q3 & 0.7179 & 0.0870 \\ 
+		\hline
+		Q4 & 0.6376 & 0 \\ 
+		\hline
+	\end{tabular}
+	\caption{MAP Results}
+	\label{tab:map_results}
+\end{table}
 Contrary to what we expected, the values of the P@k and MAP metrics were way lower in the advanced system (represented with an \textit{A}). However, when manually analysing the documents returned in the response, it became clear that the problem was most likely the way the QRELS files were built rather than the system itself. Even so, it makes it very hard to make a legitimate cross-system performance comparison and discussion.
 
 \section{Conclusions}
@@ -745,66 +745,66 @@ Completing these project milestones marks a significant step in the development 
   
 \begin{figure}[H]
   \centering
-  \includegraphics[width=\linewidth]{precision_recal_simple_1.png}
+  \includegraphics[width=0.8\linewidth]{precision_recall_q1b.png}
   \caption{Q1 P-R Curve -> Baseline System}
-  \Description{Q1 P-R Curve -> Baseline System}
-  \label{fig:precisionRecalSimple1}
+  \Description{Q1 P-R Curves -> Baseline System}
+  \label{fig:precisionRecallBaseline1}
 \end{figure}
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=\linewidth]{precision_recal_simple_2.png}
-  \caption{Q2 P-R Curve -> Baseline System}
-  \Description{Q2 P-R Curve -> Baseline System}
-  \label{fig:precisionRecalSimple2}
-\end{figure}
-  
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=\linewidth]{precision_recal_simple_3.png}
-	\caption{Q3 P-R Curve -> Baseline System}
-	\Description{Q3 P-R Curve -> Baseline System}
-	\label{fig:precisionRecalSimple3}
-\end{figure}
-
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=\linewidth]{precision_recal_simple_4.png}
-  \caption{Q4 P-R Curve -> Baseline System}
-  \Description{Q4 P-R Curve -> Baseline System}
-  \label{fig:precisionRecalSimple4}
-\end{figure}
-
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=\linewidth]{precision_recal_advanced_1.png}
+  \includegraphics[width=0.8\linewidth]{precision_recall_q1a.png}
   \caption{Q1 P-R Curve -> Advanced System}
-  \Description{Q1 P-R Curve -> Advanced System}
-  \label{fig:precisionRecalAdv1}
+  \Description{Q1 P-R Curves -> Advanced System}
+  \label{fig:precisionRecallAdvanced1}
 \end{figure}
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=\linewidth]{precision_recal_advanced_2.png}
+  \includegraphics[width=0.8\linewidth]{precision_recall_q2b.png}
+  \caption{Q2 P-R Curve -> Baseline System}
+  \Description{Q2 P-R Curves -> Baseline System}
+  \label{fig:precisionRecallBaseline2}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{precision_recall_q2a.png}
   \caption{Q2 P-R Curve -> Advanced System}
-  \Description{Q2 P-R Curve -> Advanced System}
-  \label{fig:precisionRecalAdv2}
+  \Description{Q2 P-R Curves -> Advanced System}
+  \label{fig:precisionRecallAdvanced2}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{precision_recall_q3b.png}
+  \caption{Q3 P-R Curve -> Baseline System}
+  \Description{Q3 P-R Curves -> Baseline System}
+  \label{fig:precisionRecallBaseline3}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{precision_recall_q3a.png}
+  \caption{Q3 P-R Curve -> Advanced System}
+  \Description{Q3 P-R Curves -> Advanced System}
+  \label{fig:precisionRecallAdvanced3}
 \end{figure}
   
 \begin{figure}[H]
-	\centering
-	\includegraphics[width=\linewidth]{precision_recal_advanced_3.png}
-	\caption{Q3 P-R Curve -> Advanced System}
-	\Description{Q3 P-R Curve -> Advanced System}
-	\label{fig:precisionRecalAdv3}
+  \centering
+  \includegraphics[width=0.8\linewidth]{precision_recall_q4b.png}
+  \caption{Q4 P-R Curve -> Baseline System}
+  \Description{Q4 P-R Curves -> Baseline System}
+  \label{fig:precisionRecallBaseline4}
 \end{figure}
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=\linewidth]{precision_recal_advanced_4.png}
+  \includegraphics[width=0.8\linewidth]{precision_recall_q4a.png}
   \caption{Q4 P-R Curve -> Advanced System}
-  \Description{Q4 P-R Curve -> Advanced System}
-  \label{fig:precisionRecalAdv4}
+  \Description{Q4 P-R Curves -> Advanced System}
+  \label{fig:precisionRecallAdvanced4}
 \end{figure}
 
 %%
