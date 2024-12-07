@@ -50,6 +50,7 @@
 \usepackage{enumitem}
 \usepackage{pifont}
 \usepackage{array}
+\usepackage{graphicx}
 \newlist{arrowlist}{itemize}{1}
 \setlist[arrowlist]{label=$\Rightarrow$}
 %%\usepackage{indentfirst}
@@ -491,6 +492,7 @@ For each of three field types, the same tokenizer and filters were used in both 
 The table below provides an overview of the advanced schema's structure, detailing the field names, their respective types and whether they are indexed or multi-valued.
 
 \begin{table}[H]
+    \resizebox{\columnwidth}{!}{
     \begin{tabular}{llcc}
     \toprule
     Field & Type & Indexed & Multi-Valued\\
@@ -510,7 +512,7 @@ The table below provides an overview of the advanced schema's structure, detaili
     manufacturer\_start & text\_general & \ding{55} & \ding{55}\\
     manufacturer\_end & text\_general & \ding{55} & \ding{55}\\
     \bottomrule
-    \end{tabular}
+    \end{tabular}}
     \caption{Advanced Schema}
     \label{tab:schema}
 \end{table}
