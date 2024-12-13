@@ -56,6 +56,9 @@ schema_simple:
 schema_advanced:
 	curl -X POST -H 'Content-type:application/json' --data-binary "@docker/data/primed_schema_advanced.json" http://localhost:8983/solr/primed-data/schema
 	
+schema_semantic:
+	curl -X POST -H 'Content-type:application/json' --data-binary "@docker/data/semantic_primed_schema_advanced.json" http://localhost:8983/solr/primed-data/schema
+	
 data:
 	curl -X POST -H 'Content-type:application/json' --data-binary "@docker/data/combined_drug_data.json" http://localhost:8983/solr/primed-data/update\?commit\=true
 
@@ -69,3 +72,6 @@ query_simple:
 
 query_advanced:
 	$(PYTHON) docker/request_advanced.py
+
+query_semantic:
+	$(PYTHON) docker/request_semantic.py
