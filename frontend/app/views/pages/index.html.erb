@@ -1,27 +1,93 @@
-<h1>PRIMED</h1>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRIMED</title>
+    <style>
+      body {
+        line-height: 1.6;
+        margin: 20px;
+        background-color:rgb(233, 234, 236);
+        font-family: Arial;
+      }
+      h1 {
+        color:rgb(47, 67, 87);
+      }
+      form {
+        background-color:rgb(255, 255, 255);
+        padding: 20px;
+        border: 1px solid rgb(221, 221, 221);
+        border-radius: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        max-width: 500px;
+        margin: 0 auto 10px auto;
+      }
+      form label {
+        font-weight: bold;
+        margin-bottom: 5px;
+        display: inline-block;
+        color: rgb(92, 87, 87);
+      }
+      form input[type="text"] {
+        width: 90%;
+        padding: 8px;
+        display: block;
+        margin: 10px auto 15px auto;
+        border: 1px solid rgb(212, 203, 203);
+        border-radius: 4px;
+        font-size: 14px;
+      }
+      form input[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0px 10px;
+        border: 1px solid rgb(212, 203, 203);
+        border-radius: 4px;
+        font-size: 14px;
+      }
+      form input[type="text"]:focus {
+        outline: none;
+        border-color: rgb(136, 0, 113);
+        box-shadow: 0 0 5px rgba(136, 0, 113, 0.3);
+      }
+      form input[type="submit"] {
+        background-color: rgb(136, 0, 113);
+        color: rgb(255, 255, 255);
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+      form input[type="submit"]:hover {
+        background-color: rgb(96, 1, 80);
+      }
+      form div {
+        margin-bottom: 10px;
+      }
+      form input[type="radio"] {
+        margin-right: 4px;
+        transform: scale(1.1);
+      }
+      form label[for="type"] {
+        display: block;
+        font-weight: bold;
+        color: rgb(92, 87, 87);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>PRIMED</h1>
 
-<%= form_with url: search_path, method: :get, local: true do |form| %>
-  <%= form.label :query, "Enter your query:" %>
-  <%= form.text_field :query, value: params[:query] %>
-  
-  <div>
-    <%= form.label :type, "Select search system:" %><br>
-    <%= form.radio_button :type, 'baseline', checked: params[:type] != 'advanced' %> Baseline Search<br>
-    <%= form.radio_button :type, 'advanced', checked: params[:type] == 'advanced' %> Advanced Search
-  </div>
-  
-  <%= form.submit "Search" %>
-<% end %>
-
-<% if @error %>
-  <p class="error"><%= @error %></p>
-<% elsif @results %>
-  <ul>
-    <% @results.each do |result| %>
-      <li>
-        <h2><%= result['title'] %></h2>
-        <p><%= result['description'] %></p>
-      </li>
+    <%= form_with url: search_path, method: :get, local: true do |form| %>
+      <%= form.label :query, "Enter your query:" %>
+      <%= form.text_field :query, value: params[:query] %>
+      <div>
+        <%= form.label :type, "Select search system:" %>
+        <%= form.radio_button :type, 'baseline', checked: params[:type] == 'baseline' %> Baseline Search<br>
+        <%= form.radio_button :type, 'advanced', checked: params[:type] == 'advanced' %> Advanced Search<br>
+        <%= form.radio_button :type, 'semantic', checked: params[:type] == 'semantic' %> Semantic Search<br>
+      </div>
+      <%= form.submit "Search" %>
     <% end %>
-  </ul>
-<% end %>
+  </body>
+</html>
