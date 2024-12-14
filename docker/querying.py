@@ -4,7 +4,6 @@ def text_to_embedding(text):
     model = SentenceTransformer('all-MiniLM-L6-v2')
     embedding = model.encode(text, convert_to_tensor=False).tolist()
     
-    # Convert the embedding to the expected format
     embedding_str = "[" + ",".join(map(str, embedding)) + "]"
     return embedding_str
 
@@ -50,7 +49,6 @@ def generate_boosted_query(user_query):
         'qf': "diseases_info^3 reviews^4 manufacturer_desc",
         'pf': "reviews^3",
         'ps': 2,
-        # 'bf': f"excellent_review_perc^1.5 poor_review_perc^0.5 query({{!v='side_effects:{user_query}'}})^1.5"
         'bf': f"excellent_review_perc^1.5 poor_review_perc^0.5"
     }
     return query_params
@@ -66,7 +64,7 @@ def generate_semantic_boosted_query(user_query):
     
     boosted_query = " ".join(boosted_query)'''
 
-    embedding = text_to_embedding(user_query)
+    # embedding = text_to_embedding(user_query)
 
     boosted_query = []
 
@@ -76,7 +74,7 @@ def generate_semantic_boosted_query(user_query):
         boosted_query.append(term)
 
     query_params = {
-        'q': f"{user_query}{embedding}",
+        'q': user_query, # f"{user_query}{embedding}",
         'q.op': "AND",
         'sort': "score desc",
         'start': 0,
@@ -87,6 +85,6 @@ def generate_semantic_boosted_query(user_query):
         'pf': "reviews^3",
         'ps': 2,
         # 'bf': f"excellent_review_perc^1.5 poor_review_perc^0.5 query({{!v='side_effects:{user_query}'}})^1.5"
-        'bf': f"excellent_review_perc^1.5 poor_review_perc^0.5"
+        'bf': "excellent_review_perc^1.5 poor_review_perc^0.5 combined_score^1.1"
     }
     return query_params
