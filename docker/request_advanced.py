@@ -1,10 +1,11 @@
 import requests
 import json
+import sys
 from querying import generate_boosted_query
 
 solr = 'http://localhost:8983/solr/primed-data/select'
 
-query = input("Enter your query: ")
+query = sys.argv[1]
 
 query_params = generate_boosted_query(query)
 
