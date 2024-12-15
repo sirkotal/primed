@@ -8,13 +8,17 @@ query = input("Enter your query: ")
 
 query_params = generate_semantic_boosted_query(query)
 
-response = requests.get(solr, params=query_params)
+response = requests.post(
+    solr,
+    headers={'Content-Type': 'application/json'},
+    json=query_params
+)
 
 if response.status_code == 200:
     print(f"Successful query.")
     print(f"SOLR Response: {response.json()}")
 
     with open("solr_sem_response.json", "w") as file:
-        json.dump(response.json(), file, indent=4) 
+        json.dump(response.json(), file, indent=4)
 else:
     print(f"Error: {response.status_code}")
