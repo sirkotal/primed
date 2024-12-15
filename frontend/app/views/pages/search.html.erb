@@ -76,6 +76,7 @@
           <li>
             <strong>Drug:</strong> <%= result["drug"].is_a?(Array) ? result["drug"].join(", ") : result["drug"] %><br>
             <strong>Composition:</strong> <%= result["composition"].is_a?(Array) ? result["composition"].join(", ") : result["composition"] %><br>
+            <strong>Applicable Diseases:</strong> <%= result["applicable_diseases"].is_a?(Array) ? result["applicable_diseases"].join(", ") : result["applicable_diseases"] %><br>
             <strong>Average Rating:</strong> <%= result["reviews_average_rating"] %><br>
             <details>
               <summary>Reviews</summary>
