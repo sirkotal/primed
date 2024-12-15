@@ -80,7 +80,7 @@
             <details>
               <summary>Reviews</summary>
               <ul>
-                <% result["reviews"].each do |review| %>
+                <% result["reviews"]&.each do |review| %>
                   <li class="review-item"><%= review %></li>
                 <% end %>
               </ul>
