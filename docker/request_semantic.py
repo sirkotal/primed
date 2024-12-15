@@ -11,7 +11,7 @@ query_params = generate_semantic_boosted_query(query)
 response = requests.post(
     solr,
     headers={'Content-Type': 'application/json'},
-    json=query_params
+    params=query_params
 )
 
 if response.status_code == 200:
