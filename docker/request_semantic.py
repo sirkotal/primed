@@ -4,7 +4,7 @@ from querying import generate_semantic_boosted_query
 
 solr = 'http://localhost:8983/solr/primed-data/select'
 
-query = input("Enter your query: ")
+query = sys.argv[1]
 
 query_params = generate_semantic_boosted_query(query)
 

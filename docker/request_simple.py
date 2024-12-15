@@ -4,7 +4,7 @@ from querying import generate_simple_query
 
 solr = 'http://localhost:8983/solr/primed-data/select'
 
-query = input("Enter your query: ")
+query = sys.argv[1]
 
 query_params = generate_simple_query(query)
 
