@@ -61,6 +61,9 @@ schema_semantic:
 	
 data:
 	curl -X POST -H 'Content-type:application/json' --data-binary "@docker/data/combined_drug_data.json" http://localhost:8983/solr/primed-data/update\?commit\=true
+	
+data_semantic:
+	curl -X POST -H 'Content-type:application/json' --data-binary "@docker/data/semantic_primed_data.json" http://localhost:8983/solr/primed-data/update\?commit\=true
 
 trec_eval:
 	git clone https://github.com/usnistgov/trec_eval.git src/trec_eval
@@ -75,3 +78,6 @@ query_advanced:
 
 query_semantic:
 	$(PYTHON) docker/request_semantic.py
+
+query_mixed:
+	$(PYTHON) docker/request_mixed.py
