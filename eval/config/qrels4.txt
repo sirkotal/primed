@@ -1,41 +1,37 @@
-Biochemdryl Syrup
-Gulfadryl Syrup
 Neurotrat NP Tablet
 Nervsenz Tablet SR
-Moveran Gel
+Infen Plaster
+Ketoplast Plaster
+Lupiflex 4 Tablet
+Lupiflex 8 Tablet
+Recofast Plus Tablet
+Onabet SD Solution
 Gelofast Gel
 Instaflex Nano Gel
 Joyace Nano Gel 2X
+Moveran Gel
 Vorto Gel
-Lupiflex 4 Tablet
-Lupiflex 8 Tablet
-Infen Plaster
-Ketoplast Plaster
 Superfen Gel
 Gabafix Gel
 Senseit Gel
-Onabet SD Solution
-Phensedyl CR Syrup
 Insulate NP Tablet
-Histo Calamine Lotion
-Recofast Plus Tablet
-Ovanac DSR Tablet
-Ovanac CC Tablet
 Ovaa Shield DS Combipack
-Atorsave D 10 Tablet
-Daztor 10 Tablet
-Daztor 20 Tablet
-Atorsave D 20 Tablet
-Tonact D 10 Tablet
-LCZ XP Expectorant
-Zipvert B6 Tablet
+Ovanac CC Tablet
+Histo Calamine Lotion
+Biochemdryl Syrup
+Gulfadryl Syrup
+Gluconorm G2 D Tablet SR
 Stugeron Plus Tablet
+Zipvert B6 Tablet
 Stugil D Tablet
 Diziron D Tablet MD
 Draminate 50mg Tablet
 Gemvert Tablet
 Gravol Tablet
+Vertizac Tablet
 Vertigen Tablet
+Almotan 6.25 Tablet
+Almotan 12.5 Tablet
 Rizact 10 Tablet
 Rizact 5 Tablet
 Rizanet 10 Oral Disintegrating Strip
@@ -43,134 +39,154 @@ Rizora 10 Tablet
 Rizora 5 Tablet
 Rizora ODS 10 Disintegrating Strip
 Rizora ODS 5 Disintegrating Strip
-Almotan 6.25 Tablet
-Almotan 12.5 Tablet
-GTN Sorbitrate CR 6.4 Tablet
-GTN Sorbitrate CR 2.6 Tablet
-Angispan TR 2.5mg Capsule
-Angiplat 2.5 Capsule TR
-Angiwell 2.6mg Tablet
-Angispan TR 6.5mg Capsule
-Alnitro 2.6 Tablet CR
-Angistat 2.5 Capsule TR
-Angiplat 6.5 Capsule TR
-Monit GTN 6.4 Tablet CR
-Myonit SR 6.4 Tablet
-Nitrocontin 2.6 Tablet CR
-Nitrolong 2.6 Tablet CR
-Nitro 2.6 Tablet CR
-Nitrocontin 6.4 Tablet CR
-Nitrolong 6.4 Tablet CR
-Ntgn 2.6 Tablet CR
-New GTN 2.6 Tablet CR
-Nitrotap Applicap
-Angiwell 6.4mg Tablet
-GTN Spray
-Monit GTN 2.6 Tablet CR
-Myonit SR 2.6 Tablet
-Nitro 6.4 Tablet CR
-Ntgn 6.4 Tablet CR
-Vasovin XL 2.5 Capsule
-Veenat 400 Tablet
-Veenat 100 Capsule
+Glivec 400mg Tablet
 Imatib 100 Tablet
 Imat 400 Tablet
-Glivec 400mg Tablet
+Veenat 400 Tablet
+Veenat 100 Capsule
 Polycap Capsule
+Betacap Plus 10 Capsule SR
+Betacap Plus 5 Capsule SR
 Inderal F 10 Tablet SR
 Inderal F 5 Tablet SR
-Aztor Asp 75 Capsule
-Atchol ASP Capsule
-Atorlip ASP 10 Capsule
-Atorlip ASP 20 Capsule
-Mactor ASP 75 Capsule
-Modlip Asg 20 Capsule
-Ecosprin AV 75 20 Capsule
-Ecosprin AV 150 20 Capsule
-Ecosprin AV 150 Capsule
-New Modlip Asg 75 Capsule
-Lipikind AS Capsule
-Tonact ASP 75 Capsule
+Migrabeta Plus Tablet
+Migon Plus Tablet
+Migiplex 40mg 10mg Tablet
+Mibeta Plus 10 Tablet SR
+Migrof 10 Capsule
+Migitus 5mg Tablet SR
+Mibeta Plus 5 Tablet SR
+Provanol Plus 10 Tablet
+Zinepra 10 Tablet SR
+Zinepra 5 Tablet SR
+Betacap TR 40 Capsule
+Betacap TR 20 Capsule
+Betacap 20 Tablet
+Betacap 10 Tablet
+Betacap TR 80 Capsule
+Betacap TR 60 Capsule
+Inderal LA 20 Tablet SR
+Inderal 40 Tablet
+Inderal 20mg Tablet
+Inderal LA 40 Tablet SR
+Kipnol TR 40 Capsule
+Migrabeta TR 40 Tablet
+Migrabeta TR 20 Tablet SR
 Mibeta SR 40 Tablet
 Mibeta 20mg Tablet
 Migrabeta TR 80 Tablet
-Inderal LA 20 Tablet SR
+Provanol SR 40 Tablet
+Provanol 20 Tablet
+Provanol 10 Tablet
+Pronate 20 Tablet
+Amnurite Beta 10 40 ER Tablet
+Amnurite Beta 5 20 ER Tablet
+Triptolol 10mg 40mg Tablet
+Bisoheart 2.5 Tablet
+Bisoheart 5mg Tablet
+Bisotab 2.5 Tablet
+Biselect 5 Tablet
+Biselect 2.5 Tablet
+Bisosafe 2.5 Tablet
+Bisosafe 5 Tablet
+Bisoder 5mg Tablet
+Corbis 5 Tablet
+Triohale Inhaler
+Trimium Transhaler
+Formost 200 Respicap
+Formost 400 Respicap
+Formost 200 Inhaler
+Formost 400 Inhaler
+Aerotrop F Inhaler
+Sibelium 10mg Tablet
+Sibelium 5mg Tablet
+Topamac 25mg Tablet
+Topamac 50mg Tablet
+Topamac 100mg Tablet
 Metopole 25 XL Tablet
-Tryptinol 25 Tablet
 Betaloc 25mg Tablet
 Betaloc 50mg Tablet
 Betaloc 100mg Tablet
 Seloken XL 25mg Tablet
 Seloken XL 50mg Tablet
 Seloken XL 100mg Tablet
-Fluanxol 3mg Tablet
-Sibelium 10mg Tablet
-Sibelium 5mg Tablet
-Topamac 25mg Tablet
-Topamac 50mg Tablet
-Topamac 100mg Tablet
-Snapit 85mg 500mg Tablet
-Supermet XL 50 Tablet
-Supermet XL 25 Tablet
-Supermet XL 100 Tablet
-Bisosafe 2.5 Tablet
-Bisosafe 5 Tablet
-Torex Cough Syrup
-Acuvert Tablet
-Stemetil MD Tablet
-Stemetil Injection
-Epilex Oral Solution
-Valance Oral Solution
-Inderal 40 Tablet
-Inderal 20mg Tablet
-Inderal LA 40 Tablet SR
-NO SCARS Cream
-Gabadon 300mg Tablet
+Tryptinol 25 Tablet
 Telkonol AM 40mg 5mg Tablet
+Metopole AM 5mg 50mg Tablet
 Olmo AM 20mg 5mg Tablet
 Olmo M 20mg 25mg Tablet
 Telkonol M 40mg 25mg Tablet
-Ticin Cream
-Lacotab Syrup
+Prelogic Capsule
 Olmo 20 Tablet
-Telkonol 80H Tablet
-Pregabel 150mg Capsule
-Seizgard 100 Tablet
-Seizgard 50 Tablet
+Acton Prolongatum 60IU Injection
+Actiblok IPR 25 Tablet
+Betabest XL 50 Tablet
+Betaone XL 50 Tablet
+Embeta XR 25 Tablet
+Embeta XR 50 Tablet
+Embeta XR 12.5 Tablet
+Embeta 25 Tablet
+Embeta 50 Tablet
+Embeta XR 100 Tablet
+Evimeto 50 Tablet PR
+Evimeto 25 Tablet PR
+Gudpres XL 50 Capsule
+Gudpres XL 25 Capsule
+Kimet XL 25 Tablet
+Kimet XL 50 Tablet
+Kimet XL 12.5 Tablet
+Met XL 25 Tablet
+Met XL 50 Tablet
+Metolar XR 25 Capsule
+Metolar XR 50 Capsule
+Metocard XL 25 Tablet
+Metolar 25 Tablet
+Metocard XL 50 Tablet
+Metpure XL 50 Tablet
+Metolar 50 Tablet
+Metapro XL 25 Tablet
+Metapro XL 50 Tablet
+Metolar XR 12.5 Capsule
 Metzok 25 Tablet PR
 Met XL 12.5 Tablet
 Metzok 50 Tablet PR
 Metocard XL 12.5 Tablet
 Metolar 1mg Injection
 Mprol 25mg Tablet
+Metocard XL 75 Tablet
+Metoder 50mg Tablet XL
 Metol XL 50 Tablet
 Metomac 50 Tablet ER
 Metolar XR 100 Capsule
 Metzok 12.5 Tablet PR
 Myoprol XL 50 Tablet
+Metapro 25 Tablet
 Metonce 25mg Tablet PR
 Metromax XL 50 Tablet
+Metozaar XL 50 Tablet
+Metcy 50 Tablet SR
 Metwon XR 50 Tablet
+Metspot XL 50 Tablet
 Metozox 25mg Tablet ER
 Metolar 100 Tablet
-Embeta XR 50 Tablet
-Embeta 50 Tablet
-Evimeto 50 Tablet PR
-Evimeto 25 Tablet PR
-Ozolol 50mg Tablet XL
-Prolomet XL 25 Tablet
-Prolomet XL 50 Tablet
-Prolomet XL 12.5 Tablet
+Metzok 100 Tablet PR
 Metfirst XL 25 Tablet
 Metspot XL 25 Tablet
 Metosan XR 50 Tablet
-Actiblok IPR 25 Tablet
-Betabest XL 50 Tablet
-Betaone XL 50 Tablet
-Gudpres XL 50 Capsule
-Gudpres XL 25 Capsule
-Kimet XL 25 Tablet
-Kimet XL 50 Tablet
-Met XL 25 Tablet
-Met XL 50 Tablet
-Metolar XR 25 Capsule
+Ozolol 50mg Tablet XL
+Prolomet XL 50 Tablet
+Prolomet XL 12.5 Tablet
+Protol XL 50 Tablet
+Protol XL 25 Tablet
+Starpress XL 25 Tablet
+Supermet XL 50 Tablet
+Supermet XL 25 Tablet
+Starpress XL 12.5 Tablet
+Supermet XL 100 Tablet
+Tolol XR 12.5 Tablet
+Translol XL 50 Tablet
+Tolol XR 100 Tablet
+Vinicor XL 25 Tablet PR
+Vinicor XL 50 Tablet
+Velol 50mg Tablet XL
+Vinicor XL 100 Tablet

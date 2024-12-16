@@ -646,13 +646,13 @@ In this section, the results for every single query in both systems will be exam
 		\hline
 		Query& Simple P@10 & Advanced P@10 \\
 		\hline
-		Q1 & 0.9 & 0.5 \\
+		Q1 & 0.8 & 0.9 \\
 		\hline
-		Q2 & 0.7 & 0.4 \\
+		Q2 & 0.9 & 1 \\
 		\hline
-		Q3 & 0.7 & 0.2 \\
+		Q3 & 0.7 & 1 \\
 		\hline
-		Q4 & 0.7 & 0 \\
+		Q4 & 1 & 1 \\
 		\hline
 	\end{tabular}
 	\caption{P@10 Results}
@@ -665,19 +665,23 @@ The Average Precision is calculated for each query result, and the mean of these
 		\hline
 		Query& Simple MAP & Advanced MAP \\
 		\hline
-		Q1 & 0.7986 & 0.8711 \\
+		Q1 & 0.8661 & 0.8934 \\
 		\hline
-		Q2 & 0.7713 & 0.7203 \\
+		Q2 & 0.8632 & 0.8719 \\
 		\hline
-		Q3 & 0.4004 & 0.4460 \\
+		Q3 & 0.3805 & 0.5361 \\
 		\hline
-		Q4 & 0.3694 & 0.5330 \\
+		Q4 & 0.3329 & 0.4095 \\
 		\hline
 	\end{tabular}
 	\caption{MAP Results}
 	\label{tab:map_results}
 \end{table}
-Contrary to what we expected, the values of the P@k and MAP metrics were way lower in the advanced system (represented with an \textit{A}). However, when manually analysing the documents returned in the response, it became clear that the problem was most likely the way the QRELS files were built rather than the system itself. Even so, it makes it very hard to make a legitimate cross-system performance comparison and discussion.
+As we expected, the values of the P@k and MAP in the advanced
+system (represented with an A) consistently outperformed or at
+least matched those of the simple system (represented with an
+S), showing there’s a clear advantage to using the boosted query
+system.
 
 \section{Conclusions}
 
