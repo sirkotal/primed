@@ -38,11 +38,11 @@ def generate_boosted_query(user_query):
     return query_params
 
 def generate_semantic_boosted_query(user_query):
-    # embedding = text_to_embedding(user_query)
+    embedding = text_to_embedding(user_query)
 
     # f"{user_query}{embedding}",
     query_params = {
-        'q': user_query,
+        'q': f"{{!knn f=vector topK=10}}{embedding}",
         'q.op': "AND",
         'start': 0,
         'rows': 100,
@@ -56,3 +56,4 @@ def generate_semantic_boosted_query(user_query):
         'rqq': "{!func}sum(product(reviews_average_rating, 4), product(polarity_rating, 2))"
     }
     return query_params
+    
