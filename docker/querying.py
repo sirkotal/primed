@@ -23,14 +23,14 @@ def generate_simple_query(user_query):
     return query_params
 
 def generate_boosted_query(user_query):
-    boosted_query = []
+    '''boosted_query = []
 
     for term in user_query.split():
         if len(term) > 5:
             term = f"{term}~1"
         boosted_query.append(term)
 
-    user_query = ' '.join(boosted_query)
+    user_query = ' '.join(boosted_query)'''
 
     query_params = {
         'q': user_query,
