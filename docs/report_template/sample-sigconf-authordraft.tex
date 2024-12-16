@@ -683,6 +683,22 @@ least matched those of the simple system (represented with an
 S), showing there’s a clear advantage to using the boosted query
 system.
 
+\section{Frontend}
+
+For the third milestone, we also developed a web-based frontend for the PRIMED search system.
+
+\subsection{Frontend Technologies} The frontend uses Ruby as the main language, with dependency management configured through Bundler. It includes support for Docker containers, making deployment and execution in controlled environments easier.
+
+\subsubsection{Frontend Structure} The directory structure is organized as described below:
+
+\begin{itemize} \item \textbf{app}: Contains the core logic of the application, such as controllers, models, and views. \item \textbf{config}: Includes configuration files required for the application's operation. \item \textbf{public}: Stores static assets such as images, CSS files, and JavaScript files. \item \textbf{test}: Contains test cases for validating functionality. \item \textbf{vendor}: Stores external dependencies not managed directly by Bundler. \end{itemize}
+
+\subsubsection{Configuration and Dependencies} The project dependencies are managed using the \texttt{Gemfile} and \texttt{Gemfile.lock} files, which define the libraries required for execution. Additionally, the \texttt{Dockerfile} and \texttt{.dockerignore} file configure the runtime environment for Docker containers.
+
+\subsection{Schema Switching} 
+The frontend provides an easy and painless way to switch between schemas, with options to select between the simple schema, the advanced schema, and semantic search.
+This is achieved by having multiple cores running, that a user can switch between via the interface.
+
 \section{Conclusions}
 
 Completing these project milestones marks a significant step in the development of our system. The work carried out to this date has made it possible to transform an initial set of diverse, loosely related data into a cohesive and structured basis for \textit{\textbf{PRIMED}}. By carrying out data cleaning operations, we have been able to maintain the quality of the information while simultaneously reducing inconsistencies and duplicates. With this refined data collection, we created two initial versions of the \textit{\textbf{PRIMED}} search engine by indexing the data in Solr, performing querying operations in both of these systems, and evaluating and comparing the subsequent results. Despite the progress, however, it was extremely frustrating to see the whole performance analysis process be foiled because of faulty QRELS files. Nevertheless, the focus during the next milestone will be to keep improving upon these versions in order to enhance their accuracy and efficiency, as well as fixing the QRELS files so that we can obtain more precise results.
