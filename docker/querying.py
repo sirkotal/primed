@@ -23,22 +23,14 @@ def generate_simple_query(user_query):
     return query_params
 
 def generate_boosted_query(user_query):
-    '''boosted_terms = {"cure": 4.0, "progress": 3.0, "prevent": 2.75, "effective": 2.5, "safe": 2.5, "hope": 1.5, "effects": 3.0, 
-                     "risk": 2.5, "concern": 1.5, "reliable": 1.5, "aggressive": 1.5, "death": 2.0, "prestigious": 1.1}
-
-        if term in boosted_terms:
-            boosted_query.append(f"{term}^{boosted_terms[term]}")
-        else:
-            boosted_query.append(term)
-    
-    boosted_query = " ".join(boosted_query)'''
-
     boosted_query = []
 
     for term in user_query.split():
         if len(term) > 5:
             term = f"{term}~1"
         boosted_query.append(term)
+
+    user_query = ' '.join(boosted_query)
 
     query_params = {
         'q': user_query,
