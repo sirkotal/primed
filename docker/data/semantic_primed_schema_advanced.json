@@ -168,6 +168,12 @@
             "stored": true
         },
         {
+            "name": "polarity_rating",
+            "type": "pdouble",
+            "indexed": true,
+            "stored": true
+        },
+        {
             "name": "vector",
             "type": "diseaseVector",
             "indexed": true,

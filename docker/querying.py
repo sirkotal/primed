@@ -5,7 +5,9 @@ def text_to_embedding(text):
     embedding = model.encode(text, convert_to_tensor=False).tolist()
     
     embedding_str = "[" + ",".join(map(str, embedding)) + "]"
-    return embedding_str
+    final_str = f"{{!knn f=vector topK=20}}{embedding_str}"
+    print(final_str)
+    return final_str
 
 def generate_simple_query(user_query):
     query_params = {
@@ -54,24 +56,7 @@ def generate_boosted_query(user_query):
     return query_params
 
 def generate_semantic_boosted_query(user_query):
-    '''boosted_terms = {"cure": 4.0, "progress": 3.0, "prevent": 2.75, "effective": 2.5, "safe": 2.5, "hope": 1.5, "effects": 3.0, 
-                     "risk": 2.5, "concern": 1.5, "reliable": 1.5, "aggressive": 1.5, "death": 2.0, "prestigious": 1.1}
-
-        if term in boosted_terms:
-            boosted_query.append(f"{term}^{boosted_terms[term]}")
-        else:
-            boosted_query.append(term)
-    
-    boosted_query = " ".join(boosted_query)'''
-
     # embedding = text_to_embedding(user_query)
-
-    boosted_query = []
-
-    for term in user_query.split():
-        if len(term) > 5:
-            term = f"{term}~1"
-        boosted_query.append(term)
 
     query_params = {
         'q': user_query, # f"{user_query}{embedding}",
@@ -85,6 +70,8 @@ def generate_semantic_boosted_query(user_query):
         'pf': "reviews^3",
         'ps': 2,
         # 'bf': f"excellent_review_perc^1.5 poor_review_perc^0.5 query({{!v='side_effects:{user_query}'}})^1.5"
-        'bf': "excellent_review_perc^1.5 poor_review_perc^0.5 combined_score^1.1"
+        'bf': "excellent_review_perc^1.5 poor_review_perc^0.5",
+        'rq': "{!rerank reRankQuery=$rqq reRankDocs=30 reRankWeight=2.0}",
+        'rqq': "{!func}sum(product(reviews_average_rating, 4), product(polarity_rating, 2))"
     }
     return query_params

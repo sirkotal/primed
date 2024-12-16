@@ -27,14 +27,14 @@ def process_documents():
         collection = json.load(f)
 
     for doc in collection:
-        reviews_average_rating = doc.get('reviews_average_rating', 0)
+        reviews_average_rating = float(doc.get('reviews_average_rating', 0))
         reviews = doc.get('reviews', [])
         
         if reviews and reviews_average_rating:
             combined_score = combine_rating_and_polarity(reviews_average_rating, reviews)
-            doc['combined_score'] = combined_score
+            doc['polarity_rating'] = combined_score
         else:
-            doc['combined_score'] = 0
+            doc['polarity_rating'] = 0
     
     with open('./docker/data/combined_drug_data.json', 'w') as f:
         json.dump(collection, f, indent=4)
