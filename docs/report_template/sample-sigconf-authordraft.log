@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.5.26)  18 NOV 2024 01:37
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.5.26)  16 DEC 2024 12:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -735,7 +735,7 @@ Package: array 2023/10/16 v2.5g Tabular extension package (FMi)
 \ar@cellbox=\box63
 )
 \enitdp@arrowlist=\count314
-Package hyperref Info: Option `pdfdisplaydoctitle' set `true' on input line 119
+Package hyperref Info: Option `pdfdisplaydoctitle' set `true' on input line 120
 .
 \c@theorem=\count315
 
@@ -752,133 +752,133 @@ File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
 (sample-sigconf-authordraft.aux)
 \openout1 = `sample-sigconf-authordraft.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/nxlmi/m/it on input line 119.
+LaTeX Font Info:    Checking defaults for OML/nxlmi/m/it on input line 120.
 LaTeX Font Info:    Trying to load font information for OML+nxlmi on input line
- 119.
+ 120.
  (D:\Miktex\tex/latex/newtx\omlnxlmi.fd
 File: omlnxlmi.fd 2013/11/19 Fontinst v1.933 font definitions for OML/nxlmi.
 )
-LaTeX Font Info:    ... okay on input line 119.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 119.
-LaTeX Font Info:    ... okay on input line 119.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 119.
-LaTeX Font Info:    ... okay on input line 119.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 119.
-LaTeX Font Info:    ... okay on input line 119.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 119.
-LaTeX Font Info:    ... okay on input line 119.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 119.
-LaTeX Font Info:    ... okay on input line 119.
-LaTeX Font Info:    Checking defaults for U/ntxexa/m/n on input line 119.
+LaTeX Font Info:    ... okay on input line 120.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 120.
+LaTeX Font Info:    ... okay on input line 120.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 120.
+LaTeX Font Info:    ... okay on input line 120.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 120.
+LaTeX Font Info:    ... okay on input line 120.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 120.
+LaTeX Font Info:    ... okay on input line 120.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 120.
+LaTeX Font Info:    ... okay on input line 120.
+LaTeX Font Info:    Checking defaults for U/ntxexa/m/n on input line 120.
 LaTeX Font Info:    Trying to load font information for U+ntxexa on input line 
-119.
+120.
 
 (D:\Miktex\tex/latex/newtx\untxexa.fd
 File: untxexa.fd 2012/04/16 Fontinst v1.933 font definitions for U/ntxexa.
 )
-LaTeX Font Info:    ... okay on input line 119.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 119.
-LaTeX Font Info:    ... okay on input line 119.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 119.
-LaTeX Font Info:    ... okay on input line 119.
-LaTeX Font Info:    Checking defaults for LMS/ntxsy/m/n on input line 119.
+LaTeX Font Info:    ... okay on input line 120.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 120.
+LaTeX Font Info:    ... okay on input line 120.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 120.
+LaTeX Font Info:    ... okay on input line 120.
+LaTeX Font Info:    Checking defaults for LMS/ntxsy/m/n on input line 120.
 LaTeX Font Info:    Trying to load font information for LMS+ntxsy on input line
- 119.
+ 120.
  (D:\Miktex\tex/latex/newtx\lmsntxsy.fd
 File: lmsntxsy.fd 2016/07/02 Fontinst v1.933 font definitions for LMS/ntxsy.
 )
-LaTeX Font Info:    ... okay on input line 119.
-LaTeX Font Info:    Checking defaults for LMX/ntxexx/m/n on input line 119.
+LaTeX Font Info:    ... okay on input line 120.
+LaTeX Font Info:    Checking defaults for LMX/ntxexx/m/n on input line 120.
 LaTeX Font Info:    Trying to load font information for LMX+ntxexx on input lin
-e 119.
+e 120.
 
 (D:\Miktex\tex/latex/newtx\lmxntxexx.fd
 File: lmxntxexx.fd 2016/07/03 Fontinst v1.933 font definitions for LMX/ntxexx.
 )
-LaTeX Font Info:    ... okay on input line 119.
+LaTeX Font Info:    ... okay on input line 120.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 7.0pt on input line 119.
+(Font)              scaled to size 7.0pt on input line 120.
 LaTeX Font Info:    Trying to load font information for OT1+LinuxLibertineT-TLF
- on input line 119.
+ on input line 120.
 
 (D:\Miktex\tex/latex/libertine\ot1linuxlibertinet-tlf.fd
 File: OT1LinuxLibertineT-TLF.fd 2017/03/20 (autoinst) Font definitions for OT1/
 LinuxLibertineT-TLF.
 )
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 7.3pt on input line 119.
+(Font)              scaled to size 7.3pt on input line 120.
 <<ot1.cmap>>
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 5.5pt on input line 119.
+(Font)              scaled to size 5.5pt on input line 120.
 LaTeX Font Info:    Font shape `OML/nxlmi/m/it' will be
-(Font)              scaled to size 7.3pt on input line 119.
+(Font)              scaled to size 7.3pt on input line 120.
 <<oml.cmap>>
 LaTeX Font Info:    Font shape `OML/nxlmi/m/it' will be
-(Font)              scaled to size 5.5pt on input line 119.
+(Font)              scaled to size 5.5pt on input line 120.
 LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
-(Font)              scaled to size 7.3pt on input line 119.
+(Font)              scaled to size 7.3pt on input line 120.
 LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
-(Font)              scaled to size 5.5pt on input line 119.
+(Font)              scaled to size 5.5pt on input line 120.
 LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
-(Font)              scaled to size 7.3pt on input line 119.
+(Font)              scaled to size 7.3pt on input line 120.
 LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
-(Font)              scaled to size 5.5pt on input line 119.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 119
+(Font)              scaled to size 5.5pt on input line 120.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 120
 .
  (D:\Miktex\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 119
+LaTeX Font Info:    Trying to load font information for U+msb on input line 120
 .
  (D:\Miktex\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Trying to load font information for U+ntxmia on input line 
-119.
+120.
  (D:\Miktex\tex/latex/newtx\untxmia.fd
 File: untxmia.fd 2024/04/09 Fontinst v1.933 font definitions for U/ntxmia.
 )
 LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
-(Font)              scaled to size 7.3pt on input line 119.
+(Font)              scaled to size 7.3pt on input line 120.
 LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
-(Font)              scaled to size 5.5pt on input line 119.
+(Font)              scaled to size 5.5pt on input line 120.
 LaTeX Font Info:    Trying to load font information for U+ntxsym on input line 
-119.
+120.
  (D:\Miktex\tex/latex/newtx\untxsym.fd
 File: untxsym.fd 2023/08/16 Fontinst v1.933 font definitions for U/ntxsym.
 )
 LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
-(Font)              scaled to size 7.3pt on input line 119.
+(Font)              scaled to size 7.3pt on input line 120.
 LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
-(Font)              scaled to size 5.5pt on input line 119.
+(Font)              scaled to size 5.5pt on input line 120.
 LaTeX Font Info:    Trying to load font information for U+ntxsyc on input line 
-119.
+120.
 (D:\Miktex\tex/latex/newtx\untxsyc.fd
 File: untxsyc.fd 2012/04/12 Fontinst v1.933 font definitions for U/ntxsyc.
 )
 LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
-(Font)              scaled to size 7.3pt on input line 119.
+(Font)              scaled to size 7.3pt on input line 120.
 LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
-(Font)              scaled to size 5.5pt on input line 119.
+(Font)              scaled to size 5.5pt on input line 120.
 LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
-(Font)              scaled to size 7.3pt on input line 119.
+(Font)              scaled to size 7.3pt on input line 120.
 LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
-(Font)              scaled to size 5.5pt on input line 119.
-LaTeX Info: Command `\dddot' is already robust on input line 119.
-LaTeX Info: Command `\ddddot' is already robust on input line 119.
-LaTeX Info: Redefining \microtypecontext on input line 119.
-Package microtype Info: Applying patch `item' on input line 119.
-Package microtype Info: Applying patch `toc' on input line 119.
-Package microtype Info: Applying patch `eqnum' on input line 119.
-Package microtype Info: Applying patch `footnote' on input line 119.
-Package microtype Info: Applying patch `verbatim' on input line 119.
+(Font)              scaled to size 5.5pt on input line 120.
+LaTeX Info: Command `\dddot' is already robust on input line 120.
+LaTeX Info: Command `\ddddot' is already robust on input line 120.
+LaTeX Info: Redefining \microtypecontext on input line 120.
+Package microtype Info: Applying patch `item' on input line 120.
+Package microtype Info: Applying patch `toc' on input line 120.
+Package microtype Info: Applying patch `eqnum' on input line 120.
+Package microtype Info: Applying patch `footnote' on input line 120.
+Package microtype Info: Applying patch `verbatim' on input line 120.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 119.
+LaTeX Info: Redefining \showhyphens on input line 120.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
@@ -886,7 +886,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `LinuxLibertineT-TLF' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-Package hyperref Info: Link coloring OFF on input line 119.
+Package hyperref Info: Link coloring OFF on input line 120.
  (sample-sigconf-authordraft.out)
 (sample-sigconf-authordraft.out)
 \@outlinefile=\write4
@@ -958,38 +958,38 @@ Package caption Info: float package is loaded.
 Package caption Info: End \AtBeginDocument code.
  Excluding 'CCSXML' comment.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 17.28pt on input line 205.
+(Font)              scaled to size 17.28pt on input line 206.
 LaTeX Font Info:    Trying to load font information for T1+LinuxBiolinumT-TLF o
-n input line 205.
+n input line 206.
 
 (D:\Miktex\tex/latex/libertine\t1linuxbiolinumt-tlf.fd
 File: T1LinuxBiolinumT-TLF.fd 2017/03/20 (autoinst) Font definitions for T1/Lin
 uxBiolinumT-TLF.
 )
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/n' will be
-(Font)              scaled to size 17.28pt on input line 205.
+(Font)              scaled to size 17.28pt on input line 206.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `LinuxBiolinumT-TLF' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/b/n' will be
-(Font)              scaled to size 17.28pt on input line 205.
+(Font)              scaled to size 17.28pt on input line 206.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 12.0pt on input line 205.
+(Font)              scaled to size 12.0pt on input line 206.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 10.0pt on input line 205.
+(Font)              scaled to size 10.0pt on input line 206.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 10.0pt on input line 205.
+(Font)              scaled to size 10.0pt on input line 206.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `LinuxLibertineT-TLF' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `OML/nxlmi/m/it' will be
-(Font)              scaled to size 10.0pt on input line 205.
+(Font)              scaled to size 10.0pt on input line 206.
 LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
-(Font)              scaled to size 10.0pt on input line 205.
+(Font)              scaled to size 10.0pt on input line 206.
 LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
-(Font)              scaled to size 10.0pt on input line 205.
+(Font)              scaled to size 10.0pt on input line 206.
 
 (D:\Miktex\tex/latex/microtype\mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
@@ -998,72 +998,75 @@ File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
-(Font)              scaled to size 10.0pt on input line 205.
+(Font)              scaled to size 10.0pt on input line 206.
 LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
-(Font)              scaled to size 10.0pt on input line 205.
+(Font)              scaled to size 10.0pt on input line 206.
 LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
-(Font)              scaled to size 10.0pt on input line 205.
+(Font)              scaled to size 10.0pt on input line 206.
 LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
-(Font)              scaled to size 10.0pt on input line 205.
+(Font)              scaled to size 10.0pt on input line 206.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
-(Font)              scaled to size 7.0pt on input line 205.
+(Font)              scaled to size 7.0pt on input line 206.
 LaTeX Font Info:    Trying to load font information for TS1+LinuxLibertineT-TLF
- on input line 205.
+ on input line 206.
 
 (D:\Miktex\tex/latex/libertine\ts1linuxlibertinet-tlf.fd
 File: TS1LinuxLibertineT-TLF.fd 2017/03/20 (autoinst) Font definitions for TS1/
 LinuxLibertineT-TLF.
 )
 LaTeX Font Info:    Font shape `TS1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 7.0pt on input line 205.
+(Font)              scaled to size 7.0pt on input line 206.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `LinuxLibertineT-TLF' (encoding: TS1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
-(Font)              scaled to size 9.0pt on input line 205.
+(Font)              scaled to size 9.0pt on input line 206.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
-(Font)              scaled to size 10.95pt on input line 205.
+(Font)              scaled to size 10.95pt on input line 206.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
-(Font)              scaled to size 9.0pt on input line 205.
+(Font)              scaled to size 9.0pt on input line 206.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/it' will be
-(Font)              scaled to size 9.0pt on input line 205.
+(Font)              scaled to size 9.0pt on input line 206.
 LaTeX Font Info:    Trying to load font information for T1+zi4 on input line 20
-5.
+6.
 
 (D:\Miktex\tex/latex/inconsolata\t1zi4.fd
 File: t1zi4.fd 2018/01/14 T1/zi4 (Inconsolata)
 )
 LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
-(Font)              scaled to size 9.0pt on input line 205.
+(Font)              scaled to size 9.0pt on input line 206.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `zi4' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `TS1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 9.0pt on input line 205.
+(Font)              scaled to size 9.0pt on input line 206.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 9.0pt on input line 205.
+(Font)              scaled to size 9.0pt on input line 206.
 LaTeX Font Info:    Font shape `OML/nxlmi/m/it' will be
-(Font)              scaled to size 9.0pt on input line 205.
+(Font)              scaled to size 9.0pt on input line 206.
 LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
-(Font)              scaled to size 9.0pt on input line 205.
+(Font)              scaled to size 9.0pt on input line 206.
 LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
-(Font)              scaled to size 9.0pt on input line 205.
+(Font)              scaled to size 9.0pt on input line 206.
 LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
-(Font)              scaled to size 9.0pt on input line 205.
+(Font)              scaled to size 9.0pt on input line 206.
 LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
-(Font)              scaled to size 9.0pt on input line 205.
+(Font)              scaled to size 9.0pt on input line 206.
 LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
-(Font)              scaled to size 9.0pt on input line 205.
+(Font)              scaled to size 9.0pt on input line 206.
 LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
-(Font)              scaled to size 9.0pt on input line 205.
+(Font)              scaled to size 9.0pt on input line 206.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 8.0pt on input line 205.
+(Font)              scaled to size 8.0pt on input line 206.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
-(Font)              scaled to size 8.0pt on input line 205.
+(Font)              scaled to size 8.0pt on input line 206.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
-(Font)              scaled to size 8.0pt on input line 205.
+(Font)              scaled to size 8.0pt on input line 206.
+
+Underfull \vbox (badness 4366) has occurred while \output is active []
+
  [1.1{C:/Users/pedro/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{D:/Mikte
 x/fonts/enc/dvips/libertine/lbtn_25tcsq.enc}{D:/Miktex/fonts/enc/dvips/libertin
 e/lbtn_76gpa5.enc}
@@ -1073,12 +1076,12 @@ e/lbtn_76gpa5.enc}
 D:/Miktex/fonts/enc/dvips/libertine/lbtn_naooyc.enc}{D:/Miktex/fonts/enc/dvips/
 libertine/lbtn_7grukw.enc}]
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/n' will be
-(Font)              scaled to size 9.0pt on input line 242.
+(Font)              scaled to size 9.0pt on input line 241.
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/it' will be
-(Font)              scaled to size 9.0pt on input line 242.
+(Font)              scaled to size 9.0pt on input line 241.
 
-Overfull \hbox (13.34933pt too wide) in paragraph at lines 258--259
- \T1/LinuxBiolinumT-TLF/m/it/9 (-20) 3.2.2 Dis-eases.[] \T1/LinuxLibertineT-TLF
+Overfull \hbox (13.34933pt too wide) in paragraph at lines 257--258
+ \T1/LinuxBiolinumT-TLF/m/it/9 (-20) 2.2.2 Dis-eases.[] \T1/LinuxLibertineT-TLF
 /m/n/9 (-20) This dataset was scraped from the ta-bles of a Wikipedia
  []
 
@@ -1088,22 +1091,11 @@ Overfull \hbox (3.53032pt too wide) in paragraph at lines 299--300
 th a sin-gle con-di-tion/disease,
  []
 
-
-LaTeX Warning: File `data_pipeline.png' not found on input line 309.
-
-
-! Package pdftex.def Error: File `data_pipeline.png' not found: using draft set
-ting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.309 ...hics[width=\linewidth]{data_pipeline.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
+<data_pipeline.png, id=144, 2441.12pt x 4871.19875pt>
+File: data_pipeline.png Graphic file (type png)
+<use data_pipeline.png>
+Package pdftex.def Info: data_pipeline.png  used on input line 309.
+(pdftex.def)             Requested size: 241.14749pt x 481.20215pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
@@ -1124,201 +1116,104 @@ Overfull \hbox (4.01956pt too wide) in paragraph at lines 323--324
  []
 
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/n' will be
-(Font)              scaled to size 7.0pt on input line 326.
+(Font)              scaled to size 7.0pt on input line 325.
 [2.2]
-
-LaTeX Warning: File `pri_uml_final.png' not found on input line 343.
-
-
-! Package pdftex.def Error: File `pri_uml_final.png' not found: using draft set
-ting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.343 ...hics[width=\linewidth]{pri_uml_final.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-Underfull \vbox (badness 2653) has occurred while \output is active []
-
- [3.3]
-Overfull \hbox (7.6118pt too wide) in paragraph at lines 403--404
-[]\T1/LinuxLibertineT-TLF/m/n/9 (-20) Trustworthy com-pa-nies that pro-vide med
-icines for Alzheimer's
+Overfull \hbox (8.41966pt too wide) in paragraph at lines 325--326
+\T1/LinuxLibertineT-TLF/m/n/9 (-20) codes into ASCII char-ac-ters, the \T1/zi4/
+m/n/9 unescape\T1/LinuxLibertineT-TLF/m/n/9 (-20) [[]] func-tion from \T1/zi4/m
+/n/9 Python\T1/LinuxLibertineT-TLF/m/n/9 (-20) 's
  []
 
-[4.4]
+<pri_uml_final.png, id=181, 908.39375pt x 506.89375pt>
+File: pri_uml_final.png Graphic file (type png)
+<use pri_uml_final.png>
+Package pdftex.def Info: pri_uml_final.png  used on input line 343.
+(pdftex.def)             Requested size: 241.14749pt x 134.55824pt.
+[3.3 <./data_pipeline.png> <./pri_uml_final.png>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-Package natbib Warning: Citation `schema' on page 5 undefined on input line 425
-.
-
-
-Package natbib Warning: Citation `http' on page 5 undefined on input line 425.
-
-
-Overfull \hbox (13.17508pt too wide) in paragraph at lines 439--440
+ [4.4]
+Overfull \hbox (13.17508pt too wide) in paragraph at lines 421--422
 []\T1/zi4/m/n/9 applicable_diseases\T1/LinuxLibertineT-TLF/m/n/9 (-20) : A list
  of dis-eases for which the medicine
  []
 
 
-Overfull \hbox (2.85129pt too wide) in paragraph at lines 459--460
+Overfull \hbox (2.85129pt too wide) in paragraph at lines 441--442
 \T1/LinuxLibertineT-TLF/m/n/9 (-20) the re-trieval pro-cess; the query is per-f
 ormed solely on the \T1/zi4/m/n/9 diseases- 
  []
 
 
-Package natbib Warning: Citation `tokenizer' on page 5 undefined on input line 
-469.
-
-
-Package natbib Warning: Citation `filters' on page 5 undefined on input line 46
-9.
-
-[5.5]
-Overfull \hbox (22.62808pt too wide) in paragraph at lines 494--514
- [][] 
+Overfull \hbox (1.55313pt too wide) in paragraph at lines 453--454
+\T1/LinuxLibertineT-TLF/m/n/9 (-20) ad-di-tional field types were cre-ated. For
+ this rea-son, no tokenizers[[]]
  []
 
 
-Package natbib Warning: Citation `edismax' on page 6 undefined on input line 52
-0.
+Package natbib Warning: Citation `stemming' on page 5 undefined on input line 4
+62.
 
+LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
+(Font)              scaled to size 7.3pt on input line 462.
+LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
+(Font)              scaled to size 5.5pt on input line 462.
+LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/it' will be
+(Font)              scaled to size 7.0pt on input line 462.
 
-Package natbib Warning: Citation `dismax' on page 6 undefined on input line 520
-.
+Overfull \hbox (2.409pt too wide) in paragraph at lines 462--463
+[]\T1/LinuxLibertineT-TLF/b/it/9 (-20) SnowballPorterFilterFactory\T1/LinuxLibe
+rtineT-TLF/b/n/9 (-20) : \T1/LinuxLibertineT-TLF/m/n/9 (-20) Fil-ter that ap-pl
+ies stem-ming[\T1/LinuxLibertineT-TLF/b/n/9 (-20) ?
+ []
 
-
-Package natbib Warning: Citation `slop' on page 6 undefined on input line 535.
-
-
-Overfull \hbox (1.47002pt too wide) in paragraph at lines 568--569
+[5.5] [6.6]
+Overfull \hbox (1.47002pt too wide) in paragraph at lines 553--554
 []\T1/LinuxLibertineT-TLF/m/n/9 (-20) Finally, an in-de-pen-dent boost is added
 , based on the \T1/zi4/m/n/9 excellent_- 
  []
 
-[6.6]
 
-Package natbib Warning: Citation `qrels' on page 7 undefined on input line 595.
-
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 615--615
+Underfull \hbox (badness 10000) in paragraph at lines 600--600
 []|\T1/LinuxLibertineT-TLF/m/n/9 (+20) Simple
  []
 
 
-Overfull \hbox (1.77963pt too wide) in paragraph at lines 615--616
+Overfull \hbox (1.77963pt too wide) in paragraph at lines 600--601
 []|\T1/LinuxLibertineT-TLF/m/n/9 (-20) Advanced
  []
 
 
-Underfull \vbox (badness 6575) has occurred while \output is active []
+Underfull \hbox (badness 10000) in paragraph at lines 629--630
+
+ []
 
 
-
-Package natbib Warning: Citation `pak' on page 7 undefined on input line 632.
-
-
-Package natbib Warning: Citation `map' on page 7 undefined on input line 636.
+Underfull \hbox (badness 10000) in paragraph at lines 634--634
+[]|\T1/LinuxLibertineT-TLF/m/n/9 (+20) Simple
+ []
 
 
-Package natbib Warning: Citation `prcurves' on page 7 undefined on input line 6
-40.
+Overfull \hbox (1.77963pt too wide) in paragraph at lines 634--635
+[]|\T1/LinuxLibertineT-TLF/m/n/9 (-20) Advanced
+ []
 
 
-Package natbib Warning: Citation `auc' on page 7 undefined on input line 640.
+Underfull \hbox (badness 10000) in paragraph at lines 648--649
 
-[7.7{D:/Miktex/fonts/enc/dvips/libertine/lbtn_oexx6f.enc}]
-<graphic1.png, id=264, 722.7pt x 433.62pt>
-File: graphic1.png Graphic file (type png)
-<use graphic1.png>
-Package pdftex.def Info: graphic1.png  used on input line 692.
-(pdftex.def)             Requested size: 241.14749pt x 144.68962pt.
-<graphic2.png, id=266, 784.73175pt x 486.618pt>
-File: graphic2.png Graphic file (type png)
-<use graphic2.png>
-Package pdftex.def Info: graphic2.png  used on input line 700.
-(pdftex.def)             Requested size: 241.14749pt x 149.53575pt.
-<graphic3.png, id=267, 1110.0672pt x 550.6974pt>
-File: graphic3.png Graphic file (type png)
-<use graphic3.png>
-Package pdftex.def Info: graphic3.png  used on input line 708.
-(pdftex.def)             Requested size: 241.14749pt x 119.62447pt.
-<graphic4.png, id=268, 1037.67674pt x 544.434pt>
-File: graphic4.png Graphic file (type png)
-<use graphic4.png>
-Package pdftex.def Info: graphic4.png  used on input line 716.
-(pdftex.def)             Requested size: 241.14749pt x 126.52144pt.
-<graphic5.png, id=269, 655.85025pt x 367.3725pt>
-File: graphic5.png Graphic file (type png)
-<use graphic5.png>
-Package pdftex.def Info: graphic5.png  used on input line 724.
-(pdftex.def)             Requested size: 241.14749pt x 135.07362pt.
-<graphic6.png, id=270, 1110.0672pt x 550.6974pt>
-File: graphic6.png Graphic file (type png)
-<use graphic6.png>
-Package pdftex.def Info: graphic6.png  used on input line 732.
-(pdftex.def)             Requested size: 241.14749pt x 119.62447pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [8.8 <./graphic1.png> <./graphic2.png> <./graphic3.png> <./graphic4.png> <./gr
-aphic5.png>]
-<graphic7.png, id=280, 1025.63174pt x 523.35526pt>
-File: graphic7.png Graphic file (type png)
-<use graphic7.png>
-Package pdftex.def Info: graphic7.png  used on input line 740.
-(pdftex.def)             Requested size: 241.14749pt x 123.04439pt.
-<precision_recal_simple_1.png, id=281, 1927.2pt x 1445.4pt>
-File: precision_recal_simple_1.png Graphic file (type png)
-<use precision_recal_simple_1.png>
-Package pdftex.def Info: precision_recal_simple_1.png  used on input line 748.
-(pdftex.def)             Requested size: 241.14749pt x 180.851pt.
-<precision_recal_simple_2.png, id=282, 1927.2pt x 1445.4pt>
-File: precision_recal_simple_2.png Graphic file (type png)
-<use precision_recal_simple_2.png>
-Package pdftex.def Info: precision_recal_simple_2.png  used on input line 756.
-(pdftex.def)             Requested size: 241.14749pt x 180.851pt.
-
-Underfull \vbox (badness 4205) has occurred while \output is active []
-
-<precision_recal_simple_3.png, id=283, 1927.2pt x 1445.4pt>
-File: precision_recal_simple_3.png Graphic file (type png)
-<use precision_recal_simple_3.png>
-Package pdftex.def Info: precision_recal_simple_3.png  used on input line 764.
-(pdftex.def)             Requested size: 241.14749pt x 180.851pt.
-<precision_recal_simple_4.png, id=284, 1927.2pt x 1445.4pt>
-File: precision_recal_simple_4.png Graphic file (type png)
-<use precision_recal_simple_4.png>
-Package pdftex.def Info: precision_recal_simple_4.png  used on input line 772.
-(pdftex.def)             Requested size: 241.14749pt x 180.851pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [9.9 <./graphic6.png> <./graphic7.png> <./precision_recal_simple_1.png> <./pre
-cision_recal_simple_2.png> <./precision_recal_simple_3.png>]
-
-LaTeX Warning: File `system_arch.png' not found on input line 780.
+ []
 
 
-! Package pdftex.def Error: File `system_arch.png' not found: using draft setti
-ng.
+Underfull \hbox (badness 10000) in paragraph at lines 653--653
+[]|\T1/LinuxLibertineT-TLF/m/n/9 (+20) Simple
+ []
 
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.780 ...aphics[width=\linewidth]{system_arch.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
 
-(sample-sigconf-authordraft.bbl
+Overfull \hbox (1.77963pt too wide) in paragraph at lines 653--654
+[]|\T1/LinuxLibertineT-TLF/m/n/9 (-20) Advanced
+ []
+
+[7.7] (sample-sigconf-authordraft.bbl
 Underfull \hbox (badness 6758) in paragraph at lines 14--20
 []\T1/LinuxLibertineT-TLF/m/n/7 (+20) Kaggle.  11000 medicine de-tails.  []$htt
 ps : / / www . kaggle . com / datasets /
@@ -1330,49 +1225,156 @@ Underfull \hbox (badness 2478) in paragraph at lines 22--26
  []$https : / / creativecommons . org /
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 168--174
+\T1/LinuxLibertineT-TLF/m/n/7 (+20) pri / tutorials/ -[] /blob / main / 06 -[] 
+evaluation / README . md ? ref _ type = heads # 2 -[]
+ []
+
+
+Underfull \hbox (badness 1454) in paragraph at lines 176--180
+[]\T1/LinuxLibertineT-TLF/m/n/7 (+20) Keylabs.  Un-der-stand-ing pre-ci-sion at
+ k (p@k).  []$https : / / keylabs . ai / blog /
+ []
+
 )
+<graphic1.png, id=288, 722.7pt x 433.62pt>
+File: graphic1.png Graphic file (type png)
+<use graphic1.png>
+Package pdftex.def Info: graphic1.png  used on input line 685.
+(pdftex.def)             Requested size: 241.14749pt x 144.68962pt.
+<graphic2.png, id=289, 784.73175pt x 486.618pt>
+File: graphic2.png Graphic file (type png)
+<use graphic2.png>
+Package pdftex.def Info: graphic2.png  used on input line 693.
+(pdftex.def)             Requested size: 241.14749pt x 149.53575pt.
+ [8.8 <./graphic1.png>]
+<graphic3.png, id=312, 1110.0672pt x 550.6974pt>
+File: graphic3.png Graphic file (type png)
+<use graphic3.png>
+Package pdftex.def Info: graphic3.png  used on input line 701.
+(pdftex.def)             Requested size: 241.14749pt x 119.62447pt.
+<graphic4.png, id=313, 1037.67674pt x 544.434pt>
+File: graphic4.png Graphic file (type png)
+<use graphic4.png>
+Package pdftex.def Info: graphic4.png  used on input line 709.
+(pdftex.def)             Requested size: 241.14749pt x 126.52144pt.
+<graphic5.png, id=314, 655.85025pt x 367.3725pt>
+File: graphic5.png Graphic file (type png)
+<use graphic5.png>
+Package pdftex.def Info: graphic5.png  used on input line 717.
+(pdftex.def)             Requested size: 241.14749pt x 135.07362pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+<graphic6.png, id=315, 1110.0672pt x 550.6974pt>
+File: graphic6.png Graphic file (type png)
+<use graphic6.png>
+Package pdftex.def Info: graphic6.png  used on input line 725.
+(pdftex.def)             Requested size: 241.14749pt x 119.62447pt.
+<graphic7.png, id=316, 1025.63174pt x 523.35526pt>
+File: graphic7.png Graphic file (type png)
+<use graphic7.png>
+Package pdftex.def Info: graphic7.png  used on input line 733.
+(pdftex.def)             Requested size: 241.14749pt x 123.04439pt.
+<system_arch.png, id=317, 4101.3225pt x 2749.27126pt>
+File: system_arch.png Graphic file (type png)
+<use system_arch.png>
+Package pdftex.def Info: system_arch.png  used on input line 741.
+(pdftex.def)             Requested size: 241.14749pt x 161.63507pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [9.9 <./graphic2.png> <./graphic3.png> <./graphic4.png> <./graphic5.png> <./gr
+aphic6.png> <./graphic7.png>]
+<precision_recall_q1b.png, id=328, 1927.2pt x 1445.4pt>
+File: precision_recall_q1b.png Graphic file (type png)
+<use precision_recall_q1b.png>
+Package pdftex.def Info: precision_recall_q1b.png  used on input line 749.
+(pdftex.def)             Requested size: 192.91872pt x 144.68079pt.
+<precision_recall_q1a.png, id=329, 1927.2pt x 1445.4pt>
+File: precision_recall_q1a.png Graphic file (type png)
+<use precision_recall_q1a.png>
+Package pdftex.def Info: precision_recall_q1a.png  used on input line 757.
+(pdftex.def)             Requested size: 192.91872pt x 144.68079pt.
+<precision_recall_q2b.png, id=330, 1927.2pt x 1445.4pt>
+File: precision_recall_q2b.png Graphic file (type png)
+<use precision_recall_q2b.png>
+Package pdftex.def Info: precision_recall_q2b.png  used on input line 765.
+(pdftex.def)             Requested size: 192.91872pt x 144.68079pt.
+
+Underfull \vbox (badness 1270) has occurred while \output is active []
+
+<precision_recall_q2a.png, id=331, 1927.2pt x 1445.4pt>
+File: precision_recall_q2a.png Graphic file (type png)
+<use precision_recall_q2a.png>
+Package pdftex.def Info: precision_recall_q2a.png  used on input line 773.
+(pdftex.def)             Requested size: 192.91872pt x 144.68079pt.
+<precision_recall_q3b.png, id=332, 1927.2pt x 1445.4pt>
+File: precision_recall_q3b.png Graphic file (type png)
+<use precision_recall_q3b.png>
+Package pdftex.def Info: precision_recall_q3b.png  used on input line 781.
+(pdftex.def)             Requested size: 192.91872pt x 144.68079pt.
+<precision_recall_q3a.png, id=333, 1927.2pt x 1445.4pt>
+File: precision_recall_q3a.png Graphic file (type png)
+<use precision_recall_q3a.png>
+Package pdftex.def Info: precision_recall_q3a.png  used on input line 789.
+(pdftex.def)             Requested size: 192.91872pt x 144.68079pt.
+
+Underfull \vbox (badness 2799) has occurred while \output is active []
+
+ [10.10 <./system_arch.png> <./precision_recall_q1b.png> <./precision_recall_q1
+a.png> <./precision_recall_q2b.png> <./precision_recall_q2a.png> <./precision_r
+ecall_q3b.png>]
+<precision_recall_q4b.png, id=344, 1927.2pt x 1445.4pt>
+File: precision_recall_q4b.png Graphic file (type png)
+<use precision_recall_q4b.png>
+Package pdftex.def Info: precision_recall_q4b.png  used on input line 797.
+(pdftex.def)             Requested size: 192.91872pt x 144.68079pt.
+<precision_recall_q4a.png, id=345, 1927.2pt x 1445.4pt>
+File: precision_recall_q4a.png Graphic file (type png)
+<use precision_recall_q4a.png>
+Package pdftex.def Info: precision_recall_q4a.png  used on input line 805.
+(pdftex.def)             Requested size: 192.91872pt x 144.68079pt.
+
 
 Package natbib Warning: There were undefined citations.
-
-
-Package balance Warning: You have called \balance in second column
-(balance)                Columns might not be balanced.
 
 (D:\Miktex\tex/generic/stringenc\se-pdfdoc.def
 File: se-pdfdoc.def 2019/11/29 v1.12 stringenc: PDFDocEncoding
 )
 (D:\Miktex\tex/generic/stringenc\se-utf8.def
 File: se-utf8.def 2019/11/29 v1.12 stringenc: UTF-8
-) [10.10 <./precision_recal_simple_4.png>] (sample-sigconf-authordraft.aux)
+) [11.11 <./precision_recall_q3a.png> <./precision_recall_q4b.png> <./precision
+_recall_q4a.png>]
+(sample-sigconf-authordraft.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
  ***********
 Package rerunfilecheck Info: File `sample-sigconf-authordraft.out' has not chan
 ged.
-(rerunfilecheck)             Checksum: EE4399D397EB19E287E9F9C50342A335;6051.
+(rerunfilecheck)             Checksum: E3F374449AD4ACEFB373FC7CF5AE659B;4282.
  ) 
 Here is how much of TeX's memory you used:
- 21879 strings out of 474486
- 348869 string characters out of 5760170
- 1954542 words of memory out of 5000000
+ 21908 strings out of 474486
+ 349142 string characters out of 5760170
+ 1966542 words of memory out of 5000000
  43093 multiletter control sequences out of 15000+600000
- 715143 words of font info for 372 fonts, out of 8000000 for 9000
+ 729374 words of font info for 378 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
- 90i,13n,131p,1025b,626s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 90i,13n,131p,1141b,628s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <D:/Miktex/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb><D:/Miktex/fon
-ts/type1/public/newtx/LibertineMathMI.pfb><D:/Miktex/fonts/type1/public/newtx/L
-ibertineMathMI7.pfb><D:/Miktex/fonts/type1/public/libertine/LinBiolinumT.pfb><D
-:/Miktex/fonts/type1/public/libertine/LinBiolinumTB.pfb><D:/Miktex/fonts/type1/
-public/libertine/LinBiolinumTI.pfb><D:/Miktex/fonts/type1/public/libertine/LinL
-ibertineT.pfb><D:/Miktex/fonts/type1/public/libertine/LinLibertineTB.pfb><D:/Mi
-ktex/fonts/type1/public/libertine/LinLibertineTBI.pfb><D:/Miktex/fonts/type1/pu
-blic/libertine/LinLibertineTI.pfb><D:/Miktex/fonts/type1/public/newtx/txmiaX.pf
-b><D:/Miktex/fonts/type1/public/newtx/txsys.pfb><D:/Miktex/fonts/type1/urw/zapf
-ding/uzdr.pfb>
-Output written on sample-sigconf-authordraft.pdf (10 pages, 1397061 bytes).
+ts/type1/public/libertine/LinBiolinumT.pfb><D:/Miktex/fonts/type1/public/libert
+ine/LinBiolinumTB.pfb><D:/Miktex/fonts/type1/public/libertine/LinBiolinumTI.pfb
+><D:/Miktex/fonts/type1/public/libertine/LinLibertineT.pfb><D:/Miktex/fonts/typ
+e1/public/libertine/LinLibertineTB.pfb><D:/Miktex/fonts/type1/public/libertine/
+LinLibertineTBI.pfb><D:/Miktex/fonts/type1/public/libertine/LinLibertineTI.pfb>
+<D:/Miktex/fonts/type1/public/newtx/txsys.pfb><D:/Miktex/fonts/type1/urw/zapfdi
+ng/uzdr.pfb>
+Output written on sample-sigconf-authordraft.pdf (11 pages, 3159967 bytes).
 PDF statistics:
- 403 PDF objects out of 1000 (max. 8388607)
- 93 named destinations out of 1000 (max. 500000)
- 86880 words of extra memory for PDF output out of 89155 (max. 10000000)
+ 427 PDF objects out of 1000 (max. 8388607)
+ 106 named destinations out of 1000 (max. 500000)
+ 97091 words of extra memory for PDF output out of 106986 (max. 10000000)
 
