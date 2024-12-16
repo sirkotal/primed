@@ -5,17 +5,17 @@
 %% The original source files were:
 %%
 %% samples.dtx  (with options: `all,proceedings,bibtex,authordraft')
-%% 
+%%
 %% IMPORTANT NOTICE:
-%% 
+%%
 %% For the copyright see the source file.
-%% 
+%%
 %% Any modified versions of this file must be renamed
 %% with new filenames distinct from sample-sigconf-authordraft.tex.
-%% 
+%%
 %% For distribution of the original source see the terms
 %% for copying and modification in the file samples.dtx.
-%% 
+%%
 %% This generated file may be distributed as long as the
 %% original source files, as listed above, are part of the
 %% same distribution. (The sources need not necessarily be
@@ -325,7 +325,7 @@ Another character normalization problem resulting from the scraping process aris
 
 \subsection{Standardization of Formats}
 
-For the best possible result, formats such as dates should be standardized; therefore, part of the pipeline deals with transforming this data into \texttt{yyyy-mm-dd} format, which makes the process of sorting and searching substantially easier. 
+For the best possible result, formats such as dates should be standardized; therefore, part of the pipeline deals with transforming this data into \texttt{yyyy-mm-dd} format, which makes the process of sorting and searching substantially easier.
 
 \subsection{Data Storage}
 
@@ -354,7 +354,7 @@ The final version of the dataset, representing the collection of documents, cont
 
 By analysing figure~[\ref{fig:topManufacturers}], which shows the distribution of the main pharmaceutical companies responsible for manufacturing medicines where the five that possess the largest share are highlighted, we are given a clearer understanding of each manufacturers' production capabilities.
 
-A box plot, present in figure~[\ref{fig:reviewDistribution}], is utilized to analyse the distribution of “Excellent”, “Average” and “Poor” review percentages across the different medicines. The graph shows that, for instance, "Excellent" reviews percentages are more evenly spread than the "Average" reviews percentages which, despite having a lower interquartile range\cite{iqrange}, possesses a higher number of outliers. The "Poor" review percentages have the largest variations, but also the lowest values. 
+A box plot, present in figure~[\ref{fig:reviewDistribution}], is utilized to analyse the distribution of “Excellent”, “Average” and “Poor” review percentages across the different medicines. The graph shows that, for instance, "Excellent" reviews percentages are more evenly spread than the "Average" reviews percentages which, despite having a lower interquartile range\cite{iqrange}, possesses a higher number of outliers. The "Poor" review percentages have the largest variations, but also the lowest values.
 In figure~[\ref{fig:reviewPercMean}], we can see the average percentage of reviews for the top ten use cases, which supports the findings from figure~[\ref{fig:reviewDistribution}].
 
 By analysing figure~[\ref{fig:sideEffectsDistribution}], we can identify the most common side effects caused by medication - nausea, headaches, diarrhea - and how many medicines are associated to each one of them. As expected, the data shows that side effects that occur more frequently are those that are milder in nature.
@@ -380,15 +380,12 @@ Here is a list of possible information needs, explaining what type of data is ne
 	\item {\texttt{Prevalence Rate}}: It can also be relevant to be aware of how common a certain disease is in a population, whether that influences the diagnosis of the patient or just for statistical purposes.
 \end{itemize}
 
-Based one these needs, we can answer some questions like: 
+Based one these needs, we can answer some questions like:
 \begin{arrowlist}
-	\item Which medicines are more commonly used to treat the common cold?
-        \item Trustworthy companies that provide medicines for \\Alzheimer’s disease. 
-	\item How does the composition of medicine for diabetes vary between manufacturers like Novo Nordisk, Eli Lilly, and Sanofi?
-	\item What are the most effective treatments for managing rheumatoid vasculitis pain and inflammation?
-	\item What is the best treatment for persistent migraine symptoms, including nausea and light sensitivity?
-	\item Is weight gain a common side effect of antidepressants?
-	\item What side effects have other patients experienced with medications like rituximab or methotrexate for treating vasculitis?
+    \item Identify pharmaceutical companies or organizations that develop, produce, or provide treatments for malaria.
+	\item Find customer reviews, opinions, or feedback regarding Eli Lilly's products, services, or company reputation.
+	\item Obtain information about the side effect of weight gain caused by the use of antidepressant medications, including data on specific antidepressants.
+	\item Search for medications, treatments, or drugs that are effective for managing or curing migraines.
 \end{arrowlist}
 
 As previously stated, a wide range of people can take advantage of this type of information - from regular patients to medicine experts and even investigators, everyone can benefit from having access to the data present in \textit{\textbf{PRIMED}}.
@@ -400,7 +397,7 @@ Apache Solr\cite{solr} is a search and analysis platform which allows the indexa
 \subsection{Project Objectives}
 
 The primary objective of the project is to give users access to structured information for healthcare and research, focusing on medicines, associated diseases, user reviews or even manufacturers.
-The use of Solr means to allow the system to deliver an efficient querying process to the \textit{\textbf{PRIMED}} data collection able to rapidly retrieve the desired results. 
+The use of Solr means to allow the system to deliver an efficient querying process to the \textit{\textbf{PRIMED}} data collection able to rapidly retrieve the desired results.
 Additionally, utilizing Solr's capabilities offers the opportunity to enhance the document collection itself by boosting specified fields in search results and creating of custom data types, among other features.
 
 \subsection{System Architecture}
@@ -424,18 +421,18 @@ The final version of a document in the data collection, generated as a result of
 	\item {\texttt{possible\_side\_effects}}: A list of possible side effects provoked by the drug when taken.
 	\item {\texttt{excellent\_review\_perc}}: Percentage of reviews with a rating superior to 7.
 	\item {\texttt{average\_review\_perc}}: Percentage of reviews with a rating between 4 and 7.
-        \item {\texttt{poor\_review\_perc}}: Percentage of reviews 
+        \item {\texttt{poor\_review\_perc}}: Percentage of reviews
     with a rating inferior to 4.
-        \item {\texttt{reviews\_average\_rating}}: The average review score for 
+        \item {\texttt{reviews\_average\_rating}}: The average review score for
     the medicine, based on all the reviews it received (rounded to two decimal places).
-        \item {\texttt{reviews}}: Reviews associated with each medicine (in 
+        \item {\texttt{reviews}}: Reviews associated with each medicine (in
     some specific cases, the association is made based on the active principle due to the reviewer not revealing the medicine's name itself).
-        \item {\texttt{manufacturer}}: The name of the company responsible 
+        \item {\texttt{manufacturer}}: The name of the company responsible
     for producing a specific medicine.
-        \item {\texttt{manufacturer\_desc}}: A short description of 
+        \item {\texttt{manufacturer\_desc}}: A short description of
     each company, containing some extra information.
         \item {\texttt{manufacturer\_start}}: The year the company was created.
-        \item {\texttt{manufacturer\_end}}: The year the company was shut 
+        \item {\texttt{manufacturer\_end}}: The year the company was shut
     down, if available.
 \end{itemize}
 
@@ -447,17 +444,17 @@ The three review percentage categories were defined to allow for a more detailed
 
 Solr stores details about the field types and which fields it is expected to understand in a schema. A schema allows for a specific search system to be configured on the indexing process. For system and performance evaluation purposes, a decision was made to create two distinct systems.
 
-As a result, two different schemas were created - one for the baseline system, with minimal configuration, and another, more advanced schema for the improved system. 
+As a result, two different schemas were created - one for the baseline system, with minimal configuration, and another, more advanced schema for the improved system.
 
 Since every field has the \textit{stored} property set to \textit{true} in both schemas, it won't be displayed in the upcoming (advanced) schema table. Of all the fields present, only two are not indexed (have the \textit{indexed} property set to \textit{false}): \texttt{manufacturer\_start} and \texttt{manufactu-\\rer\_end}, since they are only used to display additional information about a medicine's manufacturer and are not actively used in any search tasks. The only fields with the \textit{multiValued} property enabled are those that store a list of strings: \texttt{reviews}, \texttt{diseases\_info}, \texttt{applicable\_diseases} and \texttt{possible\_side\_effects}.
 
 For the basic schema, only native Solr data types were used - no additional field types were created. For this reason, no tokenizers\cite{tokenizer} or filters\cite{filters} were added in the basic schema; however, the text fields utilize the \textit{text\_general} type, which tokenizes with a standard tokenizer. The percentage fields type, as well as the field representing the average rating of the reviews, were assigned the \textit{pdouble} type.
 
-For the advanced schema, since the goal is to perform queries on textual fields, a new field type, \textbf{\textit{textBoosted}}, was created, based on the \textit{TextField} class, which makes use of both tokenizers and filters - while the tokenizers are responsible for breaking field data into lexical units (tokens), filters examine the stream of tokens and keep them, discard them or transform them depending on the specific filter being used. The \textbf{\textit{textBoosted}} field type includes: 
+For the advanced schema, since the goal is to perform queries on textual fields, a new field type, \textbf{\textit{textBoosted}}, was created, based on the \textit{TextField} class, which makes use of both tokenizers and filters - while the tokenizers are responsible for breaking field data into lexical units (tokens), filters examine the stream of tokens and keep them, discard them or transform them depending on the specific filter being used. The \textbf{\textit{textBoosted}} field type includes:
 
 \begin{arrowlist}
 	\item \textbf{\textit{StandardTokenizerFactory}:} Tokenizer that uses whitespaces and punctuation as delimiters to split text into tokens.
-        \item \textbf{\textit{ASCIIFoldingFilterFactory}:} Filter that 
+        \item \textbf{\textit{ASCIIFoldingFilterFactory}:} Filter that
     converts Unicode characters like special characters or characters with accents into their ASCII equivalents, if one exists.
 	\item \textbf{\textit{LowerCaseFilterFactory}:} Filter that converts all letters in a token to lowercase.
 	\item \textbf{\textit{SnowballPorterFilterFactory}:} Filter that applies stemming\cite{stemming} - the process of reducing a word to its root form (or \textit{stem}) - to tokens during text processing by generating pattern-based word stemmers. While less accurate than table-based stemmers, it is faster and less complex. It was also chosen for its aggressive stemming\footnote{The \textit{SnowballPorterFilterFactory} filter often applies more drastic reductions to words than other stemming filters; for instance, the words \textit{general}, \textit{generous}, \textit{generation} can be reduced to the stem \textit{\textbf{gener}}, despite having different meanings.}, making it suitable to normalize word variations in the reviews and manufacturer descriptions.
@@ -466,7 +463,7 @@ For the advanced schema, since the goal is to perform queries on textual fields,
 Two additional field types, similar to \textbf{\textit{textBoosted}}, were also created:
 
 \begin{itemize}
-        \item \textbf{\textit{diseasesBoosted}}: Very similar to 
+        \item \textbf{\textit{diseasesBoosted}}: Very similar to
     \textbf{\textit{textBoosted}}, but relies on \textbf{\textit{EnglishMinimalStemFilterFactory}} for stemming instead, which is a lightweight filter, better suited to handle fields that contain more technical terms - particularly the diseases' information.
 	\item \textbf{\textit{shortText}}: Very similar to \textbf{\textit{textBoosted}} but without a stemming filter, as it is applied to short textual fields that contain very specific terms.
 \end{itemize}
@@ -547,7 +544,7 @@ The baseline system exclusively uses the common parameters, along with the \text
     \label{tab:simple_query}
 \end{table}
 
-Alternatively, the advanced system makes use of the all the common and optimization parameters, with the exception of the \texttt{sort} parameter, allowing for theoretically better results to be achieved when processing a query. In this case, the common parameters have the same values as the ones in the baseline system, but the designated query fields, albeit similar in structure to those in the baseline system, have different weights in the ranking process: the \texttt{reviews} field has a weight of 4 and the \texttt{diseases\_info} field has a weight of 3, as they are the most important sources of information; \texttt{manufacturer\_desc} maintains a weight of 1. 
+Alternatively, the advanced system makes use of the all the common and optimization parameters, with the exception of the \texttt{sort} parameter, allowing for theoretically better results to be achieved when processing a query. In this case, the common parameters have the same values as the ones in the baseline system, but the designated query fields, albeit similar in structure to those in the baseline system, have different weights in the ranking process: the \texttt{reviews} field has a weight of 4 and the \texttt{diseases\_info} field has a weight of 3, as they are the most important sources of information; \texttt{manufacturer\_desc} maintains a weight of 1.
 
 The document receives an additional boost if all of the terms in the query are found in close proximity of each other (exact phrase match) within the \texttt{reviews} field, due to the more informal nature its text. Nevertheless, to account for some variation in word order or the presence of extra words, a phrase slop of 2 is applied to allow for more flexibility when searching for the phrase matches. We settled on the value of 2 for the phrase slop parameter after some trial and error - it seemed to be the value that provided the best balance between the tolerance for minor variations in word order and precision.
 
@@ -596,17 +593,17 @@ To evaluate the effectiveness of the information retrieved from querying, specif
 Each one of these queries was properly tested, with the number of documents retrieved for each query in both systems being recorded.
 
 \begin{table}[H]
-	\begin{tabular}{ | m{5em} | m{1cm}| m{1.2cm} | } 
+	\begin{tabular}{ | m{5em} | m{1cm}| m{1.2cm} | }
 		\hline
-		Query& Simple Results & Advanced Results \\ 
+		Query& Simple Results & Advanced Results \\
 		\hline
-		Q1 & 30 & 60 \\ 
+		Q1 & 30 & 60 \\
 		\hline
-		Q2 & 54 & 61 \\ 
+		Q2 & 54 & 61 \\
 		\hline
-		Q3 & 1391 & 1573 \\ 
+		Q3 & 1391 & 1573 \\
 		\hline
-		Q4 & 3897 & 4842 \\ 
+		Q4 & 3897 & 4842 \\
 		\hline
 	\end{tabular}
 	\caption{Query Results}
@@ -615,7 +612,7 @@ Each one of these queries was properly tested, with the number of documents retr
 
 \subsubsection{Precision@k}
 
-To evaluate the performance of our systems, the P@k metric\cite{pak} is used, with the choice being made of evaluating the first ten documents returned for each query. This metric gauges the accuracy of the system by analysing the top k results and calculating the proportion of those documents that are relevant. 
+To evaluate the performance of our systems, the P@k metric\cite{pak} is used, with the choice being made of evaluating the first ten documents returned for each query. This metric gauges the accuracy of the system by analysing the top k results and calculating the proportion of those documents that are relevant.
 
 \subsubsection{Mean Average Precision}
 
@@ -630,17 +627,17 @@ A Precision-Recall (P-R) Curve\cite{prcurves} is calculated for each individual 
 In this section, the results for every single query in both systems will be examined by analysing the different values for each performance metric, which will help to determine the accuracy of each system in regards to retrieving relevant information. For each query, only the first 30 results were utilized for metrics calculation.\newline
 
 \begin{table}[H]
-	\begin{tabular}{ | m{5em} | m{1cm}| m{1.2cm} | } 
+	\begin{tabular}{ | m{5em} | m{1cm}| m{1.2cm} | }
 		\hline
-		Query& Simple P@10 & Advanced P@10 \\ 
+		Query& Simple P@10 & Advanced P@10 \\
 		\hline
-		Q1 & 0.9 & 0.5 \\ 
+		Q1 & 0.9 & 0.5 \\
 		\hline
-		Q2 & 0.7 & 0.4 \\ 
+		Q2 & 0.7 & 0.4 \\
 		\hline
-		Q3 & 0.7 & 0.2 \\ 
+		Q3 & 0.7 & 0.2 \\
 		\hline
-		Q4 & 0.7 & 0 \\ 
+		Q4 & 0.7 & 0 \\
 		\hline
 	\end{tabular}
 	\caption{P@10 Results}
@@ -649,17 +646,17 @@ In this section, the results for every single query in both systems will be exam
 The Average Precision is calculated for each query result, and the mean of these values across all relevant results is used to determine the Mean Average Precision, which in this case is obtained via the P-R Curve, as it provides the MAP value for all queries and systems. The figures containing each P-R Curve are placed in the appendix. \newline
 
 \begin{table}[H]
-	\begin{tabular}{ | m{5em} | m{1cm}| m{1.2cm} | } 
+	\begin{tabular}{ | m{5em} | m{1cm}| m{1.2cm} | }
 		\hline
-		Query& Simple MAP & Advanced MAP \\ 
+		Query& Simple MAP & Advanced MAP \\
 		\hline
-		Q1 & 0.7986 & 0.8711 \\ 
+		Q1 & 0.7986 & 0.8711 \\
 		\hline
-		Q2 & 0.7713 & 0.7203 \\ 
+		Q2 & 0.7713 & 0.7203 \\
 		\hline
-		Q3 & 0.4004 & 0.4460 \\ 
+		Q3 & 0.4004 & 0.4460 \\
 		\hline
-		Q4 & 0.3694 & 0.5330 \\ 
+		Q4 & 0.3694 & 0.5330 \\
 		\hline
 	\end{tabular}
 	\caption{MAP Results}
@@ -719,7 +716,7 @@ Completing these project milestones marks a significant step in the development 
 	\caption{Common Uses Word Cloud}
 	\Description{Dataset Characterization \textit{\textbf{PRIMED}}'s data}
 	\label{fig:commonUses}
-  \end{figure} 
+  \end{figure}
 
 \begin{figure}[H]
 	\centering
@@ -727,7 +724,7 @@ Completing these project milestones marks a significant step in the development 
 	\caption{Most Common Drug Compositions}
 	\Description{Dataset Characterization \textit{\textbf{PRIMED}}'s data}
 	\label{fig:commonDrugCompositions}
-  \end{figure}   
+  \end{figure}
 
 \begin{figure}[H]
 	\centering
@@ -744,7 +741,7 @@ Completing these project milestones marks a significant step in the development 
 	\Description{\textit{\textbf{PRIMED}}'s Solr system architecture}
 	\label{fig:sysArchitecture}
   \end{figure}
-  
+
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.8\linewidth]{precision_recall_q1b.png}
@@ -792,7 +789,7 @@ Completing these project milestones marks a significant step in the development 
   \Description{Q3 P-R Curves -> Advanced System}
   \label{fig:precisionRecallAdvanced3}
 \end{figure}
-  
+
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.8\linewidth]{precision_recall_q4b.png}
