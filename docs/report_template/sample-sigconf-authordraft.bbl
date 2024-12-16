@@ -37,6 +37,11 @@ Creative Commons.
   \url{https://en.wikipedia.org/wiki/Wikipedia:Text_of_the_Creative_Commons_Attribution-ShareAlike_4.0_International_License}.
 \newblock \newline Accessed on: November 9, 2024.
 
+\bibitem{diseases_cuf_dataset}
+CUF.
+\newblock \url{https://www.cuf.pt/saude-a-z}, 2024.
+\newblock \newline Accessed on: December 16, 2024.
+
 \bibitem{companies_dataset}
 Wikipedia.
 \newblock \url{https://en.wikipedia.org/wiki/List_of_pharmaceutical_companies},
@@ -49,7 +54,8 @@ Surya Kallumadi and Felix Grer.
 \newblock
   \url{https://archive.ics.uci.edu/dataset/462/drug+review+dataset+drugs+com},
   2018.
-\newblock UC Irvine Machine Learning Repository.
+\newblock UC Irvine Machine Learning Repository \newline Accessed on: November
+  9, 2024.
 
 \bibitem{irvine}
 UC~Irvine.
@@ -101,7 +107,95 @@ Pritha Bhandari.
 
 \bibitem{solr}
 Sematext.
-\newblock {\em Getting Started with Apache Solr}.
-\newblock solr introduction and explanation.
+\newblock Getting started with apache solr.
+\newblock \url{https://sematext.com/guides/solr/}.
+\newblock solr introduction and explanation \newline Accessed on: November 11,
+  2024.
+
+\bibitem{schema}
+Apache~Software Foundation.
+\newblock Solr’s schema file.
+\newblock
+  \url{https://solr.apache.org/guide/6_6/overview-of-documents-fields-and-schema-design.html#solr-s-schema-file},
+  2017.
+\newblock \newline Accessed on: November 11, 2024.
+
+\bibitem{http}
+MDN.
+\newblock Http request methods.
+\newblock \url{https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods},
+  2024.
+\newblock \newline Accessed on: November 17, 2024.
+
+\bibitem{tokenizer}
+Apache~Software Foundation.
+\newblock Tokenizers.
+\newblock
+  \url{https://solr.apache.org/guide/solr/latest/indexing-guide/tokenizers.html}.
+\newblock \newline Accessed on: November 11, 2024.
+
+\bibitem{filters}
+Apache~Software Foundation.
+\newblock Filters.
+\newblock
+  \url{https://solr.apache.org/guide/solr/latest/indexing-guide/filters.html}.
+\newblock \newline Accessed on: November 11, 2024.
+
+\bibitem{edismax}
+Apache~Software Foundation.
+\newblock The extended dismax query parser.
+\newblock
+  \url{https://solr.apache.org/guide/6_6/the-extended-dismax-query-parser.html},
+  2017.
+\newblock \newline Accessed on: November 13, 2024.
+
+\bibitem{dismax}
+Apache~Software Foundation.
+\newblock The dismax query parser.
+\newblock \url{https://solr.apache.org/guide/6_6/the-dismax-query-parser.html},
+  2017.
+\newblock \newline Accessed on: November 13, 2024.
+
+\bibitem{slop}
+Apache~Software Foundation.
+\newblock Using 'slop'.
+\newblock
+  \url{https://solr.apache.org/guide/8_6/the-extended-dismax-query-parser.html#using-slop},
+  2020.
+\newblock \newline Accessed on: November 17, 2024.
+
+\bibitem{qrels}
+Sérgio Nunes.
+\newblock Understanding relevance judgements.
+\newblock
+  \url{https://gitlab.up.pt/pri/tutorials/-/blob/main/06-evaluation/README.md?ref_type=heads#2-understanding-relevance-judgements},
+  2024.
+\newblock \newline Accessed on: November 17, 2024.
+
+\bibitem{pak}
+Keylabs.
+\newblock Understanding precision at k (p@k).
+\newblock \url{https://keylabs.ai/blog/understanding-precision-at-k-p-k/}.
+\newblock \newline Accessed on: November 17, 2024.
+
+\bibitem{map}
+Deval Shah.
+\newblock Mean average precision (map) explained: Everything you need to know.
+\newblock \url{https://www.v7labs.com/blog/mean-average-precision}, 2022.
+\newblock \newline Accessed on: November 17, 2024.
+
+\bibitem{prcurves}
+Doug Steen.
+\newblock Precision-recall curves.
+\newblock
+  \url{https://medium.com/@douglaspsteen/precision-recall-curves-d32e5b290248},
+  2020.
+\newblock \newline Accessed on: November 17, 2024.
+
+\bibitem{auc}
+Amber Roberts.
+\newblock What is pr auc?
+\newblock \url{https://arize.com/blog/what-is-pr-auc/}, 2022.
+\newblock \newline Accessed on: November 17, 2024.
 
 \end{thebibliography}

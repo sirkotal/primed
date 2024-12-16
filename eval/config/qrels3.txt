@@ -1,176 +1,174 @@
-Neurotrat NP Tablet  
-Nervsenz Tablet SR  
-Insulate NP Tablet  
-Gabafix Gel  
-Senseit Gel  
-LCZ XP Expectorant  
-Phensedyl CR Syrup  
-Neocalm Plus Tablet  
-Selgin Tablet  
-Parkin Plus Tablet  
-Trinicalm Plus Tablet  
-Trazine H Tablet  
-Trazine S Tablet  
-Talecalm Plus Tablet  
-Trinicalm Forte Tablet  
-Panthor DX Syrup  
-Trivon Tablet  
-Skizoril 100mg Tablet  
-Skizoril 50mg Tablet  
-Skizoril 25mg Tablet  
-Skizoril 200 Tablet  
-Skizoril MD 50 Tablet  
-Talecalm 5mg Tablet  
-Alkepin Odt 12.5mg Tablet  
-Alkepin Odt 50mg Tablet  
-Alkepin Odt 200 Tablet  
-Lozapin 100mg Tablet  
-Lozapin 50mg Tablet  
-Sizopin 25 Tablet  
-Sizopin 100mg Tablet  
-Sizopin 50 Tablet  
-Sizopin 200 Tablet  
-Zaporil 12.5mg Tablet  
-Zaporil 25mg Tablet  
-Zaporil 100mg Tablet  
-Polycap Capsule  
-Endobloc T Combipack  
-Pulmonext Kit  
-Super Manforce Tablet  
-Provanol Plus 10 Tablet  
-Provanol SR 40 Tablet  
-Provanol 20 Tablet  
-Provanol 10 Tablet  
-Migon Plus Tablet  
-Amnurite Beta 10 40 ER Tablet  
-Amnurite Beta 5 20 ER Tablet  
-Triptolol 10mg 40mg Tablet  
-Efil 2.5mg Tablet  
-ED Save Tablet  
-Efil 5mg Tablet  
-Edrive T 2.5 Tablet  
-Efil 10mg Tablet  
-Edrive TD Tablet  
-Endofil Tablet  
-Bigfun 36 Tablet  
-Forlast 2.5mg Tablet  
-Megalis 20 Tablet  
-Megalis 10 Tablet  
-Modula Tablet  
-Mildfil Tablet  
-Nightmax 20 Tablet  
-Pulmopres Tablet  
-Tadaflo 5 Tablet  
-Tazzle 5 Tablet  
-Tadacip 20 Tablet  
-Tadact 10 Tablet  
-TD Pill Tablet  
-Tadact 20 Tablet  
-Tazzle 20 Tablet  
-Tadaza 10mg 30mg Tablet  
-Tadaflo 20mg Tablet  
-T Film 20mg Disintegrating Strip  
-Tadovas 20mg Tablet  
-Tfil 10mg Tablet  
-Tfil 5mg Tablet  
-Tadasure 20 Disintegrating Strip  
-Tadgo 10mg Disintegrating Strip  
-Tadgo 20mg Disintegrating Strip  
-Uphold Tablet  
-Yaw 2.5 Tablet  
-Yaw 5 Tablet  
-Zydalis MD 10 Tablet  
-Zydalis MD 20 Tablet  
-Mibeta SR 40 Tablet  
-Migiplex 40mg 10mg Tablet  
-Mibeta Plus 10 Tablet SR  
-Migrof 10 Capsule  
-Mibeta 20mg Tablet  
-Migitus 5mg Tablet SR  
-Migrabeta TR 80 Tablet  
-Inderal LA 20 Tablet SR  
-Inderal 40 Tablet  
-Inderal 20mg Tablet  
-Inderal LA 40 Tablet SR  
-Inderal F 10 Tablet SR  
-Inderal F 5 Tablet SR  
-Mibeta Plus 5 Tablet SR  
-Betacap TR 40 Capsule  
-Zupion SR Tablet  
-Vilazine 20 Tablet  
-Vilazine 40 Tablet  
-Ventab Dxt 50 Tablet ER  
-Ventab DXT 25 Tablet ER  
-Lamez 100 Tablet  
-Lamez 50 Tablet DT  
-Lamez 25 Tablet DT  
-Lamez OD 100 Tablet SR  
-Lamez OD 150 Tablet SR  
-Lamez OD 25 Tablet SR  
-Asprito 20 Tablet  
-Asprito 15 Tablet  
-Asprito 30 Tablet  
-Ventab XL 37.5 Tablet  
-Ventab XL 150 Tablet  
-Intalith CR 450 Tablet  
-Intalith 300 Tablet  
-Duvanta NP 20 Tablet  
-Duvanta 40 Tablet  
-Obelit Capsule  
-Obelit 60 Capsule  
-Pexep 40 Tablet  
-Pexep 30 Tablet  
-Pexep CR 37.5 Tablet  
-Pexep 10 Tablet  
-Pexep 20 Tablet  
-Flunil Suspension  
-Flunil 60 Capsule  
-Qutan 25 Tablet  
-Qutan 50 Tablet  
-Qutan 100 Tablet  
-Qutan SR 50 Tablet  
-Qutan SR 100 Tablet  
-Qutan SR 200 Tablet  
-Qutan 200 Tablet  
-Qutan SR 300 Tablet  
-Qutan 300 Tablet  
-Qutan SR 400 Tablet  
-Levomil 20 Capsule ER  
-Sertima 50 Tablet  
-Sertima 100 Tablet  
-Fludac 60 Capsule  
-Rexipra 10 Tablet  
-Depranex 5 Tablet  
-Rexipra 15 Tablet  
-Rexipra 20 Tablet  
-Nortimer 50mg Tablet  
-Amitone 10mg Tablet  
-Amitone 25mg Tablet  
-Zenoxa 300 Tablet  
-Zenoxa 150 Tablet  
-Zenoxa 450 Tablet  
-Zenoxa 600 Tablet  
-Zenoxa OD 600 Tablet SR  
-Zenoxa OD 150 Tablet SR  
-Zenoxa OD 900 Tablet SR  
-Bupron XL 150 Tablet  
-Bupron SR 150 Tablet  
-Doxin 25mg Capsule  
-Pregabid NT Tablet  
-Pregabid MNT Tablet  
-Nervz NT Tablet SR  
-Pregabid OD 150 Tablet  
-Pregabid ME 150 Capsule  
-Pregabid 75 Capsule  
-Pregabid 50 Capsule  
-Pregabid ME 75 Capsule  
-Prelin M 75 Capsule  
-Pregabid OD 100 Tablet SR  
-Pregabid 150 Capsule  
-Prelin 75 Capsule  
-Frext 50 Tablet  
-Frext CR 100 Tablet  
-Frext 100 Tablet  
-Lurasid 40 Tablet  
-Mahagaba M 75 Capsule  
-Mahagaba M OD Tablet SR  
+Insulate-NP Tablet
+Neurotrat NP Tablet
+Nervsenz Tablet SR
+Gabafix Gel
+Senseit Gel
+Neocalm Plus Tablet
+Selgin Tablet
+Parkin-Plus Tablet
+Trinicalm Plus Tablet
+Trazine-H Tablet
+Trazine-S Tablet
+Talecalm Plus Tablet
+Trinicalm Forte Tablet
+Trivon Tablet
+Talecalm 5mg Tablet
+Polycap Capsule
+Provanol Plus 10 Tablet
+Provanol SR 40 Tablet
+Provanol 20 Tablet
+Provanol 10 Tablet
+Migon Plus Tablet
+Amnurite Beta 10/40 ER Tablet
+Amnurite Beta 5/20 ER Tablet
+Triptolol 10mg/40mg Tablet
+Betacap TR 40 Capsule
+Betacap TR 20 Capsule
+Betacap Plus 10 Capsule SR
+Betacap 20 Tablet
+Betacap 10 Tablet
+Betacap Plus 5 Capsule SR
+Betacap TR 80 Capsule
+Betacap TR 60 Capsule
+Inderal LA 20 Tablet SR
+Inderal 40 Tablet
+Inderal 20mg Tablet
+Inderal LA 40 Tablet SR
+Inderal F 10 Tablet SR
+Inderal F 5 Tablet SR
+Kipnol TR 40 Capsule
+Migrabeta Plus Tablet
+Migrabeta-TR 40 Tablet
+Migrabeta-TR 20 Tablet SR
+Mibeta SR 40 Tablet
+Migiplex 40mg/10mg Tablet
+Mibeta-Plus 10 Tablet SR
+Migrof 10 Capsule
+Mibeta 20mg Tablet
+Migitus 5mg Tablet SR
+Migrabeta-TR 80 Tablet
+Mibeta-Plus 5 Tablet SR
+Pronate 20 Tablet
+Zinepra 10 Tablet SR
+Zinepra 5 Tablet SR
+Manforce 100mg Tablet
+Manforce 50mg Tablet
+Sildaprep Tablet
+Alivher Tablet
+Bigfun Jelly Mint Cool
+Mard 100 Tablet
+Power Vegra 100mg Tablet
+Penegra 100 Tablet
+Penegra 50 Tablet
+Penegra 25 Tablet
+Primiwal-S Tablet
+Penegra Xpress 25mg Tablet
+Suhagra 100 Tablet
+Suhagra 50 Tablet
+Silnafil 25mg Tablet
+Suhagra 25 Tablet
+Silagra 100mg Tablet
+UGR Free Softgel Capsule
+Vigore 100 Red Tablet
+Viagra 50mg Tablet
+Vigore 50 Red Tablet
+Zenegra 100 Tablet
+Zestasil 100 Tablet
+Bigfun 36 Tablet
+Efil 2.5mg Tablet
+ED Save Tablet
+Efil 5mg Tablet
+Edrive-T 2.5 Tablet
+Efil 10mg Tablet
+Endofil Tablet
+Forlast 2.5mg Tablet
+Megalis 20 Tablet
+Megalis 10 Tablet
+Modula Tablet
+Mildfil Tablet
+Nightmax 20 Tablet
+Tazzle 10 Tablet
+Tadaflo 5 Tablet
+Tazzle 5 Tablet
+Tadacip 20 Tablet
+Tadact 10 Tablet
+Tadact 20 Tablet
+Tazzle 20 Tablet
+Tadaflo 20mg Tablet
+Zupion SR Tablet
+Vilazine 20 Tablet
+Vilazine 40 Tablet
+Ventab Dxt 50 Tablet ER
+Ventab DXT 100 Tablet ER
+Lamez 100 Tablet
+Lamez 50 Tablet DT
+Lamez 25 Tablet DT
+Lamez OD 100 Tablet SR
+Lamez OD 50 Tablet SR
+Lamez OD 150 Tablet SR
+Lamez OD 25 Tablet SR
+Asprito 20 Tablet
+Asprito 15 Tablet
+Asprito 30 Tablet
+Duvanta 30 Tablet
+Duvanta NP 20 Tablet
+Duvanta 40 Tablet
+Ventab XL 75 Tablet PR
+Ventab XL 37.5 Tablet
+Intalith CR 450 Tablet
+Intalith 300 Tablet
+Flunil Suspension
+Flunil 60 Capsule
+Levomil 40 Capsule ER
+Levomil 20 Capsule ER
+Sertima 50 Tablet
+Sertima 100 Tablet
+Sertima 25mg Tablet
+Obelit 60 Capsule
+Fludac 60 Capsule
+Qutan 25 Tablet
+Qutan 50 Tablet
+Qutan 100 Tablet
+Qutan SR 50 Tablet
+Qutan SR 100 Tablet
+Qutan SR 200 Tablet
+Qutan 200 Tablet
+Qutan 300 Tablet
+Qutan SR 400 Tablet
+Pexep CR 25 Tablet
+Pexep CR 37.5 Tablet
+Pexep 10 Tablet
+Pexep 40 Tablet
+Pexep 30 Tablet
+Depranex 5 Tablet
+Rexipra 10 Tablet
+Rexipra 5 Tablet
+Rexipra 15 Tablet
+Zenoxa 300 Tablet
+Zenoxa 450 Tablet
+Zenoxa 600 Tablet
+Zenoxa OD 300 Tablet SR
+Zenoxa OD 450 Tablet SR
+Zenoxa OD 150 Tablet SR
+Zenoxa OD 900 Tablet SR
+Lurasid 40 Tablet
+Bupron XL 150 Tablet
+Bupron SR 150 Tablet
+Bupron XL 300 Tablet
+Amitone 10mg Tablet
+Amitone 25mg Tablet
+Amitone 75mg Tablet
+Pregabid 50 Capsule
+Pregabid Forte 75 Capsule
+Prelin M 75 Capsule
+Pregabid OD 100 Tablet SR
+Pregabid 150 Capsule
+Prelin 75 Capsule
+Pregabid OD 150 Tablet
+Trancodol DT 5 Tablet
+Trancodol LA Injection
+Trancodol DT 10 Tablet
+Trancodol DT 1.5 Tablet
+Frext 50 Tablet
+Frext CR 100 Tablet
+Frext 100 Tablet
