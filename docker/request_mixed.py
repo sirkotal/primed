@@ -1,13 +1,13 @@
 import requests
 import json
 import sys
-from querying import generate_semantic_boosted_query
+from querying import generate_mixed_query
 
 solr = 'http://localhost:8983/solr/primed-data/select'
 
 query = sys.argv[1]
 
-query_params = generate_semantic_boosted_query(query)
+query_params = generate_mixed_query(query)
 
 response = requests.post(
     solr,
