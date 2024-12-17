@@ -11,3 +11,4 @@ src/venv
 data_pipeline/__pycache__
 docker/data/combined_drug_data.json
 docker/data/semantic_primed_data.json
+docker/data/semantic_primed_data_part1.json
