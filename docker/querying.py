@@ -40,7 +40,7 @@ def generate_semantic_boosted_query(user_query):
 
     # f"{user_query}{embedding}",
     query_params = {
-        'q': f"{{!knn f=vector topK=10}}{embedding}",
+        'q': f"{{!knn f=vector topK=100}}{embedding}",
         'q.op': "AND",
         'start': 0,
         'rows': 100,
@@ -68,7 +68,7 @@ def generate_mixed_query(user_query):
     }
 
     query_params = {
-        'q': q,
+        'q': q2,
         'q.op': "AND",
         'start': 0,
         'rows': 100,

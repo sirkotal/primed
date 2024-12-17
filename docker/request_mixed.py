@@ -11,8 +11,10 @@ query_params = generate_mixed_query(query)
 
 response = requests.post(
     solr,
-    headers={'Content-Type': 'application/json'},
-    params=query_params
+    headers = {
+        "Content-Type": "application/x-www-form-urlencoded"
+    },
+    data=query_params
 )
 
 if response.status_code == 200:
