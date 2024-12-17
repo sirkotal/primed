@@ -17,11 +17,14 @@ def process_data(start_idx, end_idx, input_file, output_file):
     for i in range(start_idx, end_idx):
         document = data[i]
 
-        diseases_with_vectors = []
-        for disease in document.get("applicable_diseases", []):
-            diseases_with_vectors.append({"text": disease, "vector": get_embedding(disease)})
-            print("disease")
-        document["applicable_diseases"] = diseases_with_vectors
+        composition = document.get("composition", [])
+
+        document["vector"] = get_embedding(composition)
+        
+        #for disease in document.get("applicable_diseases", []):
+        #    diseases_with_vectors.append({"text": disease, "vector": get_embedding(disease)})
+        #    print("disease")
+        #document["applicable_diseases"] = diseases_with_vectors
 
         #side_effects_with_vectors = []
         #for side_effect in document.get("possible_side_effects", []):
