@@ -718,7 +718,7 @@ The \texttt{rerank} parser utilizes the following parameters:
     \item \texttt{reRankWeight}: Factor applied to the score of each re-ranked document.
 \end{itemize}
 
-As mentioned earlier, the re-ranking query contains the weighted sum of the average review and polarity ratings, obtained for each document. It was decided that the reviews average rating would still have more influence in the result due to the data skew observed in the polarity scores graph~[\ref{fig:polarityScores}]. As for the number of documents, we arbitrarily decided that 30 would be an appropriate number, both to verify improvements in the system and due to the slightly intensive nature of the query in terms of computational power that might eventually be required. In the weight parameter, we decided to utilize the default value present in the ReRank query parser.
+As mentioned earlier, the re-ranking query contains the weighted sum of the average review and polarity ratings, obtained for each document. It was decided that the reviews average rating would still have more influence in the result due to the data skew observed in the polarity scores graph~[\ref{fig:polarityScores}]. As for the number of documents, we arbitrarily decided that 30 would be an appropriate number, both to verify improvements in the system, the reduced number of results that some queries yield and due to the slightly intensive nature of the query in terms of computational power that might eventually be required. In the weight parameter, we decided to utilize the default value present in the ReRank query parser.
 
 \begin{table}[H]
     \resizebox{\columnwidth}{!}{
@@ -741,22 +741,24 @@ It was then decided to test the influence of the re-ranking process on the syste
 		\hline
 		Query & Re-Ranked AP \\
 		\hline
-		Q1 & 0.8661 \\
+		Q1 & 0.8133 \\
 		\hline
-		Q2 & 0.8632 \\
+		Q2 & 0.8288 \\
 		\hline
-		Q3 & 0.3805 \\
+		Q3 & 0.1878 \\
 		\hline
-		Q4 & 0.3329 \\
+		Q4 & 0.1953 \\
 		\hline
 	\end{tabular}
-	\caption{Re-rank AP Results (Advanced System) TODO}
+	\caption{Re-rank AP Results (Advanced System)}
 	\label{tab:rerank_ap_results}
 \end{table}
 
-\subsection{Semantic Search}
+As shown in the P-R Curve graphs for queries 1~[\ref{fig:precisionRecallReRank1}] and 2~[\ref{fig:precisionRecallReRank2}], the loss in average precision in the advanced system utilizing the ReRank query parser, albeit not negligible, is minimal. However, this doesn't mean the system itself isn't performing a more suitable ranking of the relevant documents. 
 
-The goal of the semantic search is to generate more accurate queries
+However, in the P-R Curve graphs for queries 3~[\ref{fig:precisionRecallReRank3}] and 4~[\ref{fig:precisionRecallReRank4}] there is a sharp drop both in terms of average precision and recall; these abnormal results may be a consequence of Solr's ability to internally increase (automatically) the value of \texttt{reRankDocs} in order to rank enough documents to satisfy the query, which means the actual value of this parameter for queries 3 and 4 (which return a large number of relevant documents) might actually be, for instance, the number of rows, as stated in Solr documentation for the ReRank query parser.
+
+\subsection{Semantic Search}
 
 \section{User Interface}
 
@@ -919,6 +921,46 @@ Completing these project milestones marks a significant step in the development 
   \caption{Q4 P-R Curve -> Baseline System}
   \Description{Q4 P-R Curves -> Baseline System}
   \label{fig:precisionRecallBaseline4}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{precision_recall_q4a.png}
+  \caption{Q4 P-R Curve -> Advanced System}
+  \Description{Q4 P-R Curves -> Advanced System}
+  \label{fig:precisionRecallAdvanced4}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{precision_recall_q1r.png}
+  \caption{Q1 P-R Curve -> ReRank Advanced System}
+  \Description{Q1 P-R Curve -> ReRank Advanced System}
+  \label{fig:precisionRecallReRank1}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{precision_recall_q2r.png}
+  \caption{Q2 P-R Curve -> ReRank Advanced System}
+  \Description{Q2 P-R Curve -> ReRank Advanced System}
+  \label{fig:precisionRecallReRank2}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{precision_recall_q3r.png}
+  \caption{Q3 P-R Curve -> ReRank Advanced System}
+  \Description{Q3 P-R Curve -> ReRank Advanced System}
+  \label{fig:precisionRecallReRank3}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{precision_recall_q4r.png}
+  \caption{Q4 P-R Curve -> ReRank Advanced System}
+  \Description{Q4 P-R Curve -> ReRank Advanced System}
+  \label{fig:precisionRecallReRank4}
 \end{figure}
 
 \begin{figure}[H]
