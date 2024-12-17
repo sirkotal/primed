@@ -762,17 +762,24 @@ However, in the P-R Curve graphs for queries 3~[\ref{fig:precisionRecallReRank3}
 
 The goal of the semantic search is to generate more accurate queries by focusing on understanding the contextual meaning of the terms rather than relying solely on exact keyword matches. This approach leverages semantic vectors, which transform words or phrases into mathematical representations, enabling the system to comprehend complex relationships between concepts.
 
-In our system, semantic search was implemented, using vectors for the "diseases" and "symptoms" attributes, not being able to implement on the reviews since they required too much computational power. Each of these attributes is represented by embeddings generated from AI-based language models, allowing the capture of semantic nuances in the data, such as associations between symptoms and diseases or eventually possible sentiments expressed in the reviews.
+In our system, semantic search was implemented, using vectors for the "diseases" attribute, not being able to implement on the side effects and reviews since they required too much computational power. Each of these attributes is represented by embeddings generated from AI-based language models, allowing the capture of semantic nuances in the data, such as associations between the query and diseases or eventually side effects or possible sentiments expressed in the reviews.
 
 This approach empowers the system to interpret the intent behind user queries, being expected to deliver more relevant and accurate results, even when there is no direct lexical match between the query terms and the indexed documents. As a result, semantic search enhances the interaction with data, making it more intuitive and efficient by aligning the results with the context and meaning of the queries.
 
 The changes made to the advanced query in order to implement this feature were:
 
 \begin{itemize}
-	\item \texttt{q-field}: Changes to the query field, only including an embedding from the query and some information related to the search with an embedding.
+	\item \texttt{q}: Changes to the query field, only including an embedding extracted from the query and some information related to the search with an embedding, in our case {\texttt{!knn f=vector topK=10}}.
 \end{itemize}
 
-This search type only searches for the semantic of the query. It can also be changed so that it makes the query and 
+This search type only searches for the semantic of the query. It can also be changed so that it makes the match of the typed query from the user and having into account generated embeddings.
+
+This could be done by following the changes:
+
+\begin{itemize}
+	\item \texttt{q}: Returning of the normal query introduced by the user.
+	\item \texttt{knn.q}: Contains the same content as the query-field from the normal semantic search.
+\end{itemize}
 
 \section{User Interface}
 

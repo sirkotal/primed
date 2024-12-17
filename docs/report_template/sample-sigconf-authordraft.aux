@@ -96,19 +96,17 @@
 \@writefile{toc}{\contentsline {subsection}{\numberline {10.1}Polarity Analysis}{8}{subsection.10.1}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Polarity Scores Distribution}}{8}{figure.caption.13}\protected@file@percent }
 \newlabel{fig:polarityScores}{{3}{8}{Polarity Scores Distribution}{figure.caption.13}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {10.2}Re-ranking}{9}{subsection.10.2}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {7}{\ignorespaces ReRank Query Parser Fields}}{9}{table.caption.14}\protected@file@percent }
+\newlabel{tab:rerank_parser}{{7}{9}{ReRank Query Parser Fields}{table.caption.14}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {8}{\ignorespaces Re-rank AP Results (Advanced System)}}{9}{table.caption.15}\protected@file@percent }
+\newlabel{tab:rerank_ap_results}{{8}{9}{Re-rank AP Results (Advanced System)}{table.caption.15}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {10.3}Semantic Search}{9}{subsection.10.3}\protected@file@percent }
 \citation{rails}
 \citation{ruby}
 \citation{bundler}
 \citation{docker}
 \citation{mvc}
-\@writefile{toc}{\contentsline {subsection}{\numberline {10.2}Re-ranking}{9}{subsection.10.2}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {7}{\ignorespaces ReRank Query Parser Fields}}{9}{table.caption.14}\protected@file@percent }
-\newlabel{tab:rerank_parser}{{7}{9}{ReRank Query Parser Fields}{table.caption.14}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {8}{\ignorespaces Re-rank AP Results (Advanced System) TODO}}{9}{table.caption.15}\protected@file@percent }
-\newlabel{tab:rerank_ap_results}{{8}{9}{Re-rank AP Results (Advanced System) TODO}{table.caption.15}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {10.3}Semantic Search}{9}{subsection.10.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {11}User Interface}{9}{section.11}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {11.1}Technologies}{9}{subsection.11.1}\protected@file@percent }
 \citation{instancevars}
 \bibstyle{unsrt}
 \bibdata{sample-base}
@@ -128,6 +126,11 @@
 \bibcite{html}{{14}{}{{}}{{}}}
 \bibcite{json}{{15}{}{{}}{{}}}
 \bibcite{csv}{{16}{}{{}}{{}}}
+\@writefile{toc}{\contentsline {section}{\numberline {11}User Interface}{10}{section.11}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {11.1}Technologies}{10}{subsection.11.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {11.2}Web Interface}{10}{subsection.11.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {12}Conclusions}{10}{section.12}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{References}{10}{section*.17}\protected@file@percent }
 \bibcite{iqrange}{{17}{}{{}}{{}}}
 \bibcite{solr}{{18}{}{{}}{{}}}
 \bibcite{schema}{{19}{}{{}}{{}}}
@@ -139,9 +142,6 @@
 \bibcite{dismax}{{25}{}{{}}{{}}}
 \bibcite{slop}{{26}{}{{}}{{}}}
 \bibcite{termboosting}{{27}{}{{}}{{}}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {11.2}Web Interface}{10}{subsection.11.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {12}Conclusions}{10}{section.12}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{References}{10}{section*.17}\protected@file@percent }
 \bibcite{fuzziness}{{28}{}{{}}{{}}}
 \bibcite{qrels}{{29}{}{{}}{{}}}
 \bibcite{pak}{{30}{}{{}}{{}}}
@@ -166,8 +166,8 @@
 \newlabel{fig:topManufacturers}{{4}{11}{Top Drug Manufacturers}{figure.caption.18}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Distribution of Reviews}}{11}{figure.caption.19}\protected@file@percent }
 \newlabel{fig:reviewDistribution}{{5}{11}{Distribution of Reviews}{figure.caption.19}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Mean of Reviews Percentages by Uses}}{11}{figure.caption.20}\protected@file@percent }
-\newlabel{fig:reviewPercMean}{{6}{11}{Mean of Reviews Percentages by Uses}{figure.caption.20}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Mean of Reviews Percentages by Uses}}{12}{figure.caption.20}\protected@file@percent }
+\newlabel{fig:reviewPercMean}{{6}{12}{Mean of Reviews Percentages by Uses}{figure.caption.20}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Distribution of Side Effects}}{12}{figure.caption.21}\protected@file@percent }
 \newlabel{fig:sideEffectsDistribution}{{7}{12}{Distribution of Side Effects}{figure.caption.21}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Common Uses Word Cloud}}{12}{figure.caption.22}\protected@file@percent }
@@ -178,8 +178,8 @@
 \newlabel{fig:companyYears}{{10}{12}{Years with the Most Companies Foundations}{figure.caption.24}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces System Architecture}}{12}{figure.caption.25}\protected@file@percent }
 \newlabel{fig:sysArchitecture}{{11}{12}{System Architecture}{figure.caption.25}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces Q1 P-R Curve -> Baseline System}}{12}{figure.caption.26}\protected@file@percent }
-\newlabel{fig:precisionRecallBaseline1}{{12}{12}{Q1 P-R Curve -> Baseline System}{figure.caption.26}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces Q1 P-R Curve -> Baseline System}}{13}{figure.caption.26}\protected@file@percent }
+\newlabel{fig:precisionRecallBaseline1}{{12}{13}{Q1 P-R Curve -> Baseline System}{figure.caption.26}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces Q1 P-R Curve -> Advanced System}}{13}{figure.caption.27}\protected@file@percent }
 \newlabel{fig:precisionRecallAdvanced1}{{13}{13}{Q1 P-R Curve -> Advanced System}{figure.caption.27}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {14}{\ignorespaces Q2 P-R Curve -> Baseline System}}{13}{figure.caption.28}\protected@file@percent }
@@ -190,17 +190,27 @@
 \newlabel{fig:precisionRecallBaseline3}{{16}{13}{Q3 P-R Curve -> Baseline System}{figure.caption.30}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {17}{\ignorespaces Q3 P-R Curve -> Advanced System}}{13}{figure.caption.31}\protected@file@percent }
 \newlabel{fig:precisionRecallAdvanced3}{{17}{13}{Q3 P-R Curve -> Advanced System}{figure.caption.31}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {18}{\ignorespaces Q4 P-R Curve -> Baseline System}}{13}{figure.caption.32}\protected@file@percent }
-\newlabel{fig:precisionRecallBaseline4}{{18}{13}{Q4 P-R Curve -> Baseline System}{figure.caption.32}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {18}{\ignorespaces Q4 P-R Curve -> Baseline System}}{14}{figure.caption.32}\protected@file@percent }
+\newlabel{fig:precisionRecallBaseline4}{{18}{14}{Q4 P-R Curve -> Baseline System}{figure.caption.32}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {19}{\ignorespaces Q4 P-R Curve -> Advanced System}}{14}{figure.caption.33}\protected@file@percent }
+\newlabel{fig:precisionRecallAdvanced4}{{19}{14}{Q4 P-R Curve -> Advanced System}{figure.caption.33}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {20}{\ignorespaces Q1 P-R Curve -> ReRank Advanced System}}{14}{figure.caption.34}\protected@file@percent }
+\newlabel{fig:precisionRecallReRank1}{{20}{14}{Q1 P-R Curve -> ReRank Advanced System}{figure.caption.34}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {21}{\ignorespaces Q2 P-R Curve -> ReRank Advanced System}}{14}{figure.caption.35}\protected@file@percent }
+\newlabel{fig:precisionRecallReRank2}{{21}{14}{Q2 P-R Curve -> ReRank Advanced System}{figure.caption.35}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {22}{\ignorespaces Q3 P-R Curve -> ReRank Advanced System}}{14}{figure.caption.36}\protected@file@percent }
+\newlabel{fig:precisionRecallReRank3}{{22}{14}{Q3 P-R Curve -> ReRank Advanced System}{figure.caption.36}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {23}{\ignorespaces Q4 P-R Curve -> ReRank Advanced System}}{14}{figure.caption.37}\protected@file@percent }
+\newlabel{fig:precisionRecallReRank4}{{23}{14}{Q4 P-R Curve -> ReRank Advanced System}{figure.caption.37}{}}
 \newlabel{tocindent-1}{0pt}
 \newlabel{tocindent0}{0pt}
 \newlabel{tocindent1}{8.37pt}
 \newlabel{tocindent2}{14.53499pt}
 \newlabel{tocindent3}{22.194pt}
 \providecommand\NAT@force@numbers{}\NAT@force@numbers
-\@writefile{lof}{\contentsline {figure}{\numberline {19}{\ignorespaces User Interface - Index/Landing Page}}{14}{figure.caption.33}\protected@file@percent }
-\newlabel{fig:indexUI}{{19}{14}{User Interface - Index/Landing Page}{figure.caption.33}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {20}{\ignorespaces User Interface - Search Page}}{14}{figure.caption.34}\protected@file@percent }
-\newlabel{fig:searchUI}{{20}{14}{User Interface - Search Page}{figure.caption.34}{}}
-\newlabel{TotPages}{{14}{14}{}{page.14}{}}
-\gdef \@abspage@last{14}
+\@writefile{lof}{\contentsline {figure}{\numberline {24}{\ignorespaces User Interface - Index/Landing Page}}{15}{figure.caption.38}\protected@file@percent }
+\newlabel{fig:indexUI}{{24}{15}{User Interface - Index/Landing Page}{figure.caption.38}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {25}{\ignorespaces User Interface - Search Page}}{15}{figure.caption.39}\protected@file@percent }
+\newlabel{fig:searchUI}{{25}{15}{User Interface - Search Page}{figure.caption.39}{}}
+\newlabel{TotPages}{{15}{15}{}{page.15}{}}
+\gdef \@abspage@last{15}

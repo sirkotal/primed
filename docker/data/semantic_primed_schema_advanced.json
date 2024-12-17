@@ -25,6 +25,20 @@
             }
         },
         {
+            "name": "nestedTextVector",
+            "class": "solr.NestedTextField",
+            "fieldTypeConfig": {
+                "textField": {
+                    "name": "text",
+                    "type": "text_general"
+                },
+                "vectorField": {
+                    "name": "vector",
+                    "type": "pdouble"
+                }
+            }
+        },
+        {
             "name":"diseasesBoosted",
             "class":"solr.TextField",
             "indexAnalyzer":{
@@ -113,7 +127,7 @@
         },
         {
             "name": "applicable_diseases",
-            "type": "shortText",
+            "type": "nestedTextVector",
             "indexed": true,
             "stored": true,
             "multiValued": true

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.5.26)  17 DEC 2024 11:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.5.26)  17 DEC 2024 12:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1227,17 +1227,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 742--743
 []|\T1/LinuxLibertineT-TLF/m/n/9 (+20) Re-Ranked
  []
 
-
-Overfull \hbox (3.03557pt too wide) in paragraph at lines 771--772
+[9.9]
+Overfull \hbox (3.03557pt too wide) in paragraph at lines 790--791
 \T1/LinuxLibertineT-TLF/m/n/9 (-20) The user in-ter-face was built us-ing \T1/z
 i4/m/n/9 Rails\T1/LinuxLibertineT-TLF/m/n/9 (-20) [[]], which uti-lizes \T1/zi4
 /m/n/9 Ruby\T1/LinuxLibertineT-TLF/m/n/9 (-20) [[]]
  []
 
-[9.9] (sample-sigconf-authordraft.bbl
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
+(sample-sigconf-authordraft.bbl
 Underfull \hbox (badness 6758) in paragraph at lines 14--20
 []\T1/LinuxLibertineT-TLF/m/n/7 (+20) Kaggle.  11000 medicine de-tails.  []$htt
 ps : / / www . kaggle . com / datasets /
@@ -1250,7 +1247,7 @@ Underfull \hbox (badness 2478) in paragraph at lines 22--26
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 2698) has occurred while \output is active []
 
  [10.10]
 Underfull \hbox (badness 10000) in paragraph at lines 177--183
@@ -1274,111 +1271,142 @@ Underfull \hbox (badness 1454) in paragraph at lines 193--197
 <graphic1.png, id=401, 722.7pt x 433.62pt>
 File: graphic1.png Graphic file (type png)
 <use graphic1.png>
-Package pdftex.def Info: graphic1.png  used on input line 810.
+Package pdftex.def Info: graphic1.png  used on input line 829.
 (pdftex.def)             Requested size: 241.14749pt x 144.68962pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
 <graphic2.png, id=402, 784.73175pt x 486.618pt>
 File: graphic2.png Graphic file (type png)
 <use graphic2.png>
-Package pdftex.def Info: graphic2.png  used on input line 818.
+Package pdftex.def Info: graphic2.png  used on input line 837.
 (pdftex.def)             Requested size: 241.14749pt x 149.53575pt.
 <graphic3.png, id=403, 1110.0672pt x 550.6974pt>
 File: graphic3.png Graphic file (type png)
 <use graphic3.png>
-Package pdftex.def Info: graphic3.png  used on input line 826.
+Package pdftex.def Info: graphic3.png  used on input line 845.
 (pdftex.def)             Requested size: 241.14749pt x 119.62447pt.
-<graphic4.png, id=404, 1037.67674pt x 544.434pt>
-File: graphic4.png Graphic file (type png)
-<use graphic4.png>
-Package pdftex.def Info: graphic4.png  used on input line 834.
-(pdftex.def)             Requested size: 241.14749pt x 126.52144pt.
-
-Underfull \vbox (badness 1122) has occurred while \output is active []
-
- [11.11 <./graphic1.png> <./graphic2.png> <./graphic3.png>]
-<graphic5.png, id=425, 655.85025pt x 367.3725pt>
-File: graphic5.png Graphic file (type png)
-<use graphic5.png>
-Package pdftex.def Info: graphic5.png  used on input line 842.
-(pdftex.def)             Requested size: 241.14749pt x 135.07362pt.
-<graphic6.png, id=426, 1110.0672pt x 550.6974pt>
-File: graphic6.png Graphic file (type png)
-<use graphic6.png>
-Package pdftex.def Info: graphic6.png  used on input line 850.
-(pdftex.def)             Requested size: 241.14749pt x 119.62447pt.
-<graphic7.png, id=427, 1025.63174pt x 523.35526pt>
-File: graphic7.png Graphic file (type png)
-<use graphic7.png>
-Package pdftex.def Info: graphic7.png  used on input line 858.
-(pdftex.def)             Requested size: 241.14749pt x 123.04439pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-<system_arch.png, id=428, 4101.3225pt x 2749.27126pt>
+ [11.11 <./graphic1.png> <./graphic2.png>]
+<graphic4.png, id=431, 1037.67674pt x 544.434pt>
+File: graphic4.png Graphic file (type png)
+<use graphic4.png>
+Package pdftex.def Info: graphic4.png  used on input line 853.
+(pdftex.def)             Requested size: 241.14749pt x 126.52144pt.
+<graphic5.png, id=432, 655.85025pt x 367.3725pt>
+File: graphic5.png Graphic file (type png)
+<use graphic5.png>
+Package pdftex.def Info: graphic5.png  used on input line 861.
+(pdftex.def)             Requested size: 241.14749pt x 135.07362pt.
+<graphic6.png, id=433, 1110.0672pt x 550.6974pt>
+File: graphic6.png Graphic file (type png)
+<use graphic6.png>
+Package pdftex.def Info: graphic6.png  used on input line 869.
+(pdftex.def)             Requested size: 241.14749pt x 119.62447pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+<graphic7.png, id=434, 1025.63174pt x 523.35526pt>
+File: graphic7.png Graphic file (type png)
+<use graphic7.png>
+Package pdftex.def Info: graphic7.png  used on input line 877.
+(pdftex.def)             Requested size: 241.14749pt x 123.04439pt.
+<system_arch.png, id=435, 4101.3225pt x 2749.27126pt>
 File: system_arch.png Graphic file (type png)
 <use system_arch.png>
-Package pdftex.def Info: system_arch.png  used on input line 866.
+Package pdftex.def Info: system_arch.png  used on input line 885.
 (pdftex.def)             Requested size: 241.14749pt x 161.63507pt.
-<precision_recall_q1b.png, id=429, 1927.2pt x 1445.4pt>
+<precision_recall_q1b.png, id=436, 1927.2pt x 1445.4pt>
 File: precision_recall_q1b.png Graphic file (type png)
 <use precision_recall_q1b.png>
-Package pdftex.def Info: precision_recall_q1b.png  used on input line 874.
+Package pdftex.def Info: precision_recall_q1b.png  used on input line 893.
 (pdftex.def)             Requested size: 192.91872pt x 144.68079pt.
-<precision_recall_q1a.png, id=430, 1927.2pt x 1445.4pt>
+
+Underfull \vbox (badness 7814) has occurred while \output is active []
+
+ [12.12 <./graphic3.png> <./graphic4.png> <./graphic5.png> <./graphic6.png> <./
+graphic7.png> <./system_arch.png>]
+<precision_recall_q1a.png, id=447, 1927.2pt x 1445.4pt>
 File: precision_recall_q1a.png Graphic file (type png)
 <use precision_recall_q1a.png>
-Package pdftex.def Info: precision_recall_q1a.png  used on input line 882.
+Package pdftex.def Info: precision_recall_q1a.png  used on input line 901.
 (pdftex.def)             Requested size: 192.91872pt x 144.68079pt.
-
-Underfull \vbox (badness 3375) has occurred while \output is active []
-
- [12.12 <./graphic4.png> <./graphic5.png> <./graphic6.png> <./graphic7.png> <./
-system_arch.png> <./precision_recall_q1b.png>]
-<precision_recall_q2b.png, id=441, 1927.2pt x 1445.4pt>
+<precision_recall_q2b.png, id=448, 1927.2pt x 1445.4pt>
 File: precision_recall_q2b.png Graphic file (type png)
 <use precision_recall_q2b.png>
-Package pdftex.def Info: precision_recall_q2b.png  used on input line 890.
+Package pdftex.def Info: precision_recall_q2b.png  used on input line 909.
 (pdftex.def)             Requested size: 192.91872pt x 144.68079pt.
-<precision_recall_q2a.png, id=442, 1927.2pt x 1445.4pt>
+<precision_recall_q2a.png, id=449, 1927.2pt x 1445.4pt>
 File: precision_recall_q2a.png Graphic file (type png)
 <use precision_recall_q2a.png>
-Package pdftex.def Info: precision_recall_q2a.png  used on input line 898.
-(pdftex.def)             Requested size: 192.91872pt x 144.68079pt.
-<precision_recall_q3b.png, id=443, 1927.2pt x 1445.4pt>
-File: precision_recall_q3b.png Graphic file (type png)
-<use precision_recall_q3b.png>
-Package pdftex.def Info: precision_recall_q3b.png  used on input line 906.
+Package pdftex.def Info: precision_recall_q2a.png  used on input line 917.
 (pdftex.def)             Requested size: 192.91872pt x 144.68079pt.
 
 Underfull \vbox (badness 2799) has occurred while \output is active []
 
-<precision_recall_q3a.png, id=444, 1927.2pt x 1445.4pt>
+<precision_recall_q3b.png, id=450, 1927.2pt x 1445.4pt>
+File: precision_recall_q3b.png Graphic file (type png)
+<use precision_recall_q3b.png>
+Package pdftex.def Info: precision_recall_q3b.png  used on input line 925.
+(pdftex.def)             Requested size: 192.91872pt x 144.68079pt.
+<precision_recall_q3a.png, id=451, 1927.2pt x 1445.4pt>
 File: precision_recall_q3a.png Graphic file (type png)
 <use precision_recall_q3a.png>
-Package pdftex.def Info: precision_recall_q3a.png  used on input line 914.
+Package pdftex.def Info: precision_recall_q3a.png  used on input line 933.
 (pdftex.def)             Requested size: 192.91872pt x 144.68079pt.
-<precision_recall_q4b.png, id=445, 1927.2pt x 1445.4pt>
+<precision_recall_q4b.png, id=452, 1927.2pt x 1445.4pt>
 File: precision_recall_q4b.png Graphic file (type png)
 <use precision_recall_q4b.png>
-Package pdftex.def Info: precision_recall_q4b.png  used on input line 922.
+Package pdftex.def Info: precision_recall_q4b.png  used on input line 941.
 (pdftex.def)             Requested size: 192.91872pt x 144.68079pt.
-<indexUI.png, id=446, 1153.30875pt x 528.17325pt>
+
+Underfull \vbox (badness 2799) has occurred while \output is active []
+
+ [13.13 <./precision_recall_q1b.png> <./precision_recall_q1a.png> <./precision_
+recall_q2b.png> <./precision_recall_q2a.png> <./precision_recall_q3b.png> <./pr
+ecision_recall_q3a.png>]
+<precision_recall_q4a.png, id=464, 1927.2pt x 1445.4pt>
+File: precision_recall_q4a.png Graphic file (type png)
+<use precision_recall_q4a.png>
+Package pdftex.def Info: precision_recall_q4a.png  used on input line 949.
+(pdftex.def)             Requested size: 192.91872pt x 144.68079pt.
+<precision_recall_q1r.png, id=465, 1927.2pt x 1445.4pt>
+File: precision_recall_q1r.png Graphic file (type png)
+<use precision_recall_q1r.png>
+Package pdftex.def Info: precision_recall_q1r.png  used on input line 957.
+(pdftex.def)             Requested size: 192.91872pt x 144.68079pt.
+<precision_recall_q2r.png, id=466, 1927.2pt x 1445.4pt>
+File: precision_recall_q2r.png Graphic file (type png)
+<use precision_recall_q2r.png>
+Package pdftex.def Info: precision_recall_q2r.png  used on input line 965.
+(pdftex.def)             Requested size: 192.91872pt x 144.68079pt.
+
+Underfull \vbox (badness 2799) has occurred while \output is active []
+
+<precision_recall_q3r.png, id=467, 1927.2pt x 1445.4pt>
+File: precision_recall_q3r.png Graphic file (type png)
+<use precision_recall_q3r.png>
+Package pdftex.def Info: precision_recall_q3r.png  used on input line 973.
+(pdftex.def)             Requested size: 192.91872pt x 144.68079pt.
+<precision_recall_q4r.png, id=468, 1927.2pt x 1445.4pt>
+File: precision_recall_q4r.png Graphic file (type png)
+<use precision_recall_q4r.png>
+Package pdftex.def Info: precision_recall_q4r.png  used on input line 981.
+(pdftex.def)             Requested size: 192.91872pt x 144.68079pt.
+<indexUI.png, id=469, 1153.30875pt x 528.17325pt>
 File: indexUI.png Graphic file (type png)
 <use indexUI.png>
-Package pdftex.def Info: indexUI.png  used on input line 930.
+Package pdftex.def Info: indexUI.png  used on input line 989.
 (pdftex.def)             Requested size: 192.91872pt x 88.34564pt.
 
 Underfull \vbox (badness 2799) has occurred while \output is active []
 
- [13.13 <./precision_recall_q1a.png> <./precision_recall_q2b.png> <./precision_
-recall_q2a.png> <./precision_recall_q3b.png> <./precision_recall_q3a.png> <./pr
-ecision_recall_q4b.png>]
-<searchUI.png, id=458, 1008.76875pt x 454.69875pt>
+ [14.14 <./precision_recall_q4b.png> <./precision_recall_q4a.png> <./precision_
+recall_q1r.png> <./precision_recall_q2r.png> <./precision_recall_q3r.png> <./pr
+ecision_recall_q4r.png>]
+<searchUI.png, id=476, 1008.76875pt x 454.69875pt>
 File: searchUI.png Graphic file (type png)
 <use searchUI.png>
-Package pdftex.def Info: searchUI.png  used on input line 938.
+Package pdftex.def Info: searchUI.png  used on input line 997.
 (pdftex.def)             Requested size: 192.91872pt x 86.95564pt.
 
 
@@ -1389,7 +1417,7 @@ File: se-pdfdoc.def 2019/11/29 v1.12 stringenc: PDFDocEncoding
 )
 (D:\Miktex\tex/generic/stringenc\se-utf8.def
 File: se-utf8.def 2019/11/29 v1.12 stringenc: UTF-8
-) [14.14 <./indexUI.png> <./searchUI.png>] (sample-sigconf-authordraft.aux)
+) [15.15 <./indexUI.png> <./searchUI.png>] (sample-sigconf-authordraft.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
@@ -1399,13 +1427,13 @@ ged.
 (rerunfilecheck)             Checksum: D15DC066F95FED8C370FE46A2C9CEE55;5363.
  ) 
 Here is how much of TeX's memory you used:
- 22042 strings out of 474486
- 351383 string characters out of 5760170
- 1964542 words of memory out of 5000000
- 43163 multiletter control sequences out of 15000+600000
+ 22088 strings out of 474486
+ 352697 string characters out of 5760170
+ 1965542 words of memory out of 5000000
+ 43203 multiletter control sequences out of 15000+600000
  733628 words of font info for 401 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
- 90i,12n,131p,1354b,777s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 90i,12n,131p,1354b,733s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <D:/Miktex/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb><D:/Miktex/fon
 ts/type1/public/newtx/LibertineMathMI.pfb><D:/Miktex/fonts/type1/public/liberti
 ne/LinBiolinumT.pfb><D:/Miktex/fonts/type1/public/libertine/LinBiolinumTB.pfb><
@@ -1414,9 +1442,9 @@ D:/Miktex/fonts/type1/public/libertine/LinBiolinumTI.pfb><D:/Miktex/fonts/type1
 LibertineTB.pfb><D:/Miktex/fonts/type1/public/libertine/LinLibertineTBI.pfb><D:
 /Miktex/fonts/type1/public/libertine/LinLibertineTI.pfb><D:/Miktex/fonts/type1/
 public/newtx/txsys.pfb><D:/Miktex/fonts/type1/urw/zapfding/uzdr.pfb>
-Output written on sample-sigconf-authordraft.pdf (14 pages, 4146815 bytes).
+Output written on sample-sigconf-authordraft.pdf (15 pages, 4438933 bytes).
 PDF statistics:
- 552 PDF objects out of 1000 (max. 8388607)
- 136 named destinations out of 1000 (max. 500000)
- 99205 words of extra memory for PDF output out of 106986 (max. 10000000)
+ 571 PDF objects out of 1000 (max. 8388607)
+ 142 named destinations out of 1000 (max. 500000)
+ 99230 words of extra memory for PDF output out of 106986 (max. 10000000)
 
