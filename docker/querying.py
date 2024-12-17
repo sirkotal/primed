@@ -57,10 +57,9 @@ def generate_semantic_boosted_query(user_query):
 
 def generate_mixed_query(user_query):
     embedding = text_to_embedding(user_query)
-    embedding_str = " ".join(map(str, embedding))
 
     query_params = {
-        'q': user_query,
+        'q': f"{{!type=edismax qf=text_field}}{user_query}{{!knn f=vector topK=10}}{embedding}",
         'q.op': "AND",
         'start': 0,
         'rows': 100,
@@ -72,6 +71,5 @@ def generate_mixed_query(user_query):
         'bf': "excellent_review_perc^1.5 poor_review_perc^0.5",
         'rq': "{!rerank reRankQuery=$rqq reRankDocs=30 reRankWeight=2.0}",
         'rqq': "{!func}sum(product(reviews_average_rating, 4), product(polarity_rating, 2))",
-        'knn.q': f"{{!knn f=vector topK=10}}{embedding_str}",
     }
     return query_params

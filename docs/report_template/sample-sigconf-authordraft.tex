@@ -777,8 +777,7 @@ This search type only searches for the semantic of the query. It can also be cha
 This could be done by following the changes:
 
 \begin{itemize}
-	\item \texttt{q}: Returning of the normal query introduced by the user.
-	\item \texttt{knn.q}: Contains the same content as the query-field from the normal semantic search.
+	\item \texttt{q}: Adding both the normal query and the user's query within a boolean search where the findings have to match the normal query and the semantic one.
 \end{itemize}
 
 \section{User Interface}
