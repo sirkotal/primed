@@ -45,31 +45,37 @@ def generate_semantic_boosted_query(user_query):
         'start': 0,
         'rows': 100,
         'fl': "id, drug, composition, applicable_diseases, diseases_info, possible_side_effects, excellent_review_perc, average_review_perc, poor_review_perc, reviews_average_rating, reviews_useful_count, reviews, manufacturer, manufacturer_desc, manufacturer_start, manufacturer_end, score",
-        'defType': "edismax",
-        'qf': "diseases_info^3 reviews^4 manufacturer_desc",
-        'pf': "reviews^3",
-        'ps': 2,
-        'bf': "excellent_review_perc^1.5 poor_review_perc^0.5",
-        'rq': "{!rerank reRankQuery=$rqq reRankDocs=30 reRankWeight=2.0}",
-        'rqq': "{!func}sum(product(reviews_average_rating, 4), product(polarity_rating, 2))"
+        #'defType': "edismax",
+        #'qf': "diseases_info^3 reviews^4 manufacturer_desc",
+        #'pf': "reviews^3",
+        #'bf': "excellent_review_perc^1.5 poor_review_perc^0.5",
     }
     return query_params
 
 def generate_mixed_query(user_query):
     embedding = text_to_embedding(user_query)
 
+    lexical_query = f"{{!type=edismax qf=text_field}}{user_query}"
+    vector_query = f"{{!knn f=vector topK=10}}{embedding}"
+    q = f"{{!bool should=}}{lexical_query}{{ should=}}{vector_query}"
+    q2 = {
+        "bool": {
+            "should": [
+               f"{{!type=edismax qf=text_field}}{user_query}",
+               f"{{!knn f=vector topK=10}}{embedding}"
+            ]
+        }
+    }
+
     query_params = {
-        'q': f"{{!type=edismax qf=text_field}}{user_query}{{!knn f=vector topK=10}}{embedding}",
+        'q': q,
         'q.op': "AND",
         'start': 0,
         'rows': 100,
         'fl': "id, drug, composition, applicable_diseases, diseases_info, possible_side_effects, excellent_review_perc, average_review_perc, poor_review_perc, reviews_average_rating, reviews_useful_count, reviews, manufacturer, manufacturer_desc, manufacturer_start, manufacturer_end, score",
-        'defType': "edismax",
-        'qf': "diseases_info^3 reviews^4 manufacturer_desc",
-        'pf': "reviews^3",
-        'ps': 2,
-        'bf': "excellent_review_perc^1.5 poor_review_perc^0.5",
-        'rq': "{!rerank reRankQuery=$rqq reRankDocs=30 reRankWeight=2.0}",
-        'rqq': "{!func}sum(product(reviews_average_rating, 4), product(polarity_rating, 2))",
+        #'defType': "edismax",
+        #'qf': "diseases_info^3 reviews^4 manufacturer_desc",
+        #'pf': "reviews^3",
+        #'bf': "excellent_review_perc^1.5 poor_review_perc^0.5",
     }
     return query_params
