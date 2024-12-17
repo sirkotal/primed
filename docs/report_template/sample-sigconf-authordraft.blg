@@ -8,45 +8,45 @@ Database file #1: sample-base.bib
 Warning--entry type for "filters" isn't style-file defined
 --line 301 of file sample-base.bib
 Warning--I didn't find a database entry for "diseases_cuf_dataset"
-You've used 44 entries,
+You've used 46 entries,
             1791 wiz_defined-function locations,
-            614 strings with 8611 characters,
-and the built_in function-call counts, 5977 in all, are:
-= -- 541
-> -- 188
+            623 strings with 8879 characters,
+and the built_in function-call counts, 6249 in all, are:
+= -- 566
+> -- 196
 < -- 0
-+ -- 91
-- -- 47
-* -- 55
-:= -- 960
-add.period$ -- 166
-call.type$ -- 44
-change.case$ -- 33
++ -- 95
+- -- 49
+* -- 56
+:= -- 1003
+add.period$ -- 174
+call.type$ -- 46
+change.case$ -- 35
 chr.to.int$ -- 0
-cite$ -- 44
-duplicate$ -- 232
-empty$ -- 775
-format.name$ -- 47
-if$ -- 1413
+cite$ -- 46
+duplicate$ -- 242
+empty$ -- 811
+format.name$ -- 49
+if$ -- 1478
 int.to.chr$ -- 0
-int.to.str$ -- 44
+int.to.str$ -- 46
 missing$ -- 0
-newline$ -- 257
-num.names$ -- 44
-pop$ -- 255
+newline$ -- 269
+num.names$ -- 46
+pop$ -- 268
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 99
+skip$ -- 103
 stack$ -- 0
 substring$ -- 0
-swap$ -- 50
+swap$ -- 52
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 44
-width$ -- 46
-write$ -- 501
+while$ -- 46
+width$ -- 48
+write$ -- 524
 (There were 2 warnings)

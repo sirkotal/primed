@@ -23,11 +23,11 @@ def process_data(start_idx, end_idx, input_file, output_file):
             print("disease")
         document["applicable_diseases"] = diseases_with_vectors
 
-        side_effects_with_vectors = []
-        for side_effect in document.get("possible_side_effects", []):
-            side_effects_with_vectors.append({"text": side_effect, "vector": get_embedding(side_effect)})
-            print("side effect")
-        document["possible_side_effects"] = side_effects_with_vectors
+        #side_effects_with_vectors = []
+        #for side_effect in document.get("possible_side_effects", []):
+        #    side_effects_with_vectors.append({"text": side_effect, "vector": get_embedding(side_effect)})
+        #    print("side effect")
+        #document["possible_side_effects"] = side_effects_with_vectors
 
         #reviews_with_vectors = []
         #for review in document.get("reviews", []):

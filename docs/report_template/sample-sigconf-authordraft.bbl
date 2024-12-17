@@ -287,4 +287,17 @@ Docker Inc.
 \newblock \url{https://www.docker.com/}, 2024.
 \newblock \newline Accessed on: December 16, 2024.
 
+\bibitem{mvc}
+MDN.
+\newblock Mvc.
+\newblock \url{https://developer.mozilla.org/en-US/docs/Glossary/MVC}, 2024.
+\newblock \newline Accessed on: December 17, 2024.
+
+\bibitem{instancevars}
+Ruby~User's Guide.
+\newblock Instance variables.
+\newblock
+  \url{https://ruby-doc.org/docs/ruby-doc-bundle/UsersGuide/rg/instancevars.html}.
+\newblock \newline Accessed on: December 9, 2024.
+
 \end{thebibliography}
