@@ -37,11 +37,6 @@ Creative Commons.
   \url{https://en.wikipedia.org/wiki/Wikipedia:Text_of_the_Creative_Commons_Attribution-ShareAlike_4.0_International_License}.
 \newblock \newline Accessed on: November 9, 2024.
 
-\bibitem{diseases_cuf_dataset}
-CUF.
-\newblock \url{https://www.cuf.pt/saude-a-z}, 2024.
-\newblock \newline Accessed on: December 16, 2024.
-
 \bibitem{companies_dataset}
 Wikipedia.
 \newblock \url{https://en.wikipedia.org/wiki/List_of_pharmaceutical_companies},
@@ -141,6 +136,12 @@ Apache~Software Foundation.
   \url{https://solr.apache.org/guide/solr/latest/indexing-guide/filters.html}.
 \newblock \newline Accessed on: November 11, 2024.
 
+\bibitem{stemming}
+Jacob~Murel Ph.D. and Eda Kavlakoglu.
+\newblock What is stemming?
+\newblock \url{https://www.ibm.com/topics/stemming}, 2023.
+\newblock \newline Accessed on: December 7, 2024.
+
 \bibitem{edismax}
 Apache~Software Foundation.
 \newblock The extended dismax query parser.
@@ -163,6 +164,22 @@ Apache~Software Foundation.
   \url{https://solr.apache.org/guide/8_6/the-extended-dismax-query-parser.html#using-slop},
   2020.
 \newblock \newline Accessed on: November 17, 2024.
+
+\bibitem{termboosting}
+Apache~Software Foundation.
+\newblock Boosting a term.
+\newblock
+  \url{https://solr.apache.org/guide/7_2/the-standard-query-parser.html#boosting-a-term-with},
+  2024.
+\newblock \newline Accessed on: December 14, 2024.
+
+\bibitem{fuzziness}
+Apache~Software Foundation.
+\newblock Fuzzy searches.
+\newblock
+  \url{https://solr.apache.org/guide/6_6/the-standard-query-parser.html#TheStandardQueryParser-FuzzySearches},
+  2024.
+\newblock \newline Accessed on: December 14, 2024.
 
 \bibitem{qrels}
 Sérgio Nunes.
@@ -197,5 +214,77 @@ Amber Roberts.
 \newblock What is pr auc?
 \newblock \url{https://arize.com/blog/what-is-pr-auc/}, 2022.
 \newblock \newline Accessed on: November 17, 2024.
+
+\bibitem{polarity}
+Thematic.
+\newblock Sentiment analysis: Comprehensive beginners guide.
+\newblock \url{https://getthematic.com/sentiment-analysis}.
+\newblock \newline Accessed on: December 13, 2024.
+
+\bibitem{reranking}
+Apache~Software Foundation.
+\newblock Query re-ranking.
+\newblock \url{https://solr.apache.org/guide/6_6/query-re-ranking.html}, 2024.
+\newblock \newline Accessed on: December 14, 2024.
+
+\bibitem{rerankparser}
+Apache~Software Foundation.
+\newblock Rerank query parser.
+\newblock
+  \url{https://solr.apache.org/guide/solr/latest/query-guide/query-re-ranking.html#rerank-query-parser},
+  2024.
+\newblock \newline Accessed on: December 14, 2024.
+
+\bibitem{semantic}
+Sérgio Nunes.
+\newblock Solr semantic search.
+\newblock
+  \url{https://gitlab.up.pt/pri/tutorials/-/blob/main/07-semantic-search/README.md?ref_type=heads},
+  2024.
+\newblock \newline Accessed on: December 11, 2024.
+
+\bibitem{embeddings}
+Alessandro Benedetti.
+\newblock Apache solr neural search.
+\newblock \url{https://sease.io/2022/01/apache-solr-neural-search.html}, 2022.
+\newblock \newline Accessed on: December 12, 2024.
+
+\bibitem{nltk}
+NLTK Project.
+\newblock Natural language toolkit.
+\newblock \url{https://getthematic.com/sentiment-analysis}, 2024.
+\newblock \newline Accessed on: December 13, 2024.
+
+\bibitem{vader}
+C.J Hutto and E.E. Gilbert.
+\newblock Vader: A parsimonious rule-based model for sentiment analysis of
+  social media text.
+\newblock Eighth International Conference on Weblogs and Social Media
+  (ICWSM-14), 2014.
+\newblock \newline Accessed on: December 13, 2024.
+
+\bibitem{rails}
+The~Rails Foundation.
+\newblock Ruby on rails.
+\newblock \url{https://rubyonrails.org/}, 2024.
+\newblock \newline Accessed on: December 14, 2024.
+
+\bibitem{ruby}
+Ruby Community.
+\newblock Ruby programming language.
+\newblock \url{https://www.ruby-lang.org/en/}, 2024.
+\newblock \newline Accessed on: December 14, 2024.
+
+\bibitem{bundler}
+Bundler.
+\newblock Bundler.
+\newblock \url{https://bundler.io/}, 2024.
+\newblock \newline Accessed on: December 16, 2024.
+
+\bibitem{docker}
+Docker Inc.
+\newblock Docker.
+\newblock \url{https://www.docker.com/}, 2024.
+\newblock \newline Accessed on: December 16, 2024.
 
 \end{thebibliography}

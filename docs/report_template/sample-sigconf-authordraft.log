@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.5.26)  16 DEC 2024 12:38
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.5.26)  17 DEC 2024 11:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1065,7 +1065,7 @@ LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
 (Font)              scaled to size 8.0pt on input line 206.
 
-Underfull \vbox (badness 4366) has occurred while \output is active []
+Underfull \vbox (badness 1132) has occurred while \output is active []
 
  [1.1{C:/Users/pedro/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{D:/Mikte
 x/fonts/enc/dvips/libertine/lbtn_25tcsq.enc}{D:/Miktex/fonts/enc/dvips/libertin
@@ -1080,27 +1080,26 @@ LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/n' will be
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/it' will be
 (Font)              scaled to size 9.0pt on input line 241.
 
-Overfull \hbox (13.34933pt too wide) in paragraph at lines 257--258
- \T1/LinuxBiolinumT-TLF/m/it/9 (-20) 2.2.2 Dis-eases.[] \T1/LinuxLibertineT-TLF
-/m/n/9 (-20) This dataset was scraped from the ta-bles of a Wikipedia
- []
+
+Package natbib Warning: Citation `diseases_cuf_dataset' on page 2 undefined on 
+input line 270.
 
 
-Overfull \hbox (3.53032pt too wide) in paragraph at lines 299--300
+Overfull \hbox (3.53032pt too wide) in paragraph at lines 313--314
 []\T1/LinuxLibertineT-TLF/m/n/9 (-20) Each re-view can only be as-so-ci-ated wi
 th a sin-gle con-di-tion/disease,
  []
 
-<data_pipeline.png, id=144, 2441.12pt x 4871.19875pt>
+LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/n' will be
+(Font)              scaled to size 7.0pt on input line 317.
+[2.2]
+<data_pipeline.png, id=191, 2441.12pt x 4871.19875pt>
 File: data_pipeline.png Graphic file (type png)
 <use data_pipeline.png>
-Package pdftex.def Info: data_pipeline.png  used on input line 309.
+Package pdftex.def Info: data_pipeline.png  used on input line 323.
 (pdftex.def)             Requested size: 241.14749pt x 481.20215pt.
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Overfull \hbox (2.81508pt too wide) in paragraph at lines 315--316
+Overfull \hbox (2.81508pt too wide) in paragraph at lines 329--330
 \T1/LinuxLibertineT-TLF/m/n/9 (-20) such as \T1/zi4/m/n/9 pandas\T1/LinuxLibert
 ineT-TLF/m/n/9 (-20) [[]], \T1/zi4/m/n/9 unidecode\T1/LinuxLibertineT-TLF/m/n/9
  (-20) [[]], \T1/zi4/m/n/9 html\T1/LinuxLibertineT-TLF/m/n/9 (-20) [[]], \T1/zi
@@ -1109,111 +1108,132 @@ inuxLibertineT-TLF/m/n/9 (-20) [[]]
  []
 
 
-Overfull \hbox (4.01956pt too wide) in paragraph at lines 323--324
+Overfull \hbox (4.01956pt too wide) in paragraph at lines 337--338
 \T1/LinuxLibertineT-TLF/m/n/9 (-20) sure all the text is nor-mal-ized. The data
  pipeline en-sures, via \T1/zi4/m/n/9 Python\T1/LinuxLibertineT-TLF/m/n/9 (-20)
  's
  []
 
-LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/n' will be
-(Font)              scaled to size 7.0pt on input line 325.
-[2.2]
-Overfull \hbox (8.41966pt too wide) in paragraph at lines 325--326
+
+Overfull \hbox (8.41966pt too wide) in paragraph at lines 339--340
 \T1/LinuxLibertineT-TLF/m/n/9 (-20) codes into ASCII char-ac-ters, the \T1/zi4/
 m/n/9 unescape\T1/LinuxLibertineT-TLF/m/n/9 (-20) [[]] func-tion from \T1/zi4/m
 /n/9 Python\T1/LinuxLibertineT-TLF/m/n/9 (-20) 's
  []
 
-<pri_uml_final.png, id=181, 908.39375pt x 506.89375pt>
+<pri_uml_final.png, id=200, 908.39375pt x 506.89375pt>
 File: pri_uml_final.png Graphic file (type png)
 <use pri_uml_final.png>
-Package pdftex.def Info: pri_uml_final.png  used on input line 343.
+Package pdftex.def Info: pri_uml_final.png  used on input line 357.
 (pdftex.def)             Requested size: 241.14749pt x 134.55824pt.
-[3.3 <./data_pipeline.png> <./pri_uml_final.png>]
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [4.4]
-Overfull \hbox (13.17508pt too wide) in paragraph at lines 421--422
+ [3.3 <./data_pipeline.png>]
+Underfull \vbox (badness 3407) has occurred while \output is active []
+
+ [4.4 <./pri_uml_final.png>]
+Overfull \hbox (13.17508pt too wide) in paragraph at lines 435--436
 []\T1/zi4/m/n/9 applicable_diseases\T1/LinuxLibertineT-TLF/m/n/9 (-20) : A list
  of dis-eases for which the medicine
  []
 
 
-Overfull \hbox (2.85129pt too wide) in paragraph at lines 441--442
+Overfull \hbox (2.85129pt too wide) in paragraph at lines 455--456
 \T1/LinuxLibertineT-TLF/m/n/9 (-20) the re-trieval pro-cess; the query is per-f
 ormed solely on the \T1/zi4/m/n/9 diseases- 
  []
 
 
-Overfull \hbox (1.55313pt too wide) in paragraph at lines 453--454
+Overfull \hbox (1.55313pt too wide) in paragraph at lines 467--468
 \T1/LinuxLibertineT-TLF/m/n/9 (-20) ad-di-tional field types were cre-ated. For
  this rea-son, no tokenizers[[]]
  []
 
-
-Package natbib Warning: Citation `stemming' on page 5 undefined on input line 4
-62.
-
+[5.5]
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 7.3pt on input line 462.
+(Font)              scaled to size 7.3pt on input line 476.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 5.5pt on input line 462.
+(Font)              scaled to size 5.5pt on input line 476.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/it' will be
-(Font)              scaled to size 7.0pt on input line 462.
+(Font)              scaled to size 7.0pt on input line 476.
 
-Overfull \hbox (2.409pt too wide) in paragraph at lines 462--463
+Overfull \hbox (10.51329pt too wide) in paragraph at lines 476--477
 []\T1/LinuxLibertineT-TLF/b/it/9 (-20) SnowballPorterFilterFactory\T1/LinuxLibe
 rtineT-TLF/b/n/9 (-20) : \T1/LinuxLibertineT-TLF/m/n/9 (-20) Fil-ter that ap-pl
-ies stem-ming[\T1/LinuxLibertineT-TLF/b/n/9 (-20) ?
+ies stemming[[]]
  []
 
-[5.5] [6.6]
-Overfull \hbox (1.47002pt too wide) in paragraph at lines 553--554
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [6.6]
+Overfull \hbox (1.47002pt too wide) in paragraph at lines 563--564
 []\T1/LinuxLibertineT-TLF/m/n/9 (-20) Finally, an in-de-pen-dent boost is added
 , based on the \T1/zi4/m/n/9 excellent_- 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 600--600
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 610--610
 []|\T1/LinuxLibertineT-TLF/m/n/9 (+20) Simple
  []
 
 
-Overfull \hbox (1.77963pt too wide) in paragraph at lines 600--601
+Overfull \hbox (1.77963pt too wide) in paragraph at lines 610--611
 []|\T1/LinuxLibertineT-TLF/m/n/9 (-20) Advanced
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 629--630
+[7.7]
+Underfull \hbox (badness 10000) in paragraph at lines 639--640
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 634--634
+Underfull \hbox (badness 10000) in paragraph at lines 644--644
 []|\T1/LinuxLibertineT-TLF/m/n/9 (+20) Simple
  []
 
 
-Overfull \hbox (1.77963pt too wide) in paragraph at lines 634--635
+Overfull \hbox (1.77963pt too wide) in paragraph at lines 644--645
 []|\T1/LinuxLibertineT-TLF/m/n/9 (-20) Advanced
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 648--649
+Underfull \hbox (badness 10000) in paragraph at lines 658--659
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 653--653
+Underfull \hbox (badness 10000) in paragraph at lines 663--663
 []|\T1/LinuxLibertineT-TLF/m/n/9 (+20) Simple
  []
 
 
-Overfull \hbox (1.77963pt too wide) in paragraph at lines 653--654
+Overfull \hbox (1.77963pt too wide) in paragraph at lines 663--664
 []|\T1/LinuxLibertineT-TLF/m/n/9 (-20) Advanced
  []
 
-[7.7] (sample-sigconf-authordraft.bbl
+<polarity_scores.png, id=296, 1589.94pt x 433.62pt>
+File: polarity_scores.png Graphic file (type png)
+<use polarity_scores.png>
+Package pdftex.def Info: polarity_scores.png  used on input line 697.
+(pdftex.def)             Requested size: 192.91872pt x 52.6144pt.
+[8.8{D:/Miktex/fonts/enc/dvips/libertine/lbtn_oexx6f.enc} <./polarity_scores.pn
+g>]
+Underfull \hbox (badness 10000) in paragraph at lines 742--743
+[]|\T1/LinuxLibertineT-TLF/m/n/9 (+20) Re-Ranked
+ []
+
+
+Overfull \hbox (6.15579pt too wide) in paragraph at lines 781--782
+\T1/LinuxLibertineT-TLF/m/n/9 (-20) fine the li-braries re-quired for ex-e-cu-t
+ion. Ad-di-tion-ally, the \T1/zi4/m/n/9 Dockerfile
+ []
+
+[9.9] (sample-sigconf-authordraft.bbl
 Underfull \hbox (badness 6758) in paragraph at lines 14--20
 []\T1/LinuxLibertineT-TLF/m/n/7 (+20) Kaggle.  11000 medicine de-tails.  []$htt
 ps : / / www . kaggle . com / datasets /
@@ -1226,155 +1246,173 @@ Underfull \hbox (badness 2478) in paragraph at lines 22--26
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 168--174
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 177--183
+\T1/LinuxLibertineT-TLF/m/n/7 (+20) 6 / the -[] standard -[] query -[] parser .
+ html # TheStandardQueryParser -[] FuzzySearches$[],
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 185--191
 \T1/LinuxLibertineT-TLF/m/n/7 (+20) pri / tutorials/ -[] /blob / main / 06 -[] 
 evaluation / README . md ? ref _ type = heads # 2 -[]
  []
 
 
-Underfull \hbox (badness 1454) in paragraph at lines 176--180
+Underfull \hbox (badness 1454) in paragraph at lines 193--197
 []\T1/LinuxLibertineT-TLF/m/n/7 (+20) Keylabs.  Un-der-stand-ing pre-ci-sion at
  k (p@k).  []$https : / / keylabs . ai / blog /
  []
 
 )
-<graphic1.png, id=288, 722.7pt x 433.62pt>
+<graphic1.png, id=375, 722.7pt x 433.62pt>
 File: graphic1.png Graphic file (type png)
 <use graphic1.png>
-Package pdftex.def Info: graphic1.png  used on input line 685.
+Package pdftex.def Info: graphic1.png  used on input line 804.
 (pdftex.def)             Requested size: 241.14749pt x 144.68962pt.
-<graphic2.png, id=289, 784.73175pt x 486.618pt>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [10.10]
+<graphic2.png, id=406, 784.73175pt x 486.618pt>
 File: graphic2.png Graphic file (type png)
 <use graphic2.png>
-Package pdftex.def Info: graphic2.png  used on input line 693.
+Package pdftex.def Info: graphic2.png  used on input line 812.
 (pdftex.def)             Requested size: 241.14749pt x 149.53575pt.
- [8.8 <./graphic1.png>]
-<graphic3.png, id=312, 1110.0672pt x 550.6974pt>
+<graphic3.png, id=407, 1110.0672pt x 550.6974pt>
 File: graphic3.png Graphic file (type png)
 <use graphic3.png>
-Package pdftex.def Info: graphic3.png  used on input line 701.
+Package pdftex.def Info: graphic3.png  used on input line 820.
 (pdftex.def)             Requested size: 241.14749pt x 119.62447pt.
-<graphic4.png, id=313, 1037.67674pt x 544.434pt>
+<graphic4.png, id=408, 1037.67674pt x 544.434pt>
 File: graphic4.png Graphic file (type png)
 <use graphic4.png>
-Package pdftex.def Info: graphic4.png  used on input line 709.
+Package pdftex.def Info: graphic4.png  used on input line 828.
 (pdftex.def)             Requested size: 241.14749pt x 126.52144pt.
-<graphic5.png, id=314, 655.85025pt x 367.3725pt>
+
+Underfull \vbox (badness 1122) has occurred while \output is active []
+
+<graphic5.png, id=409, 655.85025pt x 367.3725pt>
 File: graphic5.png Graphic file (type png)
 <use graphic5.png>
-Package pdftex.def Info: graphic5.png  used on input line 717.
+Package pdftex.def Info: graphic5.png  used on input line 836.
 (pdftex.def)             Requested size: 241.14749pt x 135.07362pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-<graphic6.png, id=315, 1110.0672pt x 550.6974pt>
+<graphic6.png, id=410, 1110.0672pt x 550.6974pt>
 File: graphic6.png Graphic file (type png)
 <use graphic6.png>
-Package pdftex.def Info: graphic6.png  used on input line 725.
+Package pdftex.def Info: graphic6.png  used on input line 844.
 (pdftex.def)             Requested size: 241.14749pt x 119.62447pt.
-<graphic7.png, id=316, 1025.63174pt x 523.35526pt>
+<graphic7.png, id=411, 1025.63174pt x 523.35526pt>
 File: graphic7.png Graphic file (type png)
 <use graphic7.png>
-Package pdftex.def Info: graphic7.png  used on input line 733.
+Package pdftex.def Info: graphic7.png  used on input line 852.
 (pdftex.def)             Requested size: 241.14749pt x 123.04439pt.
-<system_arch.png, id=317, 4101.3225pt x 2749.27126pt>
-File: system_arch.png Graphic file (type png)
-<use system_arch.png>
-Package pdftex.def Info: system_arch.png  used on input line 741.
-(pdftex.def)             Requested size: 241.14749pt x 161.63507pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [9.9 <./graphic2.png> <./graphic3.png> <./graphic4.png> <./graphic5.png> <./gr
-aphic6.png> <./graphic7.png>]
-<precision_recall_q1b.png, id=328, 1927.2pt x 1445.4pt>
+ [11.11 <./graphic1.png> <./graphic2.png> <./graphic3.png> <./graphic4.png> <./
+graphic5.png> <./graphic6.png>]
+<system_arch.png, id=422, 4101.3225pt x 2749.27126pt>
+File: system_arch.png Graphic file (type png)
+<use system_arch.png>
+Package pdftex.def Info: system_arch.png  used on input line 860.
+(pdftex.def)             Requested size: 241.14749pt x 161.63507pt.
+<precision_recall_q1b.png, id=423, 1927.2pt x 1445.4pt>
 File: precision_recall_q1b.png Graphic file (type png)
 <use precision_recall_q1b.png>
-Package pdftex.def Info: precision_recall_q1b.png  used on input line 749.
+Package pdftex.def Info: precision_recall_q1b.png  used on input line 868.
 (pdftex.def)             Requested size: 192.91872pt x 144.68079pt.
-<precision_recall_q1a.png, id=329, 1927.2pt x 1445.4pt>
+<precision_recall_q1a.png, id=424, 1927.2pt x 1445.4pt>
 File: precision_recall_q1a.png Graphic file (type png)
 <use precision_recall_q1a.png>
-Package pdftex.def Info: precision_recall_q1a.png  used on input line 757.
+Package pdftex.def Info: precision_recall_q1a.png  used on input line 876.
 (pdftex.def)             Requested size: 192.91872pt x 144.68079pt.
-<precision_recall_q2b.png, id=330, 1927.2pt x 1445.4pt>
+
+Underfull \vbox (badness 3375) has occurred while \output is active []
+
+<precision_recall_q2b.png, id=425, 1927.2pt x 1445.4pt>
 File: precision_recall_q2b.png Graphic file (type png)
 <use precision_recall_q2b.png>
-Package pdftex.def Info: precision_recall_q2b.png  used on input line 765.
+Package pdftex.def Info: precision_recall_q2b.png  used on input line 884.
 (pdftex.def)             Requested size: 192.91872pt x 144.68079pt.
-
-Underfull \vbox (badness 1270) has occurred while \output is active []
-
-<precision_recall_q2a.png, id=331, 1927.2pt x 1445.4pt>
+<precision_recall_q2a.png, id=426, 1927.2pt x 1445.4pt>
 File: precision_recall_q2a.png Graphic file (type png)
 <use precision_recall_q2a.png>
-Package pdftex.def Info: precision_recall_q2a.png  used on input line 773.
+Package pdftex.def Info: precision_recall_q2a.png  used on input line 892.
 (pdftex.def)             Requested size: 192.91872pt x 144.68079pt.
-<precision_recall_q3b.png, id=332, 1927.2pt x 1445.4pt>
+<precision_recall_q3b.png, id=427, 1927.2pt x 1445.4pt>
 File: precision_recall_q3b.png Graphic file (type png)
 <use precision_recall_q3b.png>
-Package pdftex.def Info: precision_recall_q3b.png  used on input line 781.
-(pdftex.def)             Requested size: 192.91872pt x 144.68079pt.
-<precision_recall_q3a.png, id=333, 1927.2pt x 1445.4pt>
-File: precision_recall_q3a.png Graphic file (type png)
-<use precision_recall_q3a.png>
-Package pdftex.def Info: precision_recall_q3a.png  used on input line 789.
+Package pdftex.def Info: precision_recall_q3b.png  used on input line 900.
 (pdftex.def)             Requested size: 192.91872pt x 144.68079pt.
 
 Underfull \vbox (badness 2799) has occurred while \output is active []
 
- [10.10 <./system_arch.png> <./precision_recall_q1b.png> <./precision_recall_q1
-a.png> <./precision_recall_q2b.png> <./precision_recall_q2a.png> <./precision_r
-ecall_q3b.png>]
-<precision_recall_q4b.png, id=344, 1927.2pt x 1445.4pt>
+ [12.12 <./graphic7.png> <./system_arch.png> <./precision_recall_q1b.png> <./pr
+ecision_recall_q1a.png> <./precision_recall_q2b.png> <./precision_recall_q2a.pn
+g>]
+<precision_recall_q3a.png, id=438, 1927.2pt x 1445.4pt>
+File: precision_recall_q3a.png Graphic file (type png)
+<use precision_recall_q3a.png>
+Package pdftex.def Info: precision_recall_q3a.png  used on input line 908.
+(pdftex.def)             Requested size: 192.91872pt x 144.68079pt.
+<precision_recall_q4b.png, id=439, 1927.2pt x 1445.4pt>
 File: precision_recall_q4b.png Graphic file (type png)
 <use precision_recall_q4b.png>
-Package pdftex.def Info: precision_recall_q4b.png  used on input line 797.
+Package pdftex.def Info: precision_recall_q4b.png  used on input line 916.
 (pdftex.def)             Requested size: 192.91872pt x 144.68079pt.
-<precision_recall_q4a.png, id=345, 1927.2pt x 1445.4pt>
+<precision_recall_q4a.png, id=440, 1927.2pt x 1445.4pt>
 File: precision_recall_q4a.png Graphic file (type png)
 <use precision_recall_q4a.png>
-Package pdftex.def Info: precision_recall_q4a.png  used on input line 805.
+Package pdftex.def Info: precision_recall_q4a.png  used on input line 924.
 (pdftex.def)             Requested size: 192.91872pt x 144.68079pt.
+
+Underfull \vbox (badness 2799) has occurred while \output is active []
+
 
 
 Package natbib Warning: There were undefined citations.
+
+
+Package balance Warning: You have called \balance in second column
+(balance)                Columns might not be balanced.
 
 (D:\Miktex\tex/generic/stringenc\se-pdfdoc.def
 File: se-pdfdoc.def 2019/11/29 v1.12 stringenc: PDFDocEncoding
 )
 (D:\Miktex\tex/generic/stringenc\se-utf8.def
 File: se-utf8.def 2019/11/29 v1.12 stringenc: UTF-8
-) [11.11 <./precision_recall_q3a.png> <./precision_recall_q4b.png> <./precision
-_recall_q4a.png>]
-(sample-sigconf-authordraft.aux)
+) [13.13 <./precision_recall_q3b.png> <./precision_recall_q3a.png> <./precision
+_recall_q4b.png> <./precision_recall_q4a.png>] (sample-sigconf-authordraft.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
  ***********
 Package rerunfilecheck Info: File `sample-sigconf-authordraft.out' has not chan
 ged.
-(rerunfilecheck)             Checksum: E3F374449AD4ACEFB373FC7CF5AE659B;4282.
+(rerunfilecheck)             Checksum: E3EAF208845E1632F5EA35326FB77B76;5363.
  ) 
 Here is how much of TeX's memory you used:
- 21908 strings out of 474486
- 349142 string characters out of 5760170
- 1966542 words of memory out of 5000000
- 43093 multiletter control sequences out of 15000+600000
- 729374 words of font info for 378 fonts, out of 8000000 for 9000
+ 22032 strings out of 474486
+ 351390 string characters out of 5760170
+ 1977542 words of memory out of 5000000
+ 43149 multiletter control sequences out of 15000+600000
+ 734424 words of font info for 405 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
- 90i,13n,131p,1141b,628s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 90i,12n,131p,1354b,634s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <D:/Miktex/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb><D:/Miktex/fon
-ts/type1/public/libertine/LinBiolinumT.pfb><D:/Miktex/fonts/type1/public/libert
-ine/LinBiolinumTB.pfb><D:/Miktex/fonts/type1/public/libertine/LinBiolinumTI.pfb
-><D:/Miktex/fonts/type1/public/libertine/LinLibertineT.pfb><D:/Miktex/fonts/typ
-e1/public/libertine/LinLibertineTB.pfb><D:/Miktex/fonts/type1/public/libertine/
-LinLibertineTBI.pfb><D:/Miktex/fonts/type1/public/libertine/LinLibertineTI.pfb>
-<D:/Miktex/fonts/type1/public/newtx/txsys.pfb><D:/Miktex/fonts/type1/urw/zapfdi
-ng/uzdr.pfb>
-Output written on sample-sigconf-authordraft.pdf (11 pages, 3159967 bytes).
+ts/type1/public/newtx/LibertineMathMI.pfb><D:/Miktex/fonts/type1/public/liberti
+ne/LinBiolinumT.pfb><D:/Miktex/fonts/type1/public/libertine/LinBiolinumTB.pfb><
+D:/Miktex/fonts/type1/public/libertine/LinBiolinumTI.pfb><D:/Miktex/fonts/type1
+/public/libertine/LinLibertineT.pfb><D:/Miktex/fonts/type1/public/libertine/Lin
+LibertineTB.pfb><D:/Miktex/fonts/type1/public/libertine/LinLibertineTBI.pfb><D:
+/Miktex/fonts/type1/public/libertine/LinLibertineTI.pfb><D:/Miktex/fonts/type1/
+public/newtx/txsys.pfb><D:/Miktex/fonts/type1/urw/zapfding/uzdr.pfb>
+Output written on sample-sigconf-authordraft.pdf (13 pages, 4124695 bytes).
 PDF statistics:
- 427 PDF objects out of 1000 (max. 8388607)
- 106 named destinations out of 1000 (max. 500000)
- 97091 words of extra memory for PDF output out of 106986 (max. 10000000)
+ 537 PDF objects out of 1000 (max. 8388607)
+ 134 named destinations out of 1000 (max. 500000)
+ 99200 words of extra memory for PDF output out of 106986 (max. 10000000)
 
