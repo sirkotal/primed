@@ -762,28 +762,28 @@ A web-based user interface was also developed for the \textit{\textbf{PRIMED}} s
 
 \subsection{Technologies} 
 
-The user interface was built using Rails\cite{rails}, which utilizes Ruby\cite{ruby} as the main language, with dependency management configured through Bundler\cite{bundler}. It can support Docker\cite{docker} containers, which would make an eventual deployment easier to due its controlled environment.
+The user interface was built using \texttt{Rails}\cite{rails}, which utilizes \texttt{Ruby}\cite{ruby} as the main language, with dependency management configured through \texttt{Bundler}\cite{bundler}. It can support \texttt{Docker}\cite{docker} containers, which would make an eventual deployment easier to due its controlled environment.
 
-\subsubsection{Structure} 
-
-The user interface structure is organized as follows:
+The user interface's project structure is organized as follows:
 
 \begin{itemize} 
-    \item \textbf{app}: Contains the core logic of the application, such as controllers, models, and views. 
+    \item \textbf{app}: Contains the core logic of the application, such as controllers, models, and views\cite{mvc}. 
     \item \textbf{config}: Includes configuration files required for the application's operation. 
-    \item \textbf{public}: Stores static assets such as images, CSS files, and JavaScript files. 
+    \item \textbf{public}: Stores static assets such as images, \texttt{CSS} files, and \texttt{JavaScript} files. 
     \item \textbf{test}: Contains test cases for validating the website's functionality. 
-    \item \textbf{vendor}: Stores external dependencies not managed directly by Bundler. 
+    \item \textbf{vendor}: Stores external dependencies not managed directly by \texttt{Bundler}. 
 \end{itemize}
 
-\subsubsection{Configuration and Dependencies} 
+The project dependencies are managed using the \texttt{Gemfile} and \texttt{Gemfile.lock} files, which define the libraries required for execution. Additionally, the \texttt{Dockerfile} and \texttt{.dockerignore} file configure the runtime environment for \texttt{Docker} containers.
 
-The project dependencies are managed using the \texttt{Gemfile} and \texttt{Gemfile.lock} files, which define the libraries required for execution. Additionally, the \texttt{Dockerfile} and \texttt{.dockerignore} file configure the runtime environment for Docker containers.
+\subsection{Web Interface}
 
-\subsection{System Switch}
+The search engine's web interface (for testing purposes, hosted locally on one's machine) consists of an index page~[\ref{fig:indexUI}] that acts as the website's landing page. In it, the user has access to a text input field where queries can be inserted and the ability to switch between three system options - each representing one of the different systems supported by the search engine. This option provides an easy way to switch between systems (schemas and query parameters) - baseline, advanced, and the semantic search.
+To achieve this, however, it is required to be running multiple cores, so that the end user can quickly switch systems without requiring a reset of the \texttt{Docker} container.
 
-The user interface provides an easy way to switch between systems (schemas and query parameters), with options to select between the baseline, the advanced system, and the semantic search system.
-To achieve this, however, it is required to be running multiple cores, so that the end user can quickly switch systems without requiring a reset of the Docker container.
+Once a query is submitted, the interface redirects the user query and the system option to the page controller's \texttt{Ruby} script, which then creates an instance variable\cite{instancevars} containing the query and makes calls to the appopriate \texttt{Python} scripts, depending on the chosen system. As before, the results from the query are returned from Solr in \texttt{JSON} format and dumped into a file.
+
+After the file is created, the page controller parses its contents and redirects the user, alongside the response contents, to the search page~[\ref{fig:searchUI}]. Here, the relevant documents retrieved from Solr are displayed in a more user-friendly format, compared to a raw \texttt{JSON} file. This interface allows the user to easily consult the most important aspects of a medicine relevant to their query: the drug's name, its composition, applicable diseases, the average review rating and the reviews themselves.
 
 \section{Conclusions}
 
@@ -921,10 +921,18 @@ Completing these project milestones marks a significant step in the development 
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=0.8\linewidth]{precision_recall_q4a.png}
-  \caption{Q4 P-R Curve -> Advanced System}
-  \Description{Q4 P-R Curves -> Advanced System}
-  \label{fig:precisionRecallAdvanced4}
+  \includegraphics[width=0.8\linewidth]{indexUI.png}
+  \caption{User Interface - Index/Landing Page}
+  \Description{User Interface - Index/Landing Page}
+  \label{fig:indexUI}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{searchUI.png}
+  \caption{User Interface - Search Page}
+  \Description{User Interface - Search Page}
+  \label{fig:searchUI}
 \end{figure}
 
 %%
