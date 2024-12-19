@@ -17,23 +17,26 @@ def process_data(start_idx, end_idx, input_file, output_file):
     for i in range(start_idx, end_idx):
         document = data[i]
 
-        diseases_with_vectors = []
-        for disease in document.get("applicable_diseases", []):
-            diseases_with_vectors.append({"text": disease, "vector": get_embedding(disease)})
-            print("disease")
-        document["applicable_diseases"] = diseases_with_vectors
+        #composition = document.get("composition", [])
 
-        side_effects_with_vectors = []
-        for side_effect in document.get("possible_side_effects", []):
-            side_effects_with_vectors.append({"text": side_effect, "vector": get_embedding(side_effect)})
-            print("side effect")
-        document["possible_side_effects"] = side_effects_with_vectors
+        #document["vector"] = get_embedding(composition)
+        
+        #for disease in document.get("applicable_diseases", []):
+        #    diseases_with_vectors.append({"text": disease, "vector": get_embedding(disease)})
+        #    print("disease")
+        #document["applicable_diseases"] = diseases_with_vectors
 
-        #reviews_with_vectors = []
-        #for review in document.get("reviews", []):
-        #    reviews_with_vectors.append({"text": review, "vector": get_embedding(review)})
-        #    print("review")
-        #document["reviews"] = reviews_with_vectors
+        #side_effects_with_vectors = []
+        #for side_effect in document.get("possible_side_effects", []):
+        #    side_effects_with_vectors.append({"text": side_effect, "vector": get_embedding(side_effect)})
+        #    print("side effect")
+        #document["possible_side_effects"] = side_effects_with_vectors
+
+        all_reviews = ""
+        for review in document.get("reviews", []):
+            all_reviews += review + " "
+        all_reviews = all_reviews.strip()
+        document["vector"] = get_embedding(("Reviews: " + all_reviews))
 
     with open(output_file, 'w', encoding='utf-8') as f:
         json.dump(data[start_idx:end_idx], f, indent=4, ensure_ascii=False)
